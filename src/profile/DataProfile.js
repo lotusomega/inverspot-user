@@ -3,7 +3,7 @@ import React, { Component } from 'react'
 class DataProfile extends Component {
   render() {
     const styledata={
-      float: "right", 
+      float: "right",
       margin: "30px"
     }
     const styledata2={
@@ -14,11 +14,11 @@ class DataProfile extends Component {
         <div style={styledata}>
           <div className="btn-group">
             <a className="btn btn-info" href="#">
-              Editar Perfil 
+              Editar Perfil
             </a>
           </div>
         </div>
-        
+
         <div className="panel-body">
           <h3 style={styledata2}><strong>Mis Datos</strong></h3>
           <br/>
@@ -81,7 +81,7 @@ class DataProfile extends Component {
                 </div>
               </div>
 
-              
+
               <div className="form-group">
                 <label className="col-md-3 control-label">Teléfono Fijo:</label>
                 <div className="col-md-8">
@@ -107,7 +107,7 @@ class DataProfile extends Component {
           <hr/>
         </div>
       </div>
-            
+
     )
   }
 }

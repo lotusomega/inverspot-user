@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { Link } from 'react-router'
 
 class NavBar extends Component {
   render() {
@@ -16,7 +17,6 @@ class NavBar extends Component {
       "marginBottom": "20px"
     }
     return (
-
       <div className="navbar-wrapper">
         <div className="container-fluid">
             <div className="navbar navbar-default navbar-static-top" role="navigation">
@@ -28,14 +28,26 @@ class NavBar extends Component {
                         </button>
                         <a className="navbar-brand" href="#" style={style}>
                             <img alt="Brand" src="assets/images/inver.png" width="140px" style={style1}/>
-                        </a>                    
-                        
+                        </a>
+
                     </div>
                     <div className="navbar-collapse collapse">
                         <ul className="nav navbar-nav">
-                            <li><a href="panel_usuario.html">Mi Perfil</a></li>
-                            <li><a href="informacion_de_inversor.html">Información de Inversor</a></li>
-                            <li><a href="inversiones_usuario.html">Mis Inversiones</a></li>
+                            <li>
+                              <Link to="/user/:id">
+                                Mi Perfil
+                              </Link>
+                            </li>
+                            <li>
+                              <Link to="/user/:id/investment-data">
+                                Información de Inversor
+                              </Link>
+                            </li>
+                            <li>
+                              <Link to="/user/:id/investments">
+                                Mis Inversiones
+                              </Link>
+                            </li>
                         </ul>
                         <ul className="nav navbar-nav navbar-right">
                             <li className="dropdown"><a href="#" className="dropdown-toggle" data-toggle="dropdown">
@@ -82,6 +94,7 @@ class NavBar extends Component {
             </div>
         </div>
       </div>
+
     )
   }
 }
