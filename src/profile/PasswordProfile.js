@@ -1,6 +1,40 @@
 import React, { Component } from 'react'
+import { edit } from '../services/user'
 
 class PasswordProfile extends Component {
+  constructor(props) {
+    super(props)
+    this.handleInput = this.handleInput.bind(this)
+    this.handleSubmit = this.handleSubmit.bind(this)
+    this.state = {
+      user: {
+        password:''
+      }
+    }
+  }
+
+   componentDidMount() {
+     let user = {
+       _id: this.props.userid
+     }
+     this.setState({user: user})
+   }
+
+
+  handleInput(e) {
+    e.preventDefault()
+    let name = e.target.name
+    let newState = Object.assign( this.state )
+    newState.user[name] = e.target.value
+    this.setState(newState)
+  }
+
+  handleSubmit(e) {
+    e.preventDefault()
+    edit( this.state.user )
+      .then( success => success && alert("Contraseña Actualizada") )
+  }
+
   render() {
     const stylepa={
       color:"#FF0004"
@@ -12,39 +46,40 @@ class PasswordProfile extends Component {
       marginLeft: "10px"
     }
     return (
-      <div className="panel panel-default">                
+      <div className="panel panel-default">
         <div className="panel-body">
             <h3 style={stylepa3}><strong>Cambio de Contraseña</strong></h3>
             <hr/>
 
             <div className="col-md-12 col-sm-12 col-xs-12 personal-info">
               <div className="form-horizontal">
-               
+
                 <div className="form-group">
                   <div className="container">
                    <div className="row">
                     <div className="col-md-4 col-md-offset-3">
                       <p className="text-center">Introduzca su nueva contraseña</p>
-                      <form method="post" id="passwordForm">
+                      <form id="passwordForm" onSubmit={ this.handleSubmit }>
                         <input type="password" className="input-sm form-control" name="password1" id="password1" placeholder="Nueva contraseña" required/>
                         <div className="row">
                           <div className="col-sm-6" style={stylepa2}>
                             <span id="8char" className="glyphicon glyphicon-remove" style={stylepa}></span> 8 caracteres mínimo<br/><br/>
                           </div>
                         </div>
-                        <input type="password" className="input-sm form-control" name="password2" id="password2" placeholder="Confirmar contraseña"/>
+                        <input type="password" name="password" className="input-sm form-control" name="password2" id="password2" placeholder="Confirmar contraseña"
+                        value={ this.state.user.password } onChange={ this.handleInput }/>
                         <div className="row">
                           <div className="col-sm-12" style={stylepa2}>
                             <span id="pwmatch" className="glyphicon glyphicon-remove" style={stylepa}></span> Contraseñas coinciden<br/><br/>
                           </div>
                         </div>
                         <input type="submit" className="btn btn-primary btn-load" data-loading-text="Cambiando Contraseña..." value="Cambiar Contraseña" required/>
-                      </form> 
-                    </div>  
-                    </div>        
+                      </form>
+                    </div>
+                    </div>
                   </div>
                 </div>
-                  
+
               </div>
             </div>
         </div>

@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
-import { edit, list } from '../services/user'
-import { withRouter } from 'react-router'
+import { edit } from '../services/user'
 
 function InputForm (props){
   return(
@@ -21,7 +20,6 @@ class Profile extends Component {
     this.state = {
       user: {
         investmentData:{
-          name: '',
           address: {},
           investmentForm:{},
           bankData:{},
@@ -32,18 +30,14 @@ class Profile extends Component {
   }
 
   componentDidMount() {
-    if(this.props.params.id) {
-      list({_id: this.props.params.id},{}, 'investmentData')
-        .then( user => this.setState({user: user[0]}) )
-        .catch(alert)
-    }
+
   }
 
   handleInput(e) {
     e.preventDefault()
     let name = e.target.name
     let newState = Object.assign( this.state )
-    newState.user[name] = e.target.value
+    newState.user.investmentData[name] = e.target.value
     this.setState(newState)
   }
 
@@ -54,7 +48,7 @@ class Profile extends Component {
       let newState = Object.assign( this.state )
       newState.user['level'] = 'investor'
       this.setState(newState)
-      .then( success => success && this.props.router.push('/users/list') )
+      .then( success => success && alert("Información actualizada") )
   }
 
   render() {
@@ -348,4 +342,4 @@ class Profile extends Component {
   }
 }
 
-export default withRouter( Profile);
+export default Profile;

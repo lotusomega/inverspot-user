@@ -1,84 +1,180 @@
-import React, { Component } from 'react'
-import { Link } from 'react-router'
+import React from 'react'
+import Link from 'react-router'
+import currency from '../services/currency'
 
-class PropertyCard extends Component {
-  render() {
-    const stylepc={
-      fontSize: "12px", fontWeight: "400", color: "white"
-    }
-    const stylepc1={
-      marginTop: "-20px"
-    }
-    const stylepc2={
-      marginTop: "14px", textTransform: "none"
-    }
-    const stylepc3={
-      fontWeight: "bold", color:"#f00"
-    }
-    const stylepc4={
-      backgroundColor: "#4b118e", width:"65%"
-    }
-    const stylepc5={
-      color:"#f00"
-    }
-    return (
-      <div className="col-v col-xs-12 col-sm-4 col-md-4">
-          <div className="card-v fondeada">
-              <div className="row header-holder head-card">
-                  <div className="col-xs-12 col-sm-4 col-md-4 left margin-head">
-                      <h1>San Juan 125</h1>
-                  </div>
-                  <div className="col-xs-12 col-sm-8 col-md-8 right margin-head">
-                      <p style={stylepc}>Claudio Bernad 24</p>
-                      <p style={stylepc}>Col Doctores</p>
-                  </div>
-              </div>
-              <div className="row header-holder" style={stylepc1}>
-                  <div className="col-xs-12 col-sm-12 col-md-12 investment-holder ">
-                      <p className="p-promo" style={stylepc2}>Invierte desde <span>$100,000</span> pesos</p>
-                  </div>
-              </div>
-              <figure className="main-card-image">
-                  <a href="/inmuebles/doctores"><img src="http://placehold.it/400"/></a>
-              </figure>
-              <div className="row progress-bar-holder">
-                  <div className="col-xs-6 col-sm-6 col-md-6 left"><p style={stylepc3}>$650,000</p></div>
-                  <div className="col-xs-6 col-sm-6 col-md-6 right"><p style={stylepc3}>$1,000,000</p></div>
-                  <div className="col-xs-12 col-sm-12 col-md-12 range-holder">
-                      <div className="range" style={stylepc4}></div>
-                  </div>
-                  <div className="col-xs-12 col-sm-12 col-md-12 range-txt">
-                      <p style={stylepc5}><span style={stylepc5}>13</span> Acciones disponibles de <span style={stylepc5}>20</span></p>
-                  </div>
-                  <hr className="hr-card"/>
-              </div>
-              <div className="info-cols-holder ">
-
-                  <div className="col col-xs-4 col-sm-4 col-md-4">
-                      <p className="tit">MONTO A INVERTIR</p>
-                      <div className="icon icon-bill"></div>
-                      <p>$150,000</p>
-                  </div>
-                  <div className="col col-xs-4 col-sm-4 col-md-4">
-                      <p className="tit">PLAZO ESTIMADO</p>
-                      <div className="icon icon-calendar"></div>
-                      <p>22 MESES</p>
-                  </div>
-                  <div className="col col-xs-4 col-sm-4 col-md-4">
-                      <p className="tit">RENDIMIENTO ESTIMADO</p>
-                      <div className="icon icon-coins"></div>
-                      <p>46 %</p>
-                  </div>
-              </div>
-              <div className="row btns-holder">
-                  <a href="#"><button className="button btn-v-card left">Ver Más</button></a>
-                  <button className="button  btn-v-card right" data-toggle="modal" data-target="#invertir-modal">Invertir</button>
-              </div>
-          </div>
-      </div>
-
-    )
-  }
+function CardHeader(props) {
+  let { title, address } = props, style = { fontSize: "12px", fontWeight: "400", color: "white" }
+  return (
+    <div className="row header-holder head-card">
+        <div className="col-xs-12 col-sm-4 col-md-4 left margin-head">
+            <h1>{title}</h1>
+        </div>
+        <div className="col-xs-12 col-sm-8 col-md-8 right margin-head">
+            <p style={style}>{address.street + ' ' + address.number}</p>
+            <p style={style}>{address.suburb}</p>
+        </div>
+    </div>
+  )
 }
 
-export default PropertyCard;
+function CardPromo(props) {
+  const stylepc1 = {
+    marginTop: '-20px'
+  }
+  const stylepc2 = {
+    marginTop: '14px', textTransform: 'none'
+  }
+  return (
+    <div className="row header-holder" style={stylepc1}>
+      <div className="col-xs-12 col-sm-12 col-md-12 investment-holder ">
+        <p className="p-promo" style={stylepc2}>{ props.children }</p>
+      </div>
+    </div>
+  )
+}
+
+function CardMedia(props) {
+  return (
+    <figure className="main-card-image">
+        <img src={props.src}/>
+        {props.children}}
+    </figure>
+  )
+}
+
+function CardProgress(props) {
+  let { current, max, multiplier } = props, progress = current * 100 / max
+  return (
+    <div className="row progress-bar-holder">
+      <div className="col-xs-6 col-sm-6 col-md-6 left">
+        <p style={{fontWeight: "bold", color:"#f00"}}>{currency(multiplier * current)}</p>
+      </div>
+      <div className="col-xs-6 col-sm-6 col-md-6 right"><p style={{fontWeight: "bold", color:"#f00"}}>{currency(multiplier * max)}</p></div>
+      <div className="col-xs-12 col-sm-12 col-md-12 range-holder">
+        <div className="range" style={{backgroundColor: "#4b118e", width: `${ progress }%`}}></div>
+      </div>
+      <div className="col-xs-12 col-sm-12 col-md-12 range-txt">
+        <p style={{color: '#f00'}}><span style={{color: '#f00'}}>{max - current}</span> Acciones disponibles de <span style={{color: '#f00'}}>{max}</span></p>
+      </div>
+      <hr className="hr-card"/>
+    </div>
+  )
+}
+
+function Fact(props) {
+  return (
+    <div className="col col-xs-4 col-sm-4 col-md-4">
+      <p className="tit">{props.title.toUpperCase()}</p>
+      <div className={`icon ${props.icon}`}></div>
+      <p>{props.text}</p>
+    </div>
+  )
+}
+
+function CardFacts(props) {
+  return (
+    <div className="info-cols-holder ">
+      { props.facts.map( f => <Fact key={f.title} title={f.title} icon={f.icon} text={f.text} /> ) }
+    </div>
+  )
+}
+
+function CardActions(props) {
+  return (
+    <div className="row btns-holder">
+      {props.children}
+    </div>
+  )
+}
+
+function Card(props) {
+  return (
+    <div className="col-v col-xs-12 col-sm-4 col-md-4">
+      <div className="card-v fondeada">
+        {props.children}
+      </div>
+    </div>
+  )
+}
+
+function PropertyCard (props) {
+  let property = props.property, address = property.address
+  let facts = [
+    {
+      title: 'Monto a Invertir',
+      icon: 'icon-bill',
+      text: currency(property.dataSheet.investAmount)
+    },
+    {
+      title: 'Plazo Estimado',
+      icon: 'icon-calendar',
+      text: property.marketResearch.estimatedTime + ' MESES'
+    },
+    {
+      title: 'Rendimiento Estimado',
+      icon: 'icon-coins',
+      text: property.marketResearch.yieldInTime + ' %'
+    }
+  ]
+  return (
+    <Card>
+      <CardHeader title={property.title} address={address} />
+      <CardPromo>
+        Invierte desde <span>{currency(property.dataSheet.investAmount)}</span> pesos
+      </CardPromo>
+      <CardMedia src="http://placehold.it/400" />
+      <CardProgress
+        current={property.dataSheet.sharesSold}
+        max={property.dataSheet.totalShares}
+        multiplier={ property.dataSheet.investAmount } />
+      <CardFacts facts={facts} />
+      <CardActions>
+        <button className="button btn-v-card left">Ver Más</button>
+        <button className="button btn-v-card right" onClick={ () => props.onInvest(property) }>Invertir</button>
+      </CardActions>
+    </Card>
+  )
+}
+
+function FundCard (props) {
+  let property = props.property, address = property.address
+  let facts = [
+    {
+      title: 'Monto a Invertir',
+      icon: 'icon-bill',
+      text: currency(property.dataSheet.investAmount)
+    },
+    {
+      title: 'Plazo Estimado',
+      icon: 'icon-calendar',
+      text: property.marketResearch.estimatedTime + ' MESES'
+    },
+    {
+      title: 'Rendimiento Estimado',
+      icon: 'icon-coins',
+      text: property.marketResearch.yieldInTime + ' %'
+    }
+  ]
+
+  return (
+    <Card>
+      <CardHeader title={property.title} address={address} />
+      <CardMedia src="http://placehold.it/400">
+        <div className="fondeada-layer">
+            <p>PROYECTO<br/>FONDEADO</p>
+        </div>
+      </CardMedia>
+      <CardProgress
+        current={property.dataSheet.sharesSold}
+        max={property.dataSheet.totalShares}
+        multiplier={ property.dataSheet.investAmount } />
+      <CardFacts facts={facts} />
+      <div className="row btns-alone btns-holder">
+        <button className="button btn-v-card left">Detalles de la Propiedad</button>
+      </div>
+    </Card>
+  )
+}
+
+
+export { PropertyCard, FundCard }

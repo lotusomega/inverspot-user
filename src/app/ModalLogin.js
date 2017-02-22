@@ -38,7 +38,7 @@ class ModalLogin extends Component {
     e.preventDefault()
     if ( this.state.email !== "" && this.state.password !== "" ) {
       login(this.state.email, this.state.password)
-      .then( success => success && this.props.router.push('/user/456'), e => alert(e) )
+      .then( success => success && this.props.router.push('/user/profile'), e => alert(e) )
     }
     else {
       alert("Completa los campos")
@@ -52,7 +52,7 @@ class ModalLogin extends Component {
 		newState.user['level'] = 'user'
 		this.setState(newState)
     create( this.state.user )
-    .then( success => success && this.props.router.push('/users/456') )
+    .then( success => success && this.props.router.push('/users/profile') )
 
   }
 

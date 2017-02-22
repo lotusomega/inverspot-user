@@ -24,9 +24,9 @@ ReactDOM.render(
 
 	  </Route>
 		<Route path='/user' component={AppPanel} onEnter={ requireAuth }>
-			<Route path=':id' component={Profile} />
-			<Route path=':id/investment-data' component={InvestmentData} />
-			<Route path=':id/investments' component={Investments} />
+			<Route path='profile' component={Profile} />
+			<Route path='investment-data' component={InvestmentData} />
+			<Route path='investments' component={Investments} />
 		</Route>
   </Router>,
   document.getElementById('root')

@@ -13,7 +13,7 @@ class CardProfile extends Component {
               <div className="media-body">
                 <hr/>
                 <h3><strong>Ubicación</strong></h3>
-                <p>Earth</p>
+                <p>{this.props.user.state}</p>
                 <h3><strong>Genero</strong></h3>
                 <p>Unknown</p>
               </div>
