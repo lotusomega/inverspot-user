@@ -37,7 +37,7 @@ class NavBar extends Component {
         </div>
 
         <div className="navbar-header top-logo-holder">
-          <Link to="/">
+          <Link to="/index">
             <div className="icon-logo-main"></div>
           </Link>
           <p>Tu punto de inversión inmobiliario</p>
@@ -49,8 +49,16 @@ class NavBar extends Component {
 
         <div className="navbar-collapse collapse top-tittle-holder">
           <ul className="nav navbar-nav" style={stylen6}>
-            <li><a href="nosotros.html">Nosotros</a></li>
-            <li><a href="proyectos.html">Proyectos</a></li>
+            <li>
+              <Link to="/about-us">
+                <a>Nosotros</a>
+              </Link>
+            </li>
+            <li>
+              <Link to="/proyects">
+                <a>Proyectos</a>
+              </Link>
+            </li>
             <li><a href="como-funciona.html">Como Funciona</a></li>
             <li><a href="garantia.html">Garantia</a></li>
             <li><a href="faqs.html">FAQ's</a></li>

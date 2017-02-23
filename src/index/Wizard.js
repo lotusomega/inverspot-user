@@ -1,6 +1,7 @@
 import React,{Component} from 'react'
 import currency from '../services/currency'
 import { listProperty } from '../services/list'
+import ModalInvest from './ModalInvest'
 
 function ModalPromo (props){
   return (
@@ -14,22 +15,6 @@ function ModalButton(props){
   return (
     <div className="col-sm-12">
       <button onClick={ props.onClick } className="button large-invertion" style={{marginTop: "2px"}}>Invertir</button>
-    </div>
-  )
-}
-
-function ModalInvest(props){
-  return(
-    <div>
-      <div className="text-center counter" id="handleCounter">
-          <button className="counter-minus buttoncounter">-</button>
-          <input type="text"  style={{height: '34px', fontSize: '16px', fontWeight: '900', color: '#4B118E', textAlign: 'center', width: '50px'}}/>
-          <button className="counter-plus buttoncounter">+</button>
-      </div>
-      {props.children}
-      <div className="text-center counter" id="handleCounter">
-          <input type="text"  style={{height: '34px', width: '200px', color: '#4b118e', fontWeight: '900', textAlign: 'center'}}/>
-      </div><br/>
     </div>
   )
 }
@@ -78,10 +63,12 @@ function Step1 (props){
 }
 
 function Step2 (props){
+  let property = props.property.dataSheet
+  let total = property.totalShares - property.sharesSold
   return(
-    <Modal onClick={props.onClick} extraClass={ props.extraClass } show={props.show}>
+    <Modal>
       <ModalPromo>Número de acciones</ModalPromo>
-      <ModalInvest>
+      <ModalInvest total= {total} amount={property.investAmount}>
         <ModalPromo>Monto:</ModalPromo>
       </ModalInvest>
       <ModalSmallButton name='Invertir' onClick={ () => props.next(3) } clas='large-invertion'/>
@@ -92,7 +79,7 @@ function Step2 (props){
 
 function Step3 (props){
   return(
-    <Modal onClick={props.onClick} extraClass={ props.extraClass } show={props.show}>
+    <Modal>
       <ModalPromo>¿Estás seguro que deseas invertir en ésta propiedad?</ModalPromo>
       <ModalSmallButton onClick={ () => alert('Gracias') } name='Si' clas='large-invertion'/>
       <ModalSmallButton onClick={ () => props.next(2) }name='No' clas='large-confirm'/>

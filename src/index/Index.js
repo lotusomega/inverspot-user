@@ -5,7 +5,6 @@ import NewsLetter from './NewsLetter'
 import SectionIndex from './SectionIndex'
 import { listProperty } from '../services/list'
 import {Wizard} from './Wizard'
-// import ModalInvestment2 from './ModalInvestment2'
 
 function PropertyCards(props) {
   return (
@@ -52,12 +51,11 @@ class Index extends Component {
 
   render() {
     return (
-      <div>
-
-        { this.state.show && <Wizard onClick={ this.launchWizard } id={this.state.property._id} /> }
-        <Slider />
-        <div className="container">
-          <div className="row main-container propiedades">
+        <div>
+          { this.state.show && <Wizard onClick={ this.launchWizard } id={this.state.property._id} /> }
+          <Slider />
+          <div className="container">
+            <div className="row main-container propiedades">
             <div className="spacer double"></div>
             <h1><b>Proyectos para Invertir</b></h1>
             <div className="spacer triple"></div>
@@ -100,7 +98,6 @@ class Index extends Component {
                 </div>
             </div>
             <div className="spacer triple"></div>
-
           </div>
         </div>
       </div>

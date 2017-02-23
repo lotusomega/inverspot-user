@@ -7,7 +7,9 @@ import { isLogged } from './services/auth'
 import Profile from './profile/Profile'
 import InvestmentData from './investment-data/InvestmentData'
 import Investments from './investments-user/Investments'
-import Index from './index/Index.js'
+import Index from './index/Index'
+import AboutUs from './about-us/AboutUs'
+import Proyects from './proyects/Proyects'
 
 function requireAuth(nextState, replace) {
   if (!isLogged()) {
@@ -20,7 +22,9 @@ function requireAuth(nextState, replace) {
 ReactDOM.render(
 	<Router history={hashHistory}>
 		<Route path='/' component={ App }>
-			<Route path='index'component={Index}/>
+			<Route path='index' component={Index}/>
+			<Route path='about-us' component={AboutUs}/>
+			<Route path='proyects' component={Proyects}/>
 
 	  </Route>
 		<Route path='/user' component={AppPanel} onEnter={ requireAuth }>
