@@ -136,7 +136,7 @@ class PropertyCardBig1 extends Component  {
           <CardHeader title={property.title} address={address} />
           <div className="col-sm-12">
             <div className="col-sm-4">
-              <CardMedia src="http://placehold.it/400" />
+              <CardMedia src={'http://192.169.174.96/is-img/'+ property.image} />
               <CardProgress
               current={property.dataSheet && property.dataSheet.sharesSold}
               max={property.dataSheet && property.dataSheet.totalShares}
@@ -146,7 +146,7 @@ class PropertyCardBig1 extends Component  {
               { facts.map( f => <Fact key={f.title} title={f.title} icon={f.icon} text={f.text} /> ) }
               <div className="spacer"></div>
               <CardButton text="¡Contacta un asesor aquí!" clas="subtitulo">
-                <button className="button large-invertion">Aparta tu lugar aquí</button>
+                <button className="button large-invertion" onClick={ () => this.props.onInvest(property) }>Aparta tu lugar aquí</button>
               </CardButton>
               <CardButton text="Para que puedas invertir en este proyecto" clas="counter2">
                 <h5 className="text-center counter"><b>Quedan</b></h5>
@@ -188,7 +188,7 @@ class FundCardBig1 extends Component  {
           <CardHeader title={property.title} address={address} />
           <div className="col-sm-12">
             <div className="col-sm-4">
-              <CardMedia src="http://placehold.it/400">
+              <CardMedia src={'http://192.169.174.96/is-img/' + property.image}>
                 <div className="fondeada-layer" style={{display: 'block'}}>
                   <p>PROYECTO<br/>FONDEADO</p>
                 </div>

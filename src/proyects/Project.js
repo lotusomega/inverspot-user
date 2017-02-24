@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import {PropertyCardBig, FundCardBig} from './PropertyCardBig'
 import { listProperty } from '../services/list'
+import {Wizard} from '../index/Wizard'
 
 function Tab1 (props){
   console.log(props.property);
@@ -246,6 +247,7 @@ class Project extends Component {
 
   constructor(props) {
     super(props)
+    this.toggleWizard = this.toggleWizard.bind(this)
     this.state = {
       property: {}
     }
@@ -259,10 +261,22 @@ class Project extends Component {
     }
   }
 
+  toggleWizard( property ) {
+    // TODO: Invertir
+    console.log('Investing...', property);
+    if(!this.state.show) {
+      document.body.className += ' modal-open'
+      return this.setState({show: true, property})
+    }
+    document.body.className = ''
+    return this.setState({show: false})
+  }
+
   render() {
 
     return (
       <div className="container">
+        { this.state.show && <Wizard onClick={ this.toggleWizard } id={this.state.property._id} /> }
         <div className="row propiedades">
           <div className="spacer triple"></div>
 
