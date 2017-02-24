@@ -125,7 +125,7 @@ class InvestmentWizard extends Component {
 
   close(){
     this.props.onClick()
-    this.props.router.push('/user/investments')
+    // this.props.router.push('/user/investments')
   }
 
   summary(shares,total){
@@ -149,6 +149,7 @@ class InvestmentWizard extends Component {
     let Element = undefined
     let passProps = {
       property,
+      close: this.close,
       onClick: this.props.onClick,
       next: this.goTo,
       summary: this.summary,
@@ -172,7 +173,7 @@ class InvestmentWizard extends Component {
     }
     return (
       <div>
-        <div className="modal-backdrop fade in"></div>
+        <div className="modal-backdrop fade in" onClick={this.close}></div>
         <Element { ...passProps } />
       </div>
     )

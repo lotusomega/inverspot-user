@@ -10,7 +10,7 @@ class NavBar extends Component {
 
   closeSession() {
     logout( success => {
-      this.props.router.push('/index')
+      this.props.router.push('/')
     })
   }
   render() {
@@ -37,7 +37,7 @@ class NavBar extends Component {
                             <span className="sr-only"></span> <span className="icon-bar"></span><span
                                 className="icon-bar"></span><span className="icon-bar"></span>
                         </button>
-                        <a className="navbar-brand" href="#/index" style={style}>
+                        <a className="navbar-brand" href="/" style={style}>
                             <img alt="Brand" src="assets/images/inver.png" width="140px" style={style1}/>
                         </a>
 

@@ -40,7 +40,7 @@ class NavBar extends Component {
         </div>
 
         <div className="navbar-header top-logo-holder">
-          <Link to="/index">
+          <Link to="/">
             <div className="icon-logo-main"></div>
           </Link>
           <p>Tu punto de inversión inmobiliario</p>
@@ -66,14 +66,16 @@ class NavBar extends Component {
             <li><a href="garantia.html">Garantia</a></li>
             <li><a href="faqs.html">FAQ's</a></li>
             <li><a href="contacto.html">Contacto</a></li>
-            <li id='reg'><a data-toggle="modal" href="javascript: openRegisterModal();">Regístro</a></li>
-            <li id='acc'><a data-toggle="modal" href="javascript: openLoginModal()">Inicio de Sesión</a></li>
-            {this.user &&
+            { !this.user &&
+            <li id='reg'><a data-toggle="modal" href="javascript: openRegisterModal();">Regístro</a></li> }
+            { !this.user &&
+            <li id='acc'><a data-toggle="modal" href="javascript: openLoginModal()">Inicio de Sesión</a></li> }
+            { this.user &&
             <li>
               <Link to="/user/profile">
                 Mi perfil
               </Link>
-            </li>}
+            </li> }
 
           </ul>
         </div>

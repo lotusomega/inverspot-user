@@ -23,17 +23,17 @@ class ContactForm extends Component {
                       <div className="row">
                           <div className="col-md-6">
                               <div className="form-group">
-                                  <label for="name">
+                                  <label htmlFor="name">
                                       Nombre *</label>
                                   <input type="text" className="form-control" id="name" placeholder="Ingrese su nombre" required="required" />
                               </div>
                               <div className="form-group">
-                                  <label for="phone">
+                                  <label htmlFor="phone">
                                       Teléfono *</label>
                                   <input type="text" className="form-control" id="phone" placeholder="Ingrese su número teléfonico" required="required" />
                               </div>
                               <div className="form-group">
-                                  <label for="email">
+                                  <label htmlFor="email">
                                       Correo Electrónico *</label>
                                   <div className="input-group">
                                       <span className="input-group-addon"><i className="fa fa-envelope-o" aria-hidden="true"></i>
@@ -41,7 +41,7 @@ class ContactForm extends Component {
                                       <input type="email" className="form-control" id="email" placeholder="Ingrese su correo" required="required" /></div>
                               </div>
                               <div className="form-group">
-                                  <label for="subject">
+                                  <label htmlFor="subject">
                                       Asunto *</label>
                                   <select id="subject" name="subject" className="form-control" required="required">
                                       <option value="na" selected="">Elija uno:</option>
@@ -53,7 +53,7 @@ class ContactForm extends Component {
                           </div>
                           <div className="col-md-6">
                               <div className="form-group">
-                                  <label for="name">
+                                  <label htmlFor="name">
                                       Mensaje *</label>
                                   <textarea name="message" id="message" className="form-control" rows="9" cols="25" required="required"
                                       placeholder="Mensaje"></textarea>

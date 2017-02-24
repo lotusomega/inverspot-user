@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { Link } from 'react-router'
 
 class Slider extends Component {
   render() {
@@ -22,8 +23,8 @@ class Slider extends Component {
                   <h1>¡Invertir $100,000 en<br/>inmuebles es posible!</h1>
                   <h3 className="hidden-xs hidden-sm">Inverspot, la primera plataforma de crownfounding inmobiliario que te permite invertir a plazo o de contado en México</h3>
                   <div className="hidden-xs hidden-sm btn-promo col-xs-6 col-sm-6 col-md-6">
-                      <a href="/inmuebles">
-                      <button style={stylesli}>Ver proyectos</button></a>
+                      <Link to="/projects">
+                      <button style={stylesli}>Ver proyectos</button></Link>
                   </div>
                   <div className="btn-promo col-xs-6 col-sm-6 col-md-6">
                       <button style={stylesli} data-toggle="modal" href="javascript:void(0)" onclick="openRegisterModal();">Registrate aquí</button>
@@ -38,8 +39,8 @@ class Slider extends Component {
                   <h1>¡Invertir $100,000 en<br/>inmuebles es posible!</h1>
                   <h3 className="hidden-xs hidden-sm">Inverspot, la primera plataforma de crownfounding inmobiliario que te permite invertir a plazo o de contado en México</h3>
                   <div className="hidden-xs hidden-sm btn-promo col-xs-6 col-sm-6 col-md-6">
-                      <a href="/inmuebles">
-                      <button style={stylesli}>Ver proyectos</button></a>
+                      <Link to="/projects">
+                      <button style={stylesli}>Ver proyectos</button></Link>
                   </div>
                   <div className="btn-promo col-xs-6 col-sm-6 col-md-6">
                       <button style={stylesli} data-toggle="modal" href="javascript:void(0)" onclick="openRegisterModal();">Registrate aquí</button>
@@ -54,8 +55,8 @@ class Slider extends Component {
                   <h1>¡Invertir $100,000 en<br/>inmuebles es posible!</h1>
                   <h3 className="hidden-xs hidden-sm">Inverspot, la primera plataforma de crownfounding inmobiliario que te permite invertir a plazo o de contado en México</h3>
                   <div className="hidden-xs hidden-sm btn-promo col-xs-6 col-sm-6 col-md-6">
-                      <a href="/inmuebles">
-                      <button style={stylesli}>Ver proyectos</button></a>
+                      <Link to="/projects">
+                      <button style={stylesli}>Ver proyectos</button></Link>
                   </div>
                   <div className="btn-promo col-xs-6 col-sm-6 col-md-6">
                       <button style={stylesli} data-toggle="modal" href="javascript:void(0)" onclick="openRegisterModal();">Registrate aquí</button>

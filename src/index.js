@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { Router, Route, hashHistory } from 'react-router'
+import { Router, Route, hashHistory, IndexRoute } from 'react-router'
 import App from './app/App';
 import AppPanel from './app-panel/AppPanel';
 import { isLogged } from './services/auth'
@@ -15,7 +15,7 @@ import Project from './proyects/Project'
 function requireAuth(nextState, replace) {
   if (!isLogged()) {
     replace({
-      pathname: '/index'
+      pathname: '/'
     })
   }
 }
@@ -23,7 +23,7 @@ function requireAuth(nextState, replace) {
 ReactDOM.render(
 	<Router history={hashHistory}>
 		<Route path='/' component={ App }>
-			<Route path='index' component={Index}/>
+			<IndexRoute component={Index}/>
 			<Route path='about-us' component={AboutUs}/>
 			<Route path='projects' component={Proyects}/>
 			<Route path='projects/:id' component={Project}/>
