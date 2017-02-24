@@ -194,10 +194,10 @@ function Footer(props){
 
 function Modal (props){
   return(
-    <div className="modal fade login" id="loginModal">
+    <div className="modal fade login in" style={{display: 'block'}} id="loginModal">
       <div className="modal-dialog login animated">
         <div className="modal-content">
-          <button type="button" className="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+          <button type="button" className="close" onClick={props.onClick}>&times;</button>
           {props.children}
         </div>
       </div>
@@ -205,7 +205,7 @@ function Modal (props){
   )
 }
 
-class ModalLogin1 extends Component {
+class ModalLogin extends Component {
   constructor(props) {
     super(props)
     this.authenticate = this.authenticate.bind(this)
@@ -228,7 +228,7 @@ class ModalLogin1 extends Component {
     e.preventDefault()
     if ( this.state.email !== "" && this.state.password !== "" ) {
       login(this.state.email, this.state.password)
-      .then( success => success && this.props.router.push('/user/profile'), e => alert(e) )
+      .then( success => success && this.props.router.push('/user/profile'), e => alert(e),this.props.onClick())
     }
     else {
       alert("Completa los campos")
@@ -237,7 +237,7 @@ class ModalLogin1 extends Component {
 
   render() {
     return (
-      <Modal>
+      <Modal onClick={this.props.onClick}>
         <Header/>
         <Login authenticate={this.authenticate} email={this.state.email} password={this.state.password} handleInput={this.handleInput}/>
         <Footer/>
@@ -246,7 +246,7 @@ class ModalLogin1 extends Component {
   }
 }
 
-class ModalRegister1 extends Component {
+class ModalRegister extends Component {
   constructor(props) {
     super(props)
     this.handleInputRegister = this.handleInputRegister.bind(this)
@@ -277,12 +277,12 @@ class ModalRegister1 extends Component {
 		newState.user['level'] = 'user'
 		this.setState(newState)
     create( this.state.user )
-    .then( success => success && this.props.router.push('/users/profile') )
+    .then( success => success && alert("Registro exitoso, activa tu cuenta"),this.props.onClick() )
   }
 
   render() {
     return (
-      <Modal>
+      <Modal onClick={this.props.onClick}>
         <Header/>
         <Register handleSubmit={this.handleSubmit} user={this.state.user} asesor={this.state.asesor} handleInputRegister={this.handleInputRegister}/>
         <Footer/>
@@ -291,7 +291,36 @@ class ModalRegister1 extends Component {
   }
 }
 
-let ModalRegister = withRouter(ModalRegister1)
-let ModalLogin = withRouter(ModalLogin1)
+class LoginWizard extends Component {
 
-export {ModalLogin, ModalRegister};
+  componentWillMount() {
+    this.user = JSON.parse(localStorage.getItem('my'))
+  }
+
+  render(){
+    let { step } = this.props
+    let Element = undefined
+    let passProps = {
+      step: step,
+      onClick: this.props.onClick
+    }
+    switch (step) {
+      case 1:
+        Element = withRouter(ModalRegister)
+        break;
+      case 2:
+        Element = withRouter(ModalLogin)
+        break;
+      default:
+        break;
+    }
+    return (
+      <div>
+        <div className="modal-backdrop fade in"></div>
+        <Element { ...passProps } />
+      </div>
+    )
+  }
+}
+
+export default withRouter(LoginWizard);

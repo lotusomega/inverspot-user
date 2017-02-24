@@ -24,10 +24,10 @@ class Proyects extends Component {
   }
 
   componentDidMount() {
-    listProperty({status: 'available'}, {sort:'title', limit: 3}, 'title address dataSheet marketResearch')
+    listProperty({status: 'available'}, {sort:'title', limit: 3}, 'title address image dataSheet marketResearch')
       .then( propertiesa => this.setState({ propertiesa }) )
       .catch( e => alert(e) )
-    listProperty({status: 'fund'}, {sort:'title', limit: 6}, 'title address dataSheet marketResearch')
+    listProperty({status: 'fund'}, {sort:'title', limit: 6}, 'title address image dataSheet marketResearch')
       .then( propertiesf => this.setState({ propertiesf }) )
       .catch( e => alert(e) )
   }

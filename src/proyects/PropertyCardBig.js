@@ -136,7 +136,7 @@ class PropertyCardBig1 extends Component  {
           <CardHeader title={property.title} address={address} />
           <div className="col-sm-12">
             <div className="col-sm-4">
-              <CardMedia src="http://placehold.it/400" />
+              <CardMedia src={property.image} />
               <CardProgress
               current={property.dataSheet && property.dataSheet.sharesSold}
               max={property.dataSheet && property.dataSheet.totalShares}
@@ -188,7 +188,7 @@ class FundCardBig1 extends Component  {
           <CardHeader title={property.title} address={address} />
           <div className="col-sm-12">
             <div className="col-sm-4">
-              <CardMedia src="http://placehold.it/400">
+              <CardMedia src={property.image}>
                 <div className="fondeada-layer" style={{display: 'block'}}>
                   <p>PROYECTO<br/>FONDEADO</p>
                 </div>

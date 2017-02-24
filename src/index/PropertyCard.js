@@ -122,7 +122,7 @@ function PropertyCard (props) {
       <CardPromo>
         Invierte desde <span>{currency(property.dataSheet.investAmount)}</span> pesos
       </CardPromo>
-      <CardMedia src="http://placehold.it/400" />
+      <CardMedia src={property.image} />
       <CardProgress
         current={property.dataSheet.sharesSold}
         max={property.dataSheet.totalShares}
@@ -161,7 +161,7 @@ function FundCard (props) {
   return (
     <Card>
       <CardHeader title={property.title} address={address} />
-      <CardMedia src="http://placehold.it/400">
+      <CardMedia src={property.image}>
         <div className="fondeada-layer">
             <p>PROYECTO<br/>FONDEADO</p>
         </div>
