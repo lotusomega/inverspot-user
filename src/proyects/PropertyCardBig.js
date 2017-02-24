@@ -1,5 +1,6 @@
 import React from 'react'
 import currency from '../services/currency'
+import {Link} from 'react-router'
 
 function CardHeader(props) {
   let { title, address } = props, style = { fontSize: "12px", fontWeight: "400", color: "white" }
@@ -80,17 +81,29 @@ function CardActions(props) {
   return (
     <div className="col-sm-12 form-inline text-center">
       <div className="spacer"></div>
+      <Link to={`/projects/${ props.property._id }`} >
       <button type="button" className="btnn button btn-grande">
-      <a style={{textDecoration: 'none', color: '#fff'}} >Resumen del Proyecto</a></button>&nbsp;
+        <a style={{textDecoration: 'none', color: '#fff'}} >Resumen del Proyecto</a>
+      </button>&nbsp;
+    </Link>
 
+    <Link to={`/projects/${ props.property._id }`} >
       <button type="button" className="btnn button btn-grande">
-      <a style={{textDecoration: 'none', color: '#fff'}} >Estudio de Mercado</a></button>&nbsp;
+        <a style={{textDecoration: 'none', color: '#fff'}} >Estudio de Mercado</a>
+      </button>&nbsp;
+    </Link>
 
+    <Link to={`/projects/${ props.property._id }`} >
       <button type="button" className="btnn button btn-grande">
-      <a style={{textDecoration: 'none', color: '#fff'}} >Acerca del Desarrollador</a></button>&nbsp;
+        <a style={{textDecoration: 'none', color: '#fff'}} >Acerca del Desarrollador</a>
+      </button>&nbsp;
+    </Link>
 
+    <Link to={`/projects/${ props.property._id }`} >
       <button type="button" className="btnn button btn-grande">
-      <a style={{textDecoration: 'none', color: '#fff'}} >Avance de Obra</a></button>&nbsp;
+        <a style={{textDecoration: 'none', color: '#fff'}} >Avance de Obra</a>
+      </button>&nbsp;
+    </Link>
 
       <div className="spacer"></div>
     </div>
@@ -138,7 +151,7 @@ function PropertyCardBig (props) {
               <h5 className="text-center counter"><b>Quedan</b></h5>
               <button id="demo1" className="button large-counter"></button>
             </CardButton>
-            <CardActions/>
+            <CardActions property={property}/>
           </div>
         </div>
       </div>
@@ -186,7 +199,7 @@ function FundCardBig (props) {
             { facts.map( f => <Fact key={f.title} title={f.title} icon={f.icon} text={f.text} /> ) }
             <div className="spacer"></div>
             <CardFund />
-            <CardActions/>
+            <CardActions property={property}/>
           </div>
         </div>
       </div>

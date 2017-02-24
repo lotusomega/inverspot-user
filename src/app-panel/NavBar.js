@@ -62,7 +62,7 @@ class NavBar extends Component {
                         </ul>
                         <ul className="nav navbar-nav navbar-right">
                             <li className="dropdown"><a href="#" className="dropdown-toggle" data-toggle="dropdown">
-                                <span className="user-name">
+                                <span className="user-name" onClick={this.closeSession}>
                                   {this.props.user.name}
                                 </span>
                                 <b className="caret"></b></a>

@@ -2,6 +2,9 @@ import React, { Component } from 'react'
 import { Link } from 'react-router'
 
 class NavBar extends Component {
+  componentWillMount() {
+    this.user = JSON.parse(localStorage.getItem('my'))
+  }
   render() {
     const stylen={
       backgroundColor: "#fff"
@@ -51,12 +54,12 @@ class NavBar extends Component {
           <ul className="nav navbar-nav" style={stylen6}>
             <li>
               <Link to="/about-us">
-                <a>Nosotros</a>
+                Nosotros
               </Link>
             </li>
             <li>
-              <Link to="/proyects">
-                <a>Proyectos</a>
+              <Link to="/projects">
+                Proyectos
               </Link>
             </li>
             <li><a href="como-funciona.html">Como Funciona</a></li>
@@ -65,16 +68,13 @@ class NavBar extends Component {
             <li><a href="contacto.html">Contacto</a></li>
             <li id='reg'><a data-toggle="modal" href="javascript: openRegisterModal();">Regístro</a></li>
             <li id='acc'><a data-toggle="modal" href="javascript: openLoginModal()">Inicio de Sesión</a></li>
+            {this.user &&
+            <li>
+              <Link to="/user/profile">
+                Mi perfil
+              </Link>
+            </li>}
 
-            <li className="dropdown">
-              <a className="dropdown-toggle" data-toggle="dropdown" href="#">Bienvenido
-              <span className="caret"></span></a>
-              <ul className="dropdown-menu">
-                <li><a href="#">Mi Perfil</a></li>
-                <li><a href="#">Mis Inversiones</a></li>
-                <li><a href="#">Salir</a></li>
-              </ul>
-            </li>
           </ul>
         </div>
       </nav>

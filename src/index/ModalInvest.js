@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import currency from '../services/currency'
+import {ModalSmallButton} from './Wizard'
 
 class ModalInvest extends Component {
 
@@ -8,21 +9,18 @@ class ModalInvest extends Component {
     this.more = this.more.bind(this)
     this.less = this.less.bind(this)
     this.state = {
-      shares: 1,
-      amount: this.props.amount
+      shares: 1
     }
   }
 
   more(){
     if (this.state.shares < this.props.total )
       this.setState({shares: this.state.shares + 1 })
-    this.setState({amount: this.props.amount * this.state.shares})
   }
 
   less(){
     if (this.state.shares > 1 )
       this.setState({shares: this.state.shares - 1})
-    this.setState({amount: this.props.amount * this.state.shares})
   }
   render(){
     return(
@@ -34,8 +32,9 @@ class ModalInvest extends Component {
         </div>
         {this.props.children}
         <div className="text-center counter" id="handleCounter">
-            <input type="text" value={currency(this.state.amount)} style={{height: '34px', width: '200px', color: '#4b118e', fontWeight: '900', textAlign: 'center'}} readOnly/>
+            <input type="text" value={currency(this.props.amount * this.state.shares)} style={{height: '34px', width: '200px', color: '#4b118e', fontWeight: '900', textAlign: 'center'}} readOnly/>
         </div><br/>
+        <ModalSmallButton name='Invertir' onClick={ () => this.props.summary(this.state.shares, this.props.amount * this.state.shares) } clas='large-invertion'/>
       </div>
     )
   }

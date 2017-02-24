@@ -1,7 +1,9 @@
 import React, { Component } from 'react'
+import currency from '../services/currency'
 
 class InvestmentCard extends Component {
   render() {
+    let investment = this.props.investment
 
     return (
       <a href="#" className="list-group-item">
@@ -11,16 +13,15 @@ class InvestmentCard extends Component {
           </figure>
         </div>
         <div className="col-md-6">
-          <h4 className="list-group-item-heading"> COL DOCTORES <br/><small><b> Proyecto de departamento </b></small></h4>
-          <p className="list-group-item-text"> Eu eum corpora torquatos, ne postea constituto mea, quo tale lorem facer no. Ut sed odio appetere partiendo, quo meliore salutandi ex. Vix an sanctus vivendo, sed vocibus accumsan petentium ea.
-              Sed integre saperet at, no nec debet erant, quo dico incorrupte comprehensam ut. Et minimum consulatu ius, an dolores iracundia est, oportere vituperata interpretaris sea an. Sed id error quando indoctum, mel suas saperet at.
+          <h4 className="list-group-item-heading"> {investment.property.title} <br/><small><b> Descripción </b></small></h4>
+          <p className="list-group-item-text"> {investment.property.description}
           </p>
         </div>
         <div className="col-md-3 text-center">
-            <h2><small> Mi Inversión  $100,000.00 </small></h2>
+            <h2><small> Mi Inversión {currency(investment.amount)} </small></h2>
             <button type="button" className="btn btn-primary btn-lg btn-block">Avance de Obra</button>
             <div>
-                <p> Mis Acciones 10 de 30 </p>
+                <p> Mis Acciones {investment.sharesNumber} de {investment.property.dataSheet.totalShares} </p>
             </div>
         </div>
       </a>

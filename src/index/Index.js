@@ -22,14 +22,14 @@ class Index extends Component {
 
   constructor(props) {
     super(props)
-    this.launchWizard = this.launchWizard.bind(this)
+    this.toggleWizard = this.toggleWizard.bind(this)
     this.state = {
       propertiesa: [],
       propertiesf: []
     }
   }
 
-  launchWizard( property ) {
+  toggleWizard( property ) {
     // TODO: Invertir
     console.log('Investing...', property);
     if(!this.state.show) {
@@ -52,14 +52,14 @@ class Index extends Component {
   render() {
     return (
         <div>
-          { this.state.show && <Wizard onClick={ this.launchWizard } id={this.state.property._id} /> }
+          { this.state.show && <Wizard onClick={ this.toggleWizard } id={this.state.property._id} /> }
           <Slider />
           <div className="container">
             <div className="row main-container propiedades">
             <div className="spacer double"></div>
             <h1><b>Proyectos para Invertir</b></h1>
             <div className="spacer triple"></div>
-            <PropertyCards onInvest={ this.launchWizard } propertiesa={ this.state.propertiesa } element='PropertyCard'/>
+            <PropertyCards onInvest={ this.toggleWizard } propertiesa={ this.state.propertiesa } element='PropertyCard'/>
 
             <div className="spacer triple"></div>
             <NewsLetter />
