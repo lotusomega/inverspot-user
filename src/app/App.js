@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import NavBar from './NavBar'
 import Footer from './Footer'
-import ModalLogin from './ModalLogin'
+import {ModalRegister} from './ModalLog'
 
 class App extends Component {
   render() {
@@ -14,7 +14,7 @@ class App extends Component {
         <Footer />
         <div className="spacer"></div>
         <footer className="end-bar">©2017 inverspot.mx | All Rights reserved</footer>
-        <ModalLogin/>
+        <ModalRegister/>
       </div>
     );
   }

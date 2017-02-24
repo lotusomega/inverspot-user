@@ -37,7 +37,7 @@ class NavBar extends Component {
                             <span className="sr-only"></span> <span className="icon-bar"></span><span
                                 className="icon-bar"></span><span className="icon-bar"></span>
                         </button>
-                        <a className="navbar-brand" href="#" style={style}>
+                        <a className="navbar-brand" href="#/index" style={style}>
                             <img alt="Brand" src="assets/images/inver.png" width="140px" style={style1}/>
                         </a>
 
@@ -63,7 +63,7 @@ class NavBar extends Component {
                         <ul className="nav navbar-nav navbar-right">
                             <li className="dropdown"><a href="#" className="dropdown-toggle" data-toggle="dropdown">
                                 <span className="user-name" onClick={this.closeSession}>
-                                  {this.props.user.name}
+                                  Cerrar Sesión
                                 </span>
                                 <b className="caret"></b></a>
                                 <ul className="dropdown-menu">

@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { login } from '../services/auth'
 import { create } from '../services/signup'
+import { listUser } from '../services/list'
 import { withRouter } from 'react-router'
 
 class ModalLogin extends Component {
@@ -14,8 +15,15 @@ class ModalLogin extends Component {
     this.state = {
       email: '',
       password: '',
-      user: {}
+      user: {},
+      asesor: []
     }
+  }
+
+  componentDidMount() {
+    listUser({level:{ $in: ['user', 'asesor'] }}, {sort:'name'}, 'name _id')
+      .then( asesor => this.setState({ asesor }) )
+      .catch( e => alert(e) )
   }
 
   handleInput(e) {
@@ -58,36 +66,7 @@ class ModalLogin extends Component {
 
 
   render() {
-    const stylem={
-      color: "4B118E"
-    }
-    const stylem1={
-      display: "none"
-    }
-    const stylem2={
-      marginBottom: "5px"
-    }
-    const stylem3={
-      height: "30px"
-    }
-    const stylem4={
-      float: "left", marginLeft: "10px"
-    }
-    const stylem5={
-      fontSize: "12px"
-    }
-    const stylem6={
-      marginLeft: "10px", padding: "15px 0px"
-    }
-    const stylem7={
-      marginTop: "8px"
-    }
-    const stylem8 ={
-      fontSize: "12px", marginTop: "8px", color: "black"
-    }
-    const stylem9={
-      fontSize: "14px"
-    }
+
     return (
       <div className="modal fade login" id="loginModal">
         <div className="modal-dialog login animated">
@@ -99,12 +78,11 @@ class ModalLogin extends Component {
               <br/><br/>
             </div>
 
-
             <div className="modal-body">
               <div className="box">
-                  <div className="content registerBox" style={stylem1}>
+                  <div className="content registerBox" style={{  display: "none"}}>
                       <div className="form">
-                          <h1>Regístrate <small style={stylem}> Ingresa tus datos</small></h1>
+                          <h1>Regístrate <small style={{color: "4B118E"}}> Ingresa tus datos</small></h1>
                               <hr/>
                               <form onSubmit={ this.handleSubmit }  data-toggle="validator" role="form">
 
@@ -124,21 +102,19 @@ class ModalLogin extends Component {
                                   value={ this.state.user.telephone } onChange={ this.handleInputRegister }/>
 
                                   <div className="control-group">
-                                      <div className="select" style={stylem2}>
-                                          <select id="subject" name="asesor" className="form-control" required="required" style={stylem3}
+                                      <div className="select" style={{marginBottom: "5px"}}>
+                                          <select id="subject" name="asesor" className="form-control" required="required" style={{height: "30px"}}
                                             value={ this.state.user.asesor } onChange={ this.handleInputRegister }>
                                               <option value="na" selected="">¿Quién te atendió?</option>
-                                              <option value="service">Soy desarrollador y deseo subir mi proyecto</option>
-                                              <option value="suggestions">Soy proveedor y deseo brindar mis servicios</option>
-                                              <option value="product">Soy cliente y tengo dudas</option>
+                                              {this.state.asesor.map(asesor => <option key={asesor._id} value={asesor._id}>{asesor.name}</option>)}
                                           </select>
                                           <div className="select__arrow"></div>
                                       </div>
                                   </div>
 
                                   <div className="control-group">
-                                      <div className="select" style={stylem2}>
-                                          <select id="subject" name="state" className="form-control" required="required" style={stylem3}
+                                      <div className="select" style={{marginBottom: "5px"}}>
+                                          <select id="subject" name="state" className="form-control" required="required" style={{height: "30px"}}
                                             value={ this.state.user.state } onChange={ this.handleInputRegister }>
                                               <option value="na" selected="">Estado</option>
                                               <option value="Aguascalientes">Aguascalientes</option>
@@ -179,8 +155,8 @@ class ModalLogin extends Component {
                                     </div>
 
                                   <div className="control-group">
-                                      <div className="select" style={stylem2}>
-                                          <select id="subject" name="contactForm" className="form-control" required="required" style={stylem3}
+                                      <div className="select" style={{marginBottom: "5px"}}>
+                                          <select id="subject" name="contactForm" className="form-control" required="required" style={{height: "30px"}}
                                             value={ this.state.user.contactForm } onChange={ this.handleInputRegister }>
                                               <option>¿Cómo nos conociste?</option>
                                               <option value="Facebook">Facebook</option>
@@ -193,9 +169,9 @@ class ModalLogin extends Component {
                                       </div>
                                   </div>
 
-                                  <div className="input-group" style={stylem4}>
+                                  <div className="input-group" style={{float: "left", marginLeft: "10px"}}>
                                     <div className="checkbox">
-                                        <label style={stylem5}>
+                                        <label style={{fontSize: "12px"}}>
                                             <input id="login-remember" type="checkbox" name="remember" value="1"/> Acepto avisos de política y privacidad
                                         </label>
                                     </div>
@@ -207,7 +183,7 @@ class ModalLogin extends Component {
                                       <button className="loginBtn loginBtn--facebook">Sing in with Facebook</button>
                                   </div>
                                   <div className="col-sm-6">
-                                      <input className="button btn-register" style={stylem6} type="submit" value="Enviar" name="commit"/>
+                                      <input className="button btn-register" style={{marginLeft: "10px", padding: "15px 0px"}} type="submit" value="Enviar" name="commit"/>
                                   </div>
                                 </div>
                               </div>
@@ -234,15 +210,15 @@ class ModalLogin extends Component {
                                         <input id="password" className="form-control" type="password" placeholder="Contraseña" name="password"
                                           value={ this.state.password }
                                           onChange={ this.handleInput }/>
-                                        <div className="input-group" style={stylem4}>
+                                        <div className="input-group" style={{float: "left", marginLeft: "10px"}}>
                                           <div className="checkbox">
-                                              <label style={stylem5}>
+                                              <label style={{fontSize: "12px"}}>
                                                   <input id="login-remember" type="checkbox" name="remember" value="1"/> No cerrar sesión
                                               </label>
                                           </div>
                                         </div>
-                                        <div className="control control-login" style={stylem7}>
-                                            <a  data-target="#pwdModal" data-toggle="modal" className="close" data-dismiss="modal" style={stylem8}>
+                                        <div className="control control-login" style={{  marginTop: "8px"}}>
+                                            <a  data-target="#pwdModal" data-toggle="modal" className="close" data-dismiss="modal" style={{fontSize: "12px", marginTop: "8px", color: "black"}}>
                                                 ¿Olvide mi contraseña?
                                             </a>
                                         </div>
@@ -262,11 +238,11 @@ class ModalLogin extends Component {
                 <div className="modal-footer">
                     <div className="forgot login-footer">
                         <span>¿No tienes una cuenta?
-                             <a href="javascript: showRegisterForm();" style={stylem9}>Registrate con Nosotros</a></span>
+                             <a href="javascript: showRegisterForm();" style={{ fontSize: "14px"}}>Registrate con Nosotros</a></span>
                     </div>
                     <div className="forgot register-footer">
                          <span>Ya tengo mi cuenta</span>
-                         <a href="javascript: showLoginForm();" style={stylem9}>Ingresa</a>
+                         <a href="javascript: showLoginForm();" style={{ fontSize: "14px"}}>Ingresa</a>
                     </div>
                 </div>
           </div>

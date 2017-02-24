@@ -1,6 +1,6 @@
-import React from 'react'
+import React, {Component} from 'react'
 import currency from '../services/currency'
-import {Link} from 'react-router'
+import {Link, withRouter} from 'react-router'
 
 function CardHeader(props) {
   let { title, address } = props, style = { fontSize: "12px", fontWeight: "400", color: "white" }
@@ -10,7 +10,7 @@ function CardHeader(props) {
             <h3 className="t1">{title}</h3>
         </div>
         <div className="col-sm-8">
-            <h5 className="t2">{address.suburb}</h5>
+            <h5 className="t2">{address && address.suburb}</h5>
         </div>
     </div>
   )
@@ -110,102 +110,109 @@ function CardActions(props) {
   )
 }
 
-function PropertyCardBig (props) {
-  let property = props.property, address = property.address
-  let facts = [
-    {
-      title: 'Monto a Invertir',
-      icon: 'style/images/bill.png',
-      text: currency(property.dataSheet.investAmount)
-    },
-    {
-      title: 'Plazo Estimado',
-      icon: 'style/images/calendar.png',
-      text: property.marketResearch.estimatedTime + ' MESES'
-    },
-    {
-      title: 'Rendimiento Estimado',
-      icon: 'style/images/graphy.png',
-      text: property.marketResearch.yieldInTime + ' %'
-    }
-  ]
-  return (
-    <div>
-      <div className="row bordered">
-        <CardHeader title={property.title} address={address} />
-        <div className="col-sm-12">
-          <div className="col-sm-4">
-            <CardMedia src="http://placehold.it/400" />
-            <CardProgress
-            current={property.dataSheet.sharesSold}
-            max={property.dataSheet.totalShares}
-            multiplier={ property.dataSheet.investAmount } />
-          </div>
-          <div className="col-sm-8 card-large">
-            { facts.map( f => <Fact key={f.title} title={f.title} icon={f.icon} text={f.text} /> ) }
-            <div className="spacer"></div>
-            <CardButton text="¡Contacta un asesor aquí!" clas="subtitulo">
-              <button className="button large-invertion">Aparta tu lugar aquí</button>
-            </CardButton>
-            <CardButton text="Para que puedas invertir en este proyecto" clas="counter2">
-              <h5 className="text-center counter"><b>Quedan</b></h5>
-              <button id="demo1" className="button large-counter"></button>
-            </CardButton>
-            <CardActions property={property}/>
+class PropertyCardBig1 extends Component  {
+  render() {
+    let property = this.props.property, address = property.address
+    let facts = [
+      {
+        title: 'Monto a Invertir',
+        icon: 'style/images/bill.png',
+        text: currency(property.dataSheet && property.dataSheet.investAmount)
+      },
+      {
+        title: 'Plazo Estimado',
+        icon: 'style/images/calendar.png',
+        text: property.marketResearch && property.marketResearch.estimatedTime + ' MESES'
+      },
+      {
+        title: 'Rendimiento Estimado',
+        icon: 'style/images/graphy.png',
+        text: property.marketResearch && property.marketResearch.yieldInTime + ' %'
+      }
+    ]
+    return (
+      <div>
+        <div className="row bordered">
+          <CardHeader title={property.title} address={address} />
+          <div className="col-sm-12">
+            <div className="col-sm-4">
+              <CardMedia src="http://placehold.it/400" />
+              <CardProgress
+              current={property.dataSheet && property.dataSheet.sharesSold}
+              max={property.dataSheet && property.dataSheet.totalShares}
+              multiplier={ property.dataSheet && property.dataSheet.investAmount } />
+            </div>
+            <div className="col-sm-8 card-large">
+              { facts.map( f => <Fact key={f.title} title={f.title} icon={f.icon} text={f.text} /> ) }
+              <div className="spacer"></div>
+              <CardButton text="¡Contacta un asesor aquí!" clas="subtitulo">
+                <button className="button large-invertion">Aparta tu lugar aquí</button>
+              </CardButton>
+              <CardButton text="Para que puedas invertir en este proyecto" clas="counter2">
+                <h5 className="text-center counter"><b>Quedan</b></h5>
+                <button id="demo1" className="button large-counter"></button>
+              </CardButton>
+              <CardActions property={property}/>
+            </div>
           </div>
         </div>
+        <div className="spacer double"></div>
       </div>
-      <div className="spacer double"></div>
-    </div>
-  )
+    )
+  }
 }
 
-function FundCardBig (props) {
-  let property = props.property, address = property.address
-  let facts = [
-    {
-      title: 'Monto a Invertir',
-      icon: 'style/images/bill.png',
-      text: currency(property.dataSheet.investAmount)
-    },
-    {
-      title: 'Plazo Estimado',
-      icon: 'style/images/calendar.png',
-      text: property.marketResearch.estimatedTime + ' MESES'
-    },
-    {
-      title: 'Rendimiento Estimado',
-      icon: 'style/images/graphy.png',
-      text: property.marketResearch.yieldInTime + ' %'
-    }
-  ]
-  return (
-    <div>
-      <div className="row bordered">
-        <CardHeader title={property.title} address={address} />
-        <div className="col-sm-12">
-          <div className="col-sm-4">
-            <CardMedia src="http://placehold.it/400">
-              <div className="fondeada-layer" style={{display: 'block'}}>
-                <p>PROYECTO<br/>FONDEADO</p>
-              </div>
-            </CardMedia>
-            <CardProgress
-            current={property.dataSheet.sharesSold}
-            max={property.dataSheet.totalShares}
-            multiplier={ property.dataSheet.investAmount } />
-          </div>
-          <div className="col-sm-8 card-large">
-            { facts.map( f => <Fact key={f.title} title={f.title} icon={f.icon} text={f.text} /> ) }
-            <div className="spacer"></div>
-            <CardFund />
-            <CardActions property={property}/>
+class FundCardBig1 extends Component  {
+  render(){
+    let property = this.props.property, address = property.address
+    let facts = [
+      {
+        title: 'Monto a Invertir',
+        icon: 'style/images/bill.png',
+        text: currency(property.dataSheet.investAmount)
+      },
+      {
+        title: 'Plazo Estimado',
+        icon: 'style/images/calendar.png',
+        text: property.marketResearch.estimatedTime + ' MESES'
+      },
+      {
+        title: 'Rendimiento Estimado',
+        icon: 'style/images/graphy.png',
+        text: property.marketResearch.yieldInTime + ' %'
+      }
+    ]
+    return (
+      <div>
+        <div className="row bordered">
+          <CardHeader title={property.title} address={address} />
+          <div className="col-sm-12">
+            <div className="col-sm-4">
+              <CardMedia src="http://placehold.it/400">
+                <div className="fondeada-layer" style={{display: 'block'}}>
+                  <p>PROYECTO<br/>FONDEADO</p>
+                </div>
+              </CardMedia>
+              <CardProgress
+              current={property.dataSheet.sharesSold}
+              max={property.dataSheet.totalShares}
+              multiplier={ property.dataSheet.investAmount } />
+            </div>
+            <div className="col-sm-8 card-large">
+              { facts.map( f => <Fact key={f.title} title={f.title} icon={f.icon} text={f.text} /> ) }
+              <div className="spacer"></div>
+              <CardFund />
+              <CardActions property={property}/>
+            </div>
           </div>
         </div>
+        <div className="spacer double"></div>
       </div>
-      <div className="spacer double"></div>
-    </div>
-  )
+    )
+  }
 }
+
+let PropertyCardBig =  withRouter(PropertyCardBig1)
+let FundCardBig = withRouter(FundCardBig1)
 
 export { PropertyCardBig, FundCardBig }

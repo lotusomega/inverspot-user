@@ -1,5 +1,5 @@
 import React from 'react'
-import Link from 'react-router'
+import {Link} from 'react-router'
 import currency from '../services/currency'
 
 function CardHeader(props) {
@@ -129,7 +129,9 @@ function PropertyCard (props) {
         multiplier={ property.dataSheet.investAmount } />
       <CardFacts facts={facts} />
       <CardActions>
-        <button className="button btn-v-card left">Ver Más</button>
+        <Link to={`/projects/${ property._id }`} >
+          <button className="button btn-v-card left">Ver Más</button>
+        </Link>
         <button className="button btn-v-card right" onClick={ () => props.onInvest(property) }>Invertir</button>
       </CardActions>
     </Card>
@@ -170,7 +172,9 @@ function FundCard (props) {
         multiplier={ property.dataSheet.investAmount } />
       <CardFacts facts={facts} />
       <div className="row btns-alone btns-holder">
-        <button className="button btn-v-card left">Detalles de la Propiedad</button>
+        <Link to={`/projects/${ props.property._id }`} >
+          <button className="button btn-v-card left">Detalles de la Propiedad</button>
+        </Link>
       </div>
     </Card>
   )

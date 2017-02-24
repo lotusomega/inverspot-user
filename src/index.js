@@ -10,7 +10,7 @@ import Investments from './investments-user/Investments'
 import Index from './index/Index'
 import AboutUs from './about-us/AboutUs'
 import Proyects from './proyects/Proyects'
-import Proyect from './proyects/Proyect'
+import Project from './proyects/Project'
 
 function requireAuth(nextState, replace) {
   if (!isLogged()) {
@@ -26,7 +26,7 @@ ReactDOM.render(
 			<Route path='index' component={Index}/>
 			<Route path='about-us' component={AboutUs}/>
 			<Route path='projects' component={Proyects}/>
-			<Route path=':id' component={Proyect}/>
+			<Route path='projects/:id' component={Project}/>
 
 	  </Route>
 		<Route path='/user' component={AppPanel} onEnter={ requireAuth }>
