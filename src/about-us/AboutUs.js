@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import BannerText from '../components/BannerText'
 import BannerImage from '../components/BannerImage'
-import ContactForm from './ContactForm'
+import ContactForm from '../components/ContactForm'
 
 function Media (props){
   return(
@@ -96,7 +96,6 @@ class AboutUs extends Component {
   render() {
     return (
       <div>
-        <div className="spacer triple"></div>
         <div className="container">
 
           <div className="row propiedades">
@@ -106,11 +105,23 @@ class AboutUs extends Component {
             <BannerText title="¿Quiénes somos?"
               text="Somos una plataforma que busca conformar grupos de personas interesadas en invertir en desarrollos inmobiliarios con el fin
               de obtener atractivos rendimientos en desarrollos previamente valuados"/>
-            <div className="spacer triple"></div>
+            <div className="spacer double"></div>
+            <TitleCards title="">
+                  <Card title="¿Qué es Inverspot?" clas="fa-cogs"
+                    text="Inverspot es la primer plataforma de inversión colectiva en México que da la posibilidad de adquirir e invertir en desarrollos
+                    inmobiliarios recibiendo excelentes rendimientos de una forma práctica, segura y confiable."/>
+                  <Card title="¿Quienes conforman Inverspot?" clas="fa-users"
+                    text="Somos un grupo de personas que hemos laborado en el sector financiero inmobiliario y tecnológico con más de 10 años de experiencia."/>
+                  <Card title="¿Qué es una PIC?" clas="fa-window-restore"
+                    text="Una PIC es una Plataforma de Inversión Colectiva que genera una oportunidad práctica de inversión, siendo asi la primer plataforma en México en conformar grupos solidos de inversión, eliminando intermediarios."/>
+            </TitleCards>
+            <div className="spacer double"></div>
             <Media />
-            <div className="spacer" style={{height: '80px'}}></div>
-            <BannerImage src="http://plat.mx/admin/wp-content/uploads/2017/01/12.jpg" />
-            <div className="spacer" style={{height: '80px'}}></div>
+            <div className="spacer" style={{height: '60px'}}></div>
+            <BannerImage src="http://plat.mx/admin/wp-content/uploads/2017/01/12.jpg" title='Misión'
+            text1="Lograr la mayor rentabilidad en el menor tiempo posible"
+            text2="para quienes conforman los grupos de Inverspot."/>
+            <div className="spacer" style={{height: '60px'}}></div>
 
             <TitleCards title="¿Cómo valuamos los proyectos?">
                   <Card title="Análisis" clas="fa-folder-open-o"
@@ -120,27 +131,19 @@ class AboutUs extends Component {
                   <Card title="Estructura legal" clas="fa-folder-o"
                     text="Revisamos detalladamente la estructura legal de cada proyecto. ESTO HACE QUE LOS PROYECTOS QUE OFRECEMOS SEAN PROYECTOS SEGUROS."/>
             </TitleCards>
-            <div className="spacer" style={{height: '80px'}}></div>
-
-            <TitleCards title="¿Quienes somos?">
-                  <Card title="¿Qué es Inverspot?" clas="fa-cogs"
-                    text="Inverspot es la primer plataforma de inversión colectiva en México que da la posibilidad de adquirir e invertir en desarrollos
-                    inmobiliarios recibiendo excelentes rendimientos de una forma práctica, segura y confiable."/>
-                  <Card title="¿Quienes conforman Inverspot?" clas="fa-users"
-                    text="Somos un grupo de personas que hemos laborado en el sector financiero inmobiliario y tecnológico con más de 10 años de experiencia."/>
-                  <Card title="¿Qué es una PIC?" clas="fa-window-restore"
-                    text="Una PIC es una Plataforma de Inversión Colectiva que genera una oportunidad práctica de inversión, siendo asi la primer plataforma en México en conformar grupos solidos de inversión, eliminando intermediarios."/>
-            </TitleCards>
-            <div className="spacer" style={{height: '80px'}}></div>
+            
+            <div className="spacer" style={{height: '60px'}}></div>
 
             <BannerText title="Comienza tú registro rápido, sencillo y seguro"
               text="Con el objetivo de optimizar los procesos y entrar de manera sencilla a un canal de inversión inmobiliario; hemos desarrollado la primera plataforma de inversión colectiva en México, operando bajo un modelo de negocio sencillo bajo una
               serie de procesos nada complicados. Invertir en el mercado inmobiliario nunca fue tan fácil.">
               <button className="button" data-toggle="modal" data-target="#inverModal-login">Comenzar registro</button>
             </BannerText>
-            <div className="spacer" style={{height: '80px'}}></div>
-            <BannerImage src="http://plat.mx/admin/wp-content/uploads/2017/01/sfRkE-o6kyDYokfKodpRQ.jpg"/>
-            <div className="spacer" style={{height: '80px'}}></div>
+            <div className="spacer" style={{height: '60px'}}></div>
+            <BannerImage src="http://plat.mx/admin/wp-content/uploads/2017/01/sfRkE-o6kyDYokfKodpRQ.jpg" title="Visión"
+            text1="Lograr la mayor rentabilidad en el menor tiempo posible"
+            text2="para quienes conforman los grupos de Inverspot."/>
+            <div className="spacer" style={{height: '60px'}}></div>
 
             <TitleCards title="¿Porqué Inverspot?">
               <MiniCard title="Nuestra plataforma" src="http://plat.mx/admin/wp-content/uploads/2017/01/analiza.png"
@@ -161,19 +164,28 @@ class AboutUs extends Component {
               <MiniCard title="Invierte a plazos" src="http://plat.mx/admin/wp-content/uploads/2017/01/rendimientos.png"
               text="En los proyectos para desarrollar y dependiendo cada proyecto, se podrá invertir en distintas parcialidades y podrás invertir con un anticipo desde $20,000."/>
             </TitleCards>
-            <div className="spacer" style={{height: '80px'}}></div>
+            <div className="spacer" style={{height: '60px'}}></div>
 
             <div className="row main-container registro-section" style={{backgroundColor: '#fff'}}>
                 <div className="spacer"></div>
                 <h1 style={{color: 'red', fontFamily: 'AvenirNext-Regular', fontWeight: '900'}}>Somos la primer Plataforma Colectiva Inmobiliaria en México</h1>
                 <p style={{fontFamily: 'AvenirNext-Regular', fontStyle: 'normal', fontWeight: '100'}}>Inversión fácil, segura y al alcance de todos</p>
             </div>
-            <div className="spacer" style={{height: '80px'}}></div>
+            <div className="spacer" style={{height: '60px'}}></div>
+            <div className="contact">
+              <div className="container">
+                    <div className="row">
+                        <div className="col-sm-12 col-lg-12">
+                            <h1 style={{fontSize: '31px', color: 'white', fontFamily: 'AvenirNext-Regular', fontWeight: '900', textAlign: 'center'}}>Contáctanos<small></small></h1>
+                        </div>
+                    </div>
+                </div>
+            </div>
             <ContactForm />
-            <div className="spacer" style={{height: '80px'}}></div>
+            <div className="spacer" style={{height: '60px'}}></div>
 
             <div className="map-responsive">
-               <iframe src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d6030.418742494061!2d-111.34563870463673!3d26.01036670629853!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses-419!2smx!4v1471908546569" width="400" height="200" frameborder="0" style={{border:'0'}} allowfullscreen></iframe>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15051.065127692984!2d-99.2228893!3d19.4225017!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x5b5eda574d2e7c4d!2sInverspot!5e0!3m2!1ses!2smx!4v1487832965550" width="400" height="200" frameborder="0" style={{border:'0'}} allowfullscreen></iframe>
             </div>
 
           </div>

@@ -40,4 +40,24 @@ function listUser(filter, query, select) {
     })
 }
 
-export { listProperty, listUser }
+function listWork(filter, query, select) {
+  filter = JSON.stringify(filter)
+  query = JSON.stringify(query)
+  // select = JSON.stringify(select)
+  let url = `${BASE_URL}/work-progress?filter=${filter}&query=${query}&select=${select}`
+  let opts = {
+    method: 'GET',
+    headers: {
+      'Accept': 'application/json'
+    }
+  }
+  return fetch(url, opts)
+    .then( res => {
+      if(res.ok) {
+        return res.json()
+      }
+      throw new Error('Error al listar')
+    })
+}
+
+export { listProperty, listUser, listWork }

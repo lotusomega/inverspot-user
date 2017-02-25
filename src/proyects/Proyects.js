@@ -27,10 +27,10 @@ class Proyects extends Component {
   }
 
   componentDidMount() {
-    listProperty({status: 'available'}, {sort:'title', limit: 3}, 'title address image dataSheet marketResearch')
+    listProperty({status: 'available'}, {sort:'title'}, 'title address image dataSheet marketResearch')
       .then( propertiesa => this.setState({ propertiesa }) )
       .catch( e => alert(e) )
-    listProperty({status: 'fund'}, {sort:'title', limit: 6}, 'title address image dataSheet marketResearch')
+    listProperty({status: 'fund'}, {sort:'title'}, 'title address image dataSheet marketResearch')
       .then( propertiesf => this.setState({ propertiesf }) )
       .catch( e => alert(e) )
   }
@@ -51,8 +51,6 @@ class Proyects extends Component {
       <div className="container">
         { this.state.show && <Wizard onClick={ this.toggleWizard } id={this.state.property._id} /> }
         <div className="row propiedades">
-        <div className="spacer triple"></div>
-
           <div className="spacer double"></div>
           <h1 className="text-center"><b>Proyectos para Invertir</b></h1>
           <div className="spacer double"></div>

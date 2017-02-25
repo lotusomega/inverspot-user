@@ -12,7 +12,7 @@ function CardHeader(props) {
             <h3 className="t1">{title}</h3>
         </div>
         <div className="col-sm-8">
-            <h5 className="t2">{address && address.suburb}</h5>
+            <h5 className="t2">{address.suburb}</h5>
         </div>
     </div>
   )
@@ -83,27 +83,27 @@ function CardActions(props) {
   return (
     <div className="col-sm-12 form-inline text-center">
       <div className="spacer"></div>
-      <Link to={`/projects/${ props.property._id }`} >
+      <Link to={`/projects/${ props.property._id }/description`} >
       <button type="button" className="btnn button btn-grande">
-        <a style={{textDecoration: 'none', color: '#fff'}} >Resumen del Proyecto</a>
+        <span style={{textDecoration: 'none', color: '#fff'}} >Resumen del Proyecto</span>
       </button>&nbsp;
     </Link>
 
-    <Link to={`/projects/${ props.property._id }`} >
+    <Link to={`/projects/${ props.property._id }/market-research`} >
       <button type="button" className="btnn button btn-grande">
-        <a style={{textDecoration: 'none', color: '#fff'}} >Estudio de Mercado</a>
+        <span style={{textDecoration: 'none', color: '#fff'}} >Estudio de Mercado</span>
       </button>&nbsp;
     </Link>
 
-    <Link to={`/projects/${ props.property._id }`} >
+    <Link to={`/projects/${ props.property._id }/builder`} >
       <button type="button" className="btnn button btn-grande">
-        <a style={{textDecoration: 'none', color: '#fff'}} >Acerca del Desarrollador</a>
+        <span style={{textDecoration: 'none', color: '#fff'}} >Acerca del Desarrollador</span>
       </button>&nbsp;
     </Link>
 
-    <Link to={`/projects/${ props.property._id }`} >
+    <Link to={`/projects/${ props.property._id }/work-progress`} >
       <button type="button" className="btnn button btn-grande">
-        <a style={{textDecoration: 'none', color: '#fff'}} >Avance de Obra</a>
+        <span style={{textDecoration: 'none', color: '#fff'}} >Avance de Obra</span>
       </button>&nbsp;
     </Link>
 
@@ -119,17 +119,17 @@ class PropertyCardBig1 extends Component  {
       {
         title: 'Monto a Invertir',
         icon: 'style/images/bill.png',
-        text: currency(property.dataSheet && property.dataSheet.investAmount)
+        text: currency(property.dataSheet.investAmount)
       },
       {
         title: 'Plazo Estimado',
         icon: 'style/images/calendar.png',
-        text: property.marketResearch && property.marketResearch.estimatedTime + ' MESES'
+        text: property.marketResearch.estimatedTime + ' MESES'
       },
       {
         title: 'Rendimiento Estimado',
         icon: 'style/images/graphy.png',
-        text: property.marketResearch && property.marketResearch.yieldInTime + ' %'
+        text: property.marketResearch.yieldInTime + ' %'
       }
     ]
     return (
@@ -140,9 +140,9 @@ class PropertyCardBig1 extends Component  {
             <div className="col-sm-4">
               <CardMedia src={'http://192.169.174.96/is-img/'+ property.image} />
               <CardProgress
-              current={property.dataSheet && property.dataSheet.sharesSold}
-              max={property.dataSheet && property.dataSheet.totalShares}
-              multiplier={ property.dataSheet && property.dataSheet.investAmount } />
+              current={property.dataSheet.sharesSold}
+              max={property.dataSheet.totalShares}
+              multiplier={ property.dataSheet.investAmount } />
             </div>
             <div className="col-sm-8 card-large">
               { facts.map( f => <Fact key={f.title} title={f.title} icon={f.icon} text={f.text} /> ) }

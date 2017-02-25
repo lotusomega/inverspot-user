@@ -129,7 +129,7 @@ function PropertyCard (props) {
         multiplier={ property.dataSheet.investAmount } />
       <CardFacts facts={facts} />
       <CardActions>
-        <Link to={`/projects/${ property._id }`} >
+        <Link to={`/projects/${ property._id }/description`} >
           <button className="button btn-v-card left">Ver Más</button>
         </Link>
         <button className="button btn-v-card right" onClick={ () => props.onInvest(property) }>Invertir</button>
@@ -172,7 +172,7 @@ function FundCard (props) {
         multiplier={ property.dataSheet.investAmount } />
       <CardFacts facts={facts} />
       <div className="row btns-alone btns-holder">
-        <Link to={`/projects/${ props.property._id }`} >
+        <Link to={`/projects/${ props.property._id }/description`} >
           <button className="button btn-v-card left">Detalles de la Propiedad</button>
         </Link>
       </div>

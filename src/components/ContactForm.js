@@ -5,15 +5,6 @@ class ContactForm extends Component {
   render() {
     return (
       <div>
-      <div className="contact">
-          <div className="container">
-              <div className="row">
-                  <div className="col-sm-12 col-lg-12">
-                      <h1 style={{fontSize: '31px', color: 'white', fontFamily: 'AvenirNext-Regular', fontWeight: '900', textAlign: 'center'}}>Contáctanos<small></small></h1>
-                  </div>
-              </div>
-          </div>
-      </div>
       <div className="spacer"></div>
       <div className="container">
           <div className="row">

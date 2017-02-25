@@ -11,6 +11,13 @@ import Index from './index/Index'
 import AboutUs from './about-us/AboutUs'
 import Proyects from './proyects/Proyects'
 import Project from './proyects/Project'
+import Tab1 from './proyects/Tab1'
+import Tab2 from './proyects/Tab2'
+import Tab3 from './proyects/Tab3'
+import Tab4 from './proyects/Tab4'
+import Work from './how-does-it-work/Work'
+import Faqs from './faqs/Faqs'
+import Contact from './contact/Contact'
 
 function requireAuth(nextState, replace) {
   if (!isLogged()) {
@@ -26,8 +33,15 @@ ReactDOM.render(
 			<IndexRoute component={Index}/>
 			<Route path='about-us' component={AboutUs}/>
 			<Route path='projects' component={Proyects}/>
-			<Route path='projects/:id' component={Project}/>
-
+			<Route path='projects/:id' component={Project}>
+        <Route path='description' component={Tab1} />
+        <Route path='market-research' component={Tab2} />
+        <Route path='builder' component={Tab3} />
+				<Route path='work-progress' component={Tab4} />
+			</Route>
+      <Route path='how-does-it-work' component={Work}/>
+      <Route path="/faq's" component={Faqs}/>
+      <Route path="/contact" component={Contact}/>
 	  </Route>
 		<Route path='/user' component={AppPanel} onEnter={ requireAuth }>
 			<Route path='profile' component={Profile} />

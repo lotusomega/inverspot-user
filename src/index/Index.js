@@ -5,6 +5,7 @@ import NewsLetter from './NewsLetter'
 import SectionIndex from './SectionIndex'
 import { listProperty } from '../services/list'
 import {Wizard} from './Wizard'
+import SliderLogos from '../components/SliderLogos'
 
 function PropertyCards(props) {
   return (
@@ -44,7 +45,7 @@ class Index extends Component {
     listProperty({status: 'available'}, {sort:'title', limit: 3}, 'title image address dataSheet marketResearch')
       .then( propertiesa => this.setState({ propertiesa }) )
       .catch( e => alert(e) )
-    listProperty({status: 'fund'}, {sort:'title', limit: 6}, 'title address image dataSheet marketResearch')
+    listProperty({status: 'fund'}, {sort:'title', limit: 3}, 'title address image dataSheet marketResearch')
       .then( propertiesf => this.setState({ propertiesf }) )
       .catch( e => alert(e) )
   }
@@ -58,23 +59,20 @@ class Index extends Component {
             <div className="row main-container propiedades">
             <div className="spacer double"></div>
             <h1><b>Proyectos para Invertir</b></h1>
-            <div className="spacer triple"></div>
+            <div className="spacer double"></div>
             <PropertyCards onInvest={ this.toggleWizard } propertiesa={ this.state.propertiesa } element='PropertyCard'/>
 
-            <div className="spacer triple"></div>
             <NewsLetter />
-            <div className="spacer triple"></div>
             <div className="row main-container propiedades">
                 <div className="spacer double"></div>
                 <h1><b>Proyectos Fondeados</b></h1>
-                <div className="spacer triple"></div>
+                <div className="spacer double"></div>
                 <PropertyCards propertiesf={ this.state.propertiesf } element='FundCard'/>
 
             </div>
-            <div className="spacer triple"></div>
             <SectionIndex />
 
-            <div className="spacer triple"></div>
+            <div className="spacer double"></div>
 
             <div className="container">
                 <div className="row jumbotron main-container registro-section">
@@ -85,19 +83,9 @@ class Index extends Component {
                     <button className="button" data-launchWizard="modal" href="javascript:openRegisterModal()" >Comenzar registro</button>
                 </div>
             </div>
-
-            <div className="spacer triple"></div>
-
-            <div className="container">
-               <div className="row">
-                  <div className="col-xs-12 col-centered">
-                       <div className="spacer double"></div>
-                        <h1 className="text-center"><b>Ellos Hablan de Nosotros</b></h1>
-                        <div className="spacer double"></div>
-                  </div>
-                </div>
-            </div>
-            <div className="spacer triple"></div>
+            <div className="spacer double"></div>
+            <SliderLogos/>
+        
           </div>
         </div>
       </div>

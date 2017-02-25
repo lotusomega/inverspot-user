@@ -9,9 +9,6 @@ class NavBar extends Component {
     const stylen={
       backgroundColor: "#fff"
     }
-    const stylen1={
-      backgroundColor: "#4B118E", width: "100%", height: "29px"
-    }
     const stylen2={
       padding: "5px", marginLeft: "100px", fontSize: "12px", color: "white"
     }
@@ -31,7 +28,7 @@ class NavBar extends Component {
 
       <nav className="navbar navbar-light bg-faded navbar-fixed-top" style={stylen}>
 
-        <div className="hidden-xs hidden-sm col-xs-12 col-lg-12" style={stylen1}>
+        <div className="hidden-xs hidden-sm col-xs-12 col-lg-12" style={{backgroundColor: '#A0CE4E', width:'100%', height:'29px'}}>
           <p style={stylen2}>
           Atención al cliente | 01 (55) 8000 6555 |
           <a style={stylen3} href="mailto:hola@inverspot.mx">hola@inverspot.mx</a>
@@ -53,19 +50,14 @@ class NavBar extends Component {
         <div className="navbar-collapse collapse top-tittle-holder">
           <ul className="nav navbar-nav" style={stylen6}>
             <li>
-              <Link to="/about-us">
-                Nosotros
-              </Link>
+              <Link to="/about-us">Nosotros</Link>
             </li>
             <li>
-              <Link to="/projects">
-                Proyectos
-              </Link>
+              <Link to="/projects">Proyectos</Link>
             </li>
-            <li><a href="como-funciona.html">Como Funciona</a></li>
-            <li><a href="garantia.html">Garantia</a></li>
-            <li><a href="faqs.html">FAQ's</a></li>
-            <li><a href="contacto.html">Contacto</a></li>
+            <li><Link to="/how-does-it-work">Como Funciona</Link></li>
+            <li><Link to="/faq's">Preguntas Frecuentes</Link></li>
+            <li><Link to="/contact">Contacto</Link></li>
             {!this.user &&
             <li id='reg'><a data-toggle="modal" onClick={() => this.props.stepSet(1)} style={{cursor: "pointer"}}>Regístro</a></li> }
             {!this.user &&
