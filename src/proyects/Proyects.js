@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import {PropertyCardBig, FundCardBig} from './PropertyCardBig'
 import { listProperty } from '../services/list'
 import {Wizard} from '../index/Wizard'
+import Countdown from '../components/Countdown'
 
 function PropertyCards(props) {
   return (

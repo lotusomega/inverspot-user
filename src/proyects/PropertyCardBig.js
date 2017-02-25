@@ -1,6 +1,8 @@
 import React, {Component} from 'react'
 import currency from '../services/currency'
 import {Link, withRouter} from 'react-router'
+import Countdown from '../components/Countdown'
+import moment from 'moment'
 
 function CardHeader(props) {
   let { title, address } = props, style = { fontSize: "12px", fontWeight: "400", color: "white" }
@@ -150,7 +152,7 @@ class PropertyCardBig1 extends Component  {
               </CardButton>
               <CardButton text="Para que puedas invertir en este proyecto" clas="counter2">
                 <h5 className="text-center counter"><b>Quedan</b></h5>
-                <button id="demo1" className="button large-counter"></button>
+                <Countdown initialTimeRemaining={ +moment(property.createdAt).add(38, 'days') - +moment() } />
               </CardButton>
               <CardActions property={property}/>
             </div>
