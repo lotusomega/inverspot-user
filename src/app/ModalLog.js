@@ -111,7 +111,7 @@ function Register(props) {
                               <button className="loginBtn loginBtn--facebook">Sing in with Facebook</button>
                           </div>
                           <div className="col-sm-6">
-                              <button className="button btn-register" type="submit">Enviar</button>
+                              <button className="button btn-register" style={{padding: "6px 60px"}} type="submit">Enviar</button>
                           </div>
                         </div>
                       </div>
@@ -177,16 +177,23 @@ function Header (props){
   )
 }
 
-function Footer(props){
+function FooterL(props){
   return(
     <div className="modal-footer">
-        <div className="forgot login-footer">
-            <span>¿No tienes una cuenta?
-                 <a href="javascript: showRegisterForm();" style={{ fontSize: "14px"}}>Registrate con Nosotros</a></span>
+        <div className="login-footer">
+            <span>¿No tienes una cuenta? &nbsp;
+                 <a onClick={() => props.next(1)} style={{cursor: "pointer", fontSize: "14px"}}>Registrate con Nosotros</a></span>
         </div>
-        <div className="forgot register-footer">
-             <span>Ya tengo mi cuenta</span>
-             <a href="javascript: showLoginForm();" style={{ fontSize: "14px"}}>Ingresa</a>
+    </div>
+  )
+}
+
+function FooterR(props){
+  return(
+    <div className="modal-footer">
+        <div className="register-footer">
+             <span>Ya tengo mi cuenta &nbsp;</span>
+             <a onClick={() => props.next(2)} style={{cursor: "pointer", fontSize: "14px"}}>Ingresa</a>
         </div>
     </div>
   )
@@ -197,7 +204,7 @@ function Modal (props){
     <div className="modal fade login in" style={{display: 'block'}} id="loginModal">
       <div className="modal-dialog login animated">
         <div className="modal-content">
-          <button type="button" className="close" onClick={props.onClick}>&times;</button>
+          <button type="button" className="close" style={{fontSize: '35px', marginRight: '20px'}} onClick={props.onClick}>&times;</button>
           {props.children}
         </div>
       </div>
@@ -240,7 +247,7 @@ class ModalLogin extends Component {
       <Modal onClick={this.props.onClick}>
         <Header/>
         <Login authenticate={this.authenticate} email={this.state.email} password={this.state.password} handleInput={this.handleInput}/>
-        <Footer/>
+        <FooterL next={this.props.next}/>
       </Modal>
     )
   }
@@ -285,24 +292,37 @@ class ModalRegister extends Component {
       <Modal onClick={this.props.onClick}>
         <Header/>
         <Register handleSubmit={this.handleSubmit} user={this.state.user} asesor={this.state.asesor} handleInputRegister={this.handleInputRegister}/>
-        <Footer/>
+        <FooterR next={this.props.next}/>
       </Modal>
     )
   }
 }
 
-class LoginWizard extends Component {
+class LoginWizard1 extends Component {
+
+  constructor(props) {
+    super(props)
+    this.goTo = this.goTo.bind(this)
+    this.state = {
+      step: this.props.step
+    }
+  }
 
   componentWillMount() {
     this.user = JSON.parse(localStorage.getItem('my'))
   }
 
+  goTo( step ) {
+    this.setState({step})
+  }
+
   render(){
-    let { step } = this.props
+    let { step } = this.state
     let Element = undefined
     let passProps = {
       step: step,
-      onClick: this.props.onClick
+      onClick: this.props.onClick,
+      next: this.goTo
     }
     switch (step) {
       case 1:
@@ -323,4 +343,6 @@ class LoginWizard extends Component {
   }
 }
 
-export default withRouter(LoginWizard);
+let LoginWizard = withRouter(LoginWizard1)
+
+export {LoginWizard, ModalRegister, ModalLogin}

@@ -31,7 +31,7 @@ class Profile extends Component {
         <div className="container">
             <div className="dropdown pull-right" style={{  margin: "20px"}}>
               <button className="btn btn-success" type="button" id="" aria-haspopup="true" aria-expanded="true" onClick={window.print}>
-                  Imprimir
+                Imprimir
               </button>
             </div>
 
@@ -39,7 +39,7 @@ class Profile extends Component {
               <div className="well">
               <h2 className="text-center" style={{paddingLeft: "140px"}}>Mis Inversiones</h2>
               <div className="list-group">
-                <InvestmentList investments={ this.state.investments } />
+                {this.state.investments.length > 0 ? <InvestmentList investments={ this.state.investments }/> : <h1>No tienes inversiones</h1>}
 
               </div>
             </div>

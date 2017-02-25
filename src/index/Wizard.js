@@ -1,9 +1,10 @@
 import React,{Component} from 'react'
 import {withRouter} from 'react-router'
 import currency from '../services/currency'
-import { listProperty } from '../services/list'
+import { listProperty, listUser } from '../services/list'
 import { create } from '../services/crud'
 import ModalInvest from './ModalInvest'
+import {ModalLogin, ModalRegister } from '../app/ModalLog'
 
 function ModalPromo (props){
   return (
@@ -42,6 +43,7 @@ function Modal (props){
     <div className='modal fade in' style={{display: 'block'}}>
       <div className="modal-dialog">
         <div className="loginmodal-container">
+          <button type="button" className="close" style={{fontSize: '35px'}} onClick={props.onClick}>&times;</button>
           <div className="col-sm-12">
               <img className="img-responsive center-block" alt="logo" src="style/images/inverspot.png"/>
               <div className="spacer"></div>
@@ -55,7 +57,7 @@ function Modal (props){
 
 function Step1 (props){
   return(
-    <Modal>
+    <Modal onClick={props.onClick}>
       <ModalPromo>Quiero invertir en { props.property.title }</ModalPromo>
       <ModalButton onClick={ () => props.verify() } />
       <ModalPromo>Si tienes dudas, contáctanos</ModalPromo>
@@ -68,22 +70,22 @@ function Step2 (props){
   let property = props.property.dataSheet
   let total = property.totalShares - property.sharesSold
   return(
-    <Modal>
+    <Modal onClick={props.onClick}>
       <ModalPromo>Número de acciones</ModalPromo>
-      <ModalInvest total= {total} amount={property.investAmount} summary= {props.summary}>
+      <ModalInvest total={total} amount={property.investAmount} summary={props.summary}>
         <ModalPromo>Monto:</ModalPromo>
       </ModalInvest>
-      <ModalSmallButton name='Regresar' onClick={ () => props.next(1) } clas='large-confirm'/>
+      <ModalSmallButton name='Regresar' onClick={ () => props.next(3) } clas='large-confirm'/>
     </Modal>
   )
 }
 
 function Step3 (props){
   return(
-    <Modal>
+    <Modal onClick={props.onClick}>
       <ModalPromo>¿Estás seguro que deseas invertir {props.shares} acciones con un total de {currency(props.total)} en {props.property.title}?</ModalPromo>
       <ModalSmallButton onClick={ () => props.invest() } name='Si' clas='large-invertion'/>
-      <ModalSmallButton onClick={ () => props.next(2) } name='No' clas='large-confirm'/>
+      <ModalSmallButton onClick={ props.onClick } name='No' clas='large-confirm'/>
     </Modal>
   )
 }
@@ -97,11 +99,13 @@ class InvestmentWizard extends Component {
     this.summary = this.summary.bind(this)
     this.invest = this.invest.bind(this)
     this.verify = this.verify.bind(this)
+    this.verify = this.verify.bind(this)
     this.state = {
-      step: 1,
+      step: 3,
       property: {},
       shares:0,
-      total: 0
+      total: 0,
+      user: []
     }
   }
 
@@ -112,6 +116,9 @@ class InvestmentWizard extends Component {
   componentDidMount() {
     this.props.id && listProperty({_id: this.props.id}, {}, 'title dataSheet marketResearch')
       .then( properties => this.setState({ property: properties[0] }) )
+    listUser({_id: this.user._id},{}, 'level')
+      .then( user => this.setState({user: user[0]}) )
+      .catch(alert)
   }
 
   goTo( step ) {
@@ -120,6 +127,8 @@ class InvestmentWizard extends Component {
 
   verify(){
     if (this.user)
+      this.goTo(4)
+    else
       this.goTo(2)
   }
 
@@ -129,8 +138,14 @@ class InvestmentWizard extends Component {
   }
 
   summary(shares,total){
-    this.setState({shares: shares, total: total})
-    this.goTo(3)
+    if(this.state.user.level === 'investor'){
+      this.setState({shares: shares, total: total})
+      this.goTo(5)
+    }
+    else{
+      this.props.onClick()
+      this.props.router.push('/user/investment-data')
+    }
   }
 
   invest(){
@@ -159,12 +174,18 @@ class InvestmentWizard extends Component {
     }
     switch (step) {
       case 1:
-        Element = Step1
+        Element = withRouter(ModalRegister)
         break;
       case 2:
-        Element = Step2
+        Element = withRouter(ModalLogin)
         break;
       case 3:
+        Element = Step1
+        break;
+      case 4:
+        Element = Step2
+        break;
+      case 5:
         Element = Step3
         break;
       default:
