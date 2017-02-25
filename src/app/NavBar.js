@@ -67,9 +67,9 @@ class NavBar extends Component {
             <li><a href="faqs.html">FAQ's</a></li>
             <li><a href="contacto.html">Contacto</a></li>
             {!this.user &&
-            <li id='reg'><a data-toggle="modal" onClick={() => this.props.stepSet(1)}>Regístro</a></li> }
+            <li id='reg'><a data-toggle="modal" onClick={() => this.props.stepSet(1)} style={{cursor: "pointer"}}>Regístro</a></li> }
             {!this.user &&
-            <li id='acc'><a data-toggle="modal" onClick={() => this.props.stepSet(2)}>Inicio de Sesión</a></li> }
+            <li id='acc'><a data-toggle="modal" onClick={() => this.props.stepSet(2)} style={{cursor: "pointer"}}>Inicio de Sesión</a></li> }
             {this.user &&
             <li>
               <Link to="/user/profile">

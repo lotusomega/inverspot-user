@@ -112,7 +112,7 @@ class InvestmentData extends Component {
   }
 
   componentDidMount() {
-    list('user',{_id: this.user._id},{}, '')
+    list('user',{_id: this.user._id},{}, 'invesmentData _id')
       .then( user => this.setState({user: user[0]}) )
       .catch(alert)
   }
@@ -134,11 +134,11 @@ class InvestmentData extends Component {
 
   handleSubmit(e) {
     e.preventDefault()
-
+    let newState = Object.assign( this.state )
+    newState.user['level'] = 'investor'
+    this.setState(newState)
+    console.log(this.state.user)
     edit('user', this.state.user )
-      let newState = Object.assign( this.state )
-      newState.user['level'] = 'investor'
-      this.setState(newState)
       .then( success => success && alert("Datos actualizados") )
   }
 

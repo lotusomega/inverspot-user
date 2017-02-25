@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import NavBar from './NavBar'
 import Footer from './Footer'
-import LoginWizard from './ModalLog'
+import {LoginWizard} from './ModalLog'
 
 class App extends Component {
   constructor(props) {
