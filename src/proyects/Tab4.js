@@ -95,7 +95,7 @@ class Tab4 extends Component {
           let workProgress = this._groupWP(wP)
           this.setState({
             workProgress,
-            selectedYear: workProgress.length > 0 && workProgress[0].year || []
+            selectedYear: workProgress.length > 0 ? workProgress[0].year : []
           })
         } )
         .catch( e => alert(e) )

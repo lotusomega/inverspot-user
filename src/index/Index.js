@@ -6,6 +6,7 @@ import SectionIndex from './SectionIndex'
 import { listProperty } from '../services/list'
 import {Wizard} from './Wizard'
 import SliderLogos from '../components/SliderLogos'
+import {Link} from 'react-router'
 
 function PropertyCards(props) {
   return (
@@ -55,15 +56,23 @@ class Index extends Component {
           <Slider />
           <div className="container">
             <div className="row main-container propiedades">
-            <div className="spacer double"></div>
-            <h1><b>Proyectos para Invertir</b></h1>
-            <div className="spacer double"></div>
-            <PropertyCards onInvest={ this.toggleWizard } propertiesa={ this.state.propertiesa } element='PropertyCard'/>
+              <div className="spacer double"></div>
+              <h1>
+                <b>Proyectos para Participar &nbsp;&nbsp;&nbsp;&nbsp;</b>
+                <button type="button" className="btn button"><Link to="/projects" style={{color: 'white'}}>Ver Más</Link></button>
+              </h1>
+              <div className="spacer double"></div>
+              <PropertyCards onInvest={ this.toggleWizard } propertiesa={ this.state.propertiesa } element='PropertyCard'/>
 
             <NewsLetter />
             <div className="row main-container propiedades">
-                <div className="spacer double"></div>
-                <h1><b>Proyectos Fondeados</b></h1>
+                <div className="spacer"></div>
+                <h1>
+                  <b>Proyectos Fondeados &nbsp;&nbsp;&nbsp;&nbsp;</b>
+                  <button type="button" className="btn button">
+                    <Link to="/projects" style={{color: 'white'}}>Ver Más</Link>
+                  </button>
+                </h1>
                 <div className="spacer double"></div>
                 <PropertyCards propertiesf={ this.state.propertiesf } element='FundCard'/>
 
@@ -75,7 +84,7 @@ class Index extends Component {
             <div className="container">
                 <div className="row jumbotron main-container registro-section">
                     <div className="spacer"></div>
-                    <h2>Invertir con nosotros es rápido, seguro y sencillo</h2>
+                    <h2>Participar con nosotros es rápido, seguro y sencillo</h2>
                     <div className="spacer"></div>
                     <p>Con el objetivo de democratizar la inversión en el sector inmobiliario, hemos diseñado un método sencillo para la selección de inmueble ideal. Invertir nunca fue más sencillo.</p>
                     <button className="button" data-launchWizard="modal" >Comenzar registro</button>
@@ -83,7 +92,6 @@ class Index extends Component {
             </div>
             <div className="spacer double"></div>
             <SliderLogos/>
-        
           </div>
         </div>
       </div>

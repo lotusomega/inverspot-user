@@ -26,28 +26,25 @@ class Footer extends Component {
                     <div className="col-xs-12 col-sm-3 col-md-3">
                         <h2><b>Recursos</b></h2>
                         <ul>
-                            <li><a href="/solicitud-de-registro">Solicitud de registro</a></li>
-                            <li><a href="politicas-de-privacidad.html">Políticas de privacidad</a></li><li><a href="http://spot_files.softin.mx/2016/12/brochure.pdf">Brochure informativo</a></li>
-                            <li><a href="/como-invertir">¿Cómo invertir?</a></li>
+                            <li><a href="politicas-de-privacidad.html">Políticas de privacidad</a></li>
+                            <li><a href="http://spot_files.softin.mx/2016/12/brochure.pdf">Brochure informativo</a></li>
                         </ul>
                     </div>
                     <div className="col-xs-12 col-sm-3 col-md-3">
                         <h2><b>Soporte</b></h2>
                         <ul>
-                            <li><a href="/ayuda">Ayuda</a></li><li><a href="/informe">Informe</a></li><li><a href="/desarrolladores">Desarrolladores</a></li>
+                          <li><a href="faqs.html">Preguntas Frecuentes</a></li>
+                          <li><a href="contacto.html">Contacto</a></li>
+                          <li><a href="como-funciona.html">Como Funciona</a></li>
                         </ul>
                     </div>
                     <div className="col-xs-12 col-sm-3 col-md-3">
                         <h2><b>Inverspot.mx</b></h2>
                         <ul>
-                            <li><a href="solicitud-de-inversion.html">Solicitud de Inversión</a>
-                            </li><li><a href="faqs.html">FAQ's</a></li>
-                            <li><a href="aviso-de-privacidad.html">Aviso de privacidad</a></li>
-                            <li><a href="#">News</a></li>
-                            <li><a href="garantia.html">Garantia</a></li>
-                            <li><a href="nosotros.html">Nosotros</a></li>
-                            <li><a href="contacto.html">Contacto</a></li>
-                            <li><a href="como-funciona.html">Como Funciona</a></li>
+                          <li><a href="aviso-de-privacidad.html">Aviso de privacidad</a></li>
+                          <li><a href="nosotros.html">Nosotros</a></li>
+                          <li><a href="garantia.html">Garantia</a></li>
+                          <li><a href="#">News</a></li>
                         </ul>
                     </div>
                 </div>

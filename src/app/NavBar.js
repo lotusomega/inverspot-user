@@ -16,7 +16,7 @@ class NavBar extends Component {
       color: "#ffffff", textDecoration: "none"
     }
     const stylen4={
-      float: "right", marginRight: "100px", color: "white"
+      float: "right", marginLeft: "10px", color: "white"
     }
     const stylen5={
       backgroundColor: "#4b118e"
@@ -31,9 +31,21 @@ class NavBar extends Component {
         <div className="hidden-xs hidden-sm col-xs-12 col-lg-12" style={{backgroundColor: '#A0CE4E', width:'100%', height:'29px'}}>
           <p style={stylen2}>
           Atención al cliente | 01 (55) 8000 6555 |
-          <a style={stylen3} href="mailto:hola@inverspot.mx">hola@inverspot.mx</a>
+          <a style={stylen3} href="mailto:hola@inverspot.mx"> hola@inverspot.mx</a>
+
+          {/* <a style={stylen4} href="https://www.facebook.com/inverspot" target="_blank">
+          <i className="fa fa-facebook" aria-hidden="true"></i></a> */}
+          <a style={{float:'right', marginRight: '100px', marginLeft: '10px', color: 'white',}} href="https://vimeo.com/190621870" target="_blank"><i className="fa fa-vimeo" aria-hidden="true"></i></a>
+
+          <a style={stylen4} href="https://www.youtube.com/channel/UCvr85MwH36lbTAvOdmeDtxg" target="_blank">
+          <i className="fa fa-youtube" aria-hidden="true"></i></a>
+
+          <a style={stylen4} href="https://twitter.com/Inverspot2017" target="_blank">
+          <i className="fa fa-twitter" aria-hidden="true"></i></a>
+
           <a style={stylen4} href="https://www.facebook.com/inverspot" target="_blank">
-          <i className="fa fa-facebook" aria-hidden="true"></i></a></p>
+          <i className="fa fa-facebook" aria-hidden="true"></i></a>
+          </p>
         </div>
 
         <div className="navbar-header top-logo-holder">

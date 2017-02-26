@@ -47,11 +47,6 @@ function Card (props){
                       <p>
                         {props.text}
                       </p>
-                      <div className="more">
-                          <a href="#" title="Title Link">
-                              Leer Más <i className="fa fa-angle-double-right"></i>
-                          </a>
-                      </div>
                   </div>
               </div>
               <div className="space"></div>
@@ -131,7 +126,7 @@ class AboutUs extends Component {
                   <Card title="Estructura legal" clas="fa-folder-o"
                     text="Revisamos detalladamente la estructura legal de cada proyecto. ESTO HACE QUE LOS PROYECTOS QUE OFRECEMOS SEAN PROYECTOS SEGUROS."/>
             </TitleCards>
-            
+
             <div className="spacer" style={{height: '60px'}}></div>
 
             <BannerText title="Comienza tú registro rápido, sencillo y seguro"

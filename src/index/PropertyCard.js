@@ -54,7 +54,7 @@ function CardProgress(props) {
         <div className="range" style={{backgroundColor: progress < 100 ? "#f26438" : "#00cc99", width: `${ progress }%`}}></div>
       </div>
       <div className="col-xs-12 col-sm-12 col-md-12 range-txt">
-        <p style={{color: '#f00'}}><span style={{color: '#f00'}}>{max - current}</span> Acciones disponibles de <span style={{color: '#f00'}}>{max}</span></p>
+        <p style={{color: '#f00'}}><span style={{color: '#f00'}}>{max - current}</span> participaciones disponibles de <span style={{color: '#f00'}}>{max}</span></p>
       </div>
       <hr className="hr-card"/>
     </div>
@@ -101,7 +101,7 @@ function PropertyCard (props) {
   let property = props.property, address = property.address
   let facts = [
     {
-      title: 'Monto a Invertir',
+      title: 'Monto para participar',
       icon: 'icon-bill',
       text: currency(property.dataSheet.investAmount)
     },
@@ -120,7 +120,7 @@ function PropertyCard (props) {
     <Card>
       <CardHeader title={property.title} address={address} />
       <CardPromo>
-        Invierte desde <span>{currency(property.dataSheet.investAmount)}</span> pesos
+        Participa desde <span>{currency(property.dataSheet.investAmount)}</span> pesos
       </CardPromo>
       <CardMedia src={'http://192.169.174.96/is-img/'+ property.image} />
       <CardProgress
@@ -132,7 +132,7 @@ function PropertyCard (props) {
         <Link to={`/projects/${ property._id }/description`} >
           <button className="button btn-v-card left">Ver Más</button>
         </Link>
-        <button className="button btn-v-card right" onClick={ () => props.onInvest(property) }>Invertir</button>
+        <button className="button btn-v-card right" onClick={ () => props.onInvest(property) }>Participar</button>
       </CardActions>
     </Card>
   )
@@ -142,7 +142,7 @@ function FundCard (props) {
   let property = props.property, address = property.address
   let facts = [
     {
-      title: 'Monto a Invertir',
+      title: 'Monto para participar',
       icon: 'icon-bill',
       text: currency(property.dataSheet.investAmount)
     },
