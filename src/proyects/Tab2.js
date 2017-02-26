@@ -2,6 +2,30 @@ import React, { Component } from 'react';
 import { listProperty } from '../services/list'
 import currency from '../services/currency'
 
+function EdiTableRender(props) {
+  if(!props.data || props.data.length <= 0) return null;
+  let header = props.data.slice(0,1)[0]
+  let body = props.data.slice(1)
+  return (
+    <table className="table table-hover" id="dev-table">
+      <thead className="panel-heading" style={{backgroundColor: '#4B118E', color: 'white'}}>
+        <tr>
+        { header.map( (title, i) => <th key={`H${i}`} className="text-center" style={{fontFamily: 'AvenirNext-Bold', fontSize: '11px'}}>{title || ''}</th> ) }
+        </tr>
+      </thead>
+      <tbody>
+        {
+          body.map( (r, i) => {
+            return (<tr key={`B${i}`}>
+              { r.map( (cell, i) => <td key={`C${i}`} className="text-center" style={{fontFamily: 'AvenirNext-Medium', fontSize: '12px'}}>{cell}</td> ) }
+            </tr>)
+          } )
+        }
+      </tbody>
+    </table>
+  )
+}
+
 class Tab2 extends Component {
 
   constructor(props) {
@@ -24,7 +48,8 @@ class Tab2 extends Component {
           estimatedTime: 0,
           yieldIn18Months: 0,
           annualYield: 0
-        }
+        },
+        supplementaryData: [["",""],["",""]]
       }
     }
   }
@@ -36,7 +61,8 @@ class Tab2 extends Component {
         .catch( e => alert(e) )
     }
   }
-  render(){
+
+  render() {
     let property = this.state.property
     let coordinates = property.address.coordinates, co=[0,0]
     if(coordinates.indexOf(',') > -1){
@@ -57,27 +83,27 @@ class Tab2 extends Component {
                       <tbody>
                         <tr>
                           <td className="text-center" style={{fontFamily: 'AvenirNext-Medium' }}>Costo del departamento</td>
-                          <td className="text-center" style={{fontFamily: 'AvenirNext-Bold'}}>0</td>
+                          <td className="text-center" style={{fontFamily: 'AvenirNext-Bold'}}>{ property.capitalOutflow.totalCost }</td>
                         </tr>
                         <tr>
                           <td className="text-center" style={{fontFamily: 'AvenirNext-Medium' }}>Precio estimado de venta</td>
-                          <td className="text-center" style={{fontFamily: 'AvenirNext-Bold'}}>0</td>
+                          <td className="text-center" style={{fontFamily: 'AvenirNext-Bold'}}>{ property.capitalOutflow.salePrice }</td>
                         </tr>
                         <tr>
                           <td className="text-center" style={{fontFamily: 'AvenirNext-Medium' }}>Comisión de venta</td>
-                          <td className="text-center" style={{fontFamily: 'AvenirNext-Bold'}}>0</td>
+                          <td className="text-center" style={{fontFamily: 'AvenirNext-Bold'}}>{ property.capitalOutflow.salesCommission }</td>
                         </tr>
                         <tr>
                           <td className="text-center" style={{fontFamily: 'AvenirNext-Medium' }}>Utilidad</td>
-                          <td className="text-center" style={{fontFamily: 'AvenirNext-Bold'}}>0</td>
+                          <td className="text-center" style={{fontFamily: 'AvenirNext-Bold'}}>{ property.capitalOutflow.utility }</td>
                         </tr>
                         <tr>
                           <td className="text-center" style={{fontFamily: 'AvenirNext-Medium' }}>Rendimiento en 18 meses</td>
-                          <td className="text-center" style={{fontFamily: 'AvenirNext-Bold'}}>0</td>
+                          <td className="text-center" style={{fontFamily: 'AvenirNext-Bold'}}>{ property.capitalOutflow.yieldIn18Months }</td>
                         </tr>
                         <tr>
                           <td className="text-center" style={{fontFamily: 'AvenirNext-Medium' }}>Rendimiento anualizado</td>
-                          <td className="text-center" style={{fontFamily: 'AvenirNext-Bold'}}>0</td>
+                          <td className="text-center" style={{fontFamily: 'AvenirNext-Bold'}}>{ property.capitalOutflow.annualYield }</td>
                         </tr>
                       </tbody>
                   </table>
@@ -114,51 +140,16 @@ class Tab2 extends Component {
               </div>
 
               <div className="col-sm-12">
-                  <div className="panel panel-primary">
-                      <table className="table table-hover" id="dev-table">
-                          <thead className="panel-heading" style={{backgroundColor: '#4B118E', color: 'white'}}>
-                              <tr>
-                              <th className="text-center" style={{fontFamily: 'AvenirNext-Bold', fontSize: '11px'}}>CORRIDA FINANCIERA</th>
-                              <th className="text-center" style={{fontFamily: 'AvenirNext-Bold', fontSize: '11px'}}>DATOS</th>
-                              <th className="text-center" style={{fontFamily: 'AvenirNext-Bold', fontSize: '11px'}}>CORRIDA FINANCIERA</th>
-                              <th className={{fontFamily: 'AvenirNext-Bold', fontSize: '11px'}}>DATOS</th>
-                              </tr>
-                          </thead>
-                          <tbody>
-                              <tr>
-                              <td className="text-center" style={{fontFamily: 'AvenirNext-Medium', fontSize: '12px'}}>Costo del departamento</td>
-                              <td className="text-center" style={{fontFamily: 'AvenirNext-Medium', fontSize: '12px'}}>$2,450,000</td>
-                              <td className="text-center" style={{fontFamily: 'AvenirNext-Medium', fontSize: '12px'}}>Costo del departamento</td>
-                              <td className="text-center" style={{fontFamily: 'AvenirNext-Medium', fontSize: '12px'}}>$2,450,000</td>
-                              </tr>
-                              <tr>
-                              <td className="text-center" style={{fontFamily: 'AvenirNext-Medium', fontSize: '12px'}}>Precio estimado de venta</td>
-                              <td className="text-center" style={{fontFamily: 'AvenirNext-Medium', fontSize: '12px'}}>$2,450,000</td>
-                              <td className="text-center" style={{fontFamily: 'AvenirNext-Medium', fontSize: '12px'}}>Precio estimado de venta</td>
-                              <td className="text-center" style={{fontFamily: 'AvenirNext-Medium', fontSize: '12px'}}>$2,450,000</td>
-                              </tr>
-                              <tr>
-                              <td className="text-center" style={{fontFamily: 'AvenirNext-Medium', fontSize: '12px'}}>Comisión de venta</td>
-                              <td className="text-center" style={{fontFamily: 'AvenirNext-Medium', fontSize: '12px'}}>$2,450,000</td>
-                              <td className="text-center" style={{fontFamily: 'AvenirNext-Medium', fontSize: '12px'}}>Comisión de venta</td>
-                              <td className="text-center" style={{fontFamily: 'AvenirNext-Medium', fontSize: '12px'}}>$2,450,000</td>
-                              </tr>
-                              <tr>
-                              <td className="text-center" style={{fontFamily: 'AvenirNext-Medium', fontSize: '12px'}}>Utilidad</td>
-                              <td className="text-center" style={{fontFamily: 'AvenirNext-Medium', fontSize: '12px'}}>$2,450,000</td>
-                              <td className="text-center" style={{fontFamily: 'AvenirNext-Medium', fontSize: '12px'}}>Utilidad</td>
-                              <td className="text-center" style={{fontFamily: 'AvenirNext-Medium', fontSize: '12px'}}>$2,450,000</td>
-                              </tr>
-                          </tbody>
-                      </table>
-                  </div>
+                <div className="panel panel-primary">
+                  <EdiTableRender data={property.supplementaryData} />
+                </div>
               </div>
           </div>
 
           <div className="col-md-6">
               <div>
                 <iframe src={`https://www.google.com/maps/embed/v1/place?q=${co[0]}++${co[1]}
-                &key=AIzaSyCjbpxgy_fpNywsVbmQ-WCSFgIGAGGBvCY`} width='100%' height="227" frameborder="0" style={{border:0}}></iframe>
+                &key=AIzaSyCjbpxgy_fpNywsVbmQ-WCSFgIGAGGBvCY`} width='100%' height="227" frameBorder="0" style={{border:0}}></iframe>
               </div>
           </div>
       </div>
@@ -166,6 +157,5 @@ class Tab2 extends Component {
     )
   }
 }
-
 
 export default Tab2;
