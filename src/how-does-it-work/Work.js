@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import BannerText from '../components/BannerText'
-import BannerImage from '../components/BannerImage'
 import SliderLogos from '../components/SliderLogos'
 
 function Card (props){

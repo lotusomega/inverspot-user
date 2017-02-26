@@ -60,9 +60,9 @@ class DataProfile extends Component {
       <div className="panel panel-default">
         <div style={styledata}>
           <div className="btn-group">
-            <a className="btn btn-info" onClick={this.editProfile}>
+            {this.state.show === false && <a className="btn btn-info" onClick={this.editProfile}>
               Editar Perfil
-            </a>
+            </a>}
           </div>
         </div>
 
@@ -76,22 +76,28 @@ class DataProfile extends Component {
               <div className="form-group">
                 <label className="col-md-3 control-label">Nombre Completo:</label>
                 <div className="col-md-8">
-                  <input className="form-control input-sm" name="name" type="text" required 
-                  value={ this.state.user.name } onChange={ this.handleInput }/>
+                  {this.state.show === false ? <input className="form-control input-sm" name="name" type="text" required 
+                  value={ this.state.user.name } readOnly onChange={ this.handleInput }/> : 
+                <input className="form-control input-sm" name="name" type="text" required 
+                  value={ this.state.user.name } onChange={ this.handleInput }/>}
                 </div>
               </div>
               <div className="form-group">
                 <label className="col-lg-3 control-label">Correo electrónico:</label>
                 <div className="col-lg-8">
+                  {this.state.show === false ? <input type="email" name="email" className="form-control input-sm" id="inputEmail" placeholder="Email" data-error="Bruh, that email address is invalid" required
+                  value={ this.state.user.email } readOnly onChange={ this.handleInput }/>:
                   <input type="email" name="email" className="form-control input-sm" id="inputEmail" placeholder="Email" data-error="Bruh, that email address is invalid" required
-                  value={ this.state.user.email } onChange={ this.handleInput }/>
+                  value={ this.state.user.email } onChange={ this.handleInput }/>}
                   <div className="help-block with-errors"></div>
                 </div>
               </div>
 
               <div className="form-group">
-                <label className="col-lg-3">Estado:</label>
+                <label className="col-lg-3 control-label">Estado:</label>
                 <div className="col-lg-8">
+                {this.state.show === false ? <input type="text" name="state" className="form-control input-sm" id="inputEmail" placeholder="Email" data-error="Bruh, that email address is invalid" required
+                  value={ this.state.user.state } readOnly onChange={ this.handleInput }/> :
                   <select name="state" className="form-control" id="sel1"
                     value={ this.state.user.state } onChange={ this.handleInput }>
                      <option value="na">Elige</option>
@@ -127,7 +133,7 @@ class DataProfile extends Component {
                      <option value="Veracruz">Veracruz</option>
                      <option value="Yucatán">Yucatán</option>
                      <option value="Zacatecas">Zacatecas</option>
-                  </select>
+                  </select>}
                 </div>
               </div>
 
@@ -135,8 +141,10 @@ class DataProfile extends Component {
               <div className="form-group">
                 <label className="col-md-3 control-label">Teléfono Fijo:</label>
                 <div className="col-md-8">
+                  {this.state.show === false ? <input className="form-control input-sm" id="phone" type="phone" name="telephone" required
+                  value={ this.state.user.telephone } readOnly onChange={ this.handleInput }/> :
                   <input className="form-control input-sm" id="phone" type="phone" name="telephone" required
-                  value={ this.state.user.telephone } onChange={ this.handleInput }/>
+                  value={ this.state.user.telephone } onChange={ this.handleInput }/>}
                 </div>
               </div>
 
@@ -145,7 +153,7 @@ class DataProfile extends Component {
                 <div className="col-md-8">
                   <button className="btn btn-primary" type="submit" >Guardar Cambios</button>
                   <span></span>
-                  <button className="btn btn-default" onClick={this.editProfile} style={styledata2} > Cancelar</button>
+                  {this.state.show === true &&<button className="btn btn-default" onClick={this.editProfile} style={styledata2} > Cancelar</button>}
                 </div>
               </div>
             </form>

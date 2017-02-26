@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import { login } from '../services/auth'
 import { create } from '../services/signup'
 import { listUser } from '../services/list'
-import { withRouter } from 'react-router'
+import { withRouter, Link } from 'react-router'
 
 function Register(props) {
   return(
@@ -100,7 +100,8 @@ function Register(props) {
                           <div className="input-group" style={{float: "left", marginLeft: "10px"}}>
                             <div className="checkbox">
                                 <label style={{fontSize: "12px"}}>
-                                    <input id="login-remember" type="checkbox" name="remember" value="1"/> Acepto avisos de política y privacidad
+                                    <input id="login-remember" type="checkbox" name="remember" value="1"/> 
+                                    <Link to='/notice' onClick={props.onClick}>Acepto avisos de política y privacidad</Link>
                                 </label>
                             </div>
                           </div>
@@ -291,7 +292,7 @@ class ModalRegister extends Component {
     return (
       <Modal onClick={this.props.onClick}>
         <Header/>
-        <Register handleSubmit={this.handleSubmit} user={this.state.user} asesor={this.state.asesor} handleInputRegister={this.handleInputRegister}/>
+        <Register onClick={this.props.onClick} handleSubmit={this.handleSubmit} user={this.state.user} asesor={this.state.asesor} handleInputRegister={this.handleInputRegister}/>
         <FooterR next={this.props.next}/>
       </Modal>
     )

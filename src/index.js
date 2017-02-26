@@ -18,6 +18,7 @@ import Tab4 from './proyects/Tab4'
 import Work from './how-does-it-work/Work'
 import Faqs from './faqs/Faqs'
 import Contact from './contact/Contact'
+import Notice from './notice/Notice'
 
 function requireAuth(nextState, replace) {
   if (!isLogged()) {
@@ -42,6 +43,7 @@ ReactDOM.render(
       <Route path='how-does-it-work' component={Work}/>
       <Route path="/faq's" component={Faqs}/>
       <Route path="/contact" component={Contact}/>
+      <Route path="/notice" component={Notice}/>
 	  </Route>
 		<Route path='/user' component={AppPanel} onEnter={ requireAuth }>
 			<Route path='profile' component={Profile} />

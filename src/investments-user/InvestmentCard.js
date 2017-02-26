@@ -9,7 +9,7 @@ class InvestmentCard extends Component {
       <a href="#" className="list-group-item">
         <div className="media col-md-3">
           <figure className="pull-left">
-            <img className="media-object img-rounded img-responsive" src="http://placehold.it/350x250" alt="placehold.it/350x250" />
+            <img className="media-object img-rounded img-responsive" src={'http://192.169.174.96/is-img/'+ investment.property.image} alt="Propiedad" />
           </figure>
         </div>
         <div className="col-md-6">

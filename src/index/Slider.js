@@ -17,7 +17,7 @@ class Slider extends Component {
 
             <div className="carousel-inner">
             <div className="item slides active">
-              <div style= {{height: '100vh',backgroundSize: 'cover',
+              <div style={{height: '100vh',backgroundSize: 'cover',
                 backgroundPosition: 'center center',backgroundRepeat: 'no-repeat',
                 backgroundImage: "url(/style/images/slide/slide1.jpg)"}} ></div>
               <div className="hero">
@@ -29,13 +29,13 @@ class Slider extends Component {
                         <button style={stylesli}>Ver proyectos</button></Link>
                     </div>
                     <div className="btn-promo col-xs-12 col-sm-6 col-md-6">
-                        <button style={stylesli} data-toggle="modal"  onclick="openRegisterModal();">Registrate aquí</button>
+                        <button style={stylesli} data-toggle="modal">Registrate aquí</button>
                     </div>
                 </hgroup> 
               </div>
             </div>
             <div className="item slides">
-              <div style= {{height: '100vh',backgroundSize: 'cover',
+              <div style={{height: '100vh',backgroundSize: 'cover',
                 backgroundPosition: 'center center',backgroundRepeat: 'no-repeat',
                 backgroundImage: "url(/style/images/slide/slide2.jpg)"}} ></div>
               <div className="hero">        
@@ -43,17 +43,17 @@ class Slider extends Component {
                     <h1>¡Participar desde $100,000 en<br/>inmuebles es posible!</h1>        
                     <h3 className="hidden-xs hidden-sm">Inverspot, la primera plataforma de crowdfunding inmobiliario que te permite participar a plazo o de contado en México</h3>
                     <div className="hidden-xs hidden-sm btn-promo col-xs-6 col-sm-6 col-md-6">
-                        <a href="/inmuebles">
-                        <button style={stylesli}>Ver proyectos</button></a>
+                        <Link to='/projects'>
+                        <button style={stylesli}>Ver proyectos</button></Link>
                     </div>
                     <div className="btn-promo col-xs-12 col-sm-6 col-md-6">
-                        <button style={stylesli} data-toggle="modal" onclick="openRegisterModal();">Registrate aquí</button>
+                        <button style={stylesli} data-toggle="modal" >Registrate aquí</button>
                     </div>
                 </hgroup> 
               </div>
             </div>
             <div className="item slides">
-              <div style= {{height: '100vh',backgroundSize: 'cover',
+              <div style={{height: '100vh',backgroundSize: 'cover',
                 backgroundPosition: 'center center',backgroundRepeat: 'no-repeat',
                 backgroundImage: "url(/style/images/slide/slide3.jpg)"}} ></div>
               <div className="hero">        
@@ -61,17 +61,17 @@ class Slider extends Component {
                     <h1>¡Participar desde $100,000 en<br/>inmuebles es posible!</h1>        
                     <h3 className="hidden-xs hidden-sm">Inverspot, la primera plataforma de crowdfunding inmobiliario que te permite participar a plazo o de contado en México</h3>
                     <div className="hidden-xs hidden-sm btn-promo col-xs-6 col-sm-6 col-md-6">
-                        <a href="/inmuebles">
-                        <button style={stylesli}> Ver proyectos</button></a>
+                        <Link to='/projects'>
+                        <button style={stylesli}> Ver proyectos</button></Link>
                     </div>
                     <div className="btn-promo col-xs-12 col-sm-6 col-md-6">
-                        <button style={stylesli} data-toggle="modal" onclick="openRegisterModal();">Registrate aquí</button>
+                        <button style={stylesli} data-toggle="modal">Registrate aquí</button>
                     </div>
                 </hgroup> 
               </div>
             </div>
             <div className="item slides">
-              <div style= {{height: '100vh',backgroundSize: 'cover',
+              <div style={{height: '100vh',backgroundSize: 'cover',
                 backgroundPosition: 'center center',backgroundRepeat: 'no-repeat',
                 backgroundImage: "url(/style/images/slide/slide4.jpg)"}} ></div>
               <div className="hero">        
@@ -79,11 +79,11 @@ class Slider extends Component {
                     <h1>¡Participar desde $100,000 en<br/>inmuebles es posible!</h1>        
                     <h3 className="hidden-xs hidden-sm">Inverspot, la primera plataforma de crowdfunding inmobiliario que te permite participar a plazo o de contado en México</h3>
                     <div className="hidden-xs hidden-sm btn-promo col-xs-6 col-sm-6 col-md-6">
-                        <a href="/inmuebles">
-                        <button style={stylesli}>Ver proyectos</button></a>
+                        <Link to='/projects'>
+                        <button style={stylesli}>Ver proyectos</button></Link>
                     </div>
                     <div className="btn-promo col-xs-12 col-sm-6 col-md-6">
-                        <button style={stylesli} data-toggle="modal" onclick="openRegisterModal();">Registrate aquí</button>
+                        <button style={stylesli} data-toggle="modal">Registrate aquí</button>
                     </div>
                 </hgroup> 
               </div>

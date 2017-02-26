@@ -5,7 +5,7 @@ import Countdown from '../components/Countdown'
 import moment from 'moment'
 
 function CardHeader(props) {
-  let { title, address } = props, style = { fontSize: "12px", fontWeight: "400", color: "white" }
+  let { title, address } = props
   return (
     <div className="row" style={{background: '#4B118E', marginBottom: '30px'}}>
         <div className="col-sm-4">

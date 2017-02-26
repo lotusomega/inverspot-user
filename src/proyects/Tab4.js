@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { listWork } from '../services/list'
+//import { listWork } from '../services/list'
 
 class Tab4 extends Component {
 
@@ -71,7 +71,7 @@ class Tab4 extends Component {
                               <div className="row">
                                   <div className="col-xs-12 col-sm-4">
                                           <a href="#" className="thumbnail">
-                                            <img src="//placehold.it/300x200"/>
+                                            <img src="//placehold.it/300x200" alt="propiedad"/>
                                             <p className="text-center" style={{fontSize: '10px', color:'black'}}>Descripción de la imagen: <br/>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. </p>
                                           </a>
                                   </div>
