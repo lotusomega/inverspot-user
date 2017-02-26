@@ -66,7 +66,7 @@ class PasswordProfile extends Component {
                             <span id="8char" className="glyphicon glyphicon-remove" style={stylepa}></span> 8 caracteres mínimo<br/><br/>
                           </div>
                         </div>
-                        <input type="password" name="password" className="input-sm form-control" name="password2" id="password2" placeholder="Confirmar contraseña"
+                        <input type="password" className="input-sm form-control" name="password2" id="password2" placeholder="Confirmar contraseña"
                         value={ this.state.user.password } onChange={ this.handleInput }/>
                         <div className="row">
                           <div className="col-sm-12" style={stylepa2}>

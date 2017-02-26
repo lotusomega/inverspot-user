@@ -21,7 +21,7 @@ class NewsLetter extends Component {
                      <div className="help-block with-errors"></div>
                </div>
                <div className="form-group col-xs-12 col-sm-2 col-centered" style={stylel}>
-                    <input className="button large-invertion bton" type="submit" value="Enviar" type="button"/>
+                    <input className="button large-invertion bton" type="submit" value="Enviar"/>
                 </div>
            </form>
       </div>

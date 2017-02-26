@@ -1,7 +1,4 @@
 import React, { Component } from 'react';
-import BannerText from '../components/BannerText'
-import BannerImage from '../components/BannerImage'
-import SliderLogos from '../components/SliderLogos'
 
 class Faqs extends Component {
 
@@ -10,7 +7,7 @@ class Faqs extends Component {
       <div>
       <div className="container">
             <div className="row propiedades">
-                
+
                 <div className="spacer"></div>
                 <h1 className="text-center"><b>Preguntas Frecuentes</b></h1>
                 <div className="spacer double"></div>
@@ -205,7 +202,7 @@ class Faqs extends Component {
                                     </div>
                                 </div>
                            </div>
-                        </div>  
+                        </div>
 
                         <div className="container col-xs-12 col-lg-6">
 
@@ -381,7 +378,7 @@ class Faqs extends Component {
                                         </div>
                                     </div>
                                 </div>
-                           </div> 
+                           </div>
                         </div>
                     </div>
                 </div>

@@ -40,7 +40,7 @@ var CountdownTimer = React.createClass({
   },
 
   componentDidUpdate: function() {
-    if ((!this.state.prevTime) && this.state.timeRemaining > 0 && this.isMounted()) {
+    if ((!this.state.prevTime) && this.state.timeRemaining > 0) {
       this.tick();
     }
   },
@@ -101,7 +101,7 @@ var CountdownTimer = React.createClass({
     hours = hours < 10 ? '0' + hours : hours;
     days = days < 10 ? '0' + days : days
 
-    return days + 'd ' + hours + 'h ' + minutes + 'm ' + seconds + 's' 
+    return days + 'd ' + hours + 'h ' + minutes + 'm ' + seconds + 's'
   },
 
   render: function() {
