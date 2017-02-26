@@ -37,7 +37,7 @@ function CardMedia(props) {
   return (
     <figure className="main-card-image">
         <img alt={props.src} src={props.src}/>
-        {props.children}}
+        {props.children}
     </figure>
   )
 }
