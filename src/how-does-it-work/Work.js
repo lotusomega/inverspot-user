@@ -75,7 +75,7 @@ class AboutUs extends Component {
               <div className="spacer"></div>
               <p style={{fontFamily: 'AvenirNext-Regular', fontStyle: 'normal', fontWeight: '100'}}>Inverspot ofrece una gran lista de inmuebles<br/>
                 para que puedas invertir en el que más te convenza</p>
-            </div> 
+            </div>
             <div className="spacer" style={{height: '60px'}}></div>
 
             <TitleCards title="¿Cómo valuamos los proyectos?">
@@ -90,7 +90,7 @@ class AboutUs extends Component {
             <div className="row main-container">
               <div className="spacer"></div>
               <h1 style={{color: '#5a5a5a', fontFamily: 'AvenirNext-Regular', fontWeight: '900'}}>¿Cómo paraticipar en los proyectos?</h1>
-            </div> 
+            </div>
             <div className="spacer"></div>
 
             <BigCard cl='4' number='1' title="1. Analiza" text="Analiza las opciones de inversión."/>
@@ -109,7 +109,7 @@ class AboutUs extends Component {
             </BannerText>
             <div className="spacer double"></div>
             <SliderLogos />
-            
+
 
           </div>
         </div>

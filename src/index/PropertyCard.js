@@ -36,7 +36,7 @@ function CardPromo(props) {
 function CardMedia(props) {
   return (
     <figure className="main-card-image">
-        <img src={props.src} alt="Propiedad"/>
+        <img alt={props.src} src={props.src}/>
         {props.children}}
     </figure>
   )
@@ -51,7 +51,7 @@ function CardProgress(props) {
       </div>
       <div className="col-xs-6 col-sm-6 col-md-6 right"><p style={{fontWeight: "bold", color:"#f00"}}>{currency(multiplier * max)}</p></div>
       <div className="col-xs-12 col-sm-12 col-md-12 range-holder">
-        <div className="range" style={{backgroundColor: "#4b118e", width: `${ progress }%`}}></div>
+        <div className="range" style={{backgroundColor: progress < 100 ? "#f26438" : "#00cc99", width: `${ progress }%`}}></div>
       </div>
       <div className="col-xs-12 col-sm-12 col-md-12 range-txt">
         <p style={{color: '#f00'}}><span style={{color: '#f00'}}>{max - current}</span> Acciones disponibles de <span style={{color: '#f00'}}>{max}</span></p>

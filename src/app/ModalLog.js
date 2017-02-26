@@ -266,7 +266,7 @@ class ModalRegister extends Component {
   }
 
   componentDidMount() {
-    listUser({level:{ $in: ['user', 'asesor'] }}, {sort:'name'}, 'name _id')
+    listUser({level:{ $in: ['asesor'] }}, {sort:'name'}, 'name _id')
       .then( asesor => this.setState({ asesor }) )
       .catch( e => alert(e) )
   }

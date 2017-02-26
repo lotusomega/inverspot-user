@@ -40,7 +40,7 @@ function CardProgress(props) {
       </div>
       <div className="col-xs-6 right"><p style={{fontWeight: "bold", color:"#f00"}}>{currency(multiplier * max)}</p></div>
       <div className="col-xs-12 range-holder">
-        <div className="range" style={{backgroundColor: "#4b118e", width: `${ progress }%`}}></div>
+        <div className="range" style={{backgroundColor: progress < 100 ? "#f26438" : "#00cc99", width: `${ progress }%`}}></div>
       </div>
       <div className="col-xs-12 range-txt">
         <p className="purple-text"><b>{max - current}</b> participaciones disponibles de <b>{max}</b></p>
@@ -115,6 +115,8 @@ function CardActions(props) {
 class PropertyCardBig1 extends Component  {
   render() {
     let property = this.props.property, address = property.address
+    let remain = moment(property.createdAt).add(30, 'days').diff(moment())
+    console.log(remain);
     let facts = [
       {
         title: 'Monto a Invertir',
@@ -152,7 +154,8 @@ class PropertyCardBig1 extends Component  {
               </CardButton>
               <CardButton text="Para que puedas invertir en este proyecto" clas="counter2">
                 <h5 className="text-center counter"><b>Quedan</b></h5>
-                <Countdown initialTimeRemaining={ +moment(property.createdAt).add(38, 'days') - +moment() } />
+                <Countdown initialTimeRemaining={ remain } />
+                <Countdown initialTimeRemaining={ 2471520399 } />
               </CardButton>
               <CardActions property={property}/>
             </div>
