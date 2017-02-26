@@ -27,7 +27,7 @@ class Slider extends Component {
                         <button style={stylesli}>Ver proyectos</button></Link>
                     </div>
                     <div className="btn-promo col-xs-12 col-sm-6 col-md-6">
-                        <button style={stylesli} data-toggle="modal"  onclick="openRegisterModal();">Registrate aquí</button>
+                        <button style={stylesli} data-toggle="modal">Registrate aquí</button>
                     </div>
                 </hgroup>
               </div>
@@ -45,7 +45,7 @@ class Slider extends Component {
                       <button style={stylesli}>Ver proyectos</button></Link>
                     </div>
                     <div className="btn-promo col-xs-12 col-sm-6 col-md-6">
-                        <button style={stylesli} data-toggle="modal" onclick="openRegisterModal();">Registrate aquí</button>
+                        <button style={stylesli} data-toggle="modal" >Registrate aquí</button>
                     </div>
                 </hgroup>
               </div>
@@ -63,7 +63,7 @@ class Slider extends Component {
                       <button style={stylesli}>Ver proyectos</button></Link>
                     </div>
                     <div className="btn-promo col-xs-12 col-sm-6 col-md-6">
-                        <button style={stylesli} data-toggle="modal" onclick="openRegisterModal();">Registrate aquí</button>
+                        <button style={stylesli} data-toggle="modal">Registrate aquí</button>
                     </div>
                 </hgroup>
               </div>
@@ -81,7 +81,7 @@ class Slider extends Component {
                         <button style={stylesli}>Ver proyectos</button></Link>
                     </div>
                     <div className="btn-promo col-xs-12 col-sm-6 col-md-6">
-                        <button style={stylesli} data-toggle="modal" onclick="openRegisterModal();">Registrate aquí</button>
+                        <button style={stylesli} data-toggle="modal">Registrate aquí</button>
                     </div>
                 </hgroup>
               </div>

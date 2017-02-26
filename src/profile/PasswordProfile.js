@@ -5,8 +5,11 @@ class PasswordProfile extends Component {
   constructor(props) {
     super(props)
     this.handleInput = this.handleInput.bind(this)
+    this.handleInput2 = this.handleInput2.bind(this)
     this.handleSubmit = this.handleSubmit.bind(this)
     this.state = {
+      password1:'',
+      show: false,
       user: {
         password:''
       }
@@ -29,26 +32,29 @@ class PasswordProfile extends Component {
     this.setState(newState)
   }
 
+  handleInput2(e) {
+    e.preventDefault()
+    let newState = Object.assign( this.state )
+    newState.password1 = e.target.value
+    this.setState(newState)
+  }
+
   handleSubmit(e) {
     e.preventDefault()
-    edit( this.state.user )
-      .then( success => success && alert("Contraseña Actualizada") )
+    if(this.state.password1 !== this.state.user.password){
+      this.setState({show: true})
+    }
+    else{  
+      edit( this.state.user )
+        .then( success => success && alert("Contraseña Actualizada"), this.setState({show: false}) )
+    }
   }
 
   render() {
-    const stylepa={
-      color:"#FF0004"
-    }
-    const stylepa2={
-      fontSize: "smaller"
-    }
-    const stylepa3={
-      marginLeft: "10px"
-    }
     return (
       <div className="panel panel-default">
         <div className="panel-body">
-            <h3 style={stylepa3}><strong>Cambio de Contraseña</strong></h3>
+            <h3 style={{marginLeft: "10px"}}><strong>Cambio de Contraseña</strong></h3>
             <hr/>
 
             <div className="col-md-12 col-sm-12 col-xs-12 personal-info">
@@ -59,21 +65,20 @@ class PasswordProfile extends Component {
                    <div className="row">
                     <div className="col-md-4 col-md-offset-3">
                       <p className="text-center">Introduzca su nueva contraseña</p>
-                      <form id="passwordForm" onSubmit={ this.handleSubmit }>
-                        <input type="password" className="input-sm form-control" name="password1" id="password1" placeholder="Nueva contraseña" required/>
+                      <form onSubmit={ this.handleSubmit }>
+                        <input type="password" className="input-sm form-control" name="password1" placeholder="Nueva contraseña" 
+                        value={ this.state.password1 } onChange={ this.handleInput2 } required/>
                         <div className="row">
-                          <div className="col-sm-6" style={stylepa2}>
-                            <span id="8char" className="glyphicon glyphicon-remove" style={stylepa}></span> 8 caracteres mínimo<br/><br/>
+                        <br/><br/>
+                        </div>
+                        <input type="password" name="password" className="input-sm form-control" placeholder="Confirmar contraseña"
+                        value={ this.state.user.password } onChange={ this.handleInput } required/>
+                        <div className="row">
+                          <div className="col-sm-12" style={{fontSize: "smaller"}}>
+                            {this.state.show && <p style={{color:"#FF0004"}}>Contraseñas no coinciden</p>}<br/><br/>
                           </div>
                         </div>
-                        <input type="password" className="input-sm form-control" name="password2" id="password2" placeholder="Confirmar contraseña"
-                        value={ this.state.user.password } onChange={ this.handleInput }/>
-                        <div className="row">
-                          <div className="col-sm-12" style={stylepa2}>
-                            <span id="pwmatch" className="glyphicon glyphicon-remove" style={stylepa}></span> Contraseñas coinciden<br/><br/>
-                          </div>
-                        </div>
-                        <input type="submit" className="btn btn-primary btn-load" data-loading-text="Cambiando Contraseña..." value="Cambiar Contraseña" required/>
+                        <button type="submit" className="btn btn-primary btn-load" required>Cambiar Contraseña</button>
                       </form>
                     </div>
                     </div>

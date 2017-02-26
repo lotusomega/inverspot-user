@@ -31,8 +31,6 @@ class Index extends Component {
   }
 
   toggleWizard( property ) {
-    // TODO: Invertir
-    console.log('Investing...', property);
     if(!this.state.show) {
       document.body.className += ' modal-open'
       return this.setState({show: true, property})
@@ -80,7 +78,7 @@ class Index extends Component {
                     <h2>Invertir con nosotros es rápido, seguro y sencillo</h2>
                     <div className="spacer"></div>
                     <p>Con el objetivo de democratizar la inversión en el sector inmobiliario, hemos diseñado un método sencillo para la selección de inmueble ideal. Invertir nunca fue más sencillo.</p>
-                    <button className="button" data-launchWizard="modal" href="javascript:openRegisterModal()" >Comenzar registro</button>
+                    <button className="button" data-launchWizard="modal" >Comenzar registro</button>
                 </div>
             </div>
             <div className="spacer double"></div>
