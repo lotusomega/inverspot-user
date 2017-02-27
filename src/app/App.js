@@ -31,9 +31,12 @@ class App extends Component {
     return (
       <div>
         <NavBar stepSet={this.stepSet}/>
-        <div className="spacer triple"></div>
-        {this.props.children}
-        <div className="spacer triple"></div>
+        <div className="headspace"></div>
+        {/* {this.props.children} */}
+        {this.props.children && React.cloneElement(this.props.children, {
+              stepSet: this.stepSet
+        })}
+        {/* <div className="spacer triple"></div> */}
         <Footer />
         <div className="spacer"></div>
         <footer className="end-bar">©2017 inverspot.mx | All Rights reserved</footer>

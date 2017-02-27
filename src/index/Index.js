@@ -51,30 +51,30 @@ class Index extends Component {
 
   render() {
     return (
-        <div>
-          { this.state.show && <Wizard onClick={ this.toggleWizard } id={this.state.property._id} /> }
-          <Slider />
-          <div className="container">
-            <div className="row main-container propiedades">
-              <div className="spacer double"></div>
-              <h1>
-                <b>Proyectos para Participar &nbsp;&nbsp;&nbsp;&nbsp;</b>
-                <button type="button" className="btn button"><Link to="/projects" style={{color: 'white'}}>Ver Más</Link></button>
-              </h1>
-              <div className="spacer double"></div>
-              <PropertyCards onInvest={ this.toggleWizard } propertiesa={ this.state.propertiesa } element='PropertyCard'/>
+      <div>
+        { this.state.show && <Wizard onClick={ this.toggleWizard } id={this.state.property._id} /> }
+        <Slider />
+        <div className="container">
+          <div className="row main-container propiedades">
+            <div className="spacer double"></div>
+            <h1>
+              <b>Proyectos para Participar &nbsp;&nbsp;&nbsp;&nbsp;</b>
+              <button type="button" className="btn button"><Link to="/projects" style={{color: 'white'}}>Ver Más</Link></button>
+            </h1>
+            <div className="spacer double"></div>
+            <PropertyCards onInvest={ this.toggleWizard } propertiesa={ this.state.propertiesa } element='PropertyCard'/>
 
             <NewsLetter />
             <div className="row main-container propiedades">
-                <div className="spacer"></div>
-                <h1>
-                  <b>Proyectos Fondeados &nbsp;&nbsp;&nbsp;&nbsp;</b>
-                  <button type="button" className="btn button">
-                    <Link to="/projects" style={{color: 'white'}}>Ver Más</Link>
-                  </button>
-                </h1>
-                <div className="spacer double"></div>
-                <PropertyCards propertiesf={ this.state.propertiesf } element='FundCard'/>
+              <div className="spacer"></div>
+              <h1>
+                <b>Proyectos Fondeados &nbsp;&nbsp;&nbsp;&nbsp;</b>
+                <button type="button" className="btn button">
+                  <Link to="/projects" style={{color: 'white'}}>Ver Más</Link>
+                </button>
+              </h1>
+              <div className="spacer double"></div>
+              <PropertyCards propertiesf={ this.state.propertiesf } element='FundCard'/>
 
             </div>
             <SectionIndex />
@@ -82,18 +82,19 @@ class Index extends Component {
             <div className="spacer double"></div>
 
             <div className="container">
-                <div className="row jumbotron main-container registro-section">
-                    <div className="spacer"></div>
-                    <h2>Participar con nosotros es rápido, seguro y sencillo</h2>
-                    <div className="spacer"></div>
-                    <p>Con el objetivo de democratizar la inversión en el sector inmobiliario, hemos diseñado un método sencillo para la selección de inmueble ideal. Invertir nunca fue más sencillo.</p>
-                    <button className="button" data-launchWizard="modal" >Comenzar registro</button>
-                </div>
+              <div className="row jumbotron main-container registro-section">
+                <div className="spacer"></div>
+                <h2>Participar con nosotros es rápido, seguro y sencillo</h2>
+                <div className="spacer"></div>
+                <p>Con el objetivo de democratizar la inversión en el sector inmobiliario, hemos diseñado un método sencillo para la selección de inmueble ideal. Invertir nunca fue más sencillo.</p>
+                <button className="button" data-launchWizard="modal" >Comenzar registro</button>
+              </div>
             </div>
             <div className="spacer double"></div>
             <SliderLogos/>
           </div>
         </div>
+        <div class="spacer double"></div>
       </div>
     );
   }

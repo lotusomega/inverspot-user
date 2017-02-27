@@ -3,31 +3,25 @@ import {Link} from 'react-router'
 import currency from '../services/currency'
 
 function CardHeader(props) {
-  let { title, address } = props, style = { fontSize: "12px", fontWeight: "400", color: "white" }
+  let { title, address } = props
   return (
     <div className="row header-holder head-card">
-        <div className="col-xs-12 col-sm-4 col-md-4 left margin-head">
-            <h1>{title}</h1>
-        </div>
-        <div className="col-xs-12 col-sm-8 col-md-8 right margin-head">
-            <p style={style}>{address.street + ' ' + address.number}</p>
-            <p style={style}>{address.suburb}</p>
-        </div>
+      <div className="col-xs-12 col-sm-4 col-md-4 left margin-head">
+        <h1 style={{color: 'white', fontWeight: 900}}>{title}</h1>
+      </div>
+      <div className="col-xs-12 col-sm-8 col-md-8 right margin-head">
+        <p style={{fontSize: 12, fontWeight: 400, color: 'white'}}>{address.street + ' ' + address.number}</p>
+        <p style={{fontSize: 12, fontWeight: 400, color: 'white'}}>{address.suburb}</p>
+      </div>
     </div>
   )
 }
 
 function CardPromo(props) {
-  const stylepc1 = {
-    marginTop: '-20px'
-  }
-  const stylepc2 = {
-    marginTop: '14px', textTransform: 'none'
-  }
   return (
-    <div className="row header-holder" style={stylepc1}>
+    <div className="row header-holder" style={{marginTop: '-20px'}}>
       <div className="col-xs-12 col-sm-12 col-md-12 investment-holder ">
-        <p className="p-promo" style={stylepc2}>{ props.children }</p>
+        <p className="p-promo" style={{marginTop: 14, textTransform: 'none'}}>{ props.children }</p>
       </div>
     </div>
   )
@@ -36,8 +30,8 @@ function CardPromo(props) {
 function CardMedia(props) {
   return (
     <figure className="main-card-image">
-        <img alt={props.src} src={props.src}/>
-        {props.children}
+      <img alt={props.src} src={props.src}/>
+      {props.children}
     </figure>
   )
 }
