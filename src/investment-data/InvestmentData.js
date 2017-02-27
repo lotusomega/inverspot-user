@@ -112,8 +112,12 @@ class InvestmentData extends Component {
   }
 
   componentDidMount() {
-    list('user',{_id: this.user._id},{}, 'invesmentData _id')
-      .then( user => this.setState({user: user[0]}) )
+    list('user',{_id: this.user._id},{}, 'invesmentData')
+      .then( user => this.setState( (prev, props) => {
+        return {
+          user: Object.assign( prev.user, user[0])
+        }
+      } ) )
       .catch(alert)
   }
 
