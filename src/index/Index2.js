@@ -168,7 +168,7 @@ export default class Index extends Component {
             <a href="http://sellspot.mx/" target="_blank">
               <div className="box-banner" style={{cursor: 'pointer'}}>
                 <div>
-                  <img src="style/images/sellspot.png" className="img-fluid" style={{float: 'left', width: 250}} alt="Responsive image" />
+                  <img src="style/images/sellspot.png" className="img-fluid" style={{float: 'left', width: 250}} alt="" />
                   <div className="col-xs-12">
                     <h2 style={{fontSize: 26, textAlign: 'left'}}>Promueve propiedades y gana<br />comisiones<br />Ir al sitio</h2>
                   </div>
@@ -180,7 +180,7 @@ export default class Index extends Component {
             <a href="http://premiumspot.mx/" target="_blank">
               <div className="box-banner" style={{cursor: 'pointer'}}>
                 <div>
-                  <img src="style/images/premiumspot.png" className="img-responsive" style={{float: 'right', width: 370}} alt="Responsive image" />
+                  <img src="style/images/premiumspot.png" className="img-responsive" style={{float: 'right', width: 370}} alt="" />
                   <div className="col-xs-12">
                     <h2 style={{fontSize: 26, textAlign: 'right'}}>Buscas inversiones superiores<br />a <b>$500,000</b><br />Ir al sitio</h2>
                   </div>
@@ -220,39 +220,39 @@ export default class Index extends Component {
                   <div className="item  active">
                     <div className="row">
                       <div className="col-md-4">
-                        <a className="thumbnail"><img alt src="style/images/logos/ebu.gif" /></a>
+                        <a className="thumbnail"><img alt="" src="style/images/logos/ebu.gif" /></a>
                       </div>
                       <div className="col-md-4">
-                        <a className="thumbnail"><img alt src="style/images/logos/econo.gif" /></a>
+                        <a className="thumbnail"><img alt="" src="style/images/logos/econo.gif" /></a>
                       </div>
                       <div className="col-md-4">
-                        <a className="thumbnail"><img alt src="style/images/logos/expa.gif" /></a>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="item">
-                    <div className="row">
-                      <div className="col-md-4">
-                        <a className="thumbnail"><img alt src="style/images/logos/mun.gif" /></a>
-                      </div>
-                      <div className="col-md-4">
-                        <a className="thumbnail"><img alt src="style/images/logos/neo.gif" /></a>
-                      </div>
-                      <div className="col-md-4">
-                        <a className="thumbnail"><img alt src="style/images/logos/noti.gif" /></a>
+                        <a className="thumbnail"><img alt="" src="style/images/logos/expa.gif" /></a>
                       </div>
                     </div>
                   </div>
                   <div className="item">
                     <div className="row">
                       <div className="col-md-4">
-                        <a className="thumbnail"><img alt src="style/images/logos/sinem.gif" /></a>
+                        <a className="thumbnail"><img alt="" src="style/images/logos/mun.gif" /></a>
                       </div>
                       <div className="col-md-4">
-                        <a className="thumbnail"><img alt src="style/images/logos/tecno.gif" /></a>
+                        <a className="thumbnail"><img alt="" src="style/images/logos/neo.gif" /></a>
                       </div>
                       <div className="col-md-4">
-                        <a className="thumbnail"><img alt src="style/images/logos/imag.gif" /></a>
+                        <a className="thumbnail"><img alt="" src="style/images/logos/noti.gif" /></a>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="item">
+                    <div className="row">
+                      <div className="col-md-4">
+                        <a className="thumbnail"><img alt="" src="style/images/logos/sinem.gif" /></a>
+                      </div>
+                      <div className="col-md-4">
+                        <a className="thumbnail"><img alt="" src="style/images/logos/tecno.gif" /></a>
+                      </div>
+                      <div className="col-md-4">
+                        <a className="thumbnail"><img alt="" src="style/images/logos/imag.gif" /></a>
                       </div>
                     </div>
                   </div>

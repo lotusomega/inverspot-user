@@ -17,7 +17,7 @@ export default function(props) {
           <div className="hidden-sm col-page col-sm-4 col-md-3">
             <a href="http://www.businessandmarketingtodaynews.com/83045-2/" target="_blank" className="fondo-publicacion-home">
               <div className="img-publicacion-home">
-                <img className="img-responsive" src="style/images/logos/bmn.gif" />
+                <img alt="" className="img-responsive" src="style/images/logos/bmn.gif" />
               </div>
               <div className="contenido-publicacion-home">
                 <h4 style={{fontSize: 24}}><b>Entrevista Exclusiva con David Agmon CEO de Inverspot</b></h4>
@@ -31,7 +31,7 @@ export default function(props) {
           <div className="hidden-sm col-page col-sm-4 col-md-3">
             <a href="http://tremanherman.mx/2016/11/5-tips-para-que-tu-aguinaldo-sobreviva-al-super-dolar/" target="_blank" className="fondo-publicacion-home">
               <div className="img-publicacion-home">
-                <img className="img-responsive" src="style/images/logos/trem.gif" />
+                <img alt="" className="img-responsive" src="style/images/logos/trem.gif" />
               </div>
               <div className="contenido-publicacion-home">
                 <h4 style={{fontSize: 24}}><b>5 tips para que tu aguinaldo sobreviva al súper dólar</b></h4>
@@ -45,7 +45,7 @@ export default function(props) {
           <div className="hidden-sm col-page col-sm-4 col-md-3">
             <a href="http://www.reforma.com/aplicacioneslibre/preacceso/articulo/default.aspx?id=993569&po=4&urlredirect=http://www.reforma.com/aplicaciones/articulo/default.aspx?Id=993569&po=4" target="_blank" className="fondo-publicacion-home">
               <div className="img-publicacion-home">
-                <img className="img-responsive" src="style/images/logos/ref.gif" />
+                <img alt="" className="img-responsive" src="style/images/logos/ref.gif" />
               </div>
               <div className="contenido-publicacion-home">
                 <h4 style={{fontSize: 24}}><b>Facilitan inversión en bienes raíces</b></h4>
@@ -59,7 +59,7 @@ export default function(props) {
           <div className="hidden-sm col-page col-sm-4 col-md-3">
             <a href="http://diariopalmbeach.com/UltimasNoticias/Tips-para-cuidar-tu-aguinaldo-ante-la-subida-del-dolar.html" target="_blank" className="fondo-publicacion-home">
               <div className="img-publicacion-home">
-                <img className="img-responsive" src="style/images/logos/diapb.gif" />
+                <img alt="" className="img-responsive" src="style/images/logos/diapb.gif" />
               </div>
               <div className="contenido-publicacion-home">
                 <h4 style={{fontSize: 24}}><b>Tips para cuidar tu aguinaldo ante la subida del dólar</b></h4>
@@ -73,7 +73,7 @@ export default function(props) {
           <div className="hidden-sm col-page col-sm-4 col-md-3">
             <a href="http://norte-monterrey.vlex.com.mx/vid/facilitan-inversion-bienes-raices-654198989" target="_blank" className="fondo-publicacion-home">
               <div className="img-publicacion-home">
-                <img className="img-responsive" src="style/images/logos/vlex.gif" />
+                <img alt="" className="img-responsive" src="style/images/logos/vlex.gif" />
               </div>
               <div className="contenido-publicacion-home">
                 <h4 style={{fontSize: 24}}><b>Facilitan inversión en los bienes raíces</b></h4>
@@ -87,7 +87,7 @@ export default function(props) {
           <div className="hidden-sm col-page col-sm-4 col-md-3">
             <a href="http://periodicolavoz.com.mx/cinco-tips-para-que-tu-aguinaldo-no-se-diluya-en-tus-manos/" target="_blank" className="fondo-publicacion-home">
               <div className="img-publicacion-home">
-                <img className="img-responsive" src="style/images/logos/lavoz.gif" />
+                <img alt="" className="img-responsive" src="style/images/logos/lavoz.gif" />
               </div>
               <div className="contenido-publicacion-home">
                 <h4 style={{fontSize: 24}}><b>Cinco tips para que tu aguinaldo no se diluya en tus manos</b></h4>
@@ -101,7 +101,7 @@ export default function(props) {
           <div className="hidden-sm col-page col-sm-4 col-md-3">
             <a href="https://www.elsoldezacatecas.com.mx/finanzas/el-dolar-sube-y-sube-pero-como-evitar-que-se-coma-tu-aguinaldo" target="_blank" className="fondo-publicacion-home">
               <div className="img-publicacion-home">
-                <img className="img-responsive" src="style/images/logos/elsolzac.gif" />
+                <img alt="" className="img-responsive" src="style/images/logos/elsolzac.gif" />
               </div>
               <div className="contenido-publicacion-home">
                 <h4 style={{fontSize: 24}}><b>El dólar sube y sube pero ¿cómo puedes evitar que se coma tu aguinaldo?</b></h4>
@@ -115,7 +115,7 @@ export default function(props) {
           <div className="hidden-sm col-page col-sm-4 col-md-3">
             <a href="https://www.elsoldemexico.com.mx/finanzas/537537-el-dolar-sube-y-sube-pero-como-evitar-que-se-coma-tu-aguinaldo" target="_blank" className="fondo-publicacion-home">
               <div className="img-publicacion-home">
-                <img className="img-responsive" src="style/images/logos/elsolmex.gif" />
+                <img alt="" className="img-responsive" src="style/images/logos/elsolmex.gif" />
               </div>
               <div className="contenido-publicacion-home">
                 <h4 style={{fontSize: 24}}><b>El dólar sube y sube pero ¿cómo puedes evitar que se coma tu aguinaldo?</b></h4>
@@ -129,7 +129,7 @@ export default function(props) {
           <div className="hidden-sm col-page col-sm-4 col-md-3">
             <a href="http://hpdiario.com.mx/noticias22.php?%20idn=36902" target="_blank" className="fondo-publicacion-home">
               <div className="img-publicacion-home">
-                <img className="img-responsive" src="style/images/logos/hp.gif" />
+                <img alt="" className="img-responsive" src="style/images/logos/hp.gif" />
               </div>
               <div className="contenido-publicacion-home">
                 <h4 style={{fontSize: 24}}><b>Bienes raíces, un refugio ante la volatilidad del 2017</b></h4>
@@ -143,7 +143,7 @@ export default function(props) {
           <div className="col-page col-sm-4 col-md-3">
             <a href="http://ebusinesshoy.com/inverspot-cualquiera-puede-volverse-inversionista/" target="_blank" className="fondo-publicacion-home">
               <div className="img-publicacion-home">
-                <img className="img-responsive" src="style/images/logos/ebu.gif" />
+                <img alt="" className="img-responsive" src="style/images/logos/ebu.gif" />
               </div>
               <div className="contenido-publicacion-home">
                 <h4 style={{fontSize: 24}}><b>Inverspot: cualquiera puede volverse inversionista</b></h4>
@@ -157,7 +157,7 @@ export default function(props) {
           <div className="col-page col-sm-4 col-md-3">
             <a href="http://www.sinembargo.mx/21-08-2016/3082279" target="_blank" className="fondo-publicacion-home">
               <div className="img-publicacion-home">
-                <img className="img-responsive" src="style/images/logos/sinem.gif" />
+                <img alt="" className="img-responsive" src="style/images/logos/sinem.gif" />
               </div>
               <div className="contenido-publicacion-home">
                 <h4 style={{fontSize: 24}}><b>¿Ganas de participar? Conoce Inverspot, el crowdfunding del sector inmobiliario</b></h4>
@@ -171,7 +171,7 @@ export default function(props) {
           <div className="col-page col-sm-4 col-md-3">
             <a href="http://expansion.mx/emprendedores/2016/08/10/mexicano-crea-inverspot-una-nueva-opcion-para-invertir-en-bienes-raices" target="_blank" className="fondo-publicacion-home">
               <div className="img-publicacion-home">
-                <img className="img-responsive" src="style/images/logos/expa.gif" />
+                <img alt="" className="img-responsive" src="style/images/logos/expa.gif" />
               </div>
               <div className="contenido-publicacion-home">
                 <h4 style={{fontSize: 24}}><b>Mexicano crea Inverspot, una nueva opción para invertir en bienes raices</b></h4>
@@ -185,7 +185,7 @@ export default function(props) {
           <div className="hidden-sm col-page col-sm-4 col-md-3">
             <a href="http://www.imagenradio.com.mx/rodrigo-pacheco/inverspot-proyecto-de-inversion-inmobiliaria-online" target="_blank" className="fondo-publicacion-home">
               <div className="img-publicacion-home">
-                <img className="img-responsive" src="style/images/logos/imag.gif" />
+                <img alt="" className="img-responsive" src="style/images/logos/imag.gif" />
               </div>
               <div className="contenido-publicacion-home">
                 <h4 style={{fontSize: 24}}><b>Inverspot, proyecto de inversión inmobiliaria online</b></h4>
@@ -199,7 +199,7 @@ export default function(props) {
           <div className="hidden-sm col-page col-sm-4 col-md-3">
             <a href="http://mundoejecutivo.com.mx/economia-negocios/2016/08/04/inverspot-abriendo-bienes-raices-mediante-crowdfunding" target="_blank" className="fondo-publicacion-home">
               <div className="img-publicacion-home">
-                <img className="img-responsive" src="style/images/logos/mun.gif" />
+                <img alt="" className="img-responsive" src="style/images/logos/mun.gif" />
               </div>
               <div className="contenido-publicacion-home">
                 <h4 style={{fontSize: 24}}><b>Iinverspot: Abriendo las raíces mediante el Crowdfunding</b></h4>
@@ -213,7 +213,7 @@ export default function(props) {
           <div className="hidden-sm col-page col-sm-4 col-md-3">
             <a href="http://www.revistaneo.com/articles/2016/08/24/inverspot-startup-mexicana-de-crowdfunding" target="_blank" className="fondo-publicacion-home">
               <div className="img-publicacion-home">
-                <img className="img-responsive" src="style/images/logos/neo.gif" />
+                <img alt="" className="img-responsive" src="style/images/logos/neo.gif" />
               </div>
               <div className="contenido-publicacion-home">
                 <h4 style={{fontSize: 24}}><b>Inverspot, startup mexicana de crowdfunding</b></h4>
@@ -227,7 +227,7 @@ export default function(props) {
           <div className="hidden-sm col-page col-sm-4 col-md-3">
             <a href="http://eleconomista.com.mx/fondos/2016/07/06/plataformas-fondeo-colectivo-reguladas-motor-crecimiento" target="_blank" className="fondo-publicacion-home">
               <div className="img-publicacion-home">
-                <img className="img-responsive" src="style/images/logos/econo.gif" />
+                <img alt="" className="img-responsive" src="style/images/logos/econo.gif" />
               </div>
               <div className="contenido-publicacion-home">
                 <h4 style={{fontSize: 24}}><b>Plataformas de fondeo colectivo reguladas, motor de crecimiento</b></h4>
@@ -241,7 +241,7 @@ export default function(props) {
           <div className="hidden-sm col-page col-sm-4 col-md-3">
             <a href="http://tecnoempresa.mx/index.php/2016/07/06/vive-de-tus-rentas-con-el-crowdfundig-de-inverspot" target="_blank" className="fondo-publicacion-home">
               <div className="img-publicacion-home">
-                <img className="img-responsive" src="style/images/logos/tecno.gif" />
+                <img alt="" className="img-responsive" src="style/images/logos/tecno.gif" />
               </div>
               <div className="contenido-publicacion-home">
                 <h4 style={{fontSize: 24}}><b>Vive de tus rentas con el crowdfundig de Inverspot</b></h4>
@@ -255,7 +255,7 @@ export default function(props) {
           <div className="hidden-sm col-page col-sm-4 col-md-3">
             <a href="http://www.0800flor.net/historias/inverspot-una-startup-invertir-inmuebles/?utm_source=twitterfeed&utm_medium=twitter&utm_campaign=Social+Media" target="_blank" className="fondo-publicacion-home">
               <div className="img-publicacion-home">
-                <img className="img-responsive" src="style/images/logos/flor.gif" />
+                <img alt="" className="img-responsive" src="style/images/logos/flor.gif" />
               </div>
               <div className="contenido-publicacion-home">
                 <h4 style={{fontSize: 24}}><b>Inverspot, una startup para invertir en inmuebles</b></h4>
@@ -269,7 +269,7 @@ export default function(props) {
           <div className="hidden-sm col-page col-sm-4 col-md-3">
             <a href="http://www.businessandmarketingtodaynews.com/crowdfunding-hacia-nuevo-horizonte-regulacion-negocios" target="_blank" className="fondo-publicacion-home">
               <div className="img-publicacion-home">
-                <img className="img-responsive" src="style/images/logos/bmn.gif" />
+                <img alt="" className="img-responsive" src="style/images/logos/bmn.gif" />
               </div>
               <div className="contenido-publicacion-home">
                 <h4 style={{fontSize: 24}}><b>Crowdfunding, hacia un nuevo horizonte de regulación</b></h4>
@@ -283,7 +283,7 @@ export default function(props) {
           <div className="hidden-sm col-page col-sm-4 col-md-3">
             <a href="http://pcformat.mx/www/2016/09/24/crowdfunding-hacia-nuevo-horizonte-regulacion/" target="_blank" className="fondo-publicacion-home">
               <div className="img-publicacion-home">
-                <img className="img-responsive" src="style/images/logos/pcf.gif" />
+                <img alt="" className="img-responsive" src="style/images/logos/pcf.gif" />
               </div>
               <div className="contenido-publicacion-home">
                 <h4 style={{fontSize: 24}}><b>Crowdfunding, hacia un nuevo horizonte de regulación</b></h4>
@@ -297,7 +297,7 @@ export default function(props) {
           <div className="hidden-sm col-page col-sm-4 col-md-3">
             <a href="http://www.pymempresario.com/2016/09/crowdfunding-hacia-un-nuevo-horizonte-de-regulacion/" target="_blank" className="fondo-publicacion-home">
               <div className="img-publicacion-home">
-                <img className="img-responsive" src="style/images/logos/pym.gif" />
+                <img alt="" className="img-responsive" src="style/images/logos/pym.gif" />
               </div>
               <div className="contenido-publicacion-home">
                 <h4 style={{fontSize: 24}}><b>Crowdfunding, hacia un nuevo horizonte de regulación</b></h4>
@@ -311,7 +311,7 @@ export default function(props) {
           <div className="hidden-sm col-page col-sm-4 col-md-3">
             <a href="http://lrcmagazine.com.mx/diacrowdfunding-un-parteaguas-en-la-economia-mexicana/" target="_blank" className="fondo-publicacion-home">
               <div className="img-publicacion-home">
-                <img className="img-responsive" src="style/images/logos/lrc.gif" />
+                <img alt="" className="img-responsive" src="style/images/logos/lrc.gif" />
               </div>
               <div className="contenido-publicacion-home">
                 <h4 style={{fontSize: 24}}><b>Un parteaguas en la economía mexicana</b></h4>
@@ -325,7 +325,7 @@ export default function(props) {
           <div className="hidden-sm col-page col-sm-4 col-md-3">
             <a href="https://www.entrepreneur.com/article/283359" target="_blank" className="fondo-publicacion-home">
               <div className="img-publicacion-home">
-                <img className="img-responsive" src="style/images/logos/entre.gif" />
+                <img alt="" className="img-responsive" src="style/images/logos/entre.gif" />
               </div>
               <div className="contenido-publicacion-home">
                 <h4 style={{fontSize: 24}}><b>México celebra su primer Día Crowdfunding</b></h4>
@@ -339,7 +339,7 @@ export default function(props) {
           <div className="hidden-sm col-page col-sm-4 col-md-3">
             <a href="http://t3mexico.mx/crowdfunding-day-2016/" target="_blank" className="fondo-publicacion-home">
               <div className="img-publicacion-home">
-                <img className="img-responsive" src="style/images/logos/t3.gif" />
+                <img alt="" className="img-responsive" src="style/images/logos/t3.gif" />
               </div>
               <div className="contenido-publicacion-home">
                 <h4 style={{fontSize: 24}}><b>México celebra su primer Día Crowdfunding</b></h4>
@@ -353,7 +353,7 @@ export default function(props) {
           <div className="hidden-sm col-page col-sm-4 col-md-3">
             <a href="http://neandergeek.mx/dia-crowdfunding-un-parteaguas-en-la-economia-mexicana/" target="_blank" className="fondo-publicacion-home">
               <div className="img-publicacion-home">
-                <img className="img-responsive" src="style/images/logos/nean.gif" />
+                <img alt="" className="img-responsive" src="style/images/logos/nean.gif" />
               </div>
               <div className="contenido-publicacion-home">
                 <h4 style={{fontSize: 24}}><b>México celebra su primer Día Crowdfunding</b></h4>
@@ -367,7 +367,7 @@ export default function(props) {
           <div className="hidden-sm col-page col-sm-4 col-md-3">
             <a href="http://www.itzlambo.com/2016/10/dia-crowdfunding-un-parteaguas-en-la-economia-mexicana/" target="_blank" className="fondo-publicacion-home">
               <div className="img-publicacion-home">
-                <img className="img-responsive" src="style/images/logos/itz.gif" />
+                <img alt="" className="img-responsive" src="style/images/logos/itz.gif" />
               </div>
               <div className="contenido-publicacion-home">
                 <h4 style={{fontSize: 24}}><b>México celebra su primer Día Crowdfunding</b></h4>
@@ -381,7 +381,7 @@ export default function(props) {
           <div className="hidden-sm col-page col-sm-4 col-md-3">
             <a href="http://www.milenio.com/negocios/apuesta_inversionistas_jovenes-milenio_noticias_0_837516535.html" target="_blank" className="fondo-publicacion-home">
               <div className="img-publicacion-home">
-                <img className="img-responsive" src="style/images/logos/mile.gif" />
+                <img alt="" className="img-responsive" src="style/images/logos/mile.gif" />
               </div>
               <div className="contenido-publicacion-home">
                 <h4 style={{fontSize: 24}}><b>Apuestan por los inversionistas jóvenes</b></h4>
@@ -395,7 +395,7 @@ export default function(props) {
           <div className="hidden-sm col-page col-sm-4 col-md-3">
             <a href="https://hipertextual.com/2016/11/democratizacion-inmobiliaria" target="_blank" className="fondo-publicacion-home">
               <div className="img-publicacion-home">
-                <img className="img-responsive" src="style/images/logos/hiper.gif" />
+                <img alt="" className="img-responsive" src="style/images/logos/hiper.gif" />
               </div>
               <div className="contenido-publicacion-home">
                 <h4 style={{fontSize: 24}}><b>Democratización inmobiliaria, los pros y contras de las nuevas fintech</b></h4>
@@ -409,7 +409,7 @@ export default function(props) {
           <div className="hidden-sm col-page col-sm-4 col-md-3">
             <a href="http://diariodepuebla.org/component/k2/item/1630-inversiones-seguras-con-alto-rendimiento-inyectan-economia-poblana" target="_blank" className="fondo-publicacion-home">
               <div className="img-publicacion-home">
-                <img className="img-responsive" src="style/images/logos/diap.gif" />
+                <img alt="" className="img-responsive" src="style/images/logos/diap.gif" />
               </div>
               <div className="contenido-publicacion-home">
                 <h4 style={{fontSize: 24}}><b>Inversiones seguras con alto rendimiento inyectan economía poblana</b></h4>
@@ -423,7 +423,7 @@ export default function(props) {
           <div className="hidden-sm col-page col-sm-4 col-md-3">
             <a href="http://puebladigital.net/2016/inversiones-seguras-alto-rendimiento-inyectan-economia-poblana-9728.html" target="_blank" className="fondo-publicacion-home">
               <div className="img-publicacion-home">
-                <img className="img-responsive" src="style/images/logos/pued.gif" />
+                <img alt="" className="img-responsive" src="style/images/logos/pued.gif" />
               </div>
               <div className="contenido-publicacion-home">
                 <h4 style={{fontSize: 24}}><b>Inversiones seguras con alto rendimiento inyectan economía poblana</b></h4>
@@ -437,7 +437,7 @@ export default function(props) {
           <div className="hidden-sm col-page col-sm-4 col-md-3">
             <a href="http://www.miaulavirtual.com.mx/noticias/mexico/?s=tips+para+ahorrar" target="_blank" className="fondo-publicacion-home">
               <div className="img-publicacion-home">
-                <img className="img-responsive" src="style/images/logos/mexn.gif" />
+                <img alt="" className="img-responsive" src="style/images/logos/mexn.gif" />
               </div>
               <div className="contenido-publicacion-home">
                 <h4 style={{fontSize: 24}}><b>Tips para ahorrar | 5 herramientas tecnológicas para lograrlo</b></h4>
@@ -451,7 +451,7 @@ export default function(props) {
           <div className="hidden-sm col-page col-sm-4 col-md-3">
             <a href="http://www.huffingtonpost.com.mx/2016/11/22/prestamos-en-linea-sin-buro-se-acabaron/" target="_blank" className="fondo-publicacion-home">
               <div className="img-publicacion-home">
-                <img className="img-responsive" src="style/images/logos/huf.gif" />
+                <img alt="" className="img-responsive" src="style/images/logos/huf.gif" />
               </div>
               <div className="contenido-publicacion-home">
                 <h4 style={{fontSize: 24}}><b>Préstamos en línea "sin buró" se acabaron</b></h4>
@@ -465,7 +465,7 @@ export default function(props) {
           <div className="hidden-sm col-page col-sm-4 col-md-3">
             <a href="http://www.inmobiliare.com/mexico-tendra-la-oportunidad-de-ser-referente-en-crowdfunding/" target="_blank" className="fondo-publicacion-home">
               <div className="img-publicacion-home">
-                <img className="img-responsive" src="style/images/logos/inm.gif" />
+                <img alt="" className="img-responsive" src="style/images/logos/inm.gif" />
               </div>
               <div className="contenido-publicacion-home">
                 <h4 style={{fontSize: 24}}><b>México tendrá la oportunidad de ser referente en crowdfunding</b></h4>
@@ -479,7 +479,7 @@ export default function(props) {
           <div className="hidden-sm col-page col-sm-4 col-md-3">
             <a href="http://www.forbes.com.mx/5-tips-aguinaldo-sobreviva-al-super-dolar/" target="_blank" className="fondo-publicacion-home">
               <div className="img-publicacion-home">
-                <img className="img-responsive" src="style/images/logos/forb.gif" />
+                <img alt="" className="img-responsive" src="style/images/logos/forb.gif" />
               </div>
               <div className="contenido-publicacion-home">
                 <h4 style={{fontSize: 24}}><b>5 tips para que tu aguinaldo sobreviva al súper dólar</b></h4>

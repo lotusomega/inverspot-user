@@ -74,7 +74,7 @@ class Proyects extends Component {
           <div className="spacer double"></div>
           <PropertyCards  propertiesf={ this.state.propertiesf } element='FundCardBig'/>
         </div>
-        <div className="spacer triple"></div>
+        <div className="spacer double"></div>
       </div>
     );
   }
