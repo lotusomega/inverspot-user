@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { login } from '../services/auth'
+import { login,recovery } from '../services/auth'
 import { create } from '../services/signup'
 import { listUser } from '../services/list'
 import { withRouter, Link } from 'react-router'
@@ -138,7 +138,7 @@ function Login (props){
             <hr/>
             <div className="error"></div>
             <form onSubmit={ props.authenticate }>
-              <input id="email" className="form-control" type="text" placeholder="Usuario o correo electrónico" name="email"
+              <input id="email" className="form-control" type="email" placeholder="Correo electrónico" name="email"
                 value={ props.email }
                 onChange={ props.handleInput }/>
               <input id="password" className="form-control" type="password" placeholder="Contraseña" name="password"
@@ -152,7 +152,7 @@ function Login (props){
                 </div>
               </div>
               <div className="control control-login" style={{  marginTop: "8px"}}>
-                <a  data-target="#pwdModal" data-toggle="modal" className="close" data-dismiss="modal" style={{fontSize: "12px", marginTop: "8px", color: "black"}}>
+                <a onClick={() => props.next(0)}  className="close" style={{fontSize: "12px", marginTop: "8px", color: "black"}}>
                   ¿Olvide mi contraseña?
                 </a>
               </div>
@@ -167,6 +167,32 @@ function Login (props){
         </div>
       </div>
     </div>
+  )
+}
+
+function Recover(props){
+  return(
+     <div className="modal-body">
+      <div className="box">
+        <div className="content">
+          <div className="form loginBox">
+            <h1>Recupera tu contraseña</h1>
+            <hr/>
+            <div className="error"></div>
+            <form onSubmit={ props.send }>
+              <input className="form-control" type="email" placeholder="Correo electrónico" name="email"
+                value={ props.email }
+                onChange={ props.handleInput }/>
+              <br/>
+              <button className="button btn-login" type="submit">Aceptar</button>
+              <hr/>
+              <br/>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
   )
 }
 
@@ -249,7 +275,7 @@ class ModalLogin extends Component {
     return (
       <Modal onClick={this.props.onClick}>
         <Header/>
-        <Login authenticate={this.authenticate} email={this.state.email} password={this.state.password} handleInput={this.handleInput}/>
+        <Login next={this.props.next} authenticate={this.authenticate} email={this.state.email} password={this.state.password} handleInput={this.handleInput}/>
         <FooterL next={this.props.next}/>
       </Modal>
     )
@@ -318,6 +344,46 @@ class ModalRegister extends Component {
   }
 }
 
+class ModalRecover extends Component {
+  constructor(props) {
+    super(props)
+    this.send = this.send.bind(this)
+    this.handleInput = this.handleInput.bind(this)
+    this.state = {
+      email: ''
+    }
+  }
+
+  handleInput(e) {
+    e.preventDefault()
+    let name = e.target.name
+    let newState = {}
+    newState[name] = e.target.value
+    this.setState(newState)
+  }
+
+  send(e) {
+    e.preventDefault()
+    if ( this.state.email !== "" ) {
+      recovery(this.state.email)
+      .then( success => success && alert("Correo enviado, recupera tu contraseña"),this.props.onClick())
+    }
+    else {
+      alert("Introduce tu correo")
+    }
+  }
+
+  render() {
+    return (
+      <Modal onClick={this.props.onClick}>
+        <Header/>
+        <Recover send={this.send} email={this.state.email} handleInput={this.handleInput}/>
+        <FooterL next={this.props.next}/>
+      </Modal>
+    )
+  }
+}
+
 class LoginWizard1 extends Component {
 
   constructor(props) {
@@ -345,6 +411,9 @@ class LoginWizard1 extends Component {
       next: this.goTo
     }
     switch (step) {
+      case 0:
+        Element = ModalRecover
+        break;
       case 1:
         Element = withRouter(ModalRegister)
         break;
@@ -365,4 +434,4 @@ class LoginWizard1 extends Component {
 
 let LoginWizard = withRouter(LoginWizard1)
 
-export {LoginWizard, ModalRegister, ModalLogin}
+export {LoginWizard, ModalRegister, ModalLogin, ModalRecover}

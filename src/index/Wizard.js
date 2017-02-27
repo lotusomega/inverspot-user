@@ -4,7 +4,7 @@ import currency from '../services/currency'
 import { listProperty, listUser } from '../services/list'
 import { create } from '../services/crud'
 import ModalInvest from './ModalInvest'
-import {ModalLogin, ModalRegister } from '../app/ModalLog'
+import {ModalLogin, ModalRegister, ModalRecover } from '../app/ModalLog'
 
 function ModalPromo (props){
   return (
@@ -174,6 +174,9 @@ class InvestmentWizard extends Component {
       total: this.state.total
     }
     switch (step) {
+      case 0:
+        Element = ModalRecover
+        break;
       case 1:
         Element = withRouter(ModalRegister)
         break;

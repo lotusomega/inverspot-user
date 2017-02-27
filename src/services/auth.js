@@ -49,4 +49,22 @@ function isLogged() {
   return !!getToken()
 }
 
-export { login, logout, isLogged, getToken, BASE_URL }
+function recovery(email){
+  let url = `${BASE_URL}/auth/recovery?email=${email}`
+  let opts = {
+    method: 'GET',
+    headers: {
+      'Accept': 'application/json'
+    }
+  }
+  opts.headers.Authorization = getToken()
+  return fetch(url, opts)
+    .then( res => {
+      if(res.ok) {
+        return res.json()
+      }
+      throw new Error('Error al solicitar contraseña')
+    })
+}
+
+export { login, logout, isLogged, getToken, recovery, BASE_URL }
