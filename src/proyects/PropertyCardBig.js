@@ -8,12 +8,12 @@ function CardHeader(props) {
   let { title, address } = props
   return (
     <div className="row" style={{background: '#4B118E', marginBottom: '30px'}}>
-        <div className="col-sm-4">
-            <h3 className="t1">{title}</h3>
-        </div>
-        <div className="col-sm-8">
-            <h5 className="t2">{address.suburb}</h5>
-        </div>
+      <div className="col-sm-4">
+        <h3 className="t1">{title}</h3>
+      </div>
+      <div className="col-sm-8">
+        <h5 className="t2">{address.suburb}</h5>
+      </div>
     </div>
   )
 }
@@ -22,10 +22,10 @@ function CardMedia(props) {
   return (
     <div className="card-v">
       <div className="main-card-image" style={{width: "100%"}}>
-          <a href="#">
-            <img src={props.src} alt="Propiedad"/>
-            {props.children}
-          </a>
+        <a href="#">
+          <img src={props.src} alt="Propiedad"/>
+          {props.children}
+        </a>
       </div>
     </div>
   )
@@ -73,8 +73,8 @@ function CardButton(props) {
 function CardFund (props){
   return(
     <div className="col-sm-12">
-        <h5 className="text-center fondeado-title">Proyecto Fondeado</h5>
-        <h3 className="text-center fondeado-subtitle">¡Contacta un asesor aquí!</h3>
+      <h5 className="text-center fondeado-title">Proyecto Fondeado</h5>
+      <h3 className="text-center fondeado-subtitle">¡Contacta un asesor aquí!</h3>
     </div>
   )
 }
@@ -84,28 +84,28 @@ function CardActions(props) {
     <div className="col-sm-12 form-inline text-center">
       <div className="spacer"></div>
       <Link to={`/projects/${ props.property._id }/description`} >
-      <button type="button" className="btnn button btn-grande">
-        <span style={{textDecoration: 'none', color: '#fff'}} >Resumen del Proyecto</span>
-      </button>&nbsp;
-    </Link>
+        <button type="button" className="btnn button btn-grande">
+          <span style={{textDecoration: 'none', color: '#fff'}} >Resumen del Proyecto</span>
+        </button>&nbsp;
+      </Link>
 
-    <Link to={`/projects/${ props.property._id }/market-research`} >
-      <button type="button" className="btnn button btn-grande">
-        <span style={{textDecoration: 'none', color: '#fff'}} >Estudio de Mercado</span>
-      </button>&nbsp;
-    </Link>
+      <Link to={`/projects/${ props.property._id }/market-research`} >
+        <button type="button" className="btnn button btn-grande">
+          <span style={{textDecoration: 'none', color: '#fff'}} >Estudio de Mercado</span>
+        </button>&nbsp;
+      </Link>
 
-    <Link to={`/projects/${ props.property._id }/builder`} >
-      <button type="button" className="btnn button btn-grande">
-        <span style={{textDecoration: 'none', color: '#fff'}} >Acerca del Desarrollador</span>
-      </button>&nbsp;
-    </Link>
+      <Link to={`/projects/${ props.property._id }/builder`} >
+        <button type="button" className="btnn button btn-grande">
+          <span style={{textDecoration: 'none', color: '#fff'}} >Acerca del Desarrollador</span>
+        </button>&nbsp;
+      </Link>
 
-    <Link to={`/projects/${ props.property._id }/work-progress`} >
-      <button type="button" className="btnn button btn-grande">
-        <span style={{textDecoration: 'none', color: '#fff'}} >Avance de Obra</span>
-      </button>&nbsp;
-    </Link>
+      <Link to={`/projects/${ props.property._id }/work-progress`} >
+        <button type="button" className="btnn button btn-grande">
+          <span style={{textDecoration: 'none', color: '#fff'}} >Avance de Obra</span>
+        </button>&nbsp;
+      </Link>
 
       <div className="spacer"></div>
     </div>
@@ -142,9 +142,9 @@ class PropertyCardBig1 extends Component  {
             <div className="col-sm-4">
               <CardMedia src={'http://192.169.174.96/is-img/'+ property.image} />
               <CardProgress
-              current={property.dataSheet.sharesSold}
-              max={property.dataSheet.totalShares}
-              multiplier={ property.dataSheet.investAmount } />
+                current={property.dataSheet.sharesSold}
+                max={property.dataSheet.totalShares}
+                multiplier={ property.dataSheet.investAmount } />
             </div>
             <div className="col-sm-8 card-large">
               { facts.map( f => <Fact key={f.title} title={f.title} icon={f.icon} text={f.text} /> ) }
@@ -155,7 +155,7 @@ class PropertyCardBig1 extends Component  {
               <CardButton text="Para que puedas invertir en este proyecto" clas="counter2">
                 <h5 className="text-center counter"><b>Quedan</b></h5>
                 <Countdown initialTimeRemaining={ remain } />
-                <Countdown initialTimeRemaining={ 2471520399 } />
+                {/* <Countdown initialTimeRemaining={ 2471520399 } /> */}
               </CardButton>
               <CardActions property={property}/>
             </div>

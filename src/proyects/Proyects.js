@@ -1,15 +1,30 @@
 import React, { Component } from 'react';
-import {PropertyCardBig, FundCardBig} from './PropertyCardBig'
+import {PropertyCardBig, FundCardBig} from './PropertyItem'
 import { listProperty } from '../services/list'
 import {Wizard} from '../index/Wizard'
 
 function PropertyCards(props) {
   return (
     <div>
-    { props.element === 'PropertyCardBig' &&
-       props.propertiesa.map(property => (<PropertyCardBig key={property._id} onInvest={ props.onInvest } property={property}/>) ) }
-    { props.element === 'FundCardBig' &&
-        props.propertiesf.map(property => (<FundCardBig key={property._id} property={property}/>) )}
+      { props.element === 'PropertyCardBig' &&
+        props.propertiesa.map(property => {
+          return (
+            <div>
+              <PropertyCardBig key={property._id} onInvest={ props.onInvest } property={property}/>
+              <div className="spacer double"></div>
+            </div>
+          )
+        } ) }
+      { props.element === 'FundCardBig' &&
+        props.propertiesf.map(property => {
+          return (
+            <div>
+              <FundCardBig key={property._id} onInvest={ props.onInvest } property={property}/>
+              <div className="spacer double"></div>
+            </div>
+          )
+        } )
+      }
     </div>
   )
 }
@@ -50,8 +65,8 @@ class Proyects extends Component {
       <div className="container">
         { this.state.show && <Wizard onClick={ this.toggleWizard } id={this.state.property._id} /> }
         <div className="row propiedades">
-          <div className="spacer double"></div>
-          <h1 className="text-center"><b>Proyectos para Invertir</b></h1>
+          <div className="spacer"></div>
+          <h1 className="text-center"><b>Proyectos para Participar</b></h1>
           <div className="spacer double"></div>
           <PropertyCards  onInvest={ this.toggleWizard } propertiesa={ this.state.propertiesa } element='PropertyCardBig'/>
           <div className="spacer double"></div>
@@ -59,6 +74,7 @@ class Proyects extends Component {
           <div className="spacer double"></div>
           <PropertyCards  propertiesf={ this.state.propertiesf } element='FundCardBig'/>
         </div>
+        <div className="spacer triple"></div>
       </div>
     );
   }
