@@ -156,7 +156,7 @@ export default function(props) {
           <div className="spacer" />
           <h1 style={{color: 'red', fontFamily: 'AvenirNext-Regular', fontWeight: 900}}>Comienza a llenar tu contrato aquí</h1>
           <p style={{fontFamily: 'AvenirNext-Regular', fontStyle: 'normal', fontWeight: 100}}>Todo, en un sencillo proceso</p>
-          <button className="button" onclick="openRegisterModal();">Regístrate</button>
+          <button className="button" onClick={ () => props.stepSet(1) }>Regístrate</button>
         </div>
       </div>
       <div className="spacer double" />
@@ -178,39 +178,39 @@ export default function(props) {
                 <div className="item  active">
                   <div className="row">
                     <div className="col-md-4">
-                      <a className="thumbnail"><img alt src="style/images/logos/ebu.gif" /></a>
+                      <a className="thumbnail"><img alt="" src="style/images/logos/ebu.gif" /></a>
                     </div>
                     <div className="col-md-4">
-                      <a className="thumbnail"><img alt src="style/images/logos/econo.gif" /></a>
+                      <a className="thumbnail"><img alt="" src="style/images/logos/econo.gif" /></a>
                     </div>
                     <div className="col-md-4">
-                      <a className="thumbnail"><img alt src="style/images/logos/expa.gif" /></a>
-                    </div>
-                  </div>
-                </div>
-                <div className="item">
-                  <div className="row">
-                    <div className="col-md-4">
-                      <a className="thumbnail"><img alt src="style/images/logos/mun.gif" /></a>
-                    </div>
-                    <div className="col-md-4">
-                      <a className="thumbnail"><img alt src="style/images/logos/neo.gif" /></a>
-                    </div>
-                    <div className="col-md-4">
-                      <a className="thumbnail"><img alt src="style/images/logos/noti.gif" /></a>
+                      <a className="thumbnail"><img alt="" src="style/images/logos/expa.gif" /></a>
                     </div>
                   </div>
                 </div>
                 <div className="item">
                   <div className="row">
                     <div className="col-md-4">
-                      <a className="thumbnail"><img alt src="style/images/logos/sinem.gif" /></a>
+                      <a className="thumbnail"><img alt="" src="style/images/logos/mun.gif" /></a>
                     </div>
                     <div className="col-md-4">
-                      <a className="thumbnail"><img alt src="style/images/logos/tecno.gif" /></a>
+                      <a className="thumbnail"><img alt="" src="style/images/logos/neo.gif" /></a>
                     </div>
                     <div className="col-md-4">
-                      <a className="thumbnail"><img alt src="style/images/logos/imag.gif" /></a>
+                      <a className="thumbnail"><img alt="" src="style/images/logos/noti.gif" /></a>
+                    </div>
+                  </div>
+                </div>
+                <div className="item">
+                  <div className="row">
+                    <div className="col-md-4">
+                      <a className="thumbnail"><img alt="" src="style/images/logos/sinem.gif" /></a>
+                    </div>
+                    <div className="col-md-4">
+                      <a className="thumbnail"><img alt="" src="style/images/logos/tecno.gif" /></a>
+                    </div>
+                    <div className="col-md-4">
+                      <a className="thumbnail"><img alt="" src="style/images/logos/imag.gif" /></a>
                     </div>
                   </div>
                 </div>

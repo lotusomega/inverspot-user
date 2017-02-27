@@ -14,12 +14,12 @@ class Project extends Component {
           suburb:''
         },
         dataSheet:{
-          investAmount:0,    
-          totalShares: 0,   
+          investAmount:0,
+          totalShares: 0,
           sharesSold: 0
         },
         marketResearch:{
-          estimatedTime:0, 
+          estimatedTime:0,
           yieldInTime:  0
         }
       }
@@ -49,18 +49,18 @@ class Project extends Component {
       <div className="container">
         { this.state.show && <Wizard onClick={ this.toggleWizard } id={this.state.property._id} /> }
         <div className="row propiedades">
-            <div className="spacer double"></div>
-            <h1 className="text-center"><b>Proyecto </b></h1>
-            <div className="spacer double"></div>
-            {this.state.property.status === 'available' ? <PropertyCardBig property={this.state.property}/> 
-            : <FundCardBig property={this.state.property}/> } 
-            <div className="row bordered well" style={{backgroundImage: 'linear-gradient(to bottom,#ffffff 0,#ffffff 100%)', borderColor: '#ffffff'}}>
-              <div className="col-sm-12">
-                  <div className="tab-content" style={{color: 'black'}}>
-                    {this.props.children}
-                  </div>
+          <div className="spacer double"></div>
+          <h1 className="text-center"><b>Proyecto </b></h1>
+          <div className="spacer double"></div>
+          {this.state.property.status === 'available' ? <PropertyCardBig property={this.state.property} onInvest={ this.toggleWizard } /> 
+            : <FundCardBig property={this.state.property}/> }
+          <div className="row bordered well" style={{backgroundImage: 'linear-gradient(to bottom,#ffffff 0,#ffffff 100%)', borderColor: '#ffffff'}}>
+            <div className="col-sm-12">
+              <div className="tab-content" style={{color: 'black'}}>
+                {this.props.children}
               </div>
             </div>
+          </div>
 
         </div>
       </div>

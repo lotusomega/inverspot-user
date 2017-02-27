@@ -171,7 +171,8 @@ function CardActions(props) {
 class PropertyCardBig1 extends Component  {
   render() {
     let property = this.props.property, address = property.address
-    let remain = moment(property.createdAt).add(30, 'days').diff(moment())
+    // let remain = moment(property.createdAt).add(30, 'days').diff(moment())
+    let remain = moment(property.createdAt).diff(moment())
     console.log(remain);
     let facts = [
       {

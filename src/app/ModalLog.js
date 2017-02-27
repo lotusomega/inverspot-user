@@ -31,9 +31,9 @@ function Register(props) {
 
                 <div className="control-group">
                   <div className="select" style={{marginBottom: "5px"}}>
-                    <select id="subject" name="asesor" className="form-control" required="required" style={{height: "30px"}}
+                    <select defaultValue="na" name="asesor" className="form-control" required="required" style={{height: "30px"}}
                       value={ props.user.asesor } onChange={ props.handleInputRegister }>
-                      <option value="na" selected="">¿Quién te atendió?</option>
+                      <option value="na">¿Quién te atendió?</option>
                       {props.asesor.map(asesor => <option key={asesor._id} value={asesor._id}>{asesor.name}</option>)}
                     </select>
                     <div className="select__arrow"></div>
@@ -42,9 +42,9 @@ function Register(props) {
 
                 <div className="control-group">
                   <div className="select" style={{marginBottom: "5px"}}>
-                    <select id="subject" name="state" className="form-control" required="required" style={{height: "30px"}}
+                    <select defaultValue="na" name="state" className="form-control" required="required" style={{height: "30px"}}
                       value={ props.user.state } onChange={ props.handleInputRegister }>
-                      <option value="na" selected="">Estado</option>
+                      <option value="na">Estado</option>
                       <option value="Aguascalientes">Aguascalientes</option>
                       <option value="Baja California">Baja California</option>
                       <option value="Baja California Sur">Baja California Sur</option>
