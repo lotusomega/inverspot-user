@@ -17,11 +17,11 @@ export default function(props) {
           <div className="col-xs-12 col-sm-6 col-lg-4">
             <div className="box">
               <div className="icon">
-                <div className="image"><i className="fa fa-cogs" /></div>
+                <div className="image"><i className="fa fa-search" /></div>
                 <div className="info">
-                  <h3 className="title">¿Qué es Inverspot?</h3>
+                  <h3 className="title">Nuestra plataforma</h3>
                   <p>
-                    Inverspot es la primer plataforma de participación colectiva en México que da la posibilidad de adquirir y participar en desarrollos inmobiliarios recibiendo excelentes rendimientos de una forma práctica, segura y confiable.
+                    Te mostramos día a día nuevas propiedades previamente revisadas que ofrecen atractivos rendimientos.
                   </p>
                 </div>
               </div>
@@ -31,11 +31,11 @@ export default function(props) {
           <div className="col-xs-12 col-sm-6 col-lg-4">
             <div className="box">
               <div className="icon">
-                <div className="image"><i className="fa fa-users" /></div>
+                <div className="image"><i className="fa fa-file-text-o" /></div>
                 <div className="info">
-                  <h3 className="title">¿Quienes conforman Inverspot?</h3>
+                  <h3 className="title">Proceso</h3>
                   <p>
-                    Somos un grupo de personas que hemos laborado en el sector financiero inmobiliario y tecnológico con más de 10 años de experiencia.
+                    Tu dinero esta respaldado con inmuebles, por lo que tu capital esta 100% seguro.
                   </p>
                 </div>
               </div>
@@ -45,11 +45,11 @@ export default function(props) {
           <div className="col-xs-12 col-sm-6 col-lg-4">
             <div className="box">
               <div className="icon">
-                <div className="image"><i className="fa fa-window-restore" /></div>
+                <div className="image"><i className="fa fa-check-circle-o" /></div>
                 <div className="info">
-                  <h3 className="title">¿Qué es una PIC?</h3>
+                  <h3 className="title">Garantía</h3>
                   <p>
-                    Una PIC es una Plataforma de Inversión Colectiva que genera una oportunidad práctica de partiipación, siendo asi la primer plataforma en México en conformar grupos solidos de participación, eliminando intermediarios.
+                    Tu dinero está invertido en proyectos previamente valuados por nosotros, por lo que te damos una garantía de devolución íntegra de tu capital si decides retirarte del proyecto.
                   </p>
                 </div>
               </div>
@@ -97,10 +97,9 @@ export default function(props) {
         <div className="spacer double" />
         <div className="row main-container registro-section">
           <div className="spacer" />
-          <h1 style={{color: 'red', fontFamily: 'AvenirNext-Regular', fontWeight: 900}}>Comienza tú registro rápido, sencillo y seguro</h1>
-          <p style={{fontFamily: 'AvenirNext-Regular', fontStyle: 'normal', fontWeight: 100}}>Con el objetivo de optimizar los procesos y entrar de manera sencilla a un canal de participación inmobiliario; hemos desarrollado la primera plataforma de participación colectiva en México, operando bajo un modelo de negocio sencillo bajo una serie
-          de procesos nada complicados. Participar en el mercado inmobiliario nunca fue tan fácil.</p>
-          <button className="button" data-toggle="modal" onClick="openRegisterModal();">Comenzar registro</button>
+          <h1 style={{color: 'red', fontFamily: 'AvenirNext-Regular', fontWeight: 900}}>¿Quiénes conforman Inverspot?</h1>
+          <h3 style={{textAlign: 'justify', fontFamily: 'AvenirNext-Regular', fontWeight: 400}}>Somos un grupo de personas que hemos laborado en el sector financiero inmobiliario y tecnológico con más de 10 años de experiencia. El fundador y director de la empresa es David Agmon Mizrahi, licenciado en mercadotecnia y una maestría en banca y mercados financieros. Cuenta con más de 5 años de experiencia en el sector financiero.
+          El resto del equipo y socios, es gente preparada y con experiencia en el sector inmobiliario, administración y finanzas.</h3>
         </div>
         <div className="spacer double" />
         <div className="container" style={{background: 'url(http://plat.mx/admin/wp-content/uploads/2017/01/sfRkE-o6kyDYokfKodpRQ.jpg) no-repeat center center fixed', width: '100%', height: 500}}>
@@ -195,15 +194,14 @@ export default function(props) {
           <p style={{fontFamily: 'AvenirNext-Regular', fontStyle: 'normal', fontWeight: 100}}>Participación fácil, segura y al alcance de todos</p>
         </div>
         <div className="spacer double" />
-        <div className="contact">
-          <div className="container">
-            <div className="row">
-              <div className="col-sm-12 col-lg-12">
-                <h1 style={{fontSize: 31, color: 'white', fontFamily: 'AvenirNext-Regular', fontWeight: 900, textAlign: 'center'}}>Contáctanos<small /></h1>
-              </div>
-            </div>
+
+          <div className="row main-container registro-section" style={{backgroundColor: '#fff'}}>
+            <div className="spacer" />
+            <h1 style={{color: '#4B118E', fontFamily: 'AvenirNext-Regular', fontWeight: 900}}>¿Cómo puedes contactarnos?</h1>
+            <p style={{fontFamily: 'AvenirNext-Regular', fontStyle: 'normal', fontWeight: 100}}>Puedes agendar una cita con nosotros en el corporativo en cualquier momento o pedir que un asesor te contacte para darte una mejor atención personalizada. Sabemos que cada persona tiene distintas necesidades y nuestro objetivo es lograr satisfacerlas</p>
           </div>
-        </div>
+
+
         <div className="spacer" />
         <div className="container">
           <div className="row">
