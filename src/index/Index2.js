@@ -194,7 +194,7 @@ export default class Index extends Component {
             <div className="spacer" />
             <h2>Participar con nosotros es rápido, seguro y sencillo</h2>
             <div className="spacer" />
-            <p>Con el objetivo de democratizar la participación en el sector inmobiliario, hemos diseñado un método sencillo para la selección de inmueble ideal. Participar nunca fue más sencillo.</p>
+            <p>Con el objetivo de democratizar la participación en el sector inmobiliario, hemos diseñado un método sencillo para la selección del inmueble ideal. Participar nunca fue más sencillo.</p>
             <button className="button" onClick={ () => this.props.stepSet(1) }>Comenzar registro</button>
           </div>
         </div>
