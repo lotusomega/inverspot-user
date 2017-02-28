@@ -22,6 +22,8 @@ import Notice from './notice/Notice'
 import Press from './press/Plain'
 import Privacy from './privacy/Plain'
 import Warranty from './warranty/Plain'
+import Verify from './verify/Verify'
+import Recovery from './recovery/Recovery'
 
 function requireAuth(nextState, replace) {
   if (!isLogged()) {
@@ -50,6 +52,8 @@ ReactDOM.render(
       <Route path="/notice" component={Notice}/>
       <Route path="/privacy" component={Privacy}/>
       <Route path="/warranty" component={Warranty}/>
+      <Route path="/verify/:checker" component={Verify}/>
+      <Route path="/recovery/:checker" component={Recovery}/>
 	  </Route>
 		<Route path='/user' component={AppPanel} onEnter={ requireAuth }>
 			<Route path='profile' component={Profile} />

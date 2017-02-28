@@ -57,7 +57,6 @@ function recovery(email){
       'Accept': 'application/json'
     }
   }
-  opts.headers.Authorization = getToken()
   return fetch(url, opts)
     .then( res => {
       if(res.ok) {
@@ -67,4 +66,25 @@ function recovery(email){
     })
 }
 
-export { login, logout, isLogged, getToken, recovery, BASE_URL }
+function verify(checker, password){
+  let url = ''
+  if (password)
+    url = `${BASE_URL}/auth/verify/${checker}?password=${password}`
+  else
+    url = `${BASE_URL}/auth/verify/${checker}`
+  let opts = {
+    method: 'GET',
+    headers: {
+      'Accept': 'application/json'
+    }
+  }
+  return fetch(url, opts)
+    .then( res => {
+      if(res.ok) {
+        return res.json()
+      }
+      throw new Error('Error al completar registro')
+    })
+}
+
+export { login, logout, isLogged, getToken, recovery, verify, BASE_URL }
