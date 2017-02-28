@@ -10,16 +10,16 @@ export default function(props) {
         <h1 className="text-center"><b>Garantía</b></h1>
         <div className="spacer double" />
         <div className="row main-container registro-section">
-          <div className="spacer" style={{height: 40}} />
+          <div className="spacer"/>
           <h1 style={{color: 'red', fontFamily: 'AvenirNext-Regular', fontWeight: 900}}>Garantía de tu participación</h1>
           <p style={{fontFamily: 'AvenirNext-Regular', fontStyle: 'normal', fontWeight: 100}}>Entendemos la importancia de tu participación, con el objetivo de garantizar un excelente proceso te presentamos las diferentes funciones que ofrecemos como garantía</p>
         </div>
-        <div className="spacer double" />
+        <div  style={{height: "40px"}}/>
         <div className="row main-container">
           <div className="spacer" />
           <h1 style={{color: '#5a5a5a', fontFamily: 'AvenirNext-Regular', fontWeight: 900}}>Modelos de garantía</h1>
         </div>
-        <div className="spacer" />
+        <div  style={{height: "60px"}}/>
         <div className="row">
           <div className="col-xs-12 col-sm-6 col-lg-4">
             <div className="box">
@@ -64,13 +64,13 @@ export default function(props) {
             </div>
           </div>
         </div>
-        <div className="spacer double" />
+
         <div className="row main-container registro-section" style={{backgroundColor: '#fff'}}>
           <div className="spacer" />
           <h1 style={{color: 'red', fontFamily: 'AvenirNext-Regular', fontWeight: 900}}>Somos la primer Plataforma Colectiva Inmobiliaria en México</h1>
           <p style={{fontFamily: 'AvenirNext-Regular', fontStyle: 'normal', fontWeight: 100}}>Inversión fácil, segura y al alcance de todos</p>
         </div>
-        <div className="spacer double" />
+        <div className="spacer" />
         <div className="contact">
           <div className="container">
             <div className="row">

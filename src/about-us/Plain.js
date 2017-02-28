@@ -12,7 +12,7 @@ export default function(props) {
           <h1 style={{color: 'red', fontFamily: 'AvenirNext-Regular', fontWeight: 900}}>¿Quiénes somos?</h1>
           <p style={{fontFamily: 'AvenirNext-Regular', fontStyle: 'normal', fontWeight: 100}}>Somos una plataforma que busca conformar grupos de personas interesadas en participar en desarrollos inmobiliarios con el fin de obtener atractivos rendimientos en desarrollos previamente valuados</p>
         </div>
-        <div className="spacer triple" />
+        <div style={{height: "70px"}}/>
         <div className="row">
           <div className="col-xs-12 col-sm-6 col-lg-4">
             <div className="box">
@@ -84,7 +84,7 @@ export default function(props) {
             </div>
           </div>
         </div>
-        <div className="spacer double" />
+        <div style={{height: "70px"}}/>
         <div className="container" style={{background: 'url(http://plat.mx/admin/wp-content/uploads/2017/01/12.jpg) no-repeat center center fixed', width: '100%', height: 500}}>
           <div className="row">
             <div className="col-md-6 col-sm-12" style={{backgroundColor: 'rgba(75, 17, 142, 0.53)'}}>
@@ -94,14 +94,14 @@ export default function(props) {
             </div>
           </div>
         </div>
-        <div className="spacer double" />
+        <div style={{height: "40px"}}/>
         <div className="row main-container registro-section">
           <div className="spacer" />
           <h1 style={{color: 'red', fontFamily: 'AvenirNext-Regular', fontWeight: 900}}>¿Quiénes conforman Inverspot?</h1>
-          <h3 style={{textAlign: 'justify', fontFamily: 'AvenirNext-Regular', fontWeight: 400}}>Somos un grupo de personas que hemos laborado en el sector financiero inmobiliario y tecnológico con más de 10 años de experiencia. El fundador y director de la empresa es David Agmon Mizrahi, licenciado en mercadotecnia y una maestría en banca y mercados financieros. Cuenta con más de 5 años de experiencia en el sector financiero.
+          <h3 style={{textAlign: 'justify', fontFamily: 'AvenirNext-Regular', fontWeight: 400}}>Somos un grupo de personas que hemos laborado en el sector financiero inmobiliario y tecnológico con más de 10 años de experiencia. El fundador y director de la empresa es David Agmon Mizrahi, licenciado en mercadotecnia y una maestría en banca y mercados financieros, cuenta con más de 5 años de experiencia en el sector financiero.
           El resto del equipo y socios, es gente preparada y con experiencia en el sector inmobiliario, administración y finanzas.</h3>
         </div>
-        <div className="spacer double" />
+        <div style={{height: "70px"}}/>
         <div className="container" style={{background: 'url(http://plat.mx/admin/wp-content/uploads/2017/01/sfRkE-o6kyDYokfKodpRQ.jpg) no-repeat center center fixed', width: '100%', height: 500}}>
           <div className="row">
             <div className="col-md-6 col-sm-12" style={{backgroundColor: 'rgba(75, 17, 142, 0.53)'}}>
@@ -111,7 +111,7 @@ export default function(props) {
             </div>
           </div>
         </div>
-        <div className="spacer double" />
+        <div style={{height: "40px"}}/>
         <div className="row main-container registro-section" style={{backgroundColor: '#fff!important'}}>
           <div className="spacer" />
           <h1 style={{fontFamily: 'AvenirNext-Regular', fontWeight: 900}}>¿Porqué Inverspot?</h1>
@@ -152,7 +152,7 @@ export default function(props) {
             </div>
           </div>
         </div>
-        <div className="spacer" />
+        <div className="spacer double" />
         <div className="row">
           <div className="col-md-3">
             <center>
@@ -187,16 +187,13 @@ export default function(props) {
               </p></center>
           </div>
         </div>
-        <div className="spacer double" />
         <div className="row main-container registro-section" style={{backgroundColor: '#fff'}}>
-          <div className="spacer" />
+          <div className="spacer double" />
           <h1 style={{color: 'red', fontFamily: 'AvenirNext-Regular', fontWeight: 900}}>Somos la primer Plataforma Colectiva Inmobiliaria en México</h1>
           <p style={{fontFamily: 'AvenirNext-Regular', fontStyle: 'normal', fontWeight: 100}}>Participación fácil, segura y al alcance de todos</p>
         </div>
-        <div className="spacer double" />
 
           <div className="row main-container registro-section" style={{backgroundColor: '#fff'}}>
-            <div className="spacer" />
             <h1 style={{color: '#4B118E', fontFamily: 'AvenirNext-Regular', fontWeight: 900}}>¿Cómo puedes contactarnos?</h1>
             <p style={{fontFamily: 'AvenirNext-Regular', fontStyle: 'normal', fontWeight: 100}}>Puedes agendar una cita con nosotros en el corporativo en cualquier momento o pedir que un asesor te contacte para darte una mejor atención personalizada. Sabemos que cada persona tiene distintas necesidades y nuestro objetivo es lograr satisfacerlas</p>
           </div>

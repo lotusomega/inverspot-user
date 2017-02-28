@@ -12,15 +12,12 @@ export default function(props) {
             <div className="spacer" />
             <p style={{fontFamily: 'AvenirNext-Regular', fontStyle: 'normal', fontWeight: 100}}>Inverspot ofrece una gran lista de inmuebles<br /> para que puedas participar en el que más te convenza</p>
           </div>
-          <div className="spacer double" />
+          <div style={{height: "60px"}}/>
           <div className="row main-container">
-            <div className="spacer" />
             <h1 style={{color: '#5a5a5a', fontFamily: 'AvenirNext-Regular', fontWeight: 900}}>¿Cómo valuamos los proyectos?</h1>
-
             <h3 className="text-center" style={{color: '#5a5a5a', fontFamily: 'AvenirNext-Regular', fontWeight: 400}}>Inverspot valúa cada proyecto en 3 grandes indicadores</h3>
-
           </div>
-          <div className="spacer" />
+          <div style={{height: "50px"}}/>
           <div className="container">
             <div className="row">
               <div className="col-xs-12 col-sm-6 col-lg-4">
@@ -67,12 +64,12 @@ export default function(props) {
               </div>
             </div>
           </div>
-          <div className="spacer double" />
+          <div style={{height: "30px"}}/>
           <div className="row main-container">
             <div className="spacer" />
             <h1 style={{color: '#5a5a5a', fontFamily: 'AvenirNext-Regular', fontWeight: 900}}>¿Cómo paraticipar en los proyectos?</h1>
           </div>
-          <div className="spacer" />
+          <div style={{height: "40px"}}/>
           <div className="col-xs-12 col-sm-12 col-md-4 col-lg-4">
             <div className="listing listing-radius listing-purple">
               <div className="shape">
@@ -106,7 +103,7 @@ export default function(props) {
               </div>
             </div>
           </div>
-          <div className="spacer double" />
+
           <div className="col-xs-12 col-sm-12 col-md-3 col-lg-3">
             <div className="listing listing-radius listing-purple">
               <div className="shape">
@@ -153,7 +150,7 @@ export default function(props) {
           </div>
         </div>
       </div>
-
+      <div style={{height: "20px"}}/>
       <div className="container">
         <div className="row main-container registro-section">
           <div className="spacer" />
@@ -162,14 +159,13 @@ export default function(props) {
           <button className="button" onClick={ () => props.stepSet(1) }>Regístrate</button>
         </div>
       </div>
-      <div className="spacer double" />
+        <div  style={{height: "60px"}}/>
       {/*Slider ellos hablan*/}
       <div className="hidden-xs hidden-sm conteiner">
         <div className="row">
           <div className="col-xs-12 col-centered">
-            <div className="spacer double" />
             <h1 className="text-center"><b>Ellos Hablan de Nosotros</b></h1>
-            <div className="spacer double" />
+        <div  style={{height: "30px"}}/>
           </div>
         </div>
       </div>
@@ -232,7 +228,7 @@ export default function(props) {
         </div>
       </div>
       {/*slider ellos hablan*/}
-      <div className="spacer double" />
+        <div  style={{height: "50px"}}/>
     </div>
   )
 }

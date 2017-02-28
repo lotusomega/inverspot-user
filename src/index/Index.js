@@ -56,7 +56,7 @@ class Index extends Component {
         <Slider />
         <div className="container">
           <div className="row main-container propiedades">
-            <div className="spacer double"></div>
+            <div className="spacer"></div>
             <h1>
               <b>Proyectos para Participar &nbsp;&nbsp;&nbsp;&nbsp;</b>
               <button type="button" className="btn button"><Link to="/projects" style={{color: 'white'}}>Ver Más</Link></button>
@@ -86,7 +86,7 @@ class Index extends Component {
                 <div className="spacer"></div>
                 <h2>Participar con nosotros es rápido, seguro y sencillo</h2>
                 <div className="spacer"></div>
-                <p>Con el objetivo de democratizar la inversión en el sector inmobiliario, hemos diseñado un método sencillo para la selección de inmueble ideal. Invertir nunca fue más sencillo.</p>
+                <p>Con el objetivo de democratizar la inversión en el sector inmobiliario, hemos diseñado un método sencillo para la selección del inmueble ideal. Invertir nunca fue más sencillo.</p>
                 <button className="button" data-launchWizard="modal" >Comenzar registro</button>
               </div>
             </div>

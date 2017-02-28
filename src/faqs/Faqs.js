@@ -384,7 +384,7 @@ class Faqs extends Component {
                 </div>
             </div>
         </div>
-        <div className="spacer triple"></div>
+        <div className="spacer"></div>
       </div>
     );
   }

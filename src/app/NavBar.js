@@ -28,7 +28,7 @@ class NavBar extends Component {
 
       <nav className="navbar navbar-light bg-faded navbar-fixed-top" style={stylen}>
 
-        <div className="hidden-xs hidden-sm col-xs-12 col-lg-12" style={{backgroundColor: '#A0CE4E', width:'100%', height:'29px'}}>
+        <div className="hidden-xs hidden-sm col-xs-12 col-lg-12" style={{backgroundColor: '#81D742', width:'100%', height:'29px'}}>
           <p style={stylen2}>
             Atención al cliente | 01 (55) 8000 6555 |
             <a style={stylen3} href="mailto:hola@inverspot.mx"> hola@inverspot.mx</a>
