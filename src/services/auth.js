@@ -51,13 +51,7 @@ function isLogged() {
 
 function recovery(email){
   let url = `${BASE_URL}/auth/recovery?email=${email}`
-  let opts = {
-    method: 'GET',
-    headers: {
-      'Accept': 'application/json'
-    }
-  }
-  return fetch(url, opts)
+  return fetch(url)
     .then( res => {
       if(res.ok) {
         return res.json()
@@ -72,16 +66,14 @@ function verify(checker, password){
     url = `${BASE_URL}/auth/verify/${checker}?password=${password}`
   else
     url = `${BASE_URL}/auth/verify/${checker}`
-  let opts = {
-    method: 'GET',
-    headers: {
-      'Accept': 'application/json'
-    }
-  }
-  return fetch(url, opts)
+  return fetch(url)
     .then( res => {
       if(res.ok) {
-        return res.json()
+        return res.json().then(data => {
+          save(TOKEN, data.token)
+          save('my', JSON.stringify(data.user))
+          return true
+        })
       }
       throw new Error('Error al completar registro')
     })

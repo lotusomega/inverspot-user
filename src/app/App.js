@@ -8,9 +8,11 @@ class App extends Component {
     super(props)
     this.toggleWizardLogin = this.toggleWizardLogin.bind(this)
     this.stepSet = this.stepSet.bind(this)
+    this.showModal = this.showModal.bind(this)
     this.state = {
       show: false,
-      step:0
+      step:0,
+      showConfirm: false
     }
   }
 
@@ -27,6 +29,13 @@ class App extends Component {
     document.body.className = ''
     return this.setState({show: false})
   }
+
+  showModal() {
+    this.setState({
+      showConfirm: true
+    })
+  }
+
   render() {
     return (
       <div>
@@ -34,7 +43,9 @@ class App extends Component {
         <div className="headspace"></div>
         {/* {this.props.children} */}
         {this.props.children && React.cloneElement(this.props.children, {
-              stepSet: this.stepSet
+              stepSet: this.stepSet,
+              showModal: this.showModal,
+              showConfirm: this.state.showConfirm
         })}
         {/* <div className="spacer triple"></div> */}
         <Footer />

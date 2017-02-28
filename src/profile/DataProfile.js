@@ -45,7 +45,7 @@ class DataProfile extends Component {
   handleSubmit(e) {
     e.preventDefault()
     edit( this.state.user )
-      .then( success => success && this.props.onChange( this.state.user ) )
+      .then( success => success && this.props.onChange( this.state.user ), this.setState({show: false}) )
   }
 
   render() {
@@ -76,9 +76,9 @@ class DataProfile extends Component {
               <div className="form-group">
                 <label className="col-md-3 control-label">Nombre Completo:</label>
                 <div className="col-md-8">
-                  {this.state.show === false ? <input className="form-control input-sm" name="name" type="text" required 
-                  value={ this.state.user.name } readOnly onChange={ this.handleInput }/> : 
-                <input className="form-control input-sm" name="name" type="text" required 
+                  {this.state.show === false ? <input className="form-control input-sm" name="name" type="text" required
+                  value={ this.state.user.name } readOnly onChange={ this.handleInput }/> :
+                <input className="form-control input-sm" name="name" type="text" required
                   value={ this.state.user.name } onChange={ this.handleInput }/>}
                 </div>
               </div>
@@ -151,7 +151,7 @@ class DataProfile extends Component {
               <div className="form-group">
                 <label className="col-md-3 control-label"></label>
                 <div className="col-md-8">
-                  <button className="btn btn-primary" type="submit" >Guardar Cambios</button>
+                  {this.state.show === true && <button className="btn btn-primary" type="submit" >Guardar Cambios</button>}
                   <span></span>
                   {this.state.show === true &&<button className="btn btn-default" onClick={this.editProfile} style={styledata2} > Cancelar</button>}
                 </div>
