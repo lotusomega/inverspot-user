@@ -49,4 +49,42 @@ function isLogged() {
   return !!getToken()
 }
 
-export { login, logout, isLogged, getToken, BASE_URL }
+function recovery(email){
+  let url = `${BASE_URL}/auth/recovery?email=${email}`
+  let opts = {
+    method: 'GET',
+    headers: {
+      'Accept': 'application/json'
+    }
+  }
+  return fetch(url, opts)
+    .then( res => {
+      if(res.ok) {
+        return res.json()
+      }
+      throw new Error('Error al solicitar contraseña')
+    })
+}
+
+function verify(checker, password){
+  let url = ''
+  if (password)
+    url = `${BASE_URL}/auth/verify/${checker}?password=${password}`
+  else
+    url = `${BASE_URL}/auth/verify/${checker}`
+  let opts = {
+    method: 'GET',
+    headers: {
+      'Accept': 'application/json'
+    }
+  }
+  return fetch(url, opts)
+    .then( res => {
+      if(res.ok) {
+        return res.json()
+      }
+      throw new Error('Error al completar registro')
+    })
+}
+
+export { login, logout, isLogged, getToken, recovery, verify, BASE_URL }
