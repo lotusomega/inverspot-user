@@ -91,7 +91,7 @@
   },
   {
     "name": "address.city",
-    "hint": "Ciudad o Población",
+    "hint": "Ciudad o Población *",
     "required": "required"
   },
   {
@@ -218,27 +218,33 @@
 "beneficiary1":[
   {
     "name": "beneficiary1.name",
-    "hint": "Nombre"
+    "hint": "Nombre *",
+    "required": "required"
   },
   {
     "name": "beneficiary1.firstName",
-    "hint": "Apellido paterno"
+    "hint": "Apellido paterno *",
+    "required": "required"
   },
   {
     "name": "beneficiary1.lastName",
-    "hint": "Apellido materno"
+    "hint": "Apellido materno *",
+    "required": "required"
   },
   {
     "name": "beneficiary1.telephone",
-    "hint": "Teléfono Fijo"
+    "hint": "Teléfono Fijo *",
+    "required": "required"
   },
   {
     "name": "beneficiary1.cellphone",
-    "hint": "Teléfono Celular"
+    "hint": "Teléfono Celular *",
+    "required": "required"
   },
   {
     "name": "beneficiary1.percentage",
-    "hint": "Cantidad de Porcentaje"
+    "hint": "Cantidad de Porcentaje",
+    "required": "required"
   }
 ],
 "beneficiary2":[
