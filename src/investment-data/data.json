@@ -1,20 +1,24 @@
 {"general":[
   {
     "name": "name",
-    "hint": "Nombre"
+    "hint": "Nombre *",
+    "required": "required"
   },
   {
     "name": "firstName",
-    "hint": "Apellido paterno"
+    "hint": "Apellido paterno *",
+    "required": "required"
   },
   {
     "name": "lastName",
-    "hint": "Apellido materno"
+    "hint": "Apellido materno *",
+    "required": "required"
   },
   {
     "name": "sex",
-    "hint": "Sexo",
+    "hint": "Sexo *",
     "kind": "select",
+    "required": "required",
     "options": [
       {
         "name": "Masculino",
@@ -28,7 +32,8 @@
   },
   {
     "name": "nationality",
-    "hint": "Nacionalidad"
+    "hint": "Nacionalidad *",
+    "required": "required"
   },
   {
     "name": "birthPlace",
@@ -71,27 +76,33 @@
   },
   {
     "name": "address.street",
-    "hint": "Domicilio"
+    "hint": "Domicilio *",
+    "required": "required"
   },
   {
     "name": "address.suburb",
-    "hint": "Colonia"
+    "hint": "Colonia *",
+    "required": "required"
   },
   {
     "name": "address.town",
-    "hint": "Delegación o Municipio"
+    "hint": "Delegación o Municipio *",
+    "required": "required"
   },
   {
     "name": "address.city",
-    "hint": "Ciudad o Población"
+    "hint": "Ciudad o Población",
+    "required": "required"
   },
   {
     "name": "address.country",
-    "hint": "País"
+    "hint": "País *",
+    "required": "required"
   },
   {
     "name": "address.zipCode",
-    "hint": "Código Postal"
+    "hint": "Código Postal *",
+    "required": "required"
   },
   {
     "name": "maritalStatus",
@@ -141,11 +152,13 @@
   },
   {
     "name": "email",
-    "hint": "Correo Electrónico"
+    "hint": "Correo Electrónico *",
+    "required": "required"
   },
   {
     "name": "telephone",
-    "hint": "Teléfono Fijo"
+    "hint": "Teléfono Fijo *",
+    "required": "required"
   }
 ],
 "invest":[

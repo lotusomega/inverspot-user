@@ -156,8 +156,9 @@ class InvestmentData extends Component {
     beneficiary2 = data.beneficiary2
 
 		return(
-      
+
       <div className="panel-body">
+        {/* <h3>Completa los campos requeridos * para comenzar a participar</h3> */}
         <form className="form-horizontal" onSubmit={ this.handleSubmit } >
           <FormFieldset legend='1. Datos generales del inversionista'
             controls={ general } source={ u } handleInput={ this.handleInput } />

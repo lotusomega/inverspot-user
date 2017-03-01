@@ -34,7 +34,7 @@ function Register(props) {
                   <div className="select" style={{marginBottom: "5px"}}>
                     <select name="asesor" className="form-control" style={{height: "30px"}}
                       value={ props.user.asesor } onChange={ props.handleInputRegister} required>
-                      <option selected disabled>¿Quién te atendió?</option>
+                      <option defaultValue >¿Quién te atendió?</option>
                       {props.asesor.map(asesor => <option key={asesor._id} value={asesor._id}>{asesor.name}</option>)}
                     </select>
                     <div className="select__arrow"></div>
@@ -45,7 +45,7 @@ function Register(props) {
                   <div className="select" style={{marginBottom: "5px"}}>
                     <select name="state" className="form-control" required="required" style={{height: "30px"}}
                       value={ props.user.state } onChange={ props.handleInputRegister }>
-                      <option selected disabled>Estado</option>
+                      <option defaultValue>Estado</option>
                       <option value="Aguascalientes">Aguascalientes</option>
                       <option value="Baja California">Baja California</option>
                       <option value="Baja California Sur">Baja California Sur</option>
@@ -87,7 +87,7 @@ function Register(props) {
                   <div className="select" style={{marginBottom: "5px"}}>
                     <select name="contactFrom" className="form-control" required="required" style={{height: "30px"}}
                       value={ props.user.contactFrom } onChange={ props.handleInputRegister }>
-                      <option selected disabled>¿Cómo nos conociste?</option>
+                      <option defaultValue >¿Cómo nos conociste?</option>
                       <option value="Facebook">Facebook</option>
                       <option value="Twitter">Twitter</option>
                       <option value="Google">Google</option>
@@ -101,7 +101,7 @@ function Register(props) {
                 <div className="input-group" style={{float: "left", marginLeft: "10px"}}>
                   <div className="checkbox">
                     <label style={{fontSize: "12px"}}>
-                      <input type="checkbox" name="check" checked={props.check} onChange={ props.handleFields }/>
+                      <input type="checkbox" name="check" required/>
                       <Link to='/notice' onClick={props.onClick}>Acepto avisos de política y privacidad</Link>
                     </label>
                     {props.show && <label style={{fontSize: "11px", color:"red"}}>Contraseñas no coinciden</label>}
@@ -291,7 +291,6 @@ class ModalRegister extends Component {
     this.state = {
       password1: '',
       show: false,
-      check: false,
       user: {},
       asesor: []
     }
@@ -315,13 +314,13 @@ class ModalRegister extends Component {
     e.preventDefault()
     let name = e.target.name
     let newState = Object.assign( this.state )
-    newState[name] = e.target.type === 'checkbox' ? e.target.checked : e.target.value
+    newState[name] = e.target.value
     this.setState(newState)
   }
 
   handleSubmit(e) {
     e.preventDefault()
-    if(this.state.password1 === this.state.user.password && this.state.check){
+    if(this.state.password1 === this.state.user.password){
   		let newState = Object.assign( this.state )
   		newState.user['level'] = 'user'
   		this.setState(newState)

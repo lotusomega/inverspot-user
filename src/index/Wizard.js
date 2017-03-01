@@ -17,7 +17,7 @@ function ModalPromo (props){
 function ModalButton(props){
   return (
     <div className="col-sm-12">
-      <button onClick={ props.onClick } className="button large-invertion" style={{marginTop: "2px"}}>Invertir</button>
+      <button onClick={ props.onClick } className="button large-invertion" style={{marginTop: "2px"}}>Participar</button>
     </div>
   )
 }

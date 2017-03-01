@@ -34,7 +34,7 @@ class ModalInvest extends Component {
         <div className="text-center counter" id="handleCounter">
             <input type="text" value={currency(this.props.amount * this.state.shares)} style={{height: '34px', width: '200px', color: '#4b118e', fontWeight: '900', textAlign: 'center'}} readOnly/>
         </div><br/>
-        <ModalSmallButton name='Invertir' onClick={ () => this.props.summary(this.state.shares, this.props.amount * this.state.shares) } clas='large-invertion'/>
+        <ModalSmallButton name='Participa' onClick={ () => this.props.summary(this.state.shares, this.props.amount * this.state.shares) } clas='large-invertion'/>
       </div>
     )
   }

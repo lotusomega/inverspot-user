@@ -1,12 +1,13 @@
 import React, { Component } from 'react'
 import currency from '../services/currency'
+import {Link} from 'react-router'
 
 class InvestmentCard extends Component {
   render() {
     let investment = this.props.investment
 
     return (
-      <a href="#" className="list-group-item">
+      <a className="list-group-item">
         <div className="media col-md-3">
           <figure className="pull-left">
             <img className="media-object img-rounded img-responsive" src={'http://192.169.174.96/is-img/'+ investment.property.image} alt="Propiedad" />
@@ -19,7 +20,9 @@ class InvestmentCard extends Component {
         </div>
         <div className="col-md-3 text-center">
             <h2><small> Mi Inversión {currency(investment.amount)} </small></h2>
-            <button type="button" className="btn btn-primary btn-lg btn-block">Avance de Obra</button>
+            <Link to={`/projects/${investment.property._id}/work-progress`}>
+              <button type="button" className="btn btn-primary btn-lg btn-block">Avance de Obra</button>
+            </Link>
             <div>
                 <p> Mis Acciones {investment.sharesNumber} de {investment.property.dataSheet.totalShares} </p>
             </div>
