@@ -10,7 +10,7 @@ function Register(props) {
       <div className="box">
         <div className="content">
           <div className="form">
-            <h1>Regístrate <small style={{color: "4B118E"}}> Ingresa tus datos</small></h1>
+            <h1 style={{marginTop: "20px"}}>Regístrate <small style={{color: "4B118E"}}> Ingresa tus datos</small></h1>
             <hr/>
             <form onSubmit={ props.handleSubmit }  data-toggle="validator" role="form">
 
@@ -134,7 +134,7 @@ function Login (props){
       <div className="box">
         <div className="content">
           <div className="form loginBox">
-            <h1>Iniciar sesión</h1>
+            <h1 style={{marginTop: "20px"}}>Iniciar Sesión</h1>
             <hr/>
             <div className="error"></div>
             <form onSubmit={ props.authenticate }>

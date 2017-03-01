@@ -126,12 +126,12 @@ export default class Index extends Component {
         <div className="container">
           {/*Fichas de las Propiedades*/}
           <div className="row main-container propiedades">
-            <div className="spacer double" />
+            <div style={{height: "60px"}}/>
             <h1>
               <b>Proyectos para Participar &nbsp;&nbsp;&nbsp;&nbsp;</b>
               <button type="button" className="btn button"><Link to="projects" style={{color: 'white'}}>Ver Más</Link></button>
             </h1>
-            <div className="spacer double" />
+            <div style={{height: "80px"}}/>
             {/* INVERSPOT: Renderiza las últimas 3 propiedades disponibles */}
             <PropertyCards onInvest={ this.toggleWizard } propertiesa={ this.state.propertiesa } element='PropertyCard'/>
           </div>
@@ -152,17 +152,15 @@ export default class Index extends Component {
               </div>
             </form>
           </div>
-          <div className="spacer double" />
           {/*Fichas de las Propiedades Fondeadas*/}
           <div className="row main-container propiedades">
-            <div className="spacer" />
+            <div style={{height: "60px"}}/>
             <h1><b>Proyectos Fondeados &nbsp;&nbsp;&nbsp;&nbsp;</b>
               <button type="button" className="btn button"><Link to="projects" style={{color: 'white'}}>Ver Más</Link></button> </h1>
-            <div className="spacer double" />
+            <div style={{height: "80px"}}/>
             <PropertyCards propertiesf={ this.state.propertiesf } element='FundCard'/>
           </div>
         </div>
-        <div className="spacer double" />
         <div className="container">
           <div className="col-xs-12 col-sm-6 col-centered">
             <a href="http://sellspot.mx/" target="_blank">
@@ -189,25 +187,24 @@ export default class Index extends Component {
             </a>
           </div>
         </div>
-        <div className="spacer double" />
+        <div className="spacer" />
         {/*Suscribe*/}
         <div className="container">
           <div className="row jumbotron main-container registro-section">
             <div className="spacer" />
             <h2>Participar con nosotros es rápido, seguro y sencillo</h2>
             <div className="spacer" />
-            <p>Con el objetivo de democratizar la participación en el sector inmobiliario, hemos diseñado un método sencillo para la selección de inmueble ideal. Participar nunca fue más sencillo.</p>
+            <p>Con el objetivo de democratizar la participación en el sector inmobiliario, hemos diseñado un método sencillo para la selección del inmueble ideal. Participar nunca fue más sencillo.</p>
             <button className="button" onClick={ () => this.props.stepSet(1) }>Comenzar registro</button>
           </div>
         </div>
-        <div className="spacer double" />
+        <div  style={{height: "60px"}}/>
         {/*Slider ellos hablan*/}
         <div className="hidden-xs hidden-sm conteiner">
           <div className="row">
             <div className="col-xs-12 col-centered">
-              <div className="spacer" />
               <h1 className="text-center"><b>Ellos Hablan de Nosotros</b></h1>
-              <div className="spacer" />
+              <div style={{height: "30px"}}/>
             </div>
           </div>
         </div>

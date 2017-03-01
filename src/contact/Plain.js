@@ -85,7 +85,7 @@ export default function(props) {
           </div>
         </div>
       </div>
-      <div className="spacer double"></div>
+        <div  style={{height: "60px"}}/>
     </div>
   )
 }
