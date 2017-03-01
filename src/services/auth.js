@@ -54,7 +54,7 @@ function recovery(email){
   return fetch(url)
     .then( res => {
       if(res.ok) {
-        return res.json()
+        return res.text()
       }
       throw new Error('Error al solicitar contraseña')
     })

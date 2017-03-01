@@ -22,7 +22,7 @@ function Register(props) {
                   value={ props.user.email } onChange={ props.handleInputRegister }/>
 
                 <input id="password" className="form-control input-sm" type="password" placeholder="Password" name="password1" required
-                value={ props.password1 } onChange={ props.handleFields }/>
+                  value={ props.password1 } onChange={ props.handleFields }/>
 
                 <input id="password_confirmation" className="form-control input-sm" type="password" placeholder="Repeat Password" name="password" required="required"
                   value={ props.user.password } onChange={ props.handleInputRegister }/>
@@ -325,7 +325,10 @@ class ModalRegister extends Component {
   		newState.user['level'] = 'user'
   		this.setState(newState)
       create( this.state.user )
-      .then( success => success && alert("Registro exitoso, activa tu cuenta"),this.props.onClick() )
+      .then( success => {
+        success && alert("Registro exitoso, activa tu cuenta")
+        this.props.onClick()
+      }, this.props.onClick )
     }
     else
       this.state.password1 !== this.state.user.password && this.setState({ show: true })
