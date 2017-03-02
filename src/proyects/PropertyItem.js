@@ -10,6 +10,7 @@ function Spacer(props) {
   )
 }
 
+//funcion Card: contiene el estilo del contenedor de la tarjeta
 function Card(props) {
   return (
     <div className="row bordered">
@@ -18,6 +19,9 @@ function Card(props) {
   )
 }
 
+//funcion CardHeader: contiene el estilo de la cabecera de la tarjeta
+/*props
+address.suburb: colonia donde se ubica la propiedad*/
 function CardHeader(props) {
   let { title, address } = props
   return (
@@ -32,6 +36,7 @@ function CardHeader(props) {
   )
 }
 
+//funcion del estilo del cuerpo de la tarjeta
 function CardBody(props) {
   return (
     <div className="col-sm-12">
@@ -47,7 +52,9 @@ function CardLeft(props) {
     </div>
   )
 }
-
+//funcion CardMedia: contiene el estilo de la imagen de la propiedad
+/*props
+src: link de la imagen*/
 function CardMedia(props) {
   return (
     <div className="card-v">
@@ -66,6 +73,12 @@ function CardMedia(props) {
   )
 }
 
+//funcion CardProgress: contiene el estilo del progreso de la barra de inversion
+/*props
+current: acciones vendidas
+max: total de acciones que posee la propiedad
+multiplier: costo individual por accion
+progress: calculo del progreso de la barra multiplicando el numero de acciones vendidas por 100 entre el numero total de acciones de la propiedad*/
 function CardProgress(props) {
   let { current, max, multiplier } = props, progress = current * 100 / max
   return (
@@ -93,7 +106,11 @@ function CardRight(props) {
     </div>
   )
 }
-
+//funcion Fact: contiene el estilo de monto a participar, plazo estimado y rendimiento estimado
+/*props
+title: titulo del componente
+icon: nombre del icono del componente
+text: texto del componente*/
 function Fact(props) {
   return (
     <div className="col-sm-4 col-centered col-max circle">
@@ -117,6 +134,7 @@ function CardCTA(props) {
   )
 }
 
+//funcion CardCountdown: contiene el estilo del boton con la cuenta regresiva 
 function CardCountdown(props) {
   return (
     <div className="col-sm-6">
@@ -150,6 +168,9 @@ function CardActionButton(props) {
   )
 }
 
+//funcion CardActions: contiene el estilo para los botones que detallan la propiedad (resumen, estudio de mercado, desarrollador, avance de obra )
+/*props
+property._id: identificador de la propiedad a consultar*/
 function CardActions(props) {
   let {property} = props
   return (
@@ -168,6 +189,19 @@ function CardActions(props) {
   )
 }
 
+//funcion PropertyCardBig1: tarjeta de propiedad disponible para invertir
+/*props
+property.dataSheet.investAmount: costo de una accion
+remain: tiempo de la propiedad disponible para invertir
+property.marketResearch.estimatedTime: tiempo estimado en meses
+property.marketResearch.yieldInTime: porcentaje del rendimiento estimado
+property.title: nombre de la propiedad
+property.image: link de la imagen de la propiedad
+property.address: direccion de la propiedad
+property.dataSheet.sharesSold: numero de acciones vendidas por la propiedad
+property.dataSheet.totalShares: numero de acciones con las que cuenta la propiedad
+property.dataSheet.investAmount: costo por accion
+property._id: identificador de la propiedad*/
 class PropertyCardBig1 extends Component  {
   render() {
     let property = this.props.property, address = property.address
@@ -215,6 +249,18 @@ class PropertyCardBig1 extends Component  {
   }
 }
 
+//funcion FundCardBig1: tarjeta de propiedad fondeada
+/*props
+property.dataSheet.investAmount: costo de una accion
+property.marketResearch.estimatedTime: tiempo estimado en meses
+property.marketResearch.yieldInTime: porcentaje del rendimiento estimado
+property.title: nombre de la propiedad
+property.image: link de la imagen de la propiedad
+property.address: direccion de la propiedad
+property.dataSheet.sharesSold: numero de acciones vendidas por la propiedad
+property.dataSheet.totalShares: numero de acciones con las que cuenta la propiedad
+property.dataSheet.investAmount: costo por accion
+property._id: identificador de la propiedad*/
 class FundCardBig1 extends Component  {
   render(){
     let property = this.props.property, address = property.address

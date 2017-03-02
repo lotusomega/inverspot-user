@@ -1,3 +1,4 @@
+//Contiene todas las rutas para navegar en la pagina
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { Router, Route, hashHistory, IndexRoute } from 'react-router'
@@ -25,6 +26,7 @@ import Warranty from './warranty/Plain'
 import Verify from './verify/Verify'
 import Recovery from './recovery/Recovery'
 
+//funcion para verificar si el usuario esta logueado
 function requireAuth(nextState, replace) {
   if (!isLogged()) {
     replace({
@@ -32,7 +34,7 @@ function requireAuth(nextState, replace) {
     })
   }
 }
-
+//Renderizado del contenido, cargando los componentes dependiendo de la ruta
 ReactDOM.render(
 	<Router onUpdate={() => window.scrollTo(0, 0)} history={hashHistory}>
 		<Route path='/' component={ App }>

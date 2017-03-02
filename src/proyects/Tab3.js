@@ -1,8 +1,10 @@
+//Componente para mostrar el Desarrollador
 import React, { Component } from 'react';
 import { listProperty } from '../services/list'
 
 class Tab3 extends Component {
-
+  /*states
+  property: contiene los datos del desarrollador de la propiedad*/
   constructor(props) {
     super(props)
     this.state = {
@@ -16,7 +18,8 @@ class Tab3 extends Component {
       }
     }
   }
-
+  /*componentDidMount funcion que se ejecuta antes de montar el componente que devuelve el desarrollador
+  de la propiedad especificada en el estado de property*/
   componentDidMount() {
     if( this.props.params.id) {
       listProperty({_id: this.props.params.id}, {populate: 'builder'}, 'builder')

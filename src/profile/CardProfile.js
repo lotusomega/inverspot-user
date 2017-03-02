@@ -1,5 +1,7 @@
 import React, { Component } from 'react'
-
+/*props
+user.state: Estado donde vive el usuario
+user.invesmentData.sex: Genero del usuario*/
 class CardProfile extends Component {
   render() {
     return (
@@ -12,7 +14,7 @@ class CardProfile extends Component {
                 <h3><strong>Ubicación</strong></h3>
                 <p>{this.props.user.state}</p>
                 <h3><strong>Genero</strong></h3>
-                <p>Unknown</p>
+                <p>{this.props.user.invesmentData.sex ? this.props.user.invesmentData.sex : 'Desconocido'}</p>
               </div>
             </div>
           </div>

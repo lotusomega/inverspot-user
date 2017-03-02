@@ -1,5 +1,5 @@
 import { BASE_URL } from './auth'
-
+//funcion para crear un nuevo usuario
 function create(data) {
   console.log("CREATE");
   let body = JSON.stringify(data)

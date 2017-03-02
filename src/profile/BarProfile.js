@@ -1,5 +1,7 @@
 import React, { Component } from 'react'
-
+/*props
+user.name: nombre del usuario
+user.email: correo del usuario*/
 class BarProfile extends Component {
   render() {
     const styleb={
@@ -14,7 +16,7 @@ class BarProfile extends Component {
             <span>
                 <h1 className="panel-title pull-left" style={styleb}>{this.props.user.name} <br/>
                 <small>{this.props.user.email}</small> <i className="fa fa-check text-success" aria-hidden="true" data-toggle="tooltip" data-placement="bottom" title="Su cuenta de correo electrónico esta verificada"></i></h1>
-              
+
             </span>
             <br/><br/>
             <br/><br/><hr/>

@@ -1,11 +1,13 @@
+//Wizard: Componente que contiene todos los modales de inversion y de inicio de sesión
 import React,{Component} from 'react'
 import {withRouter} from 'react-router'
 import currency from '../services/currency'
-import { listProperty, listUser } from '../services/list'
+import { listProperty } from '../services/list'
 import { create } from '../services/crud'
 import ModalInvest from './ModalInvest'
 import {ModalLogin, ModalRegister, ModalRecover } from '../app/ModalLog'
 
+//funcion ModalPromo: contiene el estilo de los titulos para los modales
 function ModalPromo (props){
   return (
     <p className="text-center text-modal">
@@ -14,6 +16,7 @@ function ModalPromo (props){
   )
 }
 
+//funcion ModalButton: contiene el estilo del boton participar
 function ModalButton(props){
   return (
     <div className="col-sm-12">
@@ -22,6 +25,7 @@ function ModalButton(props){
   )
 }
 
+//funcion ModalSmallButton: contiene el estilo de los botones mas pequeños dentro del modal(participa, regresar, si , no)
 function ModalSmallButton (props){
   return(
     <div className="col-sm-6">
@@ -30,6 +34,7 @@ function ModalSmallButton (props){
   )
 }
 
+//funcion ModalText: contiene el estilo del texto cuerpo del modal
 function ModalText(props){
   return (
     <p className="text-center" style={{fontSize: "12px", color: "white"}}>
@@ -38,6 +43,9 @@ function ModalText(props){
   )
 }
 
+//funcion Modal: contiene la estructura del modal
+/*props
+onClick: contiene la funcion para cerrar el modal*/
 function Modal (props){
   return (
     <div className='modal fade in' style={{display: 'block'}}>
@@ -55,6 +63,11 @@ function Modal (props){
   )
 }
 
+//funcion Step1: contiene el paso 1 del proceso de inversion
+/*props
+property.title: contiene el titulo de la propiedad
+verify: contiene la funcion para verificar que el usuario se encuentra logueado antes de poder invertir
+onClick: contiene la funcion para cerrar el modal*/
 function Step1 (props){
   return(
     <Modal onClick={props.onClick}>
@@ -66,6 +79,12 @@ function Step1 (props){
   )
 }
 
+//funcion Step2: contiene el paso 2 del proceso de inversion
+/*props
+property = property.dataSheet: contiene la informacion sobre el monto de inversion, total de acciones y acciones vendidas de la propiedad
+total = property.totalShares - property.sharesSold: contiene el numero de acciones restatntes para invertir restando las acciones vendidas de las totales
+summary: funcion que envia el numero de acciones invertidas y el costo total de estas
+onClick: contiene la funcion para cerrar el modal*/
 function Step2 (props){
   let property = props.property.dataSheet
   let total = property.totalShares - property.sharesSold
@@ -80,6 +99,12 @@ function Step2 (props){
   )
 }
 
+//funcion Step3: contiene el paso 3 del proceso de inversion
+/*props
+onClick: contiene la funcion para cerrar el modal
+shares: numero de acciones para invertir
+total: costo total de las acciones para invertir
+property.title: nombre de la propiedad para invertir*/
 function Step3 (props){
   return(
     <Modal onClick={props.onClick}>
@@ -90,8 +115,14 @@ function Step3 (props){
   )
 }
 
+//InvestmentWizard componente que posee el paso en que se encuentra el modal(0, 1, 2, 3, 4, 5)
 class InvestmentWizard extends Component {
-
+  /* state
+  step: paso en el que se encuntra el modal por defecto comienza en el 3 para comenzar a invertir
+  property: contiene toda la información de la propiedad para invertir
+  shares: numero de acciones que se desean invertir
+  total: cantidad total del costo de las acciones
+  user: contiene la informacion del usuario para verificar que este logueado*/
   constructor(props) {
     super(props)
     this.goTo = this.goTo.bind(this)
@@ -104,27 +135,26 @@ class InvestmentWizard extends Component {
       step: 3,
       property: {},
       shares:0,
-      total: 0,
-      user: []
+      total: 0
     }
   }
-
+  /*componentDidMount funcion que se ejecuta antes de montar el componente y obtiene la informacion de
+  usuario una vez que se ha iniciado sesion*/
   componentWillMount() {
     this.user = JSON.parse(localStorage.getItem('my'))
   }
-
+  //Lista los detalles de la propiedad y los inserta en el estado property
+  /*props id: identificador de la propiedad*/
   componentDidMount() {
     this.props.id && listProperty({_id: this.props.id}, {}, 'title dataSheet marketResearch')
       .then( properties => this.setState({ property: properties[0] }) )
-    listUser({_id: this.user._id},{}, 'level')
-      .then( user => this.setState({user: user[0]}) )
-      .catch(alert)
   }
 
+  // goTo: funcion que asigna el paso al estado para cambiar de modal
   goTo( step ) {
     this.setState({step})
   }
-
+  //verifica si el usuario se ha logueado para continuar el proceso de inversion, en caso de que no se manda el modal de inicio de sesion
   verify(){
     if (this.user)
       this.goTo(4)
@@ -136,9 +166,9 @@ class InvestmentWizard extends Component {
     this.props.onClick()
     // this.props.router.push('/user/investments')
   }
-
+  //funcion de resumen con el total de acciones y monto que verifica el nivel de usuario para poder invetir
   summary(shares,total){
-    if(this.state.user.level === 'investor'){
+    if(this.user.level === 'investor'){
       this.setState({shares: shares, total: total})
       this.goTo(5)
     }
@@ -147,7 +177,7 @@ class InvestmentWizard extends Component {
       this.props.router.push('/user/investment-data')
     }
   }
-
+  //funcion invertir, crea el objeto de inversion con los datos y lo manda a la api
   invest(){
     let investment = {
       investor: this.user._id,
@@ -164,7 +194,6 @@ class InvestmentWizard extends Component {
     let Element = undefined
     let passProps = {
       property,
-      close: this.close,
       onClick: this.props.onClick,
       next: this.goTo,
       summary: this.summary,
@@ -173,6 +202,8 @@ class InvestmentWizard extends Component {
       shares: this.state.shares,
       total: this.state.total
     }
+    /* switch: renderiza el componente correspondiente a cada paso
+    (0= recuperacion de contraseña, 1= Registro, 2= Inicio de sesión, 3= Paso 1 inversion, 4= Paso 2 inversion, 5= Paso 3 inversion)*/
     switch (step) {
       case 0:
         Element = ModalRecover

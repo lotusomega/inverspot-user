@@ -7,7 +7,7 @@ class NavBar extends Component {
     super(props)
     this.closeSession = this.closeSession.bind(this)
   }
-
+  //Funcion para cerrar sesión, elimina el usuario y su token de localStorage
   closeSession() {
     logout( success => {
       this.props.router.push('/')

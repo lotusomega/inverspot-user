@@ -1,5 +1,6 @@
 import { BASE_URL, getToken } from './auth'
 
+//funcion utilizada para crear una nueva inversion
 function create(entity, data) {
   let body = JSON.stringify(data)
   const opts = {
@@ -57,7 +58,7 @@ function edit(entity, data) {
       throw new Error('Error en edición de usuario')
     })
 }
-
+//funcion para listar todas las inversiones del usuario usando los parametros de filtro, consulta y selecion de campos
 function list(entity, filter, query, select) {
   filter = JSON.stringify(filter)
   query = JSON.stringify(query)

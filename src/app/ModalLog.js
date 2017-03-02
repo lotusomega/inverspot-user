@@ -1,9 +1,25 @@
+//ModalLog componente que contiene todos los modales de inicio, registro y recuperacion de contraseña
 import React, { Component } from 'react'
-import { login,recovery } from '../services/auth'
+import { login, recovery, fbAuth } from '../services/auth'
 import { create } from '../services/signup'
 import { listUser } from '../services/list'
 import { withRouter, Link } from 'react-router'
 
+//function Register: contenido del modal de registro
+/*props
+handleSubmit: maneja el envio del formulario al api
+handleInputRegister: asigna al estado del usuario el valor que posee el input cada que este cambia
+handleFields: asigna el valor del input password1 a su estado cada que cambia
+user.name: asigna el estado del nombre de usuario
+user.email: asigna el estado del correo de usuario
+user.password1: asigna el estado de la contraseña
+user.password: asigna el estado de el paso repetir contraseña
+user.telephone: asigna el estado del telefono del usuario
+user.asesor: asigna el estado del asesor que atendio al usuario
+user.state: asigna el estado del estado de la republica al que pertenece el usuario
+user.contactFrom: asigna el estado del medio por el que el usuario conocio la pagina
+onClick: contiene la función para mostrar o no el modal (true, false)
+fbAuth: funcion para obtener la verificacion de facebook**/
 function Register(props) {
   return(
     <div className="modal-body">
@@ -111,7 +127,7 @@ function Register(props) {
               <div className="container-fluid">
                 <div className="row">
                   <div className="col-sm-6">
-                    <button className="loginBtn loginBtn--facebook">Sing in with Facebook</button>
+                    <button type="button" className="loginBtn loginBtn--facebook" onClick={props.fbAuth}>Registrate con Facebook</button>
                   </div>
                   <div className="col-sm-6">
                     <button className="button btn-register" style={{padding: "6px 60px"}} type="submit">Enviar</button>
@@ -128,6 +144,14 @@ function Register(props) {
   )
 }
 
+//function Login: contenido del modal de inicio de sesión
+/* props
+authenticate: funcion que verifica el correo y contraseña del usuario en el api para poder iniciar sesión
+handleInput: asigna al estado del valor que posee el input cada que este cambia
+email: asigna el estado del correo de usuario
+password: asigna el estado de la contraseña
+next: contiene el estado que puede tener el modal (0, 1 , 2)
+fbAuth: funcion para obtener la verificacion de facebook*/
 function Login (props){
   return(
     <div className="modal-body">
@@ -159,9 +183,8 @@ function Login (props){
               <br/>
               <button className="button btn-login" type="submit">Enviar</button>
               <hr/>
-              <a className="btn btn-block btn-social btn-facebook">
-                <i className="fa fa-facebook"></i> Login with Facebook
-              </a><br/>
+              <button type="button" className="btn btn-block btn-social btn-facebook" onClick={props.fbAuth}><i className="fa fa-facebook"></i>Ingresa con Facebook</button>
+              <br/>
             </form>
           </div>
         </div>
@@ -170,6 +193,11 @@ function Login (props){
   )
 }
 
+//function Recover: contenido del modal de recuperacion de contraseña
+/*props
+send: funcion que envia el correo al api para recuper contraseña
+handleInput: asigna al estado del valor que posee el input cada que este cambia
+email: asigna el estado del correo de usuario*/
 function Recover(props){
   return(
      <div className="modal-body">
@@ -196,6 +224,7 @@ function Recover(props){
   )
 }
 
+//function Header contiene la cabecera de todos los modales
 function Header (props){
   return(
     <div className="modal-header header-holder">
@@ -206,6 +235,7 @@ function Header (props){
   )
 }
 
+//function FooterL contiene el pie del modal de inicio de sesión
 function FooterL(props){
   return(
     <div className="modal-footer">
@@ -217,6 +247,7 @@ function FooterL(props){
   )
 }
 
+//function FooterR contiene el pie del modal de registro
 function FooterR(props){
   return(
     <div className="modal-footer">
@@ -228,6 +259,8 @@ function FooterR(props){
   )
 }
 
+//function Modal contiene la estructura del modal
+//props.children: es utlizado para renderizar el contenido del modal
 function Modal (props){
   return(
     <div className="modal fade login in" style={{display: 'block'}} id="loginModal">
@@ -241,11 +274,23 @@ function Modal (props){
   )
 }
 
+//ModalLogin contiene el modal de inicio de sesión con su funcionalidad
+/*states
+emal: estado del correo de usuario
+password: estado de la contraseña
+props
+next: contiene el estado que puede tener el modal (0, 1 , 2)
+onClick: contiene la función para mostrar o no el modal (true, false)
+authenticate: funcion que verifica el correo y contraseña del usuario en el api para poder iniciar sesión
+handleInput: asigna al estado el valor que posee el input cada que este cambia
+email: asigna el estado del correo de usuario
+password: asigna el estado de la contraseña del usuario*/
 class ModalLogin extends Component {
   constructor(props) {
     super(props)
     this.authenticate = this.authenticate.bind(this)
     this.handleInput = this.handleInput.bind(this)
+    this.fbAccess = this.fbAccess.bind(this)
     this.state = {
       email: '',
       password: ''
@@ -258,6 +303,15 @@ class ModalLogin extends Component {
     let newState = {}
     newState[name] = e.target.value
     this.setState(newState)
+  }
+
+  fbAccess(){
+    return fbAuth().then( success => {
+      if(success) {
+        this.props.onClick()
+        this.props.router.push('/user/profile')
+      }
+    } )
   }
 
   authenticate(e) {
@@ -275,19 +329,35 @@ class ModalLogin extends Component {
     return (
       <Modal onClick={this.props.onClick}>
         <Header/>
-        <Login next={this.props.next} authenticate={this.authenticate} email={this.state.email} password={this.state.password} handleInput={this.handleInput}/>
+        <Login fbAuth={this.fbAccess} next={this.props.next} authenticate={this.authenticate} email={this.state.email} password={this.state.password} handleInput={this.handleInput}/>
         <FooterL next={this.props.next}/>
       </Modal>
     )
   }
 }
 
+//ModalRegister contiene el modal de inicio de sesión con su funcionalidad
+/*states
+show: estado del error para mostrar si la contraseñas no coinciden (true, false)
+password1: estado de la contraseña para compararción con repetir contraseña
+user:  estado de que contiene todos lo campos necearios para crear un nuevo usuario(nombre,correo, etc...)
+asesor: estado que almacena todos los asesores disponibles para listar en la opcion Quien te atendio
+props
+next: contiene el estado que puede tener el modal (0, 1 , 2)
+onClick: contiene la función para mostrar o no el modal (true, false)
+show: contiene la función para mostrar o no el error al repetir contraseña (true, false)
+handleSubmit: maneja el envio del formulario al api
+handleInputRegister: asigna al estado del usuario el valor que posee el input cada que este cambia
+handleFields: asigna el valor del input password1 a su estado cada que cambia
+user: asigna el estado del usuario
+asesor: asigna el estado de la lista de asesores*/
 class ModalRegister extends Component {
   constructor(props) {
     super(props)
     this.handleInputRegister = this.handleInputRegister.bind(this)
     this.handleFields = this.handleFields.bind(this)
     this.handleSubmit = this.handleSubmit.bind(this)
+    this.fbAccess = this.fbAccess.bind(this)
     this.state = {
       password1: '',
       show: false,
@@ -296,8 +366,19 @@ class ModalRegister extends Component {
     }
   }
 
+  fbAccess(){
+    return fbAuth().then( success => {
+      if(success) {
+        this.props.onClick()
+        this.props.router.push('/user/profile')
+      }
+    } )
+  }
+
+  /*componentDidMount funcion que se ejecuta antes de montar el componente y lista todos los asesores desde el api para
+  asignarlos al estado asesor*/
   componentDidMount() {
-    listUser({level:{ $in: ['asesor'] }}, {sort:'name'}, 'name _id')
+    listUser({level:'asesor', status: 'active'}, {sort:'name'}, 'name _id')
       .then( asesor => this.setState({ asesor }) )
       .catch( e => alert(e) )
   }
@@ -338,7 +419,7 @@ class ModalRegister extends Component {
     return (
       <Modal onClick={this.props.onClick}>
         <Header/>
-        <Register show={this.state.show} onClick={this.props.onClick} handleSubmit={this.handleSubmit} user={this.state.user} check={this.state.check}
+        <Register fbAuth={this.fbAccess} show={this.state.show} onClick={this.props.onClick} handleSubmit={this.handleSubmit} user={this.state.user}
         password1={this.state.password1} handleFields={this.handleFields} asesor={this.state.asesor} handleInputRegister={this.handleInputRegister}/>
         <FooterR next={this.props.next}/>
       </Modal>
@@ -346,6 +427,15 @@ class ModalRegister extends Component {
   }
 }
 
+//ModalRecover contiene el modal para recuperación de contraseña
+/*states
+emal: estado del correo de usuario
+props
+next: contiene el estado que puede tener el modal (0, 1 , 2)
+onClick: contiene la función para mostrar o no el modal (true, false)
+send: funcion que envia el correo al api para recuper contraseña
+handleInput: asigna al estado del valor que posee el input cada que este cambia
+email: asigna el estado del correo de usuario*/
 class ModalRecover extends Component {
   constructor(props) {
     super(props)
@@ -386,6 +476,13 @@ class ModalRecover extends Component {
   }
 }
 
+//LoginWizard1 contiene todos los modales y la funcion para cambiarlos dependiendo del paso
+/*states
+step: contiene el estado que puede tener el modal (0, 1 , 2)
+props
+step: asigna el estado del paso que se desea para mostrar el modal
+next: contiene el estado que puede tener el modal (0, 1 , 2)
+onClick: contiene la función para mostrar o no el modal (true, false)*/
 class LoginWizard1 extends Component {
 
   constructor(props) {
@@ -395,11 +492,7 @@ class LoginWizard1 extends Component {
       step: this.props.step
     }
   }
-
-  componentWillMount() {
-    this.user = JSON.parse(localStorage.getItem('my'))
-  }
-
+  // goTo: funcion que asigna el paso al estado para cambiar de modal
   goTo( step ) {
     this.setState({step})
   }
@@ -412,6 +505,7 @@ class LoginWizard1 extends Component {
       onClick: this.props.onClick,
       next: this.goTo
     }
+    // switch: renderiza el componente correspondiente a cada paso (0= recuperacion de contraseña, 1= Registro, 2= Inicio de sesión)
     switch (step) {
       case 0:
         Element = ModalRecover
@@ -435,5 +529,5 @@ class LoginWizard1 extends Component {
 }
 
 let LoginWizard = withRouter(LoginWizard1)
-
+// export permite exportar los componentes para utlizarlos en cualquier parte de la página
 export {LoginWizard, ModalRegister, ModalLogin, ModalRecover}

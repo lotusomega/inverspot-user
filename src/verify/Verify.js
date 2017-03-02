@@ -3,6 +3,8 @@ import { verify } from '../services/auth'
 
 class Verify extends Component {
 
+	/*states
+	show: estado del error para mostrar si el registro no se completa adecuadamente (true, false)*/
 	constructor(props) {
     super(props)
 		this.change = this.change.bind(this)
@@ -10,14 +12,14 @@ class Verify extends Component {
       show: false
     }
   }
-
+	//funcion para verificar si el registro se completo exitosamente
 	componentDidMount() {
    	if(this.props.params.checker){
     	verify(this.props.params.checker)
     		.then( success => success && this.setState({show: true}))
     }
   }
-
+	//funcion para cambiar la ruta actual a proyectos
 	change(){
 		this.props.router.push('/projects')
 	}

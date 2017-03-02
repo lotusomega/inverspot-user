@@ -2,6 +2,10 @@ import React, { Component } from 'react';
 import InvestmentCard from './InvestmentCard'
 import { list } from '../services/crud'
 
+//Funcion para listar las tarjetas de propiedad en las que el usuario ha invertido
+/*props
+investments: contiene un arreglo con las inversiones del usuario
+investment: contiene todos los datos de una inversion especifica*/
 function InvestmentList(props) {
   return (
     <div>
@@ -11,18 +15,21 @@ function InvestmentList(props) {
 }
 
 class Profile extends Component {
-
+  /*state
+  investments: contiene un arreglo con todas las inversiones del usuario*/
   constructor(props) {
     super(props)
     this.state = {
       investments: []
     }
   }
-
+  /*componentDidMount funcion que se ejecuta antes de montar el componente y obtiene la informacion de
+  usuario una vez que se ha iniciado sesion*/
   componentWillMount() {
     this.user = JSON.parse(localStorage.getItem('my'))
   }
-
+  /*componentDidMount funcion que se ejecuta antes de montar el componente y lista todas las inversiones del usuario desde el api para
+  asignarlas al estado investments*/
   componentDidMount() {
     list('investment', {investor: this.user._id}, {sort:'createdAt', populate:{path: 'property'}}, 'investor sharesNumber amount property')
       .then( investments => this.setState({investments}) )
@@ -43,6 +50,7 @@ class Profile extends Component {
             <div className="well">
               <h2 className="text-center" style={{paddingLeft: "140px"}}>Mis Inversiones</h2>
               <div className="list-group">
+                {/* INVERSPOT: Renderiza todas las inversiones del usuario en caso de que existan  */}
                 {this.state.investments.length > 0 ? <InvestmentList investments={ this.state.investments }/> : <h1>No tienes inversiones</h1>}
               </div>
             </div>

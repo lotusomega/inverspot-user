@@ -3,12 +3,18 @@ import { edit } from '../services/user'
 import { withRouter } from 'react-router'
 
 class DataProfile extends Component {
+  /*state
+  usercopy: contiene los datos originales del usuario al inicializar el componente
+  user: contiene los datos del usuario
+  show: utilizado para mostrar los campos en caso de editar perfil*/
   constructor(props) {
     super(props)
     this.handleInput = this.handleInput.bind(this)
     this.handleSubmit = this.handleSubmit.bind(this)
     this.editProfile = this.editProfile.bind(this)
+    this.cancel = this.cancel.bind(this)
     this.state = {
+      usercopy:{},
       user: {
         name:'',
         email: '',
@@ -18,7 +24,8 @@ class DataProfile extends Component {
       show: false
     }
   }
-
+  /*componentDidMount funcion que se ejecuta antes de montar el componente y asigna la informacion de
+  usuario a su estado*/
    componentDidMount() {
      let user = {
        name: this.props.userprofile.name,
@@ -27,13 +34,19 @@ class DataProfile extends Component {
        telephone: this.props.userprofile.telephone,
        _id: this.props.userprofile._id
      }
-     this.setState({user: user})
+     let userc = Object.assign(this.state.usercopy, user)
+     this.setState({user: user, usercopy: userc})
    }
-
+   //funcion para mostrar los campos en caso de editar perfil
    editProfile(){
-      this.setState({show: !this.state.show})
+      this.setState({show: true})
    }
-
+   //funcion para regresar al estado original los datos del usuario al cancelar la edicion
+   cancel(){
+     let userc = Object.assign(this.state.user, this.state.usercopy)
+     this.setState({show: false, user: userc})
+   }
+   // asigna al estado del usuario el valor que posee el input cada que este cambia
   handleInput(e) {
     e.preventDefault()
     let name = e.target.name
@@ -41,7 +54,7 @@ class DataProfile extends Component {
     newState.user[name] = e.target.value
     this.setState(newState)
   }
-
+  //maneja el envio del formulario al api para actualizar el usuario
   handleSubmit(e) {
     e.preventDefault()
     edit( this.state.user )
@@ -96,7 +109,7 @@ class DataProfile extends Component {
               <div className="form-group">
                 <label className="col-lg-3 control-label">Estado:</label>
                 <div className="col-lg-8">
-                {this.state.show === false ? <input type="text" name="state" className="form-control input-sm" id="inputEmail" placeholder="Email" data-error="Bruh, that email address is invalid" required
+                {this.state.show === false ? <input type="text" name="state" className="form-control input-sm" data-error="Bruh, that email address is invalid" required
                   value={ this.state.user.state } readOnly onChange={ this.handleInput }/> :
                   <select name="state" className="form-control" id="sel1"
                     value={ this.state.user.state } onChange={ this.handleInput }>
@@ -153,7 +166,7 @@ class DataProfile extends Component {
                 <div className="col-md-8">
                   {this.state.show === true && <button className="btn btn-primary" type="submit" >Guardar Cambios</button>}
                   <span></span>
-                  {this.state.show === true &&<button className="btn btn-default" onClick={this.editProfile} style={styledata2} > Cancelar</button>}
+                  {this.state.show === true &&<button className="btn btn-default" onClick={this.cancel} style={styledata2} > Cancelar</button>}
                 </div>
               </div>
             </form>

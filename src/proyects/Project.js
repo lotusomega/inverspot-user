@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
-import {PropertyCardBig, FundCardBig} from './PropertyCardBig'
+import {PropertyCardBig, FundCardBig} from './PropertyItem'
 import { listProperty } from '../services/list'
 import {Wizard} from '../index/Wizard'
 
 class Project extends Component {
-
+  /*states
+  property: contiene todos los datos de la propiedad*/
   constructor(props) {
     super(props)
     this.toggleWizard = this.toggleWizard.bind(this)
@@ -25,7 +26,8 @@ class Project extends Component {
       }
     }
   }
-
+  /*componentDidMount funcion que se ejecuta antes de montar el componente que lista la propiedad especificada
+  en el estado de property*/
   componentDidMount() {
     if( this.props.params.id) {
       listProperty({_id: this.props.params.id}, {}, 'title description image address dataSheet marketResearch status')
@@ -33,7 +35,7 @@ class Project extends Component {
         .catch( e => alert(e) )
     }
   }
-
+  //toggleWizard: agrega las clases necesarias para abrir el modal de inversion hecho en bootstrap y coloca el estado show(mostrar) en verdadero o falso
   toggleWizard( property ) {
     if(!this.state.show) {
       document.body.className += ' modal-open'
@@ -52,7 +54,7 @@ class Project extends Component {
           <div className="spacer double"></div>
           <h1 className="text-center"><b>Proyecto </b></h1>
           <div className="spacer double"></div>
-          {this.state.property.status === 'available' ? <PropertyCardBig property={this.state.property} onInvest={ this.toggleWizard } /> 
+          {this.state.property.status === 'available' ? <PropertyCardBig property={this.state.property} onInvest={ this.toggleWizard } />
             : <FundCardBig property={this.state.property}/> }
           <div className="row bordered well" style={{backgroundImage: 'linear-gradient(to bottom,#ffffff 0,#ffffff 100%)', borderColor: '#ffffff'}}>
             <div className="col-sm-12">

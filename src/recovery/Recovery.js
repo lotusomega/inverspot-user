@@ -2,7 +2,10 @@ import React, { Component } from 'react';
 import { verify } from '../services/auth'
 
 class Verify extends Component {
-
+  /*states
+  show: estado del error para mostrar si las contraseñas no coinciden (true, false)
+  password1: estado de la contraseña para compararción con repetir contraseña
+  password:  estado de repetir contraseña */
   constructor(props){
     super(props)
     this.recover = this.recover.bind(this)
@@ -13,7 +16,7 @@ class Verify extends Component {
       show: false
     }
   }
-
+  // asigna el valor al estado que posee el input cada que cambia
   handleInput(e) {
     e.preventDefault()
     let name = e.target.name
@@ -21,10 +24,10 @@ class Verify extends Component {
     newState[name] = e.target.value
     this.setState(newState)
   }
-
+  //funcion para mandar la nueva contraseña
 	recover(e) {
     e.preventDefault()
-   	if(this.state.password === this.state.password1){ 
+   	if(this.state.password === this.state.password1){
     	verify(this.props.params.checker, this.state.password)
     		.then( success => success && alert("Contraseña Cambiada"))
     }

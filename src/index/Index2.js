@@ -4,6 +4,13 @@ import { listProperty } from '../services/list'
 import {Wizard} from './Wizard'
 import {Link} from 'react-router'
 
+//Funcion para listar las tarjetas de propiedad disponibles y fondeadas
+/*props
+element: nombre de la tarjeta PropertyCard(disponible) o FundCard(fondeada)
+propertiesa: contiene un arreglo con 3 propiedades disponibles
+propertiesf: contiene un arreglo con 3 propiedades fondeadas
+onInvest: funcion que agrega las clases para mostrar o no el modal de inversion
+property: contiene todos los datos de una propiedad especifica*/
 function PropertyCards(props) {
   return (
     <div>
@@ -16,7 +23,10 @@ function PropertyCards(props) {
 }
 
 export default class Index extends Component {
-
+  //Constructor Inicializa las funciones y los estados
+  /*states
+  propertiesa: contiene un arreglo con 3 propiedades disponibles
+  propertiesf: contiene un arreglo con 3 propiedades fondeadas*/
   constructor(props) {
     super(props)
     this.toggleWizard = this.toggleWizard.bind(this)
@@ -26,6 +36,7 @@ export default class Index extends Component {
     }
   }
 
+  //toggleWizard: agrega las clases necesarias para abrir el modal de inversion hecho en bootstrap y coloca el estado show(mostrar) en verdadero o falso
   toggleWizard( property ) {
     if(!this.state.show) {
       document.body.className += ' modal-open'
@@ -35,6 +46,8 @@ export default class Index extends Component {
     return this.setState({show: false})
   }
 
+  /*componentDidMount funcion que se ejecuta antes de montar el componente que lista 3 propiedades disponibles que se colocan
+  en el estado propertiesa y 3 propiedades fondeadas que se colocan en el estado de propertiesf*/
   componentDidMount() {
     listProperty({status: 'available'}, {sort:'title', limit: 3}, 'title image address dataSheet marketResearch')
       .then( propertiesa => this.setState({ propertiesa }) )

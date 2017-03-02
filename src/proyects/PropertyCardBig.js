@@ -4,6 +4,9 @@ import {Link, withRouter} from 'react-router'
 import Countdown from '../components/Countdown'
 import moment from 'moment'
 
+//funcion CardHeader: contiene el estilo de la cabecera de la tarjeta
+/*props
+address.suburb: colonia donde se ubica la propiedad*/
 function CardHeader(props) {
   let { title, address } = props
   return (
@@ -18,6 +21,9 @@ function CardHeader(props) {
   )
 }
 
+//funcion CardMedia: contiene el estilo de la imagen de la propiedad
+/*props
+src: limk de la imagen*/
 function CardMedia(props) {
   return (
     <div className="card-v">
@@ -31,6 +37,12 @@ function CardMedia(props) {
   )
 }
 
+//funcion CardProgress: contiene el estilo del progreso de la barra de inversion
+/*props
+current: acciones vendidas
+max: total de acciones que posee la propiedad
+multiplier: costo individual por accion
+progress: calculo del progreso de la barra multiplicando el numero de acciones vendidas por 100 entre el numero total de acciones de la propiedad*/
 function CardProgress(props) {
   let { current, max, multiplier } = props, progress = current * 100 / max
   return (
@@ -50,6 +62,11 @@ function CardProgress(props) {
   )
 }
 
+//funcion Fact: contiene el estilo de monto a participar, plazo estimado y rendimiento estimado
+/*props
+title: titulo del componente
+icon: nombre del icono del componente
+text: texto del componente*/
 function Fact(props) {
   return (
     <div className="col-sm-4 col-centered col-max circle">
@@ -61,6 +78,10 @@ function Fact(props) {
   )
 }
 
+//funcion CardButton: contiene el estilo del boton para invertir
+/*props
+clas: nombre de la clase de estilo del boton
+text: nombre del boton */
 function CardButton(props) {
   return (
     <div className="col-sm-6">
@@ -70,6 +91,7 @@ function CardButton(props) {
   )
 }
 
+//funcion CardFund: contiene el estilo para las tarjetas fondeadas
 function CardFund (props){
   return(
     <div className="col-sm-12">
@@ -79,6 +101,9 @@ function CardFund (props){
   )
 }
 
+//funcion CardActions: contiene el estilo para los botones que detallan la propiedad (resumen, estudio de mercado, desarrollador, avance de obra )
+/*props
+property._id: identificador de la propiedad a consultar*/
 function CardActions(props) {
   return (
     <div className="col-sm-12 form-inline text-center">
@@ -112,6 +137,19 @@ function CardActions(props) {
   )
 }
 
+//funcion PropertyCardBig1: tarjeta de propiedad disponible para invertir
+/*props
+property.dataSheet.investAmount: costo de una accion
+remain: tiempo de la propiedad disponible para invertir
+property.marketResearch.estimatedTime: tiempo estimado en meses
+property.marketResearch.yieldInTime: porcentaje del rendimiento estimado
+property.title: nombre de la propiedad
+property.image: link de la imagen de la propiedad
+property.address: direccion de la propiedad
+property.dataSheet.sharesSold: numero de acciones vendidas por la propiedad
+property.dataSheet.totalShares: numero de acciones con las que cuenta la propiedad
+property.dataSheet.investAmount: costo por accion
+property._id: identificador de la propiedad*/
 class PropertyCardBig1 extends Component  {
   render() {
     let property = this.props.property, address = property.address
@@ -147,6 +185,7 @@ class PropertyCardBig1 extends Component  {
                 multiplier={ property.dataSheet.investAmount } />
             </div>
             <div className="col-sm-8 card-large">
+              {/* Renderiza los 3 componentes de monto a participar, plazo estimado y rendimiento estimado */}
               { facts.map( f => <Fact key={f.title} title={f.title} icon={f.icon} text={f.text} /> ) }
               <div className="spacer"></div>
               <CardButton text="¡Contacta un asesor aquí!" clas="subtitulo">
@@ -167,6 +206,18 @@ class PropertyCardBig1 extends Component  {
   }
 }
 
+//funcion FundCardBig1: tarjeta de propiedad fondeada
+/*props
+property.dataSheet.investAmount: costo de una accion
+property.marketResearch.estimatedTime: tiempo estimado en meses
+property.marketResearch.yieldInTime: porcentaje del rendimiento estimado
+property.title: nombre de la propiedad
+property.image: link de la imagen de la propiedad
+property.address: direccion de la propiedad
+property.dataSheet.sharesSold: numero de acciones vendidas por la propiedad
+property.dataSheet.totalShares: numero de acciones con las que cuenta la propiedad
+property.dataSheet.investAmount: costo por accion
+property._id: identificador de la propiedad*/
 class FundCardBig1 extends Component  {
   render(){
     let property = this.props.property, address = property.address
@@ -204,6 +255,7 @@ class FundCardBig1 extends Component  {
               multiplier={ property.dataSheet.investAmount } />
             </div>
             <div className="col-sm-8 card-large">
+              {/* Renderiza los 3 componentes de monto a participar, plazo estimado y rendimiento estimado */}
               { facts.map( f => <Fact key={f.title} title={f.title} icon={f.icon} text={f.text} /> ) }
               <div className="spacer"></div>
               <CardFund />

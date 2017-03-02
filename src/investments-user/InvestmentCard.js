@@ -2,6 +2,14 @@ import React, { Component } from 'react'
 import currency from '../services/currency'
 import {Link} from 'react-router'
 
+/*props
+investment: contiene toda la informacion de una inversion
+property.image: link de la imagen
+property.title: nombre de la propiedad
+property.description: descripcion de la propiedad
+amount: costo total de mi inversion
+sharesNumber: numero de acciones compradas
+property.dataSheet.totalShares: numero total de acciones que vende la propiedad*/
 class InvestmentCard extends Component {
   render() {
     let investment = this.props.investment

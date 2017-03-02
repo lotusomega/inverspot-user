@@ -1,7 +1,11 @@
 import React from 'react'
 import {Link} from 'react-router'
 import currency from '../services/currency'
-
+//funcion CardHeader: contiene el estilo de la cabecera de la tarjeta
+/*props
+addres.street: nombre de la calle donde se ubica la propiedad
+address.number: numero de la propiedad
+address.suburb: colonia donde se ubica la propiedad*/
 function CardHeader(props) {
   let { title, address } = props
   return (
@@ -17,6 +21,7 @@ function CardHeader(props) {
   )
 }
 
+//funcion CardPromo: contiene el estilo del subtitulo de la tarjeta
 function CardPromo(props) {
   return (
     <div className="row header-holder" style={{marginTop: '-20px'}}>
@@ -27,6 +32,9 @@ function CardPromo(props) {
   )
 }
 
+//funcion CardMedia: contiene el estilo de la imagen de la propiedad
+/*props
+src: limk de la imagen*/
 function CardMedia(props) {
   return (
     <figure className="main-card-image">
@@ -36,6 +44,12 @@ function CardMedia(props) {
   )
 }
 
+//funcion CardProgress: contiene el estilo del progreso de la barra de inversion
+/*props
+current: acciones vendidas
+max: total de acciones que posee la propiedad
+multiplier: costo individual por accion
+progress: calculo del progreso de la barra multiplicando el numero de acciones vendidas por 100 entre el numero total de acciones de la propiedad*/
 function CardProgress(props) {
   let { current, max, multiplier } = props, progress = current * 100 / max
   return (
@@ -55,6 +69,11 @@ function CardProgress(props) {
   )
 }
 
+//funcion Fact: contiene el estilo de monto a participar, plazo estimado y rendimiento estimado
+/*props
+title: titulo del componente
+icon: nombre del icono del componente
+text: texto del componente*/
 function Fact(props) {
   return (
     <div className="col col-xs-4 col-sm-4 col-md-4">
@@ -65,6 +84,7 @@ function Fact(props) {
   )
 }
 
+//funcion CardFacts: para mostar todos los componentes de monto a participar, plazo estimado y rendimiento estimado
 function CardFacts(props) {
   return (
     <div className="info-cols-holder ">
@@ -73,6 +93,7 @@ function CardFacts(props) {
   )
 }
 
+//funcion CardActions: estructura de seccion de botones en la tarjeta
 function CardActions(props) {
   return (
     <div className="row btns-holder">
@@ -81,6 +102,7 @@ function CardActions(props) {
   )
 }
 
+//funcion Card: estructura de la tarjeta
 function Card(props) {
   return (
     <div className="col-v col-xs-12 col-sm-4 col-md-4">
@@ -91,6 +113,18 @@ function Card(props) {
   )
 }
 
+//funcion PropertyCard: tarjeta de propiedad disponible para invertir
+/*props
+property.dataSheet.investAmount: costo de una accion
+property.marketResearch.estimatedTime: tiempo estimado en meses
+property.marketResearch.yieldInTime: porcentaje del rendimiento estimado
+property.title: nombre de la propiedad
+property.image: link de la imagen de la propiedad
+property.address: direccion de la propiedad
+property.dataSheet.sharesSold: numero de acciones vendidas por la propiedad
+property.dataSheet.totalShares: numero de acciones con las que cuenta la propiedad
+property.dataSheet.investAmount: costo por accion
+property._id: identificador de la propiedad*/
 function PropertyCard (props) {
   let property = props.property, address = property.address
   let facts = [
@@ -132,6 +166,18 @@ function PropertyCard (props) {
   )
 }
 
+//funcion FundCard: tarjeta de propiedad fondeada
+/*props
+property.dataSheet.investAmount: costo de una accion
+property.marketResearch.estimatedTime: tiempo estimado en meses
+property.marketResearch.yieldInTime: porcentaje del rendimiento estimado
+property.title: nombre de la propiedad
+property.image: link de la imagen de la propiedad
+property.address: direccion de la propiedad
+property.dataSheet.sharesSold: numero de acciones vendidas por la propiedad
+property.dataSheet.totalShares: numero de acciones con las que cuenta la propiedad
+property.dataSheet.investAmount: costo por accion
+property._id: identificador de la propiedad*/
 function FundCard (props) {
   let property = props.property, address = property.address
   let facts = [

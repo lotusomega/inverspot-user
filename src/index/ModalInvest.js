@@ -1,9 +1,15 @@
 import React, { Component } from 'react'
+//import currency: utilizado para convertir la notacion de cantidades a pesos
 import currency from '../services/currency'
 import {ModalSmallButton} from './Wizard'
 
 class ModalInvest extends Component {
-
+  /*state
+  shares: numero de acciones para invertir, por default el minimo es de 1
+  props
+  total: numero maximo de acciones que se pueden invertir por propiedad
+  amount: cantidad que cuesta una accion
+  summary: funcion que envia el numero de acciones invertidas y el costo total de estas*/
   constructor (props){
     super(props)
     this.more = this.more.bind(this)
@@ -12,12 +18,12 @@ class ModalInvest extends Component {
       shares: 1
     }
   }
-
+  //more: funcion que aumenta el estado de las acciones
   more(){
     if (this.state.shares < this.props.total )
       this.setState({shares: this.state.shares + 1 })
   }
-
+  //less: funcion que disminuye el estado de las acciones
   less(){
     if (this.state.shares > 1 )
       this.setState({shares: this.state.shares - 1})

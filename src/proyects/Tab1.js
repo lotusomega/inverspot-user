@@ -1,8 +1,10 @@
+//Componente para mostrar la descripción de la propiedad
 import React, { Component } from 'react';
 import { listProperty } from '../services/list'
 
 class Tab1 extends Component {
-
+  /*states
+  property: contiene la direccion de la propiedad y su descripcion*/
   constructor(props) {
     super(props)
     this.state = {
@@ -13,7 +15,8 @@ class Tab1 extends Component {
       }
     }
   }
-
+  /*componentDidMount funcion que se ejecuta antes de montar el componente que devuelve el titulo, la descripcion y
+  y la direccion de la propiedad especificada en el estado de property*/
   componentDidMount() {
     if( this.props.params.id) {
       listProperty({_id: this.props.params.id}, {}, 'title description address')

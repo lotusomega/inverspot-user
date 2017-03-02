@@ -2,9 +2,13 @@ import React, { Component } from 'react'
 import { Link } from 'react-router'
 
 class NavBar extends Component {
+  /*componentDidMount funcion que se ejecuta antes de montar el componente y obtiene la informacion de
+  usuario una vez que se ha iniciado sesion*/
   componentWillMount() {
     this.user = JSON.parse(localStorage.getItem('my'))
   }
+  /* props
+  stepSet: contiene el estado que puede tener el modal (0= recuperacion de contraseña, 1= Registro, 2= Inicio de sesión)*/
   render() {
     const stylen={
       backgroundColor: "#fff"
@@ -33,8 +37,6 @@ class NavBar extends Component {
             Atención al cliente | 01 (55) 8000 6555 |
             <a style={stylen3} href="mailto:hola@inverspot.mx"> hola@inverspot.mx</a>
 
-            {/* <a style={stylen4} href="https://www.facebook.com/inverspot" target="_blank">
-            <i className="fa fa-facebook" aria-hidden="true"></i></a> */}
             <a style={{float:'right', marginRight: '100px', marginLeft: '10px', color: 'white',}} href="https://vimeo.com/190621870" target="_blank"><i className="fa fa-vimeo" aria-hidden="true"></i></a>
 
             <a style={stylen4} href="https://www.youtube.com/channel/UCvr85MwH36lbTAvOdmeDtxg" target="_blank">

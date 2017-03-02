@@ -2,20 +2,26 @@ import React, { Component } from 'react'
 import { edit } from '../services/user'
 
 class PasswordProfile extends Component {
+  /*states
+  show: estado del error para mostrar si las contraseñas no coinciden (true, false)
+  password1: estado de la contraseña para compararción con repetir contraseña
+  user:  estado de que contiene todos lo campos necearios para crear un nuevo usuario(nombre,correo, etc...)
+  props
+  userid: identificador del usuario*/
   constructor(props) {
     super(props)
     this.handleInput = this.handleInput.bind(this)
     this.handleInput2 = this.handleInput2.bind(this)
     this.handleSubmit = this.handleSubmit.bind(this)
     this.state = {
-      password1:'',
+      password1: '',
       show: false,
       user: {
         password:''
       }
     }
   }
-
+  /*componentDidMount funcion que se ejecuta antes de montar el componente inserta el id del usuario en su estado*/
    componentDidMount() {
      let user = {
        _id: this.props.userid
@@ -23,7 +29,7 @@ class PasswordProfile extends Component {
      this.setState({user: user})
    }
 
-
+   // asigna al estado del usuario el valor que posee el input cada que este cambia
   handleInput(e) {
     e.preventDefault()
     let name = e.target.name
@@ -31,20 +37,20 @@ class PasswordProfile extends Component {
     newState.user[name] = e.target.value
     this.setState(newState)
   }
-
+  // asigna al estado password1 el valor que posee el input cada que este cambia
   handleInput2(e) {
     e.preventDefault()
     let newState = Object.assign( this.state )
     newState.password1 = e.target.value
     this.setState(newState)
   }
-
+  //maneja el envio del formulario al api para actualizar la contraseña del usuario
   handleSubmit(e) {
     e.preventDefault()
     if(this.state.password1 !== this.state.user.password){
       this.setState({show: true})
     }
-    else{  
+    else{
       edit( this.state.user )
         .then( success => success && alert("Contraseña Actualizada"), this.setState({show: false}) )
     }
@@ -66,7 +72,7 @@ class PasswordProfile extends Component {
                     <div className="col-md-4 col-md-offset-3">
                       <p className="text-center">Introduzca su nueva contraseña</p>
                       <form onSubmit={ this.handleSubmit }>
-                        <input type="password" className="input-sm form-control" name="password1" placeholder="Nueva contraseña" 
+                        <input type="password" className="input-sm form-control" name="password1" placeholder="Nueva contraseña"
                         value={ this.state.password1 } onChange={ this.handleInput2 } required/>
                         <div className="row">
                         <br/><br/>
