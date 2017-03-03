@@ -318,7 +318,12 @@ class ModalLogin extends Component {
     e.preventDefault()
     if ( this.state.email !== "" && this.state.password !== "" ) {
       login(this.state.email, this.state.password)
-      .then( success => success && this.props.router.push('/user/profile'), e => alert(e),this.props.onClick())
+      .then( success => {
+        if (success) {
+          this.props.postLogin ? this.props.postLogin() : this.props.router.push('/user/profile')
+        }
+        this.props.onClick()
+      }, e => alert(e))
     }
     else {
       alert("Completa los campos")

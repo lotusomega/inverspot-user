@@ -15,7 +15,7 @@ class InvestmentCard extends Component {
     let investment = this.props.investment
 
     return (
-      <a className="list-group-item">
+      <div style={{overflow: 'hidden'}} className="list-group-item">
         <div className="media col-md-3">
           <figure className="pull-left">
             <img className="media-object img-rounded img-responsive" src={'http://192.169.174.96/is-img/'+ investment.property.image} alt="Propiedad" />
@@ -27,15 +27,15 @@ class InvestmentCard extends Component {
           </p>
         </div>
         <div className="col-md-3 text-center">
-            <h2><small> Mi Inversión {currency(investment.amount)} </small></h2>
-            <Link to={`/projects/${investment.property._id}/work-progress`}>
-              <button type="button" className="btn btn-primary btn-lg btn-block">Avance de Obra</button>
-            </Link>
-            <div>
-                <p> Mis Acciones {investment.sharesNumber} de {investment.property.dataSheet.totalShares} </p>
-            </div>
+          <h2><small> Mi Inversión {currency(investment.amount)} </small></h2>
+          <Link to={`/projects/${investment.property._id}/work-progress`}>
+            <button type="button" className="btn btn-primary btn-lg btn-block">Avance de Obra</button>
+          </Link>
+          <div>
+            <p> Mis Acciones {investment.sharesNumber} de {investment.property.dataSheet.totalShares} </p>
+          </div>
         </div>
-      </a>
+      </div>
     )
   }
 }

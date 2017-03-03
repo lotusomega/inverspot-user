@@ -1,11 +1,11 @@
 //Wizard: Componente que contiene todos los modales de inversion y de inicio de sesión
-import React,{Component} from 'react'
-import {withRouter} from 'react-router'
+import React, { Component } from 'react'
+import { withRouter } from 'react-router'
 import currency from '../services/currency'
 import { listProperty } from '../services/list'
 import { create } from '../services/crud'
 import ModalInvest from './ModalInvest'
-import {ModalLogin, ModalRegister, ModalRecover } from '../app/ModalLog'
+import { ModalLogin, ModalRegister, ModalRecover } from '../app/ModalLog'
 
 //funcion ModalPromo: contiene el estilo de los titulos para los modales
 function ModalPromo (props){
@@ -130,7 +130,7 @@ class InvestmentWizard extends Component {
     this.summary = this.summary.bind(this)
     this.invest = this.invest.bind(this)
     this.verify = this.verify.bind(this)
-    this.verify = this.verify.bind(this)
+    this.postLogin = this.postLogin.bind(this)
     this.state = {
       step: 3,
       property: {},
@@ -148,6 +148,13 @@ class InvestmentWizard extends Component {
   componentDidMount() {
     this.props.id && listProperty({_id: this.props.id}, {}, 'title dataSheet marketResearch')
       .then( properties => this.setState({ property: properties[0] }) )
+    let newState = {}
+    if(this.props.investment) {
+      console.log('STATE: ', this.props.investment);
+      newState = Object.assign({}, this.props.investment)
+      this.setState(newState)
+      this.goTo(5)
+    }
   }
 
   // goTo: funcion que asigna el paso al estado para cambiar de modal
@@ -167,14 +174,19 @@ class InvestmentWizard extends Component {
     // this.props.router.push('/user/investments')
   }
   //funcion de resumen con el total de acciones y monto que verifica el nivel de usuario para poder invetir
-  summary(shares,total){
-    if(this.user.level === 'investor'){
+  summary(shares,total) {
+    if(this.user && this.user.level === 'investor'){
       this.setState({shares: shares, total: total})
       this.goTo(5)
     }
-    else{
+    else {
+      this.props.router.push({
+        pathname: '/user/investment-data',
+        state: {
+          investment: Object.assign({},this.state, {shares, total})
+        }
+      })
       this.props.onClick()
-      this.props.router.push('/user/investment-data')
     }
   }
   //funcion invertir, crea el objeto de inversion con los datos y lo manda a la api
@@ -186,7 +198,17 @@ class InvestmentWizard extends Component {
       amount: this.state.total
     }
     create( 'investment',investment )
-      .then( success => success && this.close() )
+      .then( success => {
+        if(success) {
+          alert('Gracias por tu participación, nuestros asesores se pondrán en contacto para dar seguimiento.')
+          this.close()
+        }
+      } )
+  }
+
+  postLogin() {
+    this.user = JSON.parse(localStorage.getItem('my'))
+    this.goTo(4)
   }
 
   render(){
@@ -195,6 +217,7 @@ class InvestmentWizard extends Component {
     let passProps = {
       property,
       onClick: this.props.onClick,
+      postLogin: this.postLogin,
       next: this.goTo,
       summary: this.summary,
       invest: this.invest,

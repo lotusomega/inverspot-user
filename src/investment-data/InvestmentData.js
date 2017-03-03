@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { edit, list } from '../services/crud'
+import {Wizard} from '../index/Wizard'
 import data from './data'
 
 function SelectControl(props) {
@@ -48,8 +49,10 @@ class InvestmentData extends Component {
   constructor(props) {
     super(props)
     this.handleInput = this.handleInput.bind(this)
+    this.toggleWizard = this.toggleWizard.bind(this)
     this.handleSubmit = this.handleSubmit.bind(this)
     this.state = {
+      show: false,
       user: {
         invesmentData: {
           name: '',
@@ -122,6 +125,15 @@ class InvestmentData extends Component {
       .catch(alert)
   }
 
+  toggleWizard( property ) {
+    if(!this.state.show) {
+      document.body.className += ' modal-open'
+      return this.setState({show: true, property})
+    }
+    document.body.className = ''
+    return this.setState({show: false})
+  }
+
   handleInput(e) {
     e.preventDefault()
     let name = e.target.name
@@ -144,7 +156,14 @@ class InvestmentData extends Component {
     this.setState(newState)
     console.log(this.state.user)
     edit('user', this.state.user )
-      .then( success => success && alert("Datos actualizados") )
+      .then( success => {
+        if(success) {
+          this.props.router.location.state.investment ? this.toggleWizard() : alert("Datos actualizados")
+        }
+        else {
+          alert('Error al actualizar')
+        }
+      } )
   }
 
   render() {
@@ -158,6 +177,7 @@ class InvestmentData extends Component {
 		return(
 
       <div className="panel-body">
+        { this.state.show && <Wizard onClick={ this.toggleWizard } investment={this.props.router.location.state.investment} /> }
         {/* <h3>Completa los campos requeridos * para comenzar a participar</h3> */}
         <form className="form-horizontal" onSubmit={ this.handleSubmit } >
           <FormFieldset legend='1. Datos generales del inversionista'

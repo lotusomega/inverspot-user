@@ -1,5 +1,5 @@
-// const BASE_URL = 'http://192.169.174.96:8080/api';
-const BASE_URL = 'http://127.0.0.1:8080/api';
+const BASE_URL = 'http://192.169.174.96:8080/api';
+// const BASE_URL = 'http://127.0.0.1:8080/api';
 const TOKEN = 'token';
 // import hello from 'hellojs/dist/hello.all.js'
 import hello from 'hellojs'
