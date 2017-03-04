@@ -1,7 +1,7 @@
 import React, {Component} from 'react'
 import currency from '../services/currency'
 import {Link, withRouter} from 'react-router'
-import Countdown from '../components/Countdown'
+import Countdown2 from '../components/Countdown2'
 import moment from 'moment'
 
 function Spacer(props) {
@@ -134,14 +134,14 @@ function CardCTA(props) {
   )
 }
 
-//funcion CardCountdown: contiene el estilo del boton con la cuenta regresiva 
+//funcion CardCountdown: contiene el estilo del boton con la cuenta regresiva
 function CardCountdown(props) {
   return (
     <div className="col-sm-6">
       <h5 className="text-center counter">
         <b>Quedan</b>
       </h5>
-      <Countdown initialTimeRemaining={props.remain} />
+      <Countdown2 duration={props.remain} />
       <h5 className="text-center counter2">
         <b>Para que puedas participar en este proyecto</b>
       </h5>
@@ -205,9 +205,10 @@ property._id: identificador de la propiedad*/
 class PropertyCardBig1 extends Component  {
   render() {
     let property = this.props.property, address = property.address
-    // let remain = moment(property.createdAt).add(30, 'days').diff(moment())
-    let remain = moment(property.createdAt).diff(moment())
-    console.log(remain);
+    console.log(property.createdAt)
+    let remain = moment(property.createdAt).add(30, 'days').diff(moment()) / 1000
+    // let remain = +moment(property.createdAt).diff(moment())
+    // console.log(remain);
     let facts = [
       {
         title: 'Monto a Invertir',

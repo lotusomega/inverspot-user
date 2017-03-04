@@ -30,7 +30,7 @@ class Project extends Component {
   en el estado de property*/
   componentDidMount() {
     if( this.props.params.id) {
-      listProperty({_id: this.props.params.id}, {}, 'title description image address dataSheet marketResearch status')
+      listProperty({_id: this.props.params.id}, {}, 'title description image address dataSheet marketResearch status createdAt')
         .then( property => this.setState({ property: property[0] }) )
         .catch( e => alert(e) )
     }

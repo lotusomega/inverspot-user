@@ -52,10 +52,10 @@ class Proyects extends Component {
   /*componentDidMount funcion que se ejecuta antes de montar el componente que lista todas las propiedades disponibles que se colocan
   en el estado propertiesa y todas las propiedades fondeadas que se colocan en el estado de propertiesf*/
   componentDidMount() {
-    listProperty({status: 'available'}, {sort:'title'}, 'title address image dataSheet marketResearch')
+    listProperty({status: 'available'}, {sort:'title'}, 'title address image dataSheet marketResearch createdAt')
       .then( propertiesa => this.setState({ propertiesa }) )
       .catch( e => alert(e) )
-    listProperty({status: 'fund'}, {sort:'title'}, 'title address image dataSheet marketResearch')
+    listProperty({status: 'fund'}, {sort:'title'}, 'title address image dataSheet marketResearch createdAt')
       .then( propertiesf => this.setState({ propertiesf }) )
       .catch( e => alert(e) )
   }
