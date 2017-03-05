@@ -114,7 +114,7 @@ function facebook(data) {
 function fbAuth() {
   return new Promise((resolve, reject) => {
     hello.init(
-      { facebook: '296515120767797' });
+      { facebook: '1430245840616178' });
 
     hello.on('auth.login', (auth) => {
       let user = {
