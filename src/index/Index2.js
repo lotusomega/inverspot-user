@@ -155,13 +155,13 @@ export default class Index extends Component {
             <h1>Newsletter</h1>
             <h2>Suscríbete</h2>
             <p className="hidden-xs hidden-sm">Suscríbete para recibir e-mails con nuevos proyectos, noticias y mucho más</p>
-            <form data-toggle="validator" role="form">
+            <form data-toggle="validator" role="form" method="POST" action="http://formspree.io/mkt@inverspot.mx">
               <div className="form-group col-xs-12 col-sm-8 col-sm-offset-1 col-centered">
-                <input type="email" className="form-control input-sm caja" id="inputEmail" data-error="La dirección de correo es invalida" name="newsletter" style={{}} />
+                <input type="email" name="email" placeholder="Correo Electrónico" className="form-control input-sm caja" id="inputEmail" data-error="La dirección de correo es invalida" name="newsletter"/>
                 <div className="help-block with-errors" />
               </div>
               <div className="form-group col-xs-12 col-sm-2 col-centered" style={{marginLeft: '-24px', marginTop: 6}}>
-                <input className="button large-invertion bton" type="submit" defaultValue="Enviar" style={{}} />
+                <input className="button large-invertion bton" type="submit" defaultValue="Enviar"/>
               </div>
             </form>
           </div>
