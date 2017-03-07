@@ -118,7 +118,7 @@ function Register(props) {
                   <div className="checkbox">
                     <label style={{fontSize: "12px"}}>
                       <input type="checkbox" name="check" required/>
-                      <Link to='/notice' onClick={props.onClick}>Acepto avisos de política y privacidad</Link>
+                      <Link to='/aviso-de-privacidad' onClick={props.onClick}>Acepto avisos de política y privacidad</Link>
                     </label>
                     {props.show && <label style={{fontSize: "11px", color:"red"}}>Contraseñas no coinciden</label>}
                   </div>

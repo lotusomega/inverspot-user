@@ -27,24 +27,24 @@ class Footer extends Component {
               <div className="col-xs-12 col-sm-3 col-md-3">
                 <h2><b>Recursos</b></h2>
                 <ul>
-                  <li><Link to="privacy">Políticas de privacidad</Link></li>
+                  <li><Link to="politicas-de-privacidad">Políticas de privacidad</Link></li>
                   <li><a href="http://spot_files.softin.mx/2016/12/brochure.pdf" target="_blank">Brochure informativo</a></li>
                 </ul>
               </div>
               <div className="col-xs-12 col-sm-3 col-md-3">
                 <h2><b>Soporte</b></h2>
                 <ul>
-                  <li><Link to="faq's">Preguntas Frecuentes</Link></li>
-                  <li><Link to="contact">Contacto</Link></li>
-                  <li><Link to="how-does-it-work">Como Funciona</Link></li>
+                  <li><Link to="faqs">Preguntas Frecuentes</Link></li>
+                  <li><Link to="contacto">Contacto</Link></li>
+                  <li><Link to="como-funciona">Como Funciona</Link></li>
                 </ul>
               </div>
               <div className="col-xs-12 col-sm-3 col-md-3">
                 <h2><b>Inverspot.mx</b></h2>
                 <ul>
-                  <li><Link to="notice">Aviso de privacidad</Link></li>
-                  <li><Link to="about-us">Nosotros</Link></li>
-                  <li><Link to="warranty">Garantia</Link></li>
+                  <li><Link to="aviso-de-privacidad">Aviso de privacidad</Link></li>
+                  <li><Link to="nosotros">Nosotros</Link></li>
+                  <li><Link to="garantia">Garantia</Link></li>
                   <li><a href="http://blog.inverspot.mx/" target="_blank">News</a></li>
                 </ul>
               </div>

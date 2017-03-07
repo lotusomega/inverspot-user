@@ -77,7 +77,7 @@ export default class Index extends Component {
                   <h1>¡Participar desde $100,000 en<br />inmuebles es posible!</h1>
                   <h3 className="hidden-xs hidden-sm">Inverspot, la primera plataforma de crowdfunding inmobiliario que te permite participar a plazo o de contado en México</h3>
                   <div className="hidden-xs hidden-sm btn-promo col-xs-6 col-sm-6 col-md-6">
-                    <Link to="projects">
+                    <Link to="proyectos">
                       <button style={{padding: '15px 20px', fontFamily: 'AvenirNext-Bold', display: 'inline-block'}}>Ver proyectos</button></Link>
                   </div>
                   <div className="btn-promo col-xs-12 col-sm-6 col-md-6">
@@ -93,7 +93,7 @@ export default class Index extends Component {
                   <h1>¡Participar desde $100,000 en<br />inmuebles es posible!</h1>
                   <h3 className="hidden-xs hidden-sm">Inverspot, la primera plataforma de crowdfunding inmobiliario que te permite participar a plazo o de contado en México</h3>
                   <div className="hidden-xs hidden-sm btn-promo col-xs-6 col-sm-6 col-md-6">
-                    <Link to="projects">
+                    <Link to="proyectos">
                       <button style={{padding: '15px 20px', fontFamily: 'AvenirNext-Bold', display: 'inline-block'}}>Ver proyectos</button></Link>
                   </div>
                   <div className="btn-promo col-xs-12 col-sm-6 col-md-6">
@@ -109,7 +109,7 @@ export default class Index extends Component {
                   <h1>¡Participar desde $100,000 en<br />inmuebles es posible!</h1>
                   <h3 className="hidden-xs hidden-sm">Inverspot, la primera plataforma de crowdfunding inmobiliario que te permite participar a plazo o de contado en México</h3>
                   <div className="hidden-xs hidden-sm btn-promo col-xs-6 col-sm-6 col-md-6">
-                    <Link to="projects">
+                    <Link to="proyectos">
                       <button style={{padding: '15px 20px', fontFamily: 'AvenirNext-Bold', display: 'inline-block'}}>Ver proyectos</button></Link>
                   </div>
                   <div className="btn-promo col-xs-12 col-sm-6 col-md-6">
@@ -125,7 +125,7 @@ export default class Index extends Component {
                   <h1>¡Participar desde $100,000 en<br />inmuebles es posible!</h1>
                   <h3 className="hidden-xs hidden-sm">Inverspot, la primera plataforma de crowdfunding inmobiliario que te permite participar a plazo o de contado en México</h3>
                   <div className="hidden-xs hidden-sm btn-promo col-xs-6 col-sm-6 col-md-6">
-                    <Link to="projects">
+                    <Link to="proyectos">
                       <button style={{padding: '15px 20px', fontFamily: 'AvenirNext-Bold', display: 'inline-block'}}>Ver proyectos</button></Link>
                   </div>
                   <div className="btn-promo col-xs-12 col-sm-6 col-md-6">
@@ -142,7 +142,7 @@ export default class Index extends Component {
             <div style={{height: "60px"}}/>
             <h1>
               <b>Proyectos para Participar &nbsp;&nbsp;&nbsp;&nbsp;</b>
-              <button type="button" className="btn button"><Link to="projects" style={{color: 'white'}}>Ver Más</Link></button>
+              <button type="button" className="btn button"><Link to="proyectos" style={{color: 'white'}}>Ver Más</Link></button>
             </h1>
             <div style={{height: "80px"}}/>
             {/* INVERSPOT: Renderiza las últimas 3 propiedades disponibles */}
@@ -157,7 +157,7 @@ export default class Index extends Component {
             <p className="hidden-xs hidden-sm">Suscríbete para recibir e-mails con nuevos proyectos, noticias y mucho más</p>
             <form data-toggle="validator" role="form" method="POST" action="http://formspree.io/mkt@inverspot.mx">
               <div className="form-group col-xs-12 col-sm-8 col-sm-offset-1 col-centered">
-                <input type="email" name="email" placeholder="Correo Electrónico" className="form-control input-sm caja" id="inputEmail" data-error="La dirección de correo es invalida" name="newsletter"/>
+                <input type="email" placeholder="Correo Electrónico" className="form-control input-sm caja" id="inputEmail" data-error="La dirección de correo es invalida" name="newsletter"/>
                 <div className="help-block with-errors" />
               </div>
               <div className="form-group col-xs-12 col-sm-2 col-centered" style={{marginLeft: '-24px', marginTop: 6}}>
@@ -169,7 +169,7 @@ export default class Index extends Component {
           <div className="row main-container propiedades">
             <div style={{height: "60px"}}/>
             <h1><b>Proyectos Fondeados &nbsp;&nbsp;&nbsp;&nbsp;</b>
-              <button type="button" className="btn button"><Link to="projects" style={{color: 'white'}}>Ver Más</Link></button> </h1>
+              <button type="button" className="btn button"><Link to="proyectos" style={{color: 'white'}}>Ver Más</Link></button> </h1>
             <div style={{height: "80px"}}/>
             <PropertyCards propertiesf={ this.state.propertiesf } element='FundCard'/>
           </div>
@@ -277,7 +277,7 @@ export default class Index extends Component {
           <div className="row">
             <div className="col-md-2 col-md-offset-5">
               <button type="button" className="btn button btn-lg btn-block">
-                <Link to="press" style={{color: 'white'}}>Ver Más</Link>
+                <Link to="ellos-hablan-de-nosotros" style={{color: 'white'}}>Ver Más</Link>
               </button>
             </div>
           </div>

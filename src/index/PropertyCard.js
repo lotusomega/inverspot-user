@@ -157,7 +157,7 @@ function PropertyCard (props) {
         multiplier={ property.dataSheet.investAmount } />
       <CardFacts facts={facts} />
       <CardActions>
-        <Link to={`/projects/${ property._id }/description`} >
+        <Link to={`/proyectos/${ property._id }/ficha`} >
           <button className="button btn-v-card left">Ver Más</button>
         </Link>
         <button className="button btn-v-card right" onClick={ () => props.onInvest(property) }>Participar</button>
@@ -203,7 +203,7 @@ function FundCard (props) {
       <CardHeader title={property.title} address={address} />
       <CardMedia src={'http://192.169.174.96/is-img/' + property.image}>
         <div className="fondeada-layer">
-            <p>PROYECTO<br/>FONDEADO</p>
+          <p>PROYECTO<br/>FONDEADO</p>
         </div>
       </CardMedia>
       <CardProgress
@@ -212,7 +212,7 @@ function FundCard (props) {
         multiplier={ property.dataSheet.investAmount } />
       <CardFacts facts={facts} />
       <div className="row btns-alone btns-holder">
-        <Link to={`/projects/${ props.property._id }/description`} >
+        <Link to={`/proyectos/${ props.property._id }/ficha`} >
           <button className="button btn-v-card left">Detalles de la Propiedad</button>
         </Link>
       </div>

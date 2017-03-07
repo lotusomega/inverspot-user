@@ -23,7 +23,7 @@ class Slider extends Component {
                     <h1>¡Participar desde $100,000 en<br/>inmuebles es posible!</h1>
                     <h3 className="hidden-xs hidden-sm">Inverspot, la primera plataforma de crowdfunding inmobiliario que te permite participar a plazo o de contado en México</h3>
                     <div className="hidden-xs hidden-sm btn-promo col-xs-6 col-sm-6 col-md-6">
-                        <Link to='/projects'>
+                        <Link to='/proyectos'>
                         <button style={stylesli}>Ver proyectos</button></Link>
                     </div>
                     <div className="btn-promo col-xs-12 col-sm-6 col-md-6">
@@ -41,7 +41,7 @@ class Slider extends Component {
                     <h1>¡Participar desde $100,000 en<br/>inmuebles es posible!</h1>
                     <h3 className="hidden-xs hidden-sm">Inverspot, la primera plataforma de crowdfunding inmobiliario que te permite participar a plazo o de contado en México</h3>
                     <div className="hidden-xs hidden-sm btn-promo col-xs-6 col-sm-6 col-md-6">
-                      <Link to='/projects'>
+                      <Link to='/proyectos'>
                       <button style={stylesli}>Ver proyectos</button></Link>
                     </div>
                     <div className="btn-promo col-xs-12 col-sm-6 col-md-6">
@@ -59,7 +59,7 @@ class Slider extends Component {
                     <h1>¡Participar desde $100,000 en<br/>inmuebles es posible!</h1>
                     <h3 className="hidden-xs hidden-sm">Inverspot, la primera plataforma de crowdfunding inmobiliario que te permite participar a plazo o de contado en México</h3>
                     <div className="hidden-xs hidden-sm btn-promo col-xs-6 col-sm-6 col-md-6">
-                      <Link to='/projects'>
+                      <Link to='/proyectos'>
                       <button style={stylesli}>Ver proyectos</button></Link>
                     </div>
                     <div className="btn-promo col-xs-12 col-sm-6 col-md-6">
@@ -77,7 +77,7 @@ class Slider extends Component {
                     <h1>¡Participar desde $100,000 en<br/>inmuebles es posible!</h1>
                     <h3 className="hidden-xs hidden-sm">Inverspot, la primera plataforma de crowdfunding inmobiliario que te permite participar a plazo o de contado en México</h3>
                     <div className="hidden-xs hidden-sm btn-promo col-xs-6 col-sm-6 col-md-6">
-                        <Link to='/projects'>
+                        <Link to='/proyectos'>
                         <button style={stylesli}>Ver proyectos</button></Link>
                     </div>
                     <div className="btn-promo col-xs-12 col-sm-6 col-md-6">

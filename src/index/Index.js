@@ -59,7 +59,7 @@ class Index extends Component {
             <div className="spacer"></div>
             <h1>
               <b>Proyectos para Participar &nbsp;&nbsp;&nbsp;&nbsp;</b>
-              <button type="button" className="btn button"><Link to="/projects" style={{color: 'white'}}>Ver Más</Link></button>
+              <button type="button" className="btn button"><Link to="/proyectos" style={{color: 'white'}}>Ver Más</Link></button>
             </h1>
             <div className="spacer double"></div>
             <PropertyCards onInvest={ this.toggleWizard } propertiesa={ this.state.propertiesa } element='PropertyCard'/>
@@ -70,7 +70,7 @@ class Index extends Component {
               <h1>
                 <b>Proyectos Fondeados &nbsp;&nbsp;&nbsp;&nbsp;</b>
                 <button type="button" className="btn button">
-                  <Link to="/projects" style={{color: 'white'}}>Ver Más</Link>
+                  <Link to="/proyectos" style={{color: 'white'}}>Ver Más</Link>
                 </button>
               </h1>
               <div className="spacer double"></div>

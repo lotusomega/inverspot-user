@@ -64,14 +64,14 @@ class NavBar extends Component {
         <div className="navbar-collapse collapse top-tittle-holder">
           <ul className="nav navbar-nav" style={stylen6}>
             <li>
-              <Link to="/about-us">Nosotros</Link>
+              <Link to="/nosotros">Nosotros</Link>
             </li>
             <li>
-              <Link to="/projects">Proyectos</Link>
+              <Link to="/proyectos">Proyectos</Link>
             </li>
-            <li><Link to="/how-does-it-work">Como Funciona</Link></li>
-            <li><Link to="/faq's">Preguntas Frecuentes</Link></li>
-            <li><Link to="/contact">Contacto</Link></li>
+            <li><Link to="/como-funciona">Como Funciona</Link></li>
+            <li><Link to="/faqs">Preguntas Frecuentes</Link></li>
+            <li><Link to="/contacto">Contacto</Link></li>
             {!this.user &&
               <li id='reg'><a data-toggle="modal" onClick={() => this.props.stepSet(1)} style={{cursor: "pointer"}}>Regístro</a></li> }
             {!this.user &&

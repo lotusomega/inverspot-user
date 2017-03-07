@@ -21,7 +21,7 @@ class Verify extends Component {
   }
 	//funcion para cambiar la ruta actual a proyectos
 	change(){
-		this.props.router.push('/projects')
+		this.props.router.push('/proyectos')
 	}
 
   render() {

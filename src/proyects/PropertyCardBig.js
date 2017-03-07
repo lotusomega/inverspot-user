@@ -108,25 +108,25 @@ function CardActions(props) {
   return (
     <div className="col-sm-12 form-inline text-center">
       <div className="spacer"></div>
-      <Link to={`/projects/${ props.property._id }/description`} >
+      <Link to={`/proyectos/${ props.property._id }/ficha`} >
         <button type="button" className="btnn button btn-grande">
           <span style={{textDecoration: 'none', color: '#fff'}} >Resumen del Proyecto</span>
         </button>&nbsp;
       </Link>
 
-      <Link to={`/projects/${ props.property._id }/market-research`} >
+      <Link to={`/proyectos/${ props.property._id }/estudio-de-mercado`} >
         <button type="button" className="btnn button btn-grande">
           <span style={{textDecoration: 'none', color: '#fff'}} >Estudio de Mercado</span>
         </button>&nbsp;
       </Link>
 
-      <Link to={`/projects/${ props.property._id }/builder`} >
+      <Link to={`/proyectos/${ props.property._id }/desarrollador`} >
         <button type="button" className="btnn button btn-grande">
           <span style={{textDecoration: 'none', color: '#fff'}} >Acerca del Desarrollador</span>
         </button>&nbsp;
       </Link>
 
-      <Link to={`/projects/${ props.property._id }/work-progress`} >
+      <Link to={`/proyectos/${ props.property._id }/avance`} >
         <button type="button" className="btnn button btn-grande">
           <span style={{textDecoration: 'none', color: '#fff'}} >Avance de Obra</span>
         </button>&nbsp;

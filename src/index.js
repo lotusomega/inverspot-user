@@ -28,9 +28,15 @@ import Recovery from './recovery/Recovery'
 
 //funcion para verificar si el usuario esta logueado
 function requireAuth(nextState, replace) {
+  const path = nextState.location.pathname.split('/')
   if (!isLogged()) {
+    if(path[1] === 'proyectos') {
+      alert('Necesita iniciar sesión para poder acceder a esta sección')
+      path.pop()
+      path.push('ficha')
+    }
     replace({
-      pathname: '/'
+      pathname: path.join('/')
     })
   }
 }
@@ -39,21 +45,21 @@ ReactDOM.render(
 	<Router onUpdate={() => window.scrollTo(0, 0)} history={hashHistory}>
 		<Route path='/' component={ App }>
 			<IndexRoute component={Index}/>
-			<Route path='about-us' component={AboutUs}/>
-			<Route path='projects' component={Proyects}/>
-			<Route path='projects/:id' component={Project}>
-        <Route path='description' component={Tab1} />
-        <Route path='market-research' component={Tab2} />
-        <Route path='builder' component={Tab3} />
-				<Route path='work-progress' component={Tab4} />
+			<Route path='nosotros' component={AboutUs}/>
+			<Route path='proyectos' component={Proyects}/>
+			<Route path='proyectos/:id' component={Project}>
+        <Route path='ficha' component={Tab1} />
+        <Route path='estudio-de-mercado' component={Tab2} onEnter={ requireAuth }/>
+        <Route path='desarrollador' component={Tab3} onEnter={ requireAuth }/>
+				<Route path='avance' component={Tab4} onEnter={ requireAuth }/>
 			</Route>
-      <Route path='how-does-it-work' component={Work}/>
-      <Route path="/faq's" component={Faqs}/>
-      <Route path="/contact" component={Contact}/>
-      <Route path="/press" component={Press}/>
-      <Route path="/notice" component={Notice}/>
-      <Route path="/privacy" component={Privacy}/>
-      <Route path="/warranty" component={Warranty}/>
+      <Route path='como-funciona' component={Work}/>
+      <Route path="/faqs" component={Faqs}/>
+      <Route path="/contacto" component={Contact}/>
+      <Route path="/ellos-hablan-de-nosotros" component={Press}/>
+      <Route path="/aviso-de-privacidad" component={Notice}/>
+      <Route path="/politicas-de-privacidad" component={Privacy}/>
+      <Route path="/garantia" component={Warranty}/>
       <Route path="/verify/:checker" component={Verify}/>
       <Route path="/recovery/:checker" component={Recovery}/>
 	  </Route>

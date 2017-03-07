@@ -160,7 +160,7 @@ function CardHero (props){
 
 function CardActionButton(props) {
   return (
-    <Link to={`/projects/${ props.id }/${props.to}`} >
+    <Link to={`/proyectos/${ props.id }/${props.to}`} >
       <button type="button" className="btnn button btn-grande">
         <span style={{textDecoration: 'none', color: '#fff'}} >{props.text}</span>
       </button>&nbsp;
@@ -177,13 +177,13 @@ function CardActions(props) {
     <div className="col-sm-12 form-inline text-center">
       <Spacer />
       <CardActionButton id={property._id}
-        to="description" text="Resumen del Proyecto" />
+        to="ficha" text="Resumen del Proyecto" />
       <CardActionButton id={property._id}
-        to="market-research" text="Estudio de Mercado" />
+        to="estudio-de-mercado" text="Estudio de Mercado" />
       <CardActionButton id={property._id}
-        to="builder" text="Acerca del Desarrollador" />
+        to="desarrollador" text="Acerca del Desarrollador" />
       <CardActionButton id={property._id}
-        to="work-progress" text="Avance de Obra" />
+        to="avance" text="Avance de Obra" />
       <Spacer />
     </div>
   )
@@ -205,10 +205,7 @@ property._id: identificador de la propiedad*/
 class PropertyCardBig1 extends Component  {
   render() {
     let property = this.props.property, address = property.address
-    console.log(property.createdAt)
     let remain = moment(property.createdAt).add(30, 'days').diff(moment()) / 1000
-    // let remain = +moment(property.createdAt).diff(moment())
-    // console.log(remain);
     let facts = [
       {
         title: 'Monto a Invertir',

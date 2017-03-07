@@ -28,7 +28,7 @@ class InvestmentCard extends Component {
         </div>
         <div className="col-md-3 text-center">
           <h2><small> Mi Inversión {currency(investment.amount)} </small></h2>
-          <Link to={`/projects/${investment.property._id}/work-progress`}>
+          <Link to={`/proyectos/${investment.property._id}/avance`}>
             <button type="button" className="btn btn-primary btn-lg btn-block">Avance de Obra</button>
           </Link>
           <div>
