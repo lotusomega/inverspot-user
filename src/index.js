@@ -43,7 +43,7 @@ function requireAuth(nextState, replace) {
 }
 
 // Google Analytics
-ReactGA.initialize('UA-90163231-1', {debug: true})
+ReactGA.initialize('UA-90163231-1')
 
 function logPageView() {
   ReactGA.set({ page: window.location.hash })
