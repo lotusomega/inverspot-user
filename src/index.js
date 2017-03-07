@@ -2,6 +2,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { Router, Route, hashHistory, IndexRoute } from 'react-router'
+import ReactGA from 'react-ga'
 import App from './app/App';
 import AppPanel from './app-panel/AppPanel';
 import { isLogged } from './services/auth'
@@ -40,9 +41,20 @@ function requireAuth(nextState, replace) {
     })
   }
 }
+
+// Google Analytics
+ReactGA.initialize('UA-90163231-1', {debug: true})
+
+function logPageView() {
+  ReactGA.set({ page: window.location.hash })
+  ReactGA.pageview(window.location.hash)
+  window.scrollTo(0, 0)
+}
+
+
 //Renderizado del contenido, cargando los componentes dependiendo de la ruta
 ReactDOM.render(
-	<Router onUpdate={() => window.scrollTo(0, 0)} history={hashHistory}>
+	<Router onUpdate={logPageView} history={hashHistory}>
 		<Route path='/' component={ App }>
 			<IndexRoute component={Index}/>
 			<Route path='nosotros' component={AboutUs}/>

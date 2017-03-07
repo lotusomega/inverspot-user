@@ -16,8 +16,8 @@ function PropertyCards(props) {
       { props.element === 'PropertyCardBig' &&
         props.propertiesa.map(property => {
           return (
-            <div>
-              <PropertyCardBig key={property._id} onInvest={ props.onInvest } property={property}/>
+            <div key={property._id}>
+              <PropertyCardBig onInvest={ props.onInvest } property={property}/>
               <div className="spacer double"></div>
             </div>
           )
@@ -25,8 +25,8 @@ function PropertyCards(props) {
       { props.element === 'FundCardBig' &&
         props.propertiesf.map(property => {
           return (
-            <div>
-              <FundCardBig key={property._id} onInvest={ props.onInvest } property={property}/>
+            <div key={property._id}>
+              <FundCardBig onInvest={ props.onInvest } property={property}/>
               <div className="spacer double"></div>
             </div>
           )
