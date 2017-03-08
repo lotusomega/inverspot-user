@@ -30,7 +30,7 @@ class NavBar extends Component {
     }
     return (
 
-      <nav className="navbar navbar-light bg-faded navbar-fixed-top" style={stylen}>
+      <nav className="navbar navbar-light bg-faded" style={stylen}>
 
         <div className="hidden-xs hidden-sm col-xs-12 col-lg-12" style={{backgroundColor: '#81D742', width:'100%', height:'29px'}}>
           <p style={stylen2}>

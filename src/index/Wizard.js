@@ -71,10 +71,9 @@ onClick: contiene la funcion para cerrar el modal*/
 function Step1 (props){
   return(
     <Modal onClick={props.onClick}>
-      <ModalPromo>Quiero invertir en { props.property.title }</ModalPromo>
+      <ModalPromo>Quiero participar en { props.property.title }</ModalPromo>
       <ModalButton onClick={ () => props.verify() } />
       <ModalPromo>Si tienes dudas, contáctanos</ModalPromo>
-      <ModalText>*Si no cuentas con el 100% del pago<br/>inicial te podemos financiar</ModalText>
     </Modal>
   )
 }

@@ -49,7 +49,6 @@ class App extends Component {
     return (
       <div>
         <NavBar stepSet={this.stepSet}/>
-        <div className="headspace"></div>
         {this.props.children && React.cloneElement(this.props.children, {
               stepSet: this.stepSet,
               showModal: this.showModal,

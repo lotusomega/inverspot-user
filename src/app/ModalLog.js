@@ -126,11 +126,11 @@ function Register(props) {
               </div>
               <div className="container-fluid">
                 <div className="row">
-                  <div className="col-sm-6">
-                    <button type="button" className="loginBtn loginBtn--facebook" onClick={props.fbAuth}>Registrate con Facebook</button>
+                  <div className="col-xs-12 col-sm-6">
+                    <button type="button" className="loginBtn loginBtn--facebook" onClick={props.fbAuth}>Registro con <br></br>Facebook</button>
                   </div>
-                  <div className="col-sm-6">
-                    <button className="button btn-register" style={{padding: "6px 60px"}} type="submit">Enviar</button>
+                  <div className="col-xs-12 col-sm-6">
+                    <button className="button btn-register" style={{padding: "6px 40px", marginTop: "1px"}} type="submit">Enviar</button>
                   </div>
                 </div>
               </div>
@@ -240,8 +240,8 @@ function FooterL(props){
   return(
     <div className="modal-footer">
       <div className="login-footer">
-        <span>¿No tienes una cuenta? &nbsp;
-          <a onClick={() => props.next(1)} style={{cursor: "pointer", fontSize: "14px"}}>Registrate con Nosotros</a></span>
+        <span>
+          <a onClick={() => props.next(1)} style={{cursor: "pointer", fontSize: "14px"}}>¿No tienes una cuenta? Registrate</a></span>
       </div>
     </div>
   )
@@ -252,8 +252,7 @@ function FooterR(props){
   return(
     <div className="modal-footer">
       <div className="register-footer">
-        <span>Ya tengo mi cuenta &nbsp;</span>
-        <a onClick={() => props.next(2)} style={{cursor: "pointer", fontSize: "14px"}}>Ingresa</a>
+        <a onClick={() => props.next(2)} style={{cursor: "pointer", fontSize: "14px"}}>Ya tiene cuenta, Ingrese</a>
       </div>
     </div>
   )

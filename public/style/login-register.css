@@ -4,9 +4,9 @@
  * Autor: Creative Tim
  * Web-autor: creative.tim
  * Web script: http://creative-tim.com
- * 
+ *
  */
- 
+
 /*  Shake animation  */
 
 @charset "UTF-8";
@@ -74,8 +74,8 @@
 	animation-name: shake;
 }
 .modal-tit {
-    font-family: AvenirNext-Regular; 
-    text-color: white; 
+    font-family: AvenirNext-Regular;
+    text-color: white;
     margin-left: 20px;
 }
 .login .modal-dialog{
@@ -88,10 +88,10 @@
 }
 .login .modal-header {
     border: 0 none;
-    padding: 10px; 
-    background-color: #4B118E; 
-    margin-top: -15px; 
-    margin-bottom: 10px; 
+    padding: 10px;
+    background-color: #4B118E;
+    margin-top: -15px;
+    margin-bottom: 10px;
     border-radius: 10px 10px 0px 0px;
 }
 .login .modal-body{
@@ -165,23 +165,23 @@
     width: 100%;
 }
 .forgot {
-    margin-top:-25px; 
-    margin-bottom:-15px; 
+    margin-top:-25px;
+    margin-bottom:-15px;
     display:none;
 }
 .loginBox h1{
-    font-size: 24px; 
-    color: #4B118E; 
-    font-family: AvenirNext-Regular; 
-    font-weight: 900; 
+    font-size: 24px;
+    color: #4B118E;
+    font-family: AvenirNext-Regular;
+    font-weight: 900;
     text-align: left;
 }
 .loginBox hr{
     border-top: 1px solid #4B118E;
 }
 .control-login {
-    float: right; 
-    margin-top: -10px; 
+    float: right;
+    margin-top: -10px;
     margin-right: 10px;
 }
 .control-login a {
@@ -189,10 +189,10 @@
     margin-top: 18px;
 }
 .registerBox h1{
-    font-size: 24px; 
-    color: #4B118E; 
-    font-family: AvenirNext-Regular; 
-    font-weight: 900; 
+    font-size: 24px;
+    color: #4B118E;
+    font-family: AvenirNext-Regular;
+    font-weight: 900;
     text-align: left;
 }
 .registerBox hr{
@@ -242,8 +242,8 @@
     margin-top: 0px;
 }
 .img-fluid-login {
-    margin: -10px 0px 0px 25px; 
-    float: left; 
+    margin: -10px 0px 0px 25px;
+    float: left;
     width: 220px;
 }
 
@@ -280,9 +280,9 @@
 }
 
 button.loginBtn.loginBtn--facebook {
-    margin-left: -20px;
-    width: 180px;
-    height: 35px;
+  margin-left: -25px;
+  width: 130px;
+  height: 35px;
 }
 
 .btn-social{position:relative;padding-left:44px;text-align:center;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.btn-social :first-child{position:absolute;left:0;top:0;bottom:0;width:32px;line-height:34px;font-size:1.6em;text-align:center;border-right:1px solid rgba(0,0,0,0.2)}
@@ -354,7 +354,7 @@ button.loginBtn.loginBtn--facebook {
   /* border: 1px solid #3079ed; */
   border: 0px;
   color: #fff;
-  text-shadow: 0 1px rgba(0,0,0,0.1); 
+  text-shadow: 0 1px rgba(0,0,0,0.1);
   background-color: #4d90fe;
   padding: 17px 0px;
   font-family: AvenirNext-Regular;
@@ -378,7 +378,7 @@ button.loginBtn.loginBtn--facebook {
   display: inline-block;
   opacity: 0.6;
   transition: opacity ease 0.5s;
-} 
+}
 
 .login-help{
   font-size: 12px;
