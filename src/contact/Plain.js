@@ -12,51 +12,51 @@ export default function(props) {
           <div className="row">
             <div className="col-md-8">
               <div className="well well-sm">
-                <form>
-                  <div className="row">
-                    <div className="col-md-6">
-                      <div className="form-group">
-                        <label htmlFor="name">
-                        Nombre *</label>
-                        <input type="text" className="form-control" id="name" placeholder="Ingrese su nombre" required="required" />
-                      </div>
-                      <div className="form-group">
-                        <label htmlFor="phone">
-                        Teléfono *</label>
-                        <input type="text" className="form-control" id="phone" placeholder="Ingrese su número teléfonico" required="required" />
-                      </div>
-                      <div className="form-group">
-                        <label htmlFor="email">
-                        Correo Electrónico *</label>
-                        <div className="input-group">
-                          <span className="input-group-addon"><i className="fa fa-envelope-o" aria-hidden="true" />
-                          </span>
-                          <input type="email" className="form-control" id="email" placeholder="Ingrese su correo" required="required" /></div>
-                      </div>
-                      <div className="form-group">
-                        <label htmlFor="subject">
-                        Asunto *</label>
-                        <select id="subject" name="subject" className="form-control" required="required">
-                          <option value="na" selected>Elija uno:</option>
-                          <option value="service">Soy desarrollador y deseo subir mi proyecto</option>
-                          <option value="suggestions">Soy proveedor y deseo brindar mis servicios</option>
-                          <option value="product">Soy cliente y tengo dudas</option>
-                        </select>
-                      </div>
+              <form target="_blank" method="POST" action="http://formspree.io/mkt@inverspot.mx">
+                <div className="row">
+                  <div className="col-md-6">
+                    <div className="form-group">
+                      <label htmlFor="name">
+                      Nombre *</label>
+                      <input type="text" name="Nombre" className="form-control" id="name" placeholder="Ingrese su nombre" required="required" />
                     </div>
-                    <div className="col-md-6">
-                      <div className="form-group">
-                        <label htmlFor="name">
-                        Mensaje *</label>
-                        <textarea name="message" id="message" className="form-control" rows={9} cols={25} required="required" placeholder="Mensaje" defaultValue={""} />
-                      </div>
+                    <div className="form-group">
+                      <label htmlFor="phone">
+                      Teléfono *</label>
+                      <input type="text" name="Teléfono" className="form-control" id="phone" placeholder="Ingrese su número teléfonico" required="required" />
                     </div>
-                    <div className="col-md-12">
-                      <button type="submit" className="btn btn-primary pull-right" id="btnContactUs">
-                      Enviar Mensaje</button>
+                    <div className="form-group">
+                      <label htmlFor="email">
+                      Correo Electrónico *</label>
+                      <div className="input-group">
+                        <span className="input-group-addon"><i className="fa fa-envelope-o" aria-hidden="true" />
+                        </span>
+                        <input type="email" name="Correo electrónico" className="form-control" id="email" placeholder="Ingrese su correo" required="required" /></div>
+                    </div>
+                    <div className="form-group">
+                      <label htmlFor="subject">
+                      Asunto *</label>
+                      <select id="subject" name="Asunto" className="form-control" required="required">
+                        <option value="na" selected>Elija uno:</option>
+                        <option value="service">Soy desarrollador y deseo subir mi proyecto</option>
+                        <option value="suggestions">Soy proveedor y deseo brindar mis servicios</option>
+                        <option value="product">Soy cliente y tengo dudas</option>
+                      </select>
                     </div>
                   </div>
-                </form>
+                  <div className="col-md-6">
+                    <div className="form-group">
+                      <label htmlFor="name">
+                      Mensaje *</label>
+                      <textarea name="Mensaje" id="message" className="form-control" rows={9} cols={25} required="required" placeholder="Mensaje" defaultValue={""} />
+                    </div>
+                  </div>
+                  <div className="col-md-12">
+                    <button type="submit" className="btn btn-primary pull-right" id="btnContactUs">
+                    Enviar Mensaje</button>
+                  </div>
+                </div>
+              </form>
               </div>
             </div>
             <div className="col-md-4">

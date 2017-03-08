@@ -105,7 +105,7 @@ function CardActions(props) {
 //funcion Card: estructura de la tarjeta
 function Card(props) {
   return (
-    <div className="col-v col-xs-12 col-sm-4 col-md-4">
+    <div className="col-v col-xs-12 col-sm-4 col-md-4" style={{marginBottom: "20px"}}>
       <div className="card-v fondeada">
         {props.children}
       </div>
