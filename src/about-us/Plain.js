@@ -85,7 +85,7 @@ export default function(props) {
           </div>
         </div>
         <div style={{height: "70px"}}/>
-        <div className="container" style={{background: 'url(http://plat.mx/admin/wp-content/uploads/2017/01/12.jpg) no-repeat center center fixed', width: '100%', height: 500}}>
+        <div className="container" style={{background: 'url(style/images/12.jpg) no-repeat center center fixed', width: '100%', height: 500}}>
           <div className="row">
             <div className="col-md-6 col-sm-12" style={{backgroundColor: 'rgba(75, 17, 142, 0.53)'}}>
               <div className="spacer" />
@@ -102,7 +102,7 @@ export default function(props) {
           El resto del equipo y socios, es gente preparada y con experiencia en el sector inmobiliario, administración y finanzas.</h3>
         </div>
         <div style={{height: "70px"}}/>
-        <div className="container" style={{background: 'url(http://plat.mx/admin/wp-content/uploads/2017/01/sfRkE-o6kyDYokfKodpRQ.jpg) no-repeat center center fixed', width: '100%', height: 500}}>
+        <div className="container" style={{background: 'url(style/images/2.jpg) no-repeat center center fixed', width: '100%', height: 500}}>
           <div className="row">
             <div className="col-md-6 col-sm-12" style={{backgroundColor: 'rgba(75, 17, 142, 0.53)'}}>
               <div className="spacer" />
@@ -120,7 +120,7 @@ export default function(props) {
           <div className="row">
             <div className="col-md-3">
               <center>
-                <img alt="" src="http://plat.mx/admin/wp-content/uploads/2017/01/analiza.png" className="icon-circle" />
+                <img alt="" src="style/images/analiza.png" className="icon-circle" />
                 <br />
                 <h4 className="footertext" style={{fontFamily: 'AvenirNext-Regular', fontSize: 20}}>Nuestra plataforma</h4>
                 <p className="footertext" style={{fontFamily: 'AvenirNext-Regular', fontSize: 17, fontWeight: 400}}>Te mostramos día a día nuevas propiedades previamente revisadas que ofrecen atractivos rendimientos.<br />
@@ -128,7 +128,7 @@ export default function(props) {
             </div>
             <div className="col-md-3">
               <center>
-                <img alt="" src="http://plat.mx/admin/wp-content/uploads/2017/01/rendimientos.png" className="icon-circle" />
+                <img alt="" src="style/images/rendimientos.png" className="icon-circle" />
                 <br />
                 <h4 className="footertext" style={{fontFamily: 'AvenirNext-Regular', fontSize: 20}}>Rentabilidad</h4>
                 <p className="footertext" style={{fontFamily: 'AvenirNext-Regular', fontSize: 17, fontWeight: 400}}>Dependiendo cada proyecto, podrás recibir atractivos retornos al termino de ellos.<br />
@@ -136,7 +136,7 @@ export default function(props) {
             </div>
             <div className="col-md-3">
               <center>
-                <img alt="" src="http://plat.mx/admin/wp-content/uploads/2017/01/grupo.png" className="icon-circle" />
+                <img alt="" src="style/images/grupo.png" className="icon-circle" />
                 <br />
                 <h4 className="footertext" style={{fontFamily: 'AvenirNext-Regular', fontSize: 20}}>Flexibilidad</h4>
                 <p className="footertext" style={{fontFamily: 'AvenirNext-Regular', fontSize: 17, fontWeight: 400}}>Puedes donar, regalar, endosar, vender o dejar en garantía tus acciones notificándonoslo con anticipación.<br />
@@ -144,7 +144,7 @@ export default function(props) {
             </div>
             <div className="col-md-3">
               <center>
-                <img alt="" src="http://plat.mx/admin/wp-content/uploads/2017/01/documentacion.png" className="icon-circle" />
+                <img alt="" src="style/images/documentacion.png" className="icon-circle" />
                 <br />
                 <h4 className="footertext" style={{fontFamily: 'AvenirNext-Regular', fontSize: 20}}>Seguridad</h4>
                 <p className="footertext" style={{fontFamily: 'AvenirNext-Regular', fontSize: 17, fontWeight: 400}}>Tu dinero esta invertido y respaldado con inmuebles, por lo que tu capital esta 100% seguro.<br />
@@ -156,7 +156,7 @@ export default function(props) {
         <div className="row">
           <div className="col-md-3">
             <center>
-              <img alt="" src="http://plat.mx/admin/wp-content/uploads/2017/01/pic.png" className="icon-circle" />
+              <img alt="" src="style/images/pic.png" className="icon-circle" />
               <br />
               <h4 className="footertext" style={{fontFamily: 'AvenirNext-Regular', fontSize: 20}}>Plusvalía</h4>
               <p className="footertext" style={{fontFamily: 'AvenirNext-Regular', fontSize: 17, fontWeight: 400}}>Tus participaciones van incrementando su valor conforme a la plusvalía de la proyecto.<br />
@@ -164,7 +164,7 @@ export default function(props) {
           </div>
           <div className="col-md-3">
             <center>
-              <img alt="" src="http://plat.mx/admin/wp-content/uploads/2017/01/elige.png" className="icon-circle" />
+              <img alt="" src="style/images/elige.png" className="icon-circle" />
               <br />
               <h4 className="footertext" style={{fontFamily: 'AvenirNext-Regular', fontSize: 20}}>Diversificación</h4>
               <p className="footertext" style={{fontFamily: 'AvenirNext-Regular', fontSize: 17, fontWeight: 400}}>En vez de participar en un proyecto, puedes diversificar tu dinero en varios proyectos.<br />
@@ -172,7 +172,7 @@ export default function(props) {
           </div>
           <div className="col-md-3">
             <center>
-              <img alt="" src="http://plat.mx/admin/wp-content/uploads/2017/01/tu-pago.png" className="icon-circle" />
+              <img alt="" src="style/images/tu-pago.png" className="icon-circle" />
               <br />
               <h4 className="icon-tittle" style={{fontFamily: 'AvenirNext-Regular', fontSize: 20}}>Motores de participación</h4>
               <p className="footertext" style={{fontFamily: 'AvenirNext-Regular', fontSize: 17, fontWeight: 400}}>Sin duda es la mejor forma de que inviertas tu dinero en proyectos inmobiliarios con montos accesibles.<br />
@@ -180,7 +180,7 @@ export default function(props) {
           </div>
           <div className="col-md-3">
             <center>
-              <img alt="" src="http://plat.mx/admin/wp-content/uploads/2017/01/rendimientos.png" className="icon-circle" />
+              <img alt="" src="style/images/rendimientos.png" className="icon-circle" />
               <br />
               <h4 className="icon-tittle" style={{fontFamily: 'AvenirNext-Regular', fontSize: 20}}>Participa a plazos</h4>
               <p className="icon-text" style={{fontFamily: 'AvenirNext-Regular', fontSize: 17, fontWeight: 400}}>En los proyectos para desarrollar y dependiendo cada proyecto, se podrá participar en distintas parcialidades y podrás participar con un anticipo desde $20,000.<br />
