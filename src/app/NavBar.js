@@ -37,7 +37,11 @@ class NavBar extends Component {
             Atención al cliente | 01 (55) 8000 6555 |
             <a style={stylen3} href="mailto:hola@inverspot.mx"> hola@inverspot.mx</a>
 
+
             <a style={{float:'right', marginRight: '100px', marginLeft: '10px', color: 'white',}} href="https://vimeo.com/190621870" target="_blank"><i className="fa fa-vimeo" aria-hidden="true"></i></a>
+
+            <a style={stylen4} href="https://www.waze.com/es-419/livemap?zoom=17&lat=19.42268&lon=-99.22286" target="_blank">
+              <i className="fa fa-crosshairs" aria-hidden="true"></i></a>
 
             <a style={stylen4} href="https://www.youtube.com/channel/UCvr85MwH36lbTAvOdmeDtxg" target="_blank">
               <i className="fa fa-youtube" aria-hidden="true"></i></a>
