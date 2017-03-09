@@ -107,7 +107,7 @@ property.title: nombre de la propiedad para invertir*/
 function Step3 (props){
   return(
     <Modal onClick={props.onClick}>
-      <ModalPromo>¿Estás seguro que deseas invertir {props.shares} acciones con un total de {currency(props.total)} en {props.property.title}?</ModalPromo>
+      <ModalPromo>¿Estás seguro que deseas apartar {props.shares} participaciones con un total de {currency(props.total)} en {props.property.title}?</ModalPromo>
       <ModalSmallButton onClick={ () => props.invest() } name='Si' clas='large-invertion'/>
       <ModalSmallButton onClick={ props.onClick } name='No' clas='large-confirm'/>
     </Modal>

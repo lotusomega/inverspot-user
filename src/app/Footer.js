@@ -19,7 +19,7 @@ class Footer extends Component {
                 <div className="icon-logo-main"></div>
                 <p className="logop">Tu punto de inversión inmobiliario</p>
                 <ul>
-                  <li><p>Avenida de las Palmas 1320<br/> Lomas de Chapultepec, CDMX</p></li>
+                  <li><p>Avenida Paseo de las Palmas 1320<br/> Lomas de Chapultepec, CDMX</p></li>
                   <li><p><a href="tel:015580006555"></a>01 (55) 8000 6555</p></li>
                   <li><p><a href="mailto:hola@inverspot.mx">hola@inverspot.mx</a></p></li>
                 </ul>

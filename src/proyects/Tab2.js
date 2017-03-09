@@ -73,8 +73,7 @@ class Tab2 extends Component {
     return(
       <div className="tab-pane fade in active" id="tab2">
         <div className="col-sm-6">
-
-          <div className="panel panel-primary">
+          <div className="table-responsive">
             <EdiTableRender data={property.capitalOutflow} />
           </div>
 
@@ -109,7 +108,7 @@ class Tab2 extends Component {
           </div>
 
           <div className="col-sm-12">
-            <div className="panel panel-primary">
+            <div className="table-responsive">
               {/* Renderiza la tabla */}
               <EdiTableRender data={property.supplementaryData} />
             </div>
