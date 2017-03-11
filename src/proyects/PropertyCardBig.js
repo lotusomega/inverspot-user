@@ -52,7 +52,7 @@ function CardProgress(props) {
       </div>
       <div className="col-xs-6 right"><p style={{fontWeight: "bold", color:"#f00"}}>{currency(multiplier * max)}</p></div>
       <div className="col-xs-12 range-holder">
-        <div className="range" style={{backgroundColor: progress < 100 ? "#f26438" : "#00cc99", width: `${ progress }%`}}></div>
+        <div className="range" style={{backgroundColor: progress < 100 ? "#FF3C00" : "#00cc99", width: `${ progress }%`}}></div>
       </div>
       <div className="col-xs-12 range-txt">
         <p className="purple-text"><b>{max - current}</b> participaciones disponibles de <b>{max}</b></p>
@@ -69,7 +69,7 @@ icon: nombre del icono del componente
 text: texto del componente*/
 function Fact(props) {
   return (
-    <div className="col-sm-4 col-centered col-max circle">
+    <div className="col-xs-12 col-sm-4 col-centered circle">
       <img src={props.icon} alt="Icono" className="iconlarge"/>
       <p className="tittle">{props.title.toUpperCase()}</p>
       <p className="subtittle">{props.text}</p>

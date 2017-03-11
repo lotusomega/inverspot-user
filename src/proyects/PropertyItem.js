@@ -90,7 +90,7 @@ function CardProgress(props) {
         <p><b>{currency(multiplier * max)}</b></p>
       </div>
       <div className="col-xs-12 range-holder">
-        <div className="range" style={{backgroundColor: progress < 100 ? "#f26438" : "#00cc99", width: `${ progress }%`}}></div>
+        <div className="range" style={{backgroundColor: progress < 100 ? "#FF3C00" : "#00cc99", width: `${ progress }%`}}></div>
       </div>
       <div className="col-xs-12 range-txt">
         <p className="purple-text"><b>{max - current}</b> participaciones disponibles de <b>{max}</b></p>
@@ -113,7 +113,7 @@ icon: nombre del icono del componente
 text: texto del componente*/
 function Fact(props) {
   return (
-    <div className="col-sm-4 col-centered col-max circle">
+    <div className="col-xs-12 col-sm-4 col-centered circle">
       <img src={props.icon} alt="Icono" className="iconlarge"/>
       <p className="tittle">{props.title.toUpperCase()}</p>
       <p className="subtittle">{props.text}</p>
@@ -176,14 +176,27 @@ function CardActions(props) {
   return (
     <div className="col-sm-12 form-inline text-center">
       <Spacer />
+
+      <div className="col-xs-12 col-sm-3" style={{paddingLeft: "2px", paddingRight: "2px", marginBottom: "-5px"}}>
       <CardActionButton id={property._id}
         to="ficha" text="Resumen del Proyecto" />
+      </div>
+
+      <div className="col-xs-12 col-sm-3" style={{paddingLeft: "2px", paddingRight: "2px", marginBottom: "-5px"}}>
       <CardActionButton id={property._id}
         to="estudio-de-mercado" text="Estudio de Mercado" />
+      </div>
+
+      <div className="col-xs-12 col-sm-3" style={{paddingLeft: "2px", paddingRight: "2px", marginBottom: "-5px"}}>
       <CardActionButton id={property._id}
         to="desarrollador" text="Acerca del Desarrollador" />
+      </div>
+
+      <div className="col-xs-12 col-sm-3" style={{paddingLeft: "2px", paddingRight: "2px"}}>
       <CardActionButton id={property._id}
         to="avance" text="Avance de Obra" />
+      </div>
+
       <Spacer />
     </div>
   )

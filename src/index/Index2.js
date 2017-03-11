@@ -184,7 +184,7 @@ export default class Index extends Component {
                 <div>
                   <img src="style/images/sellspot.png" className="img-fluid" style={{float: 'left', width: 250}} alt="" />
                   <div className="col-xs-12">
-                    <h2 style={{fontSize: 26, textAlign: 'left'}}>Promueve propiedades y gana<br />comisiones<br />Ir al sitio</h2>
+                    <h2 style={{fontSize: 26, textAlign: 'left'}}>Promueve propiedades y gana<br />comisiones<br /><br />Ir al sitio</h2>
                   </div>
                 </div>
               </div>
@@ -196,7 +196,7 @@ export default class Index extends Component {
                 <div>
                   <img src="style/images/premiumspot.png" className="img-responsive" style={{float: 'right', width: 370}} alt="" />
                   <div className="col-xs-12">
-                    <h2 style={{fontSize: 26, textAlign: 'right'}}>Buscas inversiones superiores<br />a <b>$500,000</b><br />Ir al sitio</h2>
+                    <h2 style={{fontSize: 26, textAlign: 'right'}}>Buscas inversiones superiores<br />a <b>$500,000</b><br /><br />Ir al sitio</h2>
                   </div>
                 </div>
               </div>

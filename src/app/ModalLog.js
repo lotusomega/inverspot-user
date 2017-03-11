@@ -124,17 +124,9 @@ function Register(props) {
                   </div>
                 </div>
               </div>
-              <div className="container-fluid">
-                <div className="row">
-                  <div className="col-xs-12 col-sm-6">
-                    <button type="button" className="loginBtn loginBtn--facebook" onClick={props.fbAuth}>Registro con <br></br>Facebook</button>
-                  </div>
-                  <div className="col-xs-12 col-sm-6">
-                    <button className="button btn-register" style={{padding: "6px 40px", marginTop: "1px"}} type="submit">Enviar</button>
-                  </div>
-                </div>
-              </div>
-
+              <button className="button btn-login" type="submit">Enviar</button>
+              <hr/>
+              <button type="button" className="btn-social loginBtn loginBtn--facebook btn btn-block  btn-facebook" onClick={props.fbAuth}>Registro con Facebook</button>
             </form>
           </div>
         </div>

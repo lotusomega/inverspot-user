@@ -64,7 +64,7 @@ export default function(props) {
                 <legend>Dirección</legend>
                 <address>
                   <strong>Inverspot</strong><br />
-                  Avenida de las Palmas 1320<br />
+                  Avenida Paseo de las Palmas 1320<br />
                   Lomas de Chapultepec, CDMX, México<br />
                   <abbr title="Phone">
                   Teléfono: 01 (55) 8000 6555</abbr>

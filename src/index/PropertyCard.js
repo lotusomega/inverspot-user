@@ -59,7 +59,7 @@ function CardProgress(props) {
       </div>
       <div className="col-xs-6 col-sm-6 col-md-6 right"><p style={{fontWeight: "bold", color:"#f00"}}>{currency(multiplier * max)}</p></div>
       <div className="col-xs-12 col-sm-12 col-md-12 range-holder">
-        <div className="range" style={{backgroundColor: progress < 100 ? "#f26438" : "#00cc99", width: `${ progress }%`}}></div>
+        <div className="range" style={{backgroundColor: progress < 100 ? "#FF3C00" : "#00cc99", width: `${ progress }%`}}></div>
       </div>
       <div className="col-xs-12 col-sm-12 col-md-12 range-txt">
         <p style={{color: '#f00'}}><span style={{color: '#f00'}}>{max - current}</span> participaciones disponibles de <span style={{color: '#f00'}}>{max}</span></p>

@@ -9,11 +9,16 @@ export default function(props) {
         <div className="spacer" />
         <h1 className="text-center"><b>Garantía</b></h1>
         <div className="spacer double" />
-        <div className="row main-container registro-section">
-          <div className="spacer"/>
-          <h1 style={{color: 'red', fontFamily: 'AvenirNext-Regular', fontWeight: 900}}>Garantía de tu participación</h1>
-          <p style={{fontFamily: 'AvenirNext-Regular', fontStyle: 'normal', fontWeight: 100}}>Entendemos la importancia de tu participación, con el objetivo de garantizar un excelente proceso te presentamos las diferentes funciones que ofrecemos como garantía</p>
-        </div>
+
+
+
+                <div className="col-xs-12 col-sm-12" style={{backgroundColor: "#f7f9f9", marginBottom: "70px"}}>
+                <div className="spacer double" />
+                <h1 className="text-center" style={{fontSize: "31px", color: 'red', fontWeight: 900}}>Garantía de tu participación</h1>
+                <p className="text-center" style={{fontSize: "24px", color: "black",fontWeight: 100}}>Entendemos la importancia de tu participación, con el objetivo de garantizar un excelente proceso te presentamos las diferentes funciones que ofrecemos como garantía</p>
+                <div className="spacer double" />
+                </div>
+
         <div  style={{height: "40px"}}/>
         <div className="row main-container">
           <div className="spacer" />
@@ -65,11 +70,16 @@ export default function(props) {
           </div>
         </div>
 
-        <div className="row main-container registro-section" style={{backgroundColor: '#fff'}}>
-          <div className="spacer" />
-          <h1 style={{color: 'red', fontFamily: 'AvenirNext-Regular', fontWeight: 900}}>Somos la primer Plataforma Colectiva Inmobiliaria en México</h1>
-          <p style={{fontFamily: 'AvenirNext-Regular', fontStyle: 'normal', fontWeight: 100}}>Inversión fácil, segura y al alcance de todos</p>
-        </div>
+
+        <div className="container">
+                        <div className="col-xs-12 col-sm-12" style={{backgroundColor: "#fff", marginTop: "70px", marginBottom: "70px"}}>
+                        <div className="spacer double" />
+                        <h1 className="text-center" style={{fontSize: "31px", color: 'red', fontWeight: 900}}>Somos la primer Plataforma Colectiva Inmobiliaria en México</h1>
+                        <p className="text-center" style={{fontSize: "24px", color: "black",fontWeight: 100}}>Inversión fácil, segura y al alcance de todos</p>
+                        </div>
+
+      </div>
+
         <div className="spacer" />
         <div className="contact">
           <div className="container">
@@ -136,7 +146,7 @@ export default function(props) {
               <legend>Dirección</legend>
               <address>
                 <strong>Inverspot</strong><br />
-                Avenida de las Palmas 1320<br />
+                Avenida Paseo de las Palmas 1320<br />
                 Lomas de Chapultepec, CDMX, México<br />
                 <abbr title="Phone">
                 Teléfono: (55) 800-06555</abbr>

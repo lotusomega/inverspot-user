@@ -7,12 +7,12 @@ export default function(props) {
         <div className="row propiedades">
           <div className="spacer" />
           <h1 className="text-center"><b>¿Cómo funciona?</b></h1>
-          <div className="spacer double" />
-          <div className="row main-container registro-section">
-            <div className="spacer" />
-            <p style={{fontFamily: 'AvenirNext-Regular', fontStyle: 'normal', fontWeight: 100}}>Inverspot ofrece una gran lista de inmuebles<br /> para que puedas participar en el que más te convenza</p>
+          <div className="spacer" />
+          <div className="col-xs-12 col-sm-12" style={{backgroundColor: "#fff", marginBottom: "70px"}}>
+          <p className="text-center" style={{fontSize: "24px", color: "black",fontWeight: 100}}>Inverspot ofrece una gran lista de inmuebles<br /> para que puedas participar en el que más te convenza</p>
           </div>
-          <div style={{height: "60px"}}/>
+          <div className="row"></div>
+
           <div className="row main-container">
             <h1 style={{color: '#5a5a5a', fontFamily: 'AvenirNext-Regular', fontWeight: 900}}>¿Cómo valuamos los proyectos?</h1>
             <h3 className="text-center" style={{color: '#5a5a5a', fontFamily: 'AvenirNext-Regular', fontWeight: 400}}>Inverspot valúa cada proyecto en 3 grandes indicadores</h3>
@@ -150,16 +150,19 @@ export default function(props) {
           </div>
         </div>
       </div>
-      <div style={{height: "20px"}}/>
+      <div style={{height: "60px"}}/>
+
       <div className="container">
-        <div className="row main-container registro-section">
-          <div className="spacer" />
-          <h1 style={{color: 'red', fontFamily: 'AvenirNext-Regular', fontWeight: 900}}>Comienza a llenar tu contrato aquí</h1>
-          <p style={{fontFamily: 'AvenirNext-Regular', fontStyle: 'normal', fontWeight: 100}}>Todo, en un sencillo proceso</p>
-          <button className="button" onClick={ () => props.stepSet(1) }>Regístrate</button>
-        </div>
+            <div className="col-xs-12 col-sm-12 text-center" style={{backgroundColor: "#f7f9f9", marginBottom: "70px"}}>
+            <div className="spacer double" />
+            <h1 style={{fontSize: "31px", color: 'red', fontFamily: 'AvenirNext-Regular', fontWeight: 900}}>Comienza a llenar tu contrato aquí</h1>
+            <p style={{fontSize: "24px", color: "black",fontWeight: 100}}>Todo, en un sencillo proceso</p>
+            <button className="button" onClick={ () => props.stepSet(1) }>Regístrate</button>
+            <div className="spacer double" />
+            </div>
       </div>
-        <div  style={{height: "60px"}}/>
+      <div className="row"></div>
+
       {/*Slider ellos hablan*/}
       <div className="hidden-xs hidden-sm conteiner">
         <div className="row">

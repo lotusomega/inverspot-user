@@ -7,12 +7,14 @@ export default function(props) {
         <div className="spacer" />
         <h1 className="text-center"><b>Nosotros</b></h1>
         <div className="spacer double" />
-        <div className="row main-container registro-section">
-          <div className="spacer" />
-          <h1 style={{color: 'red', fontFamily: 'AvenirNext-Regular', fontWeight: 900}}>¿Quiénes somos?</h1>
-          <p style={{fontFamily: 'AvenirNext-Regular', fontStyle: 'normal', fontWeight: 100}}>Somos una plataforma que busca conformar grupos de personas interesadas en participar en desarrollos inmobiliarios con el fin de obtener atractivos rendimientos en desarrollos previamente valuados</p>
+
+        <div className="col-xs-12 col-sm-12" style={{backgroundColor: "#f7f9f9", marginBottom: "70px"}}>
+        <div className="spacer double" />
+        <h1 className="text-center" style={{fontSize: "31px", color: 'red', fontWeight: 900}}>¿Quiénes somos?</h1>
+        <p className="text-center" style={{fontSize: "24px", color: "black",fontWeight: 100}}>Somos una plataforma que busca conformar grupos de personas interesadas en participar en desarrollos inmobiliarios con el fin de obtener atractivos rendimientos en desarrollos previamente valuados</p>
+        <div className="spacer double" />
         </div>
-        <div style={{height: "70px"}}/>
+
         <div className="row">
           <div className="col-xs-12 col-sm-6 col-lg-4">
             <div className="box">
@@ -94,14 +96,18 @@ export default function(props) {
             </div>
           </div>
         </div>
-        <div style={{height: "40px"}}/>
-        <div className="row main-container registro-section">
-          <div className="spacer" />
-          <h1 style={{color: 'red', fontFamily: 'AvenirNext-Regular', fontWeight: 900}}>¿Quiénes conforman Inverspot?</h1>
-          <h3 style={{textAlign: 'justify', fontFamily: 'AvenirNext-Regular', fontWeight: 400}}>Somos un grupo de personas que hemos laborado en el sector financiero inmobiliario y tecnológico con más de 10 años de experiencia. El fundador y director de la empresa es David Agmon Mizrahi, licenciado en mercadotecnia y una maestría en banca y mercados financieros, cuenta con más de 5 años de experiencia en el sector financiero.
-          El resto del equipo y socios, es gente preparada y con experiencia en el sector inmobiliario, administración y finanzas.</h3>
-        </div>
         <div style={{height: "70px"}}/>
+
+
+        <div className="col-xs-12 col-sm-12" style={{backgroundColor: "#f7f9f9", marginBottom: "70px"}}>
+        <div className="spacer double" />
+        <h1 className="text-center" style={{fontSize: "31px", color: 'red', fontWeight: 900}}>¿Quiénes conforman Inverspot?</h1>
+        <p className="text-center" style={{fontSize: "24px", color: "black",fontWeight: 100}}>Somos un grupo de personas que hemos laborado en el sector financiero inmobiliario y tecnológico con más de 10 años de experiencia. El fundador y director de la empresa es David Agmon Mizrahi, licenciado en mercadotecnia y una maestría en banca y mercados financieros, cuenta con más de 5 años de experiencia en el sector financiero.
+        El resto del equipo y socios, es gente preparada y con experiencia en el sector inmobiliario, administración y finanzas.</p>
+        <div className="spacer" />
+        </div>
+        <div className="row"></div>
+
         <div className="container" style={{background: 'url(style/images/2.jpg) no-repeat center center fixed', width: '100%', height: 500}}>
           <div className="row">
             <div className="col-md-6 col-sm-12" style={{backgroundColor: 'rgba(75, 17, 142, 0.53)'}}>
@@ -122,7 +128,7 @@ export default function(props) {
               <center>
                 <img alt="" src="style/images/analiza.png" className="icon-circle" />
                 <br />
-                <h4 className="footertext" style={{fontFamily: 'AvenirNext-Regular', fontSize: 20}}>Nuestra plataforma</h4>
+                <h4 className="footertext" style={{fontFamily: 'AvenirNext-Regular', fontSize: 20, fontWeight:900}}>Nuestra plataforma</h4>
                 <p className="footertext" style={{fontFamily: 'AvenirNext-Regular', fontSize: 17, fontWeight: 400}}>Te mostramos día a día nuevas propiedades previamente revisadas que ofrecen atractivos rendimientos.<br />
                 </p></center>
             </div>
@@ -130,7 +136,7 @@ export default function(props) {
               <center>
                 <img alt="" src="style/images/rendimientos.png" className="icon-circle" />
                 <br />
-                <h4 className="footertext" style={{fontFamily: 'AvenirNext-Regular', fontSize: 20}}>Rentabilidad</h4>
+                <h4 className="footertext" style={{fontFamily: 'AvenirNext-Regular', fontSize: 20, fontWeight:900}}>Rentabilidad</h4>
                 <p className="footertext" style={{fontFamily: 'AvenirNext-Regular', fontSize: 17, fontWeight: 400}}>Dependiendo cada proyecto, podrás recibir atractivos retornos al termino de ellos.<br />
                 </p></center>
             </div>
@@ -138,7 +144,7 @@ export default function(props) {
               <center>
                 <img alt="" src="style/images/grupo.png" className="icon-circle" />
                 <br />
-                <h4 className="footertext" style={{fontFamily: 'AvenirNext-Regular', fontSize: 20}}>Flexibilidad</h4>
+                <h4 className="footertext" style={{fontFamily: 'AvenirNext-Regular', fontSize: 20, fontWeight:900}}>Flexibilidad</h4>
                 <p className="footertext" style={{fontFamily: 'AvenirNext-Regular', fontSize: 17, fontWeight: 400}}>Puedes donar, regalar, endosar, vender o dejar en garantía tus acciones notificándonoslo con anticipación.<br />
                 </p></center>
             </div>
@@ -146,7 +152,7 @@ export default function(props) {
               <center>
                 <img alt="" src="style/images/documentacion.png" className="icon-circle" />
                 <br />
-                <h4 className="footertext" style={{fontFamily: 'AvenirNext-Regular', fontSize: 20}}>Seguridad</h4>
+                <h4 className="footertext" style={{fontFamily: 'AvenirNext-Regular', fontSize: 20, fontWeight:900}}>Seguridad</h4>
                 <p className="footertext" style={{fontFamily: 'AvenirNext-Regular', fontSize: 17, fontWeight: 400}}>Tu dinero esta invertido y respaldado con inmuebles, por lo que tu capital esta 100% seguro.<br />
                 </p></center>
             </div>
@@ -158,7 +164,7 @@ export default function(props) {
             <center>
               <img alt="" src="style/images/pic.png" className="icon-circle" />
               <br />
-              <h4 className="footertext" style={{fontFamily: 'AvenirNext-Regular', fontSize: 20}}>Plusvalía</h4>
+              <h4 className="footertext" style={{fontFamily: 'AvenirNext-Regular', fontSize: 20, fontWeight:900}}>Plusvalía</h4>
               <p className="footertext" style={{fontFamily: 'AvenirNext-Regular', fontSize: 17, fontWeight: 400}}>Tus participaciones van incrementando su valor conforme a la plusvalía de la proyecto.<br />
               </p></center>
           </div>
@@ -166,7 +172,7 @@ export default function(props) {
             <center>
               <img alt="" src="style/images/elige.png" className="icon-circle" />
               <br />
-              <h4 className="footertext" style={{fontFamily: 'AvenirNext-Regular', fontSize: 20}}>Diversificación</h4>
+              <h4 className="footertext" style={{fontFamily: 'AvenirNext-Regular', fontSize: 20, fontWeight:900}}>Diversificación</h4>
               <p className="footertext" style={{fontFamily: 'AvenirNext-Regular', fontSize: 17, fontWeight: 400}}>En vez de participar en un proyecto, puedes diversificar tu dinero en varios proyectos.<br />
               </p></center>
           </div>
@@ -174,7 +180,7 @@ export default function(props) {
             <center>
               <img alt="" src="style/images/tu-pago.png" className="icon-circle" />
               <br />
-              <h4 className="icon-tittle" style={{fontFamily: 'AvenirNext-Regular', fontSize: 20}}>Motores de participación</h4>
+              <h4 className="icon-tittle" style={{fontFamily: 'AvenirNext-Regular', fontSize: 20, fontWeight:900}}>Motores de participación</h4>
               <p className="footertext" style={{fontFamily: 'AvenirNext-Regular', fontSize: 17, fontWeight: 400}}>Sin duda es la mejor forma de que inviertas tu dinero en proyectos inmobiliarios con montos accesibles.<br />
               </p></center>
           </div>
@@ -182,24 +188,27 @@ export default function(props) {
             <center>
               <img alt="" src="style/images/rendimientos.png" className="icon-circle" />
               <br />
-              <h4 className="icon-tittle" style={{fontFamily: 'AvenirNext-Regular', fontSize: 20}}>Participa a plazos</h4>
+              <h4 className="icon-tittle" style={{fontFamily: 'AvenirNext-Regular', fontSize: 20, fontWeight:900}}>Participa a plazos</h4>
               <p className="icon-text" style={{fontFamily: 'AvenirNext-Regular', fontSize: 17, fontWeight: 400}}>En los proyectos para desarrollar y dependiendo cada proyecto, se podrá participar en distintas parcialidades y podrás participar con un anticipo desde $20,000.<br />
               </p></center>
           </div>
         </div>
-        <div className="row main-container registro-section" style={{backgroundColor: '#fff'}}>
-          <div className="spacer double" />
-          <h1 style={{color: 'red', fontFamily: 'AvenirNext-Regular', fontWeight: 900}}>Somos la primer Plataforma Colectiva Inmobiliaria en México</h1>
-          <p style={{fontFamily: 'AvenirNext-Regular', fontStyle: 'normal', fontWeight: 100}}>Participación fácil, segura y al alcance de todos</p>
-        </div>
+        <div style={{height: "40px"}}/>
 
-          <div className="row main-container registro-section" style={{backgroundColor: '#fff'}}>
-            <h1 style={{color: '#4B118E', fontFamily: 'AvenirNext-Regular', fontWeight: 900}}>¿Cómo puedes contactarnos?</h1>
-            <p style={{fontFamily: 'AvenirNext-Regular', fontStyle: 'normal', fontWeight: 100}}>Puedes agendar una cita con nosotros en el corporativo en cualquier momento o pedir que un asesor te contacte para darte una mejor atención personalizada. Sabemos que cada persona tiene distintas necesidades y nuestro objetivo es lograr satisfacerlas</p>
-          </div>
+                <div className="col-xs-12 col-sm-12" style={{backgroundColor: "#fff", marginBottom: "70px"}}>
+                <div className="spacer double" />
+                <h1 className="text-center" style={{fontSize: "31px", color: 'red', fontWeight: 900}}>Somos la primer Plataforma Colectiva Inmobiliaria en México</h1>
+                <p className="text-center" style={{fontSize: "24px", color: "black",fontWeight: 100}}>Participación fácil, segura y al alcance de todos</p>
+                </div>
 
+                <div className="col-xs-12 col-sm-12" style={{backgroundColor: "#fff", marginBottom: "70px"}}>
+                <div className="spacer" />
+                <h1 className="text-center" style={{fontSize: "31px", color: '#4B118E', fontWeight: 900}}>Contacta con nosotros</h1>
+                <p className="text-center" style={{fontSize: "24px", color: "black",fontWeight: 100}}>Puedes agendar una cita con nosotros en el corporativo en cualquier momento o pedir que un asesor te contacte para darte una mejor atención personalizada. Sabemos que cada persona tiene distintas necesidades y nuestro objetivo es lograr satisfacerlas</p>
+                </div>
 
-        <div className="spacer" />
+        <div className="row"></div>
+
         <div className="container">
           <div className="row">
             <div className="col-md-8">
@@ -256,7 +265,7 @@ export default function(props) {
                 <legend>Dirección</legend>
                 <address>
                   <strong>Inverspot</strong><br />
-                  Avenida de las Palmas 1320<br />
+                  Avenida Paseo de las Palmas 1320<br />
                   Lomas de Chapultepec, CDMX, México<br />
                   <abbr title="Phone">
                   Teléfono: 01 (55) 8000 6555</abbr>
