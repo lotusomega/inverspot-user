@@ -24,6 +24,10 @@
     font-family: AvenirNext-Regular;
 }
 
+nav > .container {
+  width: 100%;
+  padding: 0;
+}
 
 .triple {
     height: 80px;
@@ -790,6 +794,7 @@ button.navbar-toggle {
 	}
 	.navbar-nav>li {
         float: none;
+        padding-left: 1em;
     }
     .navbar-nav>li>a {
         padding-top: 10px;
@@ -1307,6 +1312,10 @@ a {
     margin: 0 auto;
     padding: 1px;
     margin-top: 10px;
+}
+
+.top-tittle-holder {
+    padding-top: 60px;
 }
 
 .circle .tittle{
