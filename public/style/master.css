@@ -759,14 +759,6 @@ nav.navbar.navbar-inverse.navbar-fixed-top {
     max-height: 400px!important;
 }
 
-
-button.navbar-toggle {
-    margin-top: -50px;
-}
-
-
-
-
 @media (max-width: 1200px) {
     .navbar-header {
         float: none;

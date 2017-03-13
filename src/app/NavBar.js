@@ -12,7 +12,8 @@ class NavBar extends Component {
   stepSet: contiene el estado que puede tener el modal (0= recuperacion de contraseña, 1= Registro, 2= Inicio de sesión)*/
   render() {
     const stylen={
-      backgroundColor: "#fff"
+      backgroundColor: "#fff",
+      marginBottom: '0'
     }
     const stylen2={
       padding: "5px", marginLeft: "100px", fontSize: "12px", color: "white"
@@ -24,10 +25,8 @@ class NavBar extends Component {
       float: "right", marginLeft: "10px", color: "white"
     }
     const stylen5={
-      backgroundColor: "#4b118e"
-    }
-    const stylen6={
-      margin: "9px -30px"
+      backgroundColor: "#4b118e",
+      marginTop: '-50px'
     }
     return (
         <Navbar bsStyle="none" collapseOnSelect className="navbar navbar-light bg-faded" style={stylen}>
