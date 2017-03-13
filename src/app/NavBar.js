@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router'
-import { Navbar, Nav } from 'react-bootstrap'
+import {Navbar, Nav, NavItem} from 'react-bootstrap'
+import { LinkContainer } from 'react-router-bootstrap'
 
 class NavBar extends Component {
   /*componentDidMount funcion que se ejecuta antes de montar el componente y obtiene la informacion de
@@ -62,12 +63,24 @@ class NavBar extends Component {
           </Navbar.Header>
           <Navbar.Collapse className="navbar-collapse collapse top-tittle-holder">
             <Nav>
-              <li><Link to="/nosotros">Nosotros</Link></li>
-              <li><Link to="/proyectos">Proyectos</Link></li>
-              <li><Link to="/como-funciona">Como Funciona</Link></li>
-              <li><Link to="/garantia">Garantias</Link></li>
-              <li><Link to="/faqs">FAQ´s</Link></li>
-              <li><Link to="/contacto">Contacto</Link></li>
+              <LinkContainer to="/nosotros">
+                <NavItem>Nosotros</NavItem>
+              </LinkContainer>
+              <LinkContainer to="/proyectos">
+                <NavItem>Proyectos</NavItem>
+              </LinkContainer>
+              <LinkContainer to="/como-funciona">
+                <NavItem>Como Funciona</NavItem>
+              </LinkContainer>
+              <LinkContainer to="/garantia">
+                <NavItem>Garantias</NavItem>
+              </LinkContainer>
+              <LinkContainer to="/faqs">
+                <NavItem>FAQ´s</NavItem>
+              </LinkContainer>
+              <LinkContainer to="/contacto">
+                <NavItem>Contacto</NavItem>
+              </LinkContainer>
               { !this.user &&
                 <li onClick={() => this.props.stepSet(1)} style={{cursor: "pointer"}}><a>Regístro</a></li>
               }

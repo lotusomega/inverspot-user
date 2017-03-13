@@ -1,7 +1,8 @@
 import React, { Component } from 'react'
 import { Link,withRouter } from 'react-router'
 import {logout} from '../services/auth'
-import {Navbar, Nav} from 'react-bootstrap'
+import {Navbar, Nav, NavItem} from 'react-bootstrap'
+import { LinkContainer } from 'react-router-bootstrap'
 
 class NavBar extends Component {
   constructor(props) {
@@ -31,9 +32,15 @@ class NavBar extends Component {
             </Navbar.Header>
             <Navbar.Collapse className="navbar-collapse collapse">
               <Nav className="nav navbar-nav">
-                <li><Link to="/user/profile">Mi perfil</Link></li>
-                <li><Link to="/user/investment-data">Información de Inversor</Link></li>
-                <li><Link to="/user/investments">Mis Inversiones</Link></li>
+                <LinkContainer to="/user/profile">
+                  <NavItem>Mi perfil</NavItem>
+                </LinkContainer>
+                <LinkContainer to="/user/investment-data">
+                  <NavItem>Información de Inversor</NavItem>
+                </LinkContainer>
+                <LinkContainer to="/user/investments">
+                  <NavItem>Mis Inversiones</NavItem>
+                </LinkContainer>
               </Nav>
               <Nav pullRight className="nav navbar-nav">
                 <li onClick={this.closeSession}><a>Cerrar Sesión</a></li>
