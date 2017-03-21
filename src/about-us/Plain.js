@@ -5,15 +5,44 @@ export default function(props) {
     <div className="container">
       <div className="row propiedades">
         <div className="spacer" />
-        <h1 className="text-center"><b>Nosotros</b></h1>
+        <h1 className="text-center"><b></b></h1>
         <div className="spacer double" />
 
         <div className="col-xs-12 col-sm-12" style={{backgroundColor: "#f7f9f9", marginBottom: "70px"}}>
         <div className="spacer double" />
-        <h1 className="text-center" style={{fontSize: "31px", color: 'red', fontWeight: 900}}>¿Quiénes somos?</h1>
         <p className="text-center" style={{fontSize: "24px", color: "black",fontWeight: 100}}>Somos una plataforma que busca conformar grupos de personas interesadas en participar en desarrollos inmobiliarios con el fin de obtener atractivos rendimientos en desarrollos previamente valuados</p>
         <div className="spacer double" />
         </div>
+
+
+                <div className="row">
+                  <div className="col-md-6">
+                    <div className="card">
+                      <div className="card-image">
+                        <div className="embed-responsive embed-responsive-16by9">
+                          <iframe src="https://player.vimeo.com/video/190621870?color=4B118E&title=0&byline=0&portrait=0" width={640} height={360} frameBorder={0} />
+                        </div>
+                      </div>
+                      <div className="card-content">
+                        <span className="card-title">¿Qué es Inverspot?</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="col-md-6">
+                    <div className="card">
+                      <div className="card-image">
+                        <div className="embed-responsive embed-responsive-16by9">
+                          <iframe src="https://player.vimeo.com/video/182658897?color=4B118E&title=0&byline=0&portrait=0" width={640} height={360} frameBorder={0} />
+                        </div>
+                      </div>
+                      <div className="card-content">
+                        <span className="card-title">¿Cómo funciona Inverspot?</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+        <div style={{height: "70px"}}/>
 
         <div className="row">
           <div className="col-xs-12 col-sm-6 col-lg-4">
@@ -60,40 +89,9 @@ export default function(props) {
           </div>
         </div>
         <div className="spacer double" />
-        <div className="row">
-          <div className="col-md-6">
-            <div className="card">
-              <div className="card-image">
-                <div className="embed-responsive embed-responsive-16by9">
-                  <iframe src="https://player.vimeo.com/video/190621870?color=4B118E&title=0&byline=0&portrait=0" width={640} height={360} frameBorder={0} />
-                </div>
-              </div>
-              <div className="card-content">
-                <span className="card-title">¿Qué es Inverspot?</span>
-              </div>
-            </div>
-          </div>
-          <div className="col-md-6">
-            <div className="card">
-              <div className="card-image">
-                <div className="embed-responsive embed-responsive-16by9">
-                  <iframe src="https://player.vimeo.com/video/182658897?color=4B118E&title=0&byline=0&portrait=0" width={640} height={360} frameBorder={0} />
-                </div>
-              </div>
-              <div className="card-content">
-                <span className="card-title">¿Cómo funciona Inverspot?</span>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div style={{height: "70px"}}/>
+
         <div className="container" style={{background: 'url(style/images/12.jpg) no-repeat center center fixed', width: '100%', height: 500}}>
           <div className="row">
-            <div className="col-md-6 col-sm-12" style={{backgroundColor: 'rgba(75, 17, 142, 0.53)'}}>
-              <div className="spacer" />
-              <h1 style={{fontSize: 30, color: 'white', fontFamily: 'AvenirNext-Regular', fontWeight: 900}}>Misión</h1>
-              <p style={{color: 'white', fontSize: 20, fontFamily: 'AvenirNext-Regular', fontStyle: 'normal', fontWeight: 100}}>Lograr la mayor rentabilidad en el menor tiempo posible para quienes conforman los grupos de Inverspot.</p><br />
-            </div>
           </div>
         </div>
         <div style={{height: "70px"}}/>
@@ -110,11 +108,6 @@ export default function(props) {
 
         <div className="container" style={{background: 'url(style/images/2.jpg) no-repeat center center fixed', width: '100%', height: 500}}>
           <div className="row">
-            <div className="col-md-6 col-sm-12" style={{backgroundColor: 'rgba(75, 17, 142, 0.53)'}}>
-              <div className="spacer" />
-              <h1 style={{fontSize: 30, color: 'white', fontFamily: 'AvenirNext-Regular', fontWeight: 900}}>Visión:</h1>
-              <p style={{color: 'white', fontSize: 20, fontFamily: 'AvenirNext-Regular', fontStyle: 'normal', fontWeight: 100}}>Lograr la mayor rentabilidad en el menor tiempo posible para quienes conforman los grupos de Inverspot.</p><br />
-            </div>
           </div>
         </div>
         <div style={{height: "40px"}}/>

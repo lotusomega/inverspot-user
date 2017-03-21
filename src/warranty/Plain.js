@@ -7,7 +7,7 @@ export default function(props) {
         {/* <div className="headspace" /> */}
         {/*Fichas de las Propiedades Disponibles*/}
         <div className="spacer" />
-        <h1 className="text-center"><b>Garantía</b></h1>
+        <h1 className="text-center"><b></b></h1>
         <div className="spacer double" />
 
 
@@ -70,17 +70,63 @@ export default function(props) {
           </div>
         </div>
 
+        <div className="spacer double" />
+
+        <div className="col-xs-12 col-sm-12" style={{backgroundColor: "#f7f9f9", marginBottom: "70px"}}>
+        <div className="spacer double" />
+        <h1 className="text-center" style={{fontSize: "28px", color: 'red', fontWeight: 900}}>Invertir en la construcción es invertir en economía real</h1>
+        <p className="text-center" style={{fontSize: "22px", color: "black",fontWeight: 100}}>En Inverspot somos amigos de la transparencia y no tenemos letras pequeñas, te damos la posibilidad de acceder al negocio de la construcción; esto supone recibir beneficios y asumir variables.</p><br/>
+        <div className="spacer double" />
+        </div>
+
+        <div className="spacer" />
+
+        <div className="col-xs-12 col-sm-12" style={{backgroundColor: "#f7f9f9", marginBottom: "70px"}}>
+        <div className="spacer double" />
+        <h1 className="text-center" style={{fontSize: "28px", color: 'red', fontWeight: 900}}>¿Variables?</h1>
+
+            <div className="col-xs-12 col-sm-5 col-sm-offset-1" style={{padding: "30px"}}>
+            <p className="text-left" style={{fontSize: "22px", color: "black",fontWeight: 100}}>
+            <ul>
+              <li>Tu proceso de inversión termina antes y es un éxito o puede terminar después, para esperarnos a una mejor oferta de compra.</li>
+            </ul></p>
+            </div>
+            <div className="col-xs-12 col-sm-5" style={{padding: "30px"}}>
+            <p className="text-left" style={{fontSize: "22px", color: "black",fontWeight: 100}}>
+            <ul>
+              <li>El tiempo y la utilidad es variable.</li>
+              <li>Una pre-venta puede elevar el porcentaje anual pronosticado.</li>
+              <li>Tomamos la oportunidad reduciendo el tiempo estimado en la WEB.</li>
+            </ul></p>
+            </div>
+
+        <div className="spacer double" />
+        </div>
+
+
+
+
+
+        <div className="col-xs-12 col-sm-12" style={{backgroundColor: "#f7f9f9", marginBottom: "70px"}}>
+        <div className="spacer double" />
+        <h1 className="text-center" style={{fontSize: "28px", color: 'red', fontWeight: 900}}>Se trata de un modelo de crowdfunding apadrinado</h1>
+        <p className="text-center" style={{fontSize: "22px", color: "black",fontWeight: 100}}>
+        Es decir que Inverspot se encarga de: elegir el mejor proyecto, elegir un constructor de prestigio, supervisar la obra, darte informes, asegurar tu capital en todo momento y conseguir la mejor opción de compra. Si la obra se detiene, tu capital sigue protegido por Inverspot.
+        </p>
+        <div className="spacer double" />
+        </div>
+
 
         <div className="container">
                         <div className="col-xs-12 col-sm-12" style={{backgroundColor: "#fff", marginTop: "70px", marginBottom: "70px"}}>
-                        <div className="spacer double" />
                         <h1 className="text-center" style={{fontSize: "31px", color: 'red', fontWeight: 900}}>Somos la primer Plataforma Colectiva Inmobiliaria en México</h1>
                         <p className="text-center" style={{fontSize: "24px", color: "black",fontWeight: 100}}>Inversión fácil, segura y al alcance de todos</p>
                         </div>
 
       </div>
 
-        <div className="spacer" />
+        <div className="spacer double"/>
+
         <div className="contact">
           <div className="container">
             <div className="row">

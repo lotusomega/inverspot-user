@@ -19,7 +19,7 @@ class NavBar extends Component {
     return (
       <div className="navbar-wrapper">
         <div className="container-fluid">
-          <Navbar bsStyle="default" collapseOnSelect staticTop fluid>
+          <Navbar className="navbr" bsStyle="default" collapseOnSelect staticTop fluid style={{borderBottomWidth: "3px", borderColor: "#81d742"}}>
             <Navbar.Header>
               <Navbar.Brand>
                 <Link to="/" style={{marginRight: '-8px', marginTop: '-5px'}}>
@@ -30,16 +30,16 @@ class NavBar extends Component {
                 <i style={{color: '#644898'}} className="fa fa-bars"></i>
               </Navbar.Toggle>
             </Navbar.Header>
-            <Navbar.Collapse className="navbar-collapse collapse">
+            <Navbar.Collapse className="navbar-collapse collapse" style={{marginTop: "3px"}}>
               <Nav className="nav navbar-nav">
                 <LinkContainer to="/user/profile">
-                  <NavItem>Mi perfil</NavItem>
+                  <NavItem>Mi Perfil</NavItem>
                 </LinkContainer>
                 <LinkContainer to="/user/investment-data">
-                  <NavItem>Información de Inversor</NavItem>
+                  <NavItem>Datos de Participación</NavItem>
                 </LinkContainer>
                 <LinkContainer to="/user/investments">
-                  <NavItem>Mis Inversiones</NavItem>
+                  <NavItem>Mis Participaciones</NavItem>
                 </LinkContainer>
               </Nav>
               <Nav pullRight className="nav navbar-nav">

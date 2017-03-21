@@ -6,7 +6,7 @@ export default function(props) {
       <div className="row propiedades">
         {/* <div className="headspace" /> */}
         <div className="spacer" />
-        <h1 className="text-center"><b>Contacto</b></h1>
+        <h1 className="text-center"><b></b></h1>
         <div className="spacer double" />
         <div className="container">
           <div className="row">

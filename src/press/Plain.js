@@ -7,7 +7,7 @@ export default function(props) {
         <div className="row-page row">
           {/* <div className="headspace" /> */}
           <div className="spacer" />
-          <h1 className="text-center"><b>Ellos Hablan de Nosotros</b></h1>
+          <h1 className="text-center"><b></b></h1>
           <div className="spacer double" />
           <div className="col-page col-sm-4 col-md-3">
             <a href="#" className="todas-las-publicaciones-home">

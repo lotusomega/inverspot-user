@@ -1,5 +1,5 @@
 .mainbody {
-    background:#f0f0f0;
+    background:#fff;
 }
 /* Special class on .container surrounding .navbar, used for positioning it into place. */
 .navbar-wrapper {
@@ -37,22 +37,18 @@
     margin-top: 8px;
 }
 
-.btn-default {
-    color: #fff;
-    background-color: #000;
-    border-color: #999999;
-}
-
-.btn-info {
-    color: #ffffff;
-    background-color: #4e2e89;
-    border-color: #4e2e89;
+.navbar-wrapper .navbar {
+    padding-left: 15px;
+    padding-right: 15px;
+    border-bottom-width: 3px!important;
+    border-color: #81d742!important;
 }
 
 .navbar-default .navbar-nav>li>a {
     color: #4B118E;
     font-weight: 900;
 }
+
 
 .navbar-content
 {

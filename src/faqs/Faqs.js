@@ -9,7 +9,7 @@ class Faqs extends Component {
             <div className="row propiedades">
 
                 <div className="spacer"></div>
-                <h1 className="text-center"><b>Preguntas Frecuentes</b></h1>
+                <h1 className="text-center"><b></b></h1>
                 <div className="spacer double"></div>
 
                 <div className="container">
@@ -18,7 +18,7 @@ class Faqs extends Component {
                             <div className="panel-group" id="faqAccordion">
                                 <div className="panel panel-default">
                                     <div className="panel-heading">
-                                        <h4 className="panel-title">
+                                        <h4 className="faqs-title">
                                             <a className="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapse1">
                                             ¿QUÉ TIPOS DE PROYECTOS MANEJA INVERSPOT?</a>
                                         </h4>
@@ -32,7 +32,7 @@ class Faqs extends Component {
 
                                 <div className="panel panel-default">
                                     <div className="panel-heading">
-                                        <h4 className="panel-title">
+                                        <h4 className="faqs-title">
                                             <a className="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapse2">
                                             ¿QUE ES PLUSVALÍA?</a>
                                         </h4>
@@ -46,7 +46,7 @@ class Faqs extends Component {
 
                                 <div className="panel panel-default">
                                     <div className="panel-heading">
-                                        <h4 className="panel-title">
+                                        <h4 className="faqs-title">
                                             <a className="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapse3">
                                             ¿CÓMO ESCOGE INVERSPOT LOS INMUEBLES?</a>
                                         </h4>
@@ -64,7 +64,7 @@ class Faqs extends Component {
 
                                 <div className="panel panel-default">
                                     <div className="panel-heading">
-                                        <h4 className="panel-title">
+                                        <h4 className="faqs-title">
                                             <a className="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapse4">
                                             ¿NO ME LLEGO MI CORREO DE CONFIRMACIÓN?</a>
                                         </h4>
@@ -78,7 +78,7 @@ class Faqs extends Component {
 
                                 <div className="panel panel-default">
                                     <div className="panel-heading">
-                                        <h4 className="panel-title">
+                                        <h4 className="faqs-title">
                                             <a className="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapse5">
                                             ¿EN CASO DE QUE SEA UN DESARROLLO, COMO SE AMPARA MI INVERSIÓN?</a>
                                         </h4>
@@ -92,7 +92,7 @@ class Faqs extends Component {
 
                                 <div className="panel panel-default">
                                     <div className="panel-heading">
-                                        <h4 className="panel-title">
+                                        <h4 className="faqs-title">
                                             <a className="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapse6">
                                             ¿SE PUEDE VER EL INMUEBLE?</a>
                                         </h4>
@@ -106,7 +106,7 @@ class Faqs extends Component {
 
                                 <div className="panel panel-default">
                                     <div className="panel-heading">
-                                        <h4 className="panel-title">
+                                        <h4 className="faqs-title">
                                             <a className="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapse7">
                                             ¿QUE OTRAS GARANTÍAS OBTENGO APARTE DE LA PROPIEDAD?</a>
                                         </h4>
@@ -120,7 +120,7 @@ class Faqs extends Component {
 
                                 <div className="panel panel-default">
                                     <div className="panel-heading">
-                                        <h4 className="panel-title">
+                                        <h4 className="faqs-title">
                                             <a className="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapse8">
                                             ¿CUANDO RECIBIO MI UTILIDAD?</a>
                                         </h4>
@@ -134,7 +134,7 @@ class Faqs extends Component {
 
                                 <div className="panel panel-default">
                                     <div className="panel-heading">
-                                        <h4 className="panel-title">
+                                        <h4 className="faqs-title">
                                             <a className="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapse9">
                                             ¿QUE SEGURIDAD HAY DE REALMENTE RECIBIR LOS RENDIMIENTOS QUE OFRECEN? </a>
                                         </h4>
@@ -148,7 +148,7 @@ class Faqs extends Component {
 
                                 <div className="panel panel-default">
                                     <div className="panel-heading">
-                                        <h4 className="panel-title">
+                                        <h4 className="faqs-title">
                                             <a className="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapse10">
                                             ¿DÓNDE ES MEJOR INVERTIR? </a>
                                         </h4>
@@ -162,7 +162,7 @@ class Faqs extends Component {
 
                                 <div className="panel panel-default">
                                     <div className="panel-heading">
-                                        <h4 className="panel-title">
+                                        <h4 className="faqs-title">
                                             <a className="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapse11">
                                             ¿USTEDES TIENEN UNA GARANTÍA SOBRE LOS PROYECTOS?</a>
                                         </h4>
@@ -176,7 +176,7 @@ class Faqs extends Component {
 
                                 <div className="panel panel-default">
                                     <div className="panel-heading">
-                                        <h4 className="panel-title">
+                                        <h4 className="faqs-title">
                                             <a className="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapse12">
                                             ¿EN QUÉ CASOS INVERSPOT NO ASEGURA EL CAPITAL?</a>
                                         </h4>
@@ -190,7 +190,7 @@ class Faqs extends Component {
 
                                 <div className="panel panel-default">
                                     <div className="panel-heading">
-                                        <h4 className="panel-title">
+                                        <h4 className="faqs-title">
                                             <a className="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapse13">
                                             SI QUISIERA CONOCERLOS PARA SABER DONDE ESTOY INVIRTIENDO<br/>¿CÓMO LE PUEDO HACER?</a>
                                         </h4>
@@ -209,7 +209,7 @@ class Faqs extends Component {
                             <div className="panel-group" id="faqAccordion">
                                 <div className="panel panel-default">
                                     <div className="panel-heading">
-                                        <h4 className="panel-title">
+                                        <h4 className="faqs-title">
                                             <a className="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapse14">
                                             ¿QUE PASA SI LA PROPIEDAD TIENE ALGÚN PROBLEMA LEGAL?</a>
                                         </h4>
@@ -223,7 +223,7 @@ class Faqs extends Component {
 
                                 <div className="panel panel-default">
                                     <div className="panel-heading">
-                                        <h4 className="panel-title">
+                                        <h4 className="faqs-title">
                                             <a className="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapse15">
                                             ¿SE PAGA ALGÚN TIPO DE COMISIÓN O IMPUESTOS?</a>
                                         </h4>
@@ -237,7 +237,7 @@ class Faqs extends Component {
 
                                 <div className="panel panel-default">
                                     <div className="panel-heading">
-                                        <h4 className="panel-title">
+                                        <h4 className="faqs-title">
                                             <a className="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapse16">
                                             ¿QUE PASA SI NO SE LOGRA CONCRETAR EL GRUPO AL QUE INVERTÍ?</a>
                                         </h4>
@@ -251,7 +251,7 @@ class Faqs extends Component {
 
                                 <div className="panel panel-default">
                                     <div className="panel-heading">
-                                        <h4 className="panel-title">
+                                        <h4 className="faqs-title">
                                             <a className="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapse17">
                                             ¿COMO PUEDO VENDER MI PARTICIPACIÓN?</a>
                                         </h4>
@@ -266,7 +266,7 @@ class Faqs extends Component {
 
                                 <div className="panel panel-default">
                                     <div className="panel-heading">
-                                        <h4 className="panel-title">
+                                        <h4 className="faqs-title">
                                             <a className="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapse18">
                                             ¿COMO ES LA FORMA DE PAGO AL RETIRAR MIS PARTICIPACIONES?</a>
                                         </h4>
@@ -282,7 +282,7 @@ class Faqs extends Component {
 
                                 <div className="panel panel-default">
                                     <div className="panel-heading">
-                                        <h4 className="panel-title">
+                                        <h4 className="faqs-title">
                                             <a className="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapse19">
                                             ¿QUE PUEDO HACER CON MI PARTICIPACIÓN A PARTE DE VENDERLA?</a>
                                         </h4>
@@ -296,7 +296,7 @@ class Faqs extends Component {
 
                                 <div className="panel panel-default">
                                     <div className="panel-heading">
-                                        <h4 className="panel-title">
+                                        <h4 className="faqs-title">
                                             <a className="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapse20">
                                             ¿QUE PASA EN CASO DE FALLECIMIENTO?</a>
                                         </h4>
@@ -310,7 +310,7 @@ class Faqs extends Component {
 
                                 <div className="panel panel-default">
                                     <div className="panel-heading">
-                                        <h4 className="panel-title">
+                                        <h4 className="faqs-title">
                                             <a className="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapse21">
                                             ¿ES POSIBLE INVERTIR DESDE OTRO PAÍS?</a>
                                         </h4>
@@ -324,7 +324,7 @@ class Faqs extends Component {
 
                                 <div className="panel panel-default">
                                     <div className="panel-heading">
-                                        <h4 className="panel-title">
+                                        <h4 className="faqs-title">
                                             <a className="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapse22">
                                             ¿PUEDO REVISAR LOS CONTRATOS QUE AMPARAN MI INVERSIÓN?</a>
                                         </h4>
@@ -338,7 +338,7 @@ class Faqs extends Component {
 
                                 <div className="panel panel-default">
                                     <div className="panel-heading">
-                                        <h4 className="panel-title">
+                                        <h4 className="faqs-title">
                                             <a className="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapse23">
                                             ¿CUANTO TIEMPO LLEVAN EN EL MERCADO?</a>
                                         </h4>
@@ -352,7 +352,7 @@ class Faqs extends Component {
 
                                 <div className="panel panel-default">
                                     <div className="panel-heading">
-                                        <h4 className="panel-title">
+                                        <h4 className="faqs-title">
                                             <a className="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapse24">
                                             ¿QUE RIESGOS TENGO AL INVERTIR EN INMUEBLES?</a>
                                         </h4>
@@ -367,7 +367,7 @@ class Faqs extends Component {
 
                                 <div className="panel panel-default">
                                     <div className="panel-heading">
-                                        <h4 className="panel-title">
+                                        <h4 className="faqs-title">
                                             <a className="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapse25">
                                             ¿INVERSPOT ESTA REGULADO?</a>
                                         </h4>

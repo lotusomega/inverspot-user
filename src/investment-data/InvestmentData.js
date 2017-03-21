@@ -61,8 +61,8 @@ class InvestmentData extends Component {
           sex : '',
           nationality: '',
           birthPlace: '',
-          idNumber: 0,
           typeid: '',
+          idNumber: 0,
           curp: '',
           rfc: '',
           address: {
@@ -175,28 +175,31 @@ class InvestmentData extends Component {
     beneficiary2 = data.beneficiary2
 
 		return(
-
-      <div className="panel-body">
+<div className="container">
+      <div className="panel-body panel panel-default" style={{backgroundColor: "rgb(247, 247, 247)"}}>
         { this.state.show && <Wizard onClick={ this.toggleWizard } investment={this.props.router.location.state.investment} /> }
         {/* <h3>Completa los campos requeridos * para comenzar a participar</h3> */}
+          <div className="spacer"></div>
+        <div className="text-center"><b>Para poder participar en cualquier proyecto de Inverspot es necesario llenar los campos requeridos, <br/>esto ayudará a que nuestros asesores generen tu contrato de participación</b></div>
         <form className="form-horizontal" onSubmit={ this.handleSubmit } >
-          <FormFieldset legend='1. Datos generales del inversionista'
+          <div className="spacer"></div>
+          <FormFieldset legend='1. Datos Generales de Participación'
             controls={ general } source={ u } handleInput={ this.handleInput } />
-          <FormFieldset legend='2. Forma de inversión'
+          <FormFieldset legend='2. Forma de Paticipación'
             controls={ invest } source={ u } handleInput={ this.handleInput } />
-          <FormFieldset legend='3. Datos bancarios del inversionista'
+          <FormFieldset legend='3. Datos Bancarios'
             controls={ bankData } source={ u } handleInput={ this.handleInput } />
-          <FormFieldset legend='4. Designación de beneficiario 1'
+          <FormFieldset legend='4. Designación de Beneficiario 1'
             controls={ beneficiary1 } source={ u } handleInput={ this.handleInput } />
-          <FormFieldset legend='4. Designación de beneficiario 2'
+          <FormFieldset legend='4. Designación de Beneficiario 2'
             controls={ beneficiary2 } source={ u } handleInput={ this.handleInput }>
             <div className="text-right">
-              <button type="submit" className="btn btn-primary">Editar Usuario <i className="icon-arrow-right14 position-right"></i></button>
+              <button type="submit" className="button-save btn-success">Editar Usuario <i className="icon-arrow-right14 position-right"></i></button>
             </div>
           </FormFieldset>
         </form>
       </div>
-
+</div>
 		)
 	}
 }

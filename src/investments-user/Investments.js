@@ -41,17 +41,17 @@ class Profile extends Component {
       <div>
         <div className="container">
           <div className="dropdown pull-right" style={{  margin: "20px"}}>
-            <button className="btn btn-success" type="button" id="" aria-haspopup="true" aria-expanded="true" onClick={window.print}>
+            <button className="button-save btn-success" type="button" id="" aria-haspopup="true" aria-expanded="true" onClick={window.print}>
               Imprimir
             </button>
           </div>
 
           <div className="row">
             <div className="well">
-              <h2 className="text-center" style={{paddingLeft: "140px"}}>Mis Inversiones</h2>
+              <h2 className="text-center">Mis Participaciones</h2>
               <div className="list-group">
                 {/* INVERSPOT: Renderiza todas las inversiones del usuario en caso de que existan  */}
-                {this.state.investments.length > 0 ? <InvestmentList investments={ this.state.investments }/> : <h1>No tienes inversiones</h1>}
+                {this.state.investments.length > 0 ? <InvestmentList investments={ this.state.investments }/> : <h1>No tienes participaciones aún</h1>}
               </div>
             </div>
           </div>

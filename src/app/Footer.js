@@ -5,6 +5,17 @@ class Footer extends Component {
   render() {
     return (
       <section>
+
+      <div className="container">
+        <div className="row">
+          <div className="col-xs-12 col-sm-12 text-center" style={{color: "black",fontSize: "13px"}}>
+              <b style={{color: "#ff3c00"}}>1* </b>Tiempo estimado: Inverspot no se hace responsable por el tiempo que dure la construcción. los tiempos mencionados son estimados y pueden variar en función de cada proyecto.
+              <br/><b style={{color: "#ff3c00"}}>2* </b>Rendimientos estimados: Calculada en función en los precios actuales de la zona por proyecto. Inverspot no garantiza rendimientos.
+              <br/><b style={{color: "#ff3c00"}}>3* </b> La inversión: Inverspot, garantiza el capital invertido en los proyectos, siempre y cuando, no exista un riesgo nivel país.
+          </div>
+        </div>
+      </div>
+
         <div className="container">
           <div className="row">
             <div className="divider col-xs-3 col-sm-3 col-lg-12">
@@ -16,7 +27,7 @@ class Footer extends Component {
           <div className="container">
             <div className="row">
               <div className="col-xs-12 col-sm-3 col-md-3">
-                <div className="icon-logo-main"></div>
+                <div className="icon-logo-main icon-logo-main2"></div>
                 <p className="logop">Tu punto de inversión inmobiliario</p>
                 <ul>
                   <li><p>Avenida Paseo de las Palmas 1320<br/> Lomas de Chapultepec, CDMX</p></li>
@@ -36,7 +47,7 @@ class Footer extends Component {
                 <ul>
                   <li><Link to="faqs">Preguntas Frecuentes</Link></li>
                   <li><Link to="contacto">Contacto</Link></li>
-                  <li><Link to="como-funciona">Como Funciona</Link></li>
+                  <li><Link to="como-funciona">Cómo Funciona</Link></li>
                 </ul>
               </div>
               <div className="col-xs-12 col-sm-3 col-md-3">
@@ -45,7 +56,6 @@ class Footer extends Component {
                   <li><Link to="aviso-de-privacidad">Aviso de privacidad</Link></li>
                   <li><Link to="nosotros">Nosotros</Link></li>
                   <li><Link to="garantia">Garantia</Link></li>
-                  <li><a href="http://blog.inverspot.mx/" target="_blank">News</a></li>
                 </ul>
               </div>
             </div>

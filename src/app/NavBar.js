@@ -13,11 +13,11 @@ class NavBar extends Component {
   stepSet: contiene el estado que puede tener el modal (0= recuperacion de contraseña, 1= Registro, 2= Inicio de sesión)*/
   render() {
     const stylen={
-      backgroundColor: "#fff",
+      backgroundColor: "#4B118E",
       marginBottom: '0'
     }
     const stylen2={
-      padding: "5px", marginLeft: "100px", fontSize: "12px", color: "white"
+      padding: "5px", marginLeft: "100px", fontSize: "16px", color: "white"
     }
     const stylen3={
       color: "#ffffff", textDecoration: "none"
@@ -31,11 +31,10 @@ class NavBar extends Component {
     }
     return (
         <Navbar bsStyle="none" collapseOnSelect className="navbar navbar-light bg-faded" style={stylen}>
-          <div className="hidden-xs hidden-sm col-xs-12 col-lg-12" style={{backgroundColor: '#81D742', width:'100%', height:'29px'}}>
+          <div className="hidden-xs hidden-sm" style={{backgroundColor: '#81D742', height:'32px'}}>
             <p style={stylen2}>
-              Atención al cliente | 01 (55) 8000 6555 |
+              Atención al cliente | <b>01 (55) 8000 6555</b> |
               <a style={stylen3} href="mailto:hola@inverspot.mx"> hola@inverspot.mx</a>
-
 
               <a style={{float:'right', marginRight: '100px', marginLeft: '10px', color: 'white',}} href="https://vimeo.com/190621870" target="_blank"><i className="fa fa-vimeo" aria-hidden="true"></i></a>
 
@@ -70,10 +69,10 @@ class NavBar extends Component {
                 <NavItem>Proyectos</NavItem>
               </LinkContainer>
               <LinkContainer to="/como-funciona">
-                <NavItem>Como Funciona</NavItem>
+                <NavItem>Cómo Funciona</NavItem>
               </LinkContainer>
               <LinkContainer to="/garantia">
-                <NavItem>Garantias</NavItem>
+                <NavItem>Riesgos y Garantias</NavItem>
               </LinkContainer>
               <LinkContainer to="/faqs">
                 <NavItem>FAQ´s</NavItem>

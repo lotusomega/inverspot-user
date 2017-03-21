@@ -77,12 +77,12 @@ class Proyects extends Component {
         { this.state.show && <Wizard onClick={ this.toggleWizard } id={this.state.property._id} /> }
         <div className="row propiedades">
           <div className="spacer"></div>
-          <h1 className="text-center"><b>Proyectos para Participar</b></h1>
+          <h1 className="text-center"><b></b></h1>
           <div className="spacer double"></div>
           {/* Renderiza las propiedades disponibles */}
           <PropertyCards  onInvest={ this.toggleWizard } propertiesa={ this.state.propertiesa } element='PropertyCardBig'/>
           <div className="spacer double"></div>
-          <h1 className="text-center"><b>Proyectos Fondeados</b></h1>
+          <h1 className="text-center" id="fondeados"><b>Proyectos Fondeados</b></h1>
           <div className="spacer double"></div>
           {/* Renderiza las propiedades fondeadas */}
           <PropertyCards  propertiesf={ this.state.propertiesf } element='FundCardBig'/>

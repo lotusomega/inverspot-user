@@ -97,7 +97,7 @@ class AboutUs extends Component {
             <div className="spacer double"></div>
             <h1 className="text-center"><b>Nosotros</b></h1>
             <div className="spacer double"></div>
-            <BannerText title="¿Quiénes somos?"
+            <BannerText title=""
               text="Somos una plataforma que busca conformar grupos de personas interesadas en invertir en desarrollos inmobiliarios con el fin
               de obtener atractivos rendimientos en desarrollos previamente valuados"/>
             <div className="spacer double"></div>

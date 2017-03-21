@@ -20,8 +20,7 @@ class Slider extends Component {
               <div style={{height: '100vh',backgroundSize: 'cover', backgroundPosition: 'center center',backgroundRepeat: 'no-repeat', backgroundImage: "url(/style/images/slide/slide1.jpg)"}} ></div>
               <div className="hero">
                 <hgroup>
-                    <h1>¡Participar desde $100,000 en<br/>inmuebles es posible!</h1>
-                    <h3 className="hidden-xs hidden-sm">Inverspot, la primera plataforma de crowdfunding inmobiliario que te permite participar a plazo o de contado en México</h3>
+                    <h1>Invierte de forma segura en desarrollos inmobiliarios y obtén altos rendimientos.</h1>
                     <div className="hidden-xs hidden-sm btn-promo col-xs-6 col-sm-6 col-md-6">
                         <Link to='/proyectos'>
                         <button style={stylesli}>Ver proyectos</button></Link>
@@ -38,8 +37,7 @@ class Slider extends Component {
                 backgroundImage: "url(/style/images/slide/slide2.jpg)"}} ></div>
               <div className="hero">
                 <hgroup>
-                    <h1>¡Participar desde $100,000 en<br/>inmuebles es posible!</h1>
-                    <h3 className="hidden-xs hidden-sm">Inverspot, la primera plataforma de crowdfunding inmobiliario que te permite participar a plazo o de contado en México</h3>
+                    <h1>Tu punto de inversión inmobiliario.</h1>
                     <div className="hidden-xs hidden-sm btn-promo col-xs-6 col-sm-6 col-md-6">
                       <Link to='/proyectos'>
                       <button style={stylesli}>Ver proyectos</button></Link>
@@ -53,7 +51,7 @@ class Slider extends Component {
             <div className="item slides">
               <div style={{height: '100vh',backgroundSize: 'cover',
                 backgroundPosition: 'center center',backgroundRepeat: 'no-repeat',
-                backgroundImage: "url(/style/images/slide/slide3.jpg)"}} ></div>
+                backgroundImage: "url(/style/images/slide/slide3.png)"}} ></div>
               <div className="hero">
                 <hgroup>
                     <h1>¡Participar desde $100,000 en<br/>inmuebles es posible!</h1>

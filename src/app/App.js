@@ -56,7 +56,7 @@ class App extends Component {
         })}
         <Footer />
         <div className="spacer"></div>
-        <footer className="end-bar">©2017 inverspot.mx | All Rights reserved</footer>
+        <footer className="end-bar">©2017 inverspot.mx | All Rights Reserved</footer>
         { this.state.show && <LoginWizard onClick={ this.toggleWizardLogin } step={this.state.step}/>}
       </div>
     );

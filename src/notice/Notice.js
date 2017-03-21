@@ -10,7 +10,7 @@ class Notice extends Component {
           <div className="row propiedades">
 
             <div className="spacer"></div>
-            <h1 className="text-center"><b>Aviso de Privacidad</b></h1>
+            <h1 className="text-center"><b></b></h1>
             <div className="spacer double"></div>
             <div className="col-xs-12">
               <div className="policy-header changes" style={{margin: '3%'}}>

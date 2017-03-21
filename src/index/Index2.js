@@ -67,21 +67,19 @@ export default class Index extends Component {
             <li data-target="#bs-carousel" data-slide-to={0} className="active" />
             <li data-target="#bs-carousel" data-slide-to={1} />
             <li data-target="#bs-carousel" data-slide-to={2} />
-            <li data-target="#bs-carousel" data-slide-to={3} />
           </ol>
           <div className="carousel-inner">
             <div className="item slides active">
               <div className="slide-1" />
               <div className="hero">
                 <hgroup>
-                  <h1>¡Participar desde $100,000 en<br />inmuebles es posible!</h1>
-                  <h3 className="hidden-xs hidden-sm">Inverspot, la primera plataforma de crowdfunding inmobiliario que te permite participar a plazo o de contado en México</h3>
+                  <h1 style={{lineHeight: "40px", borderWidth: "0px", marginTop: "0px", marginBottom: "50px", padding: "0px", letterSpacing: "0px", fontWeight: "900", fontSize: "35px"}}>Invierte de forma segura en<br />desarrollos inmobiliarios y obtén<br />altos rendimientos.</h1>
                   <div className="hidden-xs hidden-sm btn-promo col-xs-6 col-sm-6 col-md-6">
                     <Link to="proyectos">
-                      <button style={{padding: '15px 20px', fontFamily: 'AvenirNext-Bold', display: 'inline-block'}}>Ver proyectos</button></Link>
+                      <button style={{padding: '15px 20px', fontFamily: 'AvenirNext-Bold', display: 'inline-block', backgroundColor: "#FF3C00", borderColor: "#FF3c00"}}>Ver proyectos</button></Link>
                   </div>
                   <div className="btn-promo col-xs-12 col-sm-6 col-md-6">
-                    <button style={{padding: '15px 20px', fontFamily: 'AvenirNext-Bold', display: 'inline-block'}} onClick={ () => this.props.stepSet(1) }>Registrate aquí</button>
+                    <button style={{padding: '15px 20px', fontFamily: 'AvenirNext-Bold', display: 'inline-block', backgroundColor: "#FF3C00", borderColor: "#FF3c00"}} onClick={ () => this.props.stepSet(1) }>Registrate aquí</button>
                   </div>
                 </hgroup>
               </div>
@@ -90,9 +88,8 @@ export default class Index extends Component {
               <div className="slide-2" />
               <div className="hero">
                 <hgroup>
-                  <h1>¡Participar desde $100,000 en<br />inmuebles es posible!</h1>
-                  <h3 className="hidden-xs hidden-sm">Inverspot, la primera plataforma de crowdfunding inmobiliario que te permite participar a plazo o de contado en México</h3>
-                  <div className="hidden-xs hidden-sm btn-promo col-xs-6 col-sm-6 col-md-6">
+                <h1 style={{lineHeight: "40px", borderWidth: "0px", marginTop: "0px", marginBottom: "100px", padding: "0px", letterSpacing: "0px", fontWeight: "900", fontSize: "35px"}}>Tu punto de inversión inmobiliario.</h1>
+                <div className="hidden-xs hidden-sm btn-promo col-xs-6 col-sm-6 col-md-6">
                     <Link to="proyectos">
                       <button style={{padding: '15px 20px', fontFamily: 'AvenirNext-Bold', display: 'inline-block'}}>Ver proyectos</button></Link>
                   </div>
@@ -106,30 +103,13 @@ export default class Index extends Component {
               <div className="slide-3" />
               <div className="hero">
                 <hgroup>
-                  <h1>¡Participar desde $100,000 en<br />inmuebles es posible!</h1>
-                  <h3 className="hidden-xs hidden-sm">Inverspot, la primera plataforma de crowdfunding inmobiliario que te permite participar a plazo o de contado en México</h3>
-                  <div className="hidden-xs hidden-sm btn-promo col-xs-6 col-sm-6 col-md-6">
+                <h1 style={{lineHeight: "40px", borderWidth: "0px", marginTop: "0px", marginBottom: "50px", padding: "0px", letterSpacing: "0px", fontWeight: "900", fontSize: "35px"}}>Ahorro + Inversión + <br />Diversificación + Excelentes <br />rendimientos= Inverspot.</h1>
+                <div className="hidden-xs hidden-sm btn-promo col-xs-6 col-sm-6 col-md-6">
                     <Link to="proyectos">
-                      <button style={{padding: '15px 20px', fontFamily: 'AvenirNext-Bold', display: 'inline-block'}}>Ver proyectos</button></Link>
+                      <button style={{padding: '15px 20px', fontFamily: 'AvenirNext-Bold', display: 'inline-block', backgroundColor: "#FF3C00", borderColor: "#FF3c00"}}>Ver proyectos</button></Link>
                   </div>
                   <div className="btn-promo col-xs-12 col-sm-6 col-md-6">
-                    <button style={{padding: '15px 20px', fontFamily: 'AvenirNext-Bold', display: 'inline-block'}} onClick={ () => this.props.stepSet(1) }>Registrate aquí</button>
-                  </div>
-                </hgroup>
-              </div>
-            </div>
-            <div className="item slides">
-              <div className="slide-4" />
-              <div className="hero">
-                <hgroup>
-                  <h1>¡Participar desde $100,000 en<br />inmuebles es posible!</h1>
-                  <h3 className="hidden-xs hidden-sm">Inverspot, la primera plataforma de crowdfunding inmobiliario que te permite participar a plazo o de contado en México</h3>
-                  <div className="hidden-xs hidden-sm btn-promo col-xs-6 col-sm-6 col-md-6">
-                    <Link to="proyectos">
-                      <button style={{padding: '15px 20px', fontFamily: 'AvenirNext-Bold', display: 'inline-block'}}>Ver proyectos</button></Link>
-                  </div>
-                  <div className="btn-promo col-xs-12 col-sm-6 col-md-6">
-                    <button style={{padding: '15px 20px', fontFamily: 'AvenirNext-Bold', display: 'inline-block'}} onClick={ () => this.props.stepSet(1) }>Registrate aquí</button>
+                    <button style={{padding: '15px 20px', fontFamily: 'AvenirNext-Bold', display: 'inline-block', backgroundColor: "#FF3C00", borderColor: "#FF3c00"}} onClick={ () => this.props.stepSet(1) }>Registrate aquí</button>
                   </div>
                 </hgroup>
               </div>
@@ -141,8 +121,8 @@ export default class Index extends Component {
           <div className="row main-container propiedades">
             <div style={{height: "60px"}}/>
             <h1>
-              <b>Proyectos para Participar &nbsp;&nbsp;&nbsp;&nbsp;</b>
-              <button type="button" className="btn button"><Link to="proyectos" style={{color: 'white'}}>Ver Más</Link></button>
+              <b style={{fontSize: "30px"}}>Proyectos para Participar &nbsp;&nbsp;&nbsp;&nbsp;</b>
+              <button type="button" className="btn button" style={{marginTop: "-10px"}}><Link to="proyectos" style={{color: 'white'}}>Ver más</Link></button>
             </h1>
             <div style={{height: "80px"}}/>
             {/* INVERSPOT: Renderiza las últimas 3 propiedades disponibles */}
@@ -152,10 +132,8 @@ export default class Index extends Component {
           {/*Newsletter*/}
           <div className="row suscribe" style={{backgroundColor: '#4b118e'}}>
             <div className="spacer" />
-            <h1 className="text-center">Newsletter</h1>
-            <h2 className="text-center">Suscríbete</h2>
-            <p className="text-center hidden-xs hidden-sm">Suscríbete para recibir e-mails con nuevos proyectos, noticias y mucho más</p>
-            <form target="_blank" role="form" method="POST" action="http://formspree.io/mkt@inverspot.mx">
+            <h3 className="text-center" style={{color: "white", fontWeight: "900"}}>Suscríbete para recibir más información con nuevos proyectos, noticias y mucho más</h3>
+            <form style={{marginBottom: "80px"}} target="_blank" role="form" method="POST" action="http://formspree.io/mkt@inverspot.mx">
               <div className="form-group col-xs-12 col-sm-3 col-sm-offset-2" style={{marginTop: "-5px"}}>
                 <input type="email" placeholder="Correo Electrónico" className="form-control caja" name="Newsletter"/>
               </div>
@@ -166,44 +144,45 @@ export default class Index extends Component {
                 <input className="btn button large-invertion bton" type="submit" defaultValue="Enviar"/>
               </div>
             </form>
-          <div className="spacer double" />
           </div>
           {/*Fichas de las Propiedades Fondeadas*/}
           <div className="row main-container propiedades">
             <div style={{height: "60px"}}/>
             <h1><b>Proyectos Fondeados &nbsp;&nbsp;&nbsp;&nbsp;</b>
-              <button type="button" className="btn button"><Link to="proyectos" style={{color: 'white'}}>Ver Más</Link></button> </h1>
+              <button type="button" className="btn button">
+              <Link to="/proyectos#fondeados" style={{color: 'white'}}>Ver más</Link>
+              </button> </h1>
             <div style={{height: "80px"}}/>
             <PropertyCards propertiesf={ this.state.propertiesf } element='FundCard'/>
           </div>
         </div>
+
+        <div className="spacer" />
+
         <div className="container">
-          <div className="col-xs-12 col-sm-6 col-centered">
-            <a href="http://sellspot.mx/" target="_blank">
-              <div className="box-banner" style={{cursor: 'pointer'}}>
-                <div>
-                  <img src="style/images/sellspot.png" className="img-fluid" style={{float: 'left', width: 250}} alt="" />
-                  <div className="col-xs-12">
-                    <h2 style={{fontSize: 26, textAlign: 'left'}}>Promueve propiedades y gana<br />comisiones<br /><br />Ir al sitio</h2>
-                  </div>
-                </div>
+          <div className="row">
+            <div className="col-sm-6" style={{marginBottom: "30px"}}>
+              <div className="row box-banner" style={{cursor: 'pointer'}}>
+                <a href="http://sellspot.mx/" target="_blank">
+                      <img src="style/images/sellspot.png" className="img-responsive" style={{float: 'left', width: 200}}/>
+                      <div className="col-xs-12">
+                        <h2 style={{fontSize: 24, textAlign: 'left'}}>Promueve propiedades y gana<br />comisiones<br /><br /><b>Ir al sitio</b></h2>
+                      </div>
+                </a>
               </div>
-            </a>
-          </div>
-          <div className="col-xs-12 col-sm-6 col-centered">
-            <a href="http://premiumspot.mx/" target="_blank">
-              <div className="box-banner" style={{cursor: 'pointer'}}>
-                <div>
-                  <img src="style/images/premiumspot.png" className="img-responsive" style={{float: 'right', width: 370}} alt="" />
-                  <div className="col-xs-12">
-                    <h2 style={{fontSize: 26, textAlign: 'right'}}>Buscas inversiones superiores<br />a <b>$500,000</b><br /><br />Ir al sitio</h2>
-                  </div>
-                </div>
+            </div>
+            <div className="col-sm-6" style={{marginBottom: "30px"}}>
+              <div className="row box-banner" style={{cursor: 'pointer'}}>
+                <a href="http://premiumspot.mx/" target="_blank">
+                      <img src="style/images/premiumspot.png" className="img-responsive" style={{float: 'right', width: 300}} alt="" />
+                      <div className="col-xs-12">
+                        <h2 style={{fontSize: 24, textAlign: 'right'}}>Buscas inversiones superiores<br />a <b>$500,000</b><br /><br /><b>Ir al sitio</b></h2>
+                      </div>
+                </a>
               </div>
-            </a>
+            </div>
           </div>
         </div>
-        <div className="spacer" />
         {/*Suscribe*/}
         <div className="container">
           <div className="row jumbotron main-container registro-section">
@@ -280,7 +259,7 @@ export default class Index extends Component {
           <div className="row">
             <div className="col-md-2 col-md-offset-5">
               <button type="button" className="btn button btn-lg btn-block">
-                <Link to="ellos-hablan-de-nosotros" style={{color: 'white'}}>Ver Más</Link>
+                <Link to="ellos-hablan-de-nosotros" style={{color: 'white'}}>Ver más</Link>
               </button>
             </div>
           </div>

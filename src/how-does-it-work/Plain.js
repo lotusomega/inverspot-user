@@ -6,7 +6,7 @@ export default function(props) {
       <div className="container">
         <div className="row propiedades">
           <div className="spacer" />
-          <h1 className="text-center"><b>¿Cómo funciona?</b></h1>
+          <h1 className="text-center"><b></b></h1>
           <div className="spacer" />
           <div className="col-xs-12 col-sm-12" style={{backgroundColor: "#fff", marginBottom: "70px"}}>
           <p className="text-center" style={{fontSize: "24px", color: "black",fontWeight: 100}}>Inverspot ofrece una gran lista de inmuebles<br /> para que puedas participar en el que más te convenza</p>
@@ -14,7 +14,7 @@ export default function(props) {
           <div className="row"></div>
 
           <div className="row main-container">
-            <h1 style={{color: '#5a5a5a', fontFamily: 'AvenirNext-Regular', fontWeight: 900}}>¿Cómo valuamos los proyectos?</h1>
+            <h1 style={{color: 'black', fontFamily: 'AvenirNext-Regular', fontWeight: 900}}>¿Cómo valuamos los proyectos?</h1>
             <h3 className="text-center" style={{color: '#5a5a5a', fontFamily: 'AvenirNext-Regular', fontWeight: 400}}>Inverspot valúa cada proyecto en 3 grandes indicadores</h3>
           </div>
           <div style={{height: "50px"}}/>
@@ -67,7 +67,7 @@ export default function(props) {
           <div style={{height: "30px"}}/>
           <div className="row main-container">
             <div className="spacer" />
-            <h1 style={{color: '#5a5a5a', fontFamily: 'AvenirNext-Regular', fontWeight: 900}}>¿Cómo paraticipar en los proyectos?</h1>
+            <h1 style={{color: 'black', fontFamily: 'AvenirNext-Regular', fontWeight: 900}}>¿Cómo paraticipar en los proyectos?</h1>
           </div>
           <div style={{height: "40px"}}/>
           <div className="col-xs-12 col-sm-12 col-md-4 col-lg-4">
@@ -226,7 +226,7 @@ export default function(props) {
       <div className="hidden-xs hidden-sm container">
         <div className="row">
           <div className="col-md-2 col-md-offset-5">
-            <button type="button" className="btn button btn-lg btn-block"><a href="ellos-hablan-de-nosotros.html" style={{color: 'white'}}>Ver Más</a></button>
+            <button type="button" className="btn button btn-lg btn-block"><a href="ellos-hablan-de-nosotros.html" style={{color: 'white'}}>Ver más</a></button>
           </div>
         </div>
       </div>

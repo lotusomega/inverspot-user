@@ -58,9 +58,10 @@ class PasswordProfile extends Component {
 
   render() {
     return (
-      <div className="panel panel-default">
+      <div className="panel panel-default" style={{backgroundColor: "#f7f7f7"}}>
         <div className="panel-body">
-            <h3 style={{marginLeft: "10px"}}><strong>Cambio de Contraseña</strong></h3>
+        <i className="fa fa-refresh fa-3x" aria-hidden="true" style={{color: "#4B118E", float: "right", marginRight: "30px", marginTop: "10px", marginBottom: "30px"}}></i>
+            <h3 style={{marginLeft: "10px"}}><strong style={{color: "#FF3C00"}}>Cambio de Contraseña</strong></h3>
             <hr/>
 
             <div className="col-md-12 col-sm-12 col-xs-12 personal-info">
@@ -70,7 +71,7 @@ class PasswordProfile extends Component {
                   <div className="container">
                    <div className="row">
                     <div className="col-md-4 col-md-offset-3">
-                      <p className="text-center">Introduzca su nueva contraseña</p>
+                      <p className="text-center" style={{fontSize: "16px", fontFamily: "AvenirNext-Bold"}}>Introduzca su nueva contraseña</p>
                       <form onSubmit={ this.handleSubmit }>
                         <input type="password" className="input-sm form-control" name="password1" placeholder="Nueva contraseña"
                         value={ this.state.password1 } onChange={ this.handleInput2 } required/>
@@ -84,7 +85,7 @@ class PasswordProfile extends Component {
                             {this.state.show && <p style={{color:"#FF0004"}}>Contraseñas no coinciden</p>}<br/><br/>
                           </div>
                         </div>
-                        <button type="submit" className="btn btn-primary btn-load" required>Cambiar Contraseña</button>
+                        <button type="submit" className="button-save btn-success" required>Cambiar Contraseña</button>
                       </form>
                     </div>
                     </div>

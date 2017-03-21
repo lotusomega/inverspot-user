@@ -70,24 +70,24 @@ class DataProfile extends Component {
       marginLeft: "10px"
     }
     return (
-      <div className="panel panel-default">
+      <div className="panel panel-default"  style={{backgroundColor: "#f7f7f7"}}>
         <div style={styledata}>
           <div className="btn-group">
-            {this.state.show === false && <a className="btn btn-info" onClick={this.editProfile}>
-              Editar Perfil
+            {this.state.show === false && <a onClick={this.editProfile}>
+              <button className="btn button-panel bton"><span>Editar Perfil</span></button>
             </a>}
           </div>
         </div>
 
         <div className="panel-body">
-          <h3 style={styledata2}><strong>Mis Datos</strong></h3>
+          <h3 style={styledata2}><strong style={{color: "#FF3C00"}}>Mis Datos</strong></h3>
           <br/>
           <hr/>
 
           <div className="col-md-12 col-sm-12 col-xs-12 personal-info">
             <form className="form-horizontal" data-toggle="validator" role="form" onSubmit={ this.handleSubmit }>
               <div className="form-group">
-                <label className="col-md-3 control-label">Nombre Completo:</label>
+                <label className="col-md-3 control-label">Nombre completo:</label>
                 <div className="col-md-8">
                   {this.state.show === false ? <input className="form-control input-sm" name="name" type="text" required
                   value={ this.state.user.name } readOnly onChange={ this.handleInput }/> :
@@ -152,7 +152,7 @@ class DataProfile extends Component {
 
 
               <div className="form-group">
-                <label className="col-md-3 control-label">Teléfono Fijo:</label>
+                <label className="col-md-3 control-label">Teléfono fijo:</label>
                 <div className="col-md-8">
                   {this.state.show === false ? <input className="form-control input-sm" id="phone" type="phone" name="telephone" required
                   value={ this.state.user.telephone } readOnly onChange={ this.handleInput }/> :
@@ -163,10 +163,10 @@ class DataProfile extends Component {
 
               <div className="form-group">
                 <label className="col-md-3 control-label"></label>
-                <div className="col-md-8">
-                  {this.state.show === true && <button className="btn btn-primary" type="submit" >Guardar Cambios</button>}
+                <div className="col-xs-12 col-md-8">
+                  {this.state.show === true &&<button className="button-cancel btn-danger" onClick={this.cancel} style={styledata2} > Cancelar</button>}
                   <span></span>
-                  {this.state.show === true &&<button className="btn btn-default" onClick={this.cancel} style={styledata2} > Cancelar</button>}
+                  {this.state.show === true && <button className="button-save btn-success" type="submit" >Guardar Cambios</button>}
                 </div>
               </div>
             </form>

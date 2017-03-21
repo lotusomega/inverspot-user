@@ -158,7 +158,7 @@ function PropertyCard (props) {
       <CardFacts facts={facts} />
       <CardActions>
         <Link to={`/proyectos/${ property._id }/ficha`} >
-          <button className="button btn-v-card left">Ver Más</button>
+          <button className="button btn-v-card left">Ver más</button>
         </Link>
         <button className="button btn-v-card right" onClick={ () => props.onInvest(property) }>Participar</button>
       </CardActions>

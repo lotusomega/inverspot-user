@@ -8,7 +8,7 @@ class Contact extends Component {
       <div>
         <div className="container">
         <div className="spacer double"></div>
-        <h1 className="text-center"><b>Contacto</b></h1>
+        <h1 className="text-center"><b></b></h1>
             <div className="spacer double"></div>
             <ContactForm />
             <div className="spacer" style={{height: '60px'}}></div>

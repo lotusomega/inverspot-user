@@ -40,10 +40,6 @@
     "hint": "Lugar de nacimiento"
   },
   {
-    "name": "idNumber",
-    "hint": "Número de identificación"
-  },
-  {
     "name": "typeid",
     "hint": "Tipo de identificación",
     "kind": "select",
@@ -66,6 +62,10 @@
       }
     ]
   },
+  {
+    "name": "idNumber",
+    "hint": "Número de identificación"
+  },  
   {
     "name": "curp",
     "hint": "Clave Única de Registro de Población (CURP)"

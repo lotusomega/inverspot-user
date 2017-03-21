@@ -69,7 +69,7 @@ class SliderLogos extends Component {
         <div className="hidden-xs hidden-sm container">
           <div className='row'>
             <div className='col-md-2 col-md-offset-5'>
-                <button type="button" className="btn button btn-lg btn-block"><a href="ellos-hablan-de-nosotros.html" style={{color: 'white'}}>Ver Más</a></button>     
+                <button type="button" className="btn button btn-lg btn-block"><a href="ellos-hablan-de-nosotros.html" style={{color: 'white'}}>Ver más</a></button>     
             </div>
           </div>
         </div>   

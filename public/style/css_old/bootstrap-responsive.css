@@ -6,19 +6,19 @@
 <html lang="en" class=" is-u2f-enabled">
   <head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# object: http://ogp.me/ns/object# article: http://ogp.me/ns/article# profile: http://ogp.me/ns/profile#">
     <meta charset='utf-8'>
-    
+
 
     <link crossorigin="anonymous" href="https://assets-cdn.github.com/assets/frameworks-c07e6f4b02b556d1d85052fb3853caf84c80e6b23dcdb1ae1b00f051da1115a2.css" integrity="sha256-wH5vSwK1VtHYUFL7OFPK+EyA5rI9zbGuGwDwUdoRFaI=" media="all" rel="stylesheet" />
     <link crossorigin="anonymous" href="https://assets-cdn.github.com/assets/github-e5c626d539be6e8369b342e6eee117a5853dd4672da7cb4ad526478ef69cfc33.css" integrity="sha256-5cYm1Tm+boNps0Lm7uEXpYU91Gctp8tK1SZHjvac/DM=" media="all" rel="stylesheet" />
-    
-    
+
+
     <link crossorigin="anonymous" href="https://assets-cdn.github.com/assets/site-293f92180d0a619a750fa2b5eae9e36740f5723a59c0ec308972c70d24e834fc.css" integrity="sha256-KT+SGA0KYZp1D6K16unjZ0D1cjpZwOwwiXLHDSToNPw=" media="all" rel="stylesheet" />
-    
+
 
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta http-equiv="Content-Language" content="en">
     <meta name="viewport" content="width=device-width">
-    
+
     <title>Samples/bootstrap-responsive.css at master · endjin/Samples · GitHub</title>
     <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="GitHub">
     <link rel="fluid-icon" href="https://github.com/fluidicon.png" title="GitHub">
@@ -39,9 +39,9 @@
       <meta name="browser-stats-url" content="https://api.github.com/_private/browser/stats">
     <meta name="browser-errors-url" content="https://api.github.com/_private/browser/errors">
     <link rel="assets" href="https://assets-cdn.github.com/">
-    
+
     <meta name="pjax-timeout" content="1000">
-    
+
     <meta name="request-id" content="4375:690E:3F64B5E:665FDE7:58877ED5" data-pjax-transient>
 
     <meta name="msapplication-TileImage" content="/windows-tile.png">
@@ -74,9 +74,9 @@
     <meta name="html-safe-nonce" content="eae22e65ecd79e0ba7b656f3f7e04eca144e0347">
 
     <meta http-equiv="x-pjax-version" content="d73c4befa8c3635f919f14d62e34300d">
-    
 
-      
+
+
   <meta name="description" content="Code Samples from the endjin blogs">
   <meta name="go-import" content="github.com/endjin/Samples git https://github.com/endjin/Samples.git">
 
@@ -92,9 +92,9 @@
     <div id="js-pjax-loader-bar" class="pjax-loader-bar"><div class="progress"></div></div>
     <a href="#start-of-content" tabindex="1" class="accessibility-aid js-skip-to-content">Skip to content</a>
 
-    
-    
-    
+
+
+
 
 
 
@@ -162,11 +162,11 @@
     <div role="main">
         <div itemscope itemtype="http://schema.org/SoftwareSourceCode">
     <div id="js-repo-pjax-container" data-pjax-container>
-      
+
 <div class="pagehead repohead instapaper_ignore readability-menu experiment-repo-nav">
   <div class="container repohead-details-container">
 
-    
+
 
 <ul class="pagehead-actions">
 
@@ -224,7 +224,7 @@
 
   </div>
   <div class="container">
-    
+
 <nav class="reponav js-repo-nav js-sidenav-container-pjax"
      itemscope
      itemtype="http://schema.org/BreadcrumbList"
@@ -278,17 +278,17 @@
 <div class="container new-discussion-timeline experiment-repo-nav">
   <div class="repository-content">
 
-    
+
 
 <a href="/endjin/Samples/blob/5bfc124b5a5305c9e8846a42b085c18cff4d03bc/BootstrapSample/Content/bootstrap-responsive.css" class="d-none js-permalink-shortcut" data-hotkey="y">Permalink</a>
 
 <!-- blob contrib key: blob_contributors:v21:575c616c23ccc428b575d822f252151c -->
 
 <div class="file-navigation js-zeroclipboard-container">
-  
+
 <div class="select-menu branch-select-menu js-menu-container js-select-menu float-left">
   <button class="btn btn-sm select-menu-button js-menu-target css-truncate" data-hotkey="w"
-    
+
     type="button" aria-label="Switch branches or tags" tabindex="0" aria-haspopup="true">
     <i>Branch:</i>
     <span class="js-select-button css-truncate-target">master</span>
@@ -420,7 +420,7 @@
   </div>
 </div>
 
-  
+
 
   <div itemprop="text" class="blob-wrapper data type-css">
       <table class="highlight tab-size js-file-line-container" data-tab-size="8">
@@ -4932,7 +4932,7 @@
 
 
 
-    
+
 
     <div id="ajax-error-message" class="ajax-error-message flash flash-error">
       <svg aria-hidden="true" class="octicon octicon-alert" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M8.865 1.52c-.18-.31-.51-.5-.87-.5s-.69.19-.87.5L.275 13.5c-.18.31-.18.69 0 1 .19.31.52.5.87.5h13.7c.36 0 .69-.19.86-.5.17-.31.18-.69.01-1L8.865 1.52zM8.995 13h-2v-2h2v2zm0-3h-2V6h2v4z"/></svg>
@@ -4943,13 +4943,13 @@
     </div>
 
 
-      
+
       <script crossorigin="anonymous" integrity="sha256-0j4y5IIRK6Xj6pvY3H5VVoARanTgAnRqyR9BpOWHWps=" src="https://assets-cdn.github.com/assets/frameworks-d23e32e482112ba5e3ea9bd8dc7e555680116a74e002746ac91f41a4e5875a9b.js"></script>
       <script async="async" crossorigin="anonymous" integrity="sha256-t3EnEFEw8AZYHNTYW9lrg00mRe81qc+LkJvm27E+Wvs=" src="https://assets-cdn.github.com/assets/github-b77127105130f006581cd4d85bd96b834d2645ef35a9cf8b909be6dbb13e5afb.js"></script>
-      
-      
-      
-      
+
+
+
+
     <div class="js-stale-session-flash stale-session-flash flash flash-warn flash-banner d-none">
       <svg aria-hidden="true" class="octicon octicon-alert" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M8.865 1.52c-.18-.31-.51-.5-.87-.5s-.69.19-.87.5L.275 13.5c-.18.31-.18.69 0 1 .19.31.52.5.87.5h13.7c.36 0 .69-.19.86-.5.17-.31.18-.69.01-1L8.865 1.52zM8.995 13h-2v-2h2v2zm0-3h-2V6h2v4z"/></svg>
       <span class="signed-in-tab-flash">You signed in with another tab or window. <a href="">Reload</a> to refresh your session.</span>
@@ -4967,4 +4967,3 @@
 
   </body>
 </html>
-

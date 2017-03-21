@@ -49,7 +49,7 @@ function WPMedia(props) {
     <div className="col-xs-12 col-sm-4">
       <a href="#" className="thumbnail">
         <img src={ `//192.169.174.96/is-img/${props.photo}` } alt={ props.photo }/>
-        <p className="text-center" style={{fontSize: '10px', color:'black'}}>
+        <p className="text-center" style={{fontSize: '12px', color:'black'}}>
           { props.description }
         </p>
       </a>

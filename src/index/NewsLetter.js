@@ -12,9 +12,7 @@ class NewsLetter extends Component {
     return (
       <div className="row main-container registro-section suscribe" style={stylel2}>
         <div className="spacer"></div>
-            <h1>Newsletter</h1>
-            <h2>Suscríbete</h2>
-            <p className="hidden-xs hidden-sm">Suscríbete para recibir e-mails con nuevos proyectos, noticias y mucho más</p>
+            <h2 className="text-center">Suscríbete para recibir e-mails con nuevos proyectos, noticias y mucho más</h2>
             <form data-toggle="validator" role="form">
               <div className="form-group col-xs-12 col-sm-8 col-sm-offset-1 col-centered">
                 <input type="email" className="form-control input-sm caja" name="newsletter" placeholder=""/>

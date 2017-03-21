@@ -6,7 +6,7 @@ export default function(props) {
       <div className="row propiedades">
         {/* <div class="headspace"></div> */}
         <div className="spacer" />
-        <h1 className="text-center"><b>Políticas de Privacidad</b></h1>
+        <h1 className="text-center"><b></b></h1>
         <div className="spacer double" />
         <div className="policy-header changes" style={{margin: '3%'}}>
           <h2 />

@@ -69,12 +69,11 @@ icon: nombre del icono del componente
 text: texto del componente*/
 function Fact(props) {
   return (
-    <div className="col-xs-12 col-sm-4 col-centered circle">
+    <div className="col-xs-4 col-sm-4 col-centered circle">
       <img src={props.icon} alt="Icono" className="iconlarge"/>
       <p className="tittle">{props.title.toUpperCase()}</p>
       <p className="subtittle">{props.text}</p>
     </div>
-
   )
 }
 
@@ -96,7 +95,7 @@ function CardFund (props){
   return(
     <div className="col-sm-12">
       <h5 className="text-center fondeado-title">Proyecto Fondeado</h5>
-      <h3 className="text-center fondeado-subtitle">¡Contacta un asesor aquí!</h3>
+      <h3 className="text-center fondeado-subtitle"><a href="http://192.169.174.96/#/contacto">¡Contacta un asesor aquí!</a></h3>
     </div>
   )
 }

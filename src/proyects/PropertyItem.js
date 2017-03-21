@@ -113,7 +113,7 @@ icon: nombre del icono del componente
 text: texto del componente*/
 function Fact(props) {
   return (
-    <div className="col-xs-12 col-sm-4 col-centered circle">
+    <div className="col-xs-4 col-sm-4 col-centered circle">
       <img src={props.icon} alt="Icono" className="iconlarge"/>
       <p className="tittle">{props.title.toUpperCase()}</p>
       <p className="subtittle">{props.text}</p>
@@ -128,7 +128,7 @@ function CardCTA(props) {
         {props.cta}
       </button>
       <h5 className="subtitulo text-center">
-        <b>{props.support}</b>
+        <b><a href="http://192.169.174.96/#/contacto">{props.support}</a></b>
       </h5>
     </div>
   )
@@ -143,7 +143,7 @@ function CardCountdown(props) {
       </h5>
       <Countdown2 duration={props.remain} />
       <h5 className="text-center counter2">
-        <b>Para que puedas participar en este proyecto</b>
+        <b>para que puedas participar en este proyecto</b>
       </h5>
     </div>
   )
@@ -153,7 +153,8 @@ function CardHero (props){
   return(
     <div className="col-sm-12">
       <h5 className="text-center fondeado-title">Proyecto Fondeado</h5>
-      <h3 className="text-center fondeado-subtitle">¡Contacta un asesor aquí!</h3>
+      <h3 className="text-center fondeado-subtitle">
+      <a href="http://192.169.174.96/#/contacto">¡Contacta un asesor aquí!</a></h3>
     </div>
   )
 }

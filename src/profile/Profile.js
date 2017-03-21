@@ -36,14 +36,15 @@ class Profile extends Component {
   onUserInfoChange: funcion para actualizar los datos del usuario*/
   render() {
     return (
-      <div>
-        <CardProfile user={this.state.user}/>
-        <div className="col-lg-9 col-md-9 col-sm-12 col-xs-12">
+      <div className="row">
+      <div className="container">
+        <div className="col-sm-12">
           <BarProfile user={this.state.user}/>
           <DataProfile  userprofile={this.state.user} onChange={ this.onUserInfoChange } />
           <PasswordProfile userid={this.state.user._id} />
         </div>
       </div>
+     </div>
     );
   }
 }
