@@ -10,7 +10,7 @@ export default function(props) {
 
         <div className="col-xs-12 col-sm-12" style={{backgroundColor: "#f7f9f9", marginBottom: "70px"}}>
         <div className="spacer double" />
-        <p className="text-center" style={{fontSize: "24px", color: "black",fontWeight: 100}}>Somos una plataforma que busca conformar grupos de personas interesadas en participar en desarrollos inmobiliarios con el fin de obtener atractivos rendimientos en desarrollos previamente valuados</p>
+        <p className="text-center" style={{fontSize: "24px", color: "black",fontWeight: 100}}>Somos una plataforma que da la oportunidad a un grupo de personas para que inviertan desde $100,000 PESOS en proyectos de construcción con la garantía del inmueble.*1*2*3</p>
         <div className="spacer double" />
         </div>
 
@@ -88,13 +88,8 @@ export default function(props) {
             </div>
           </div>
         </div>
-        <div className="spacer double" />
+        <div className="spacer triple" />
 
-        <div className="container" style={{background: 'url(style/images/12.jpg) no-repeat center center fixed', width: '100%', height: 500}}>
-          <div className="row">
-          </div>
-        </div>
-        <div style={{height: "70px"}}/>
 
 
         <div className="col-xs-12 col-sm-12" style={{backgroundColor: "#f7f9f9", marginBottom: "70px"}}>
@@ -191,7 +186,7 @@ export default function(props) {
                 <div className="col-xs-12 col-sm-12" style={{backgroundColor: "#fff", marginBottom: "70px"}}>
                 <div className="spacer double" />
                 <h1 className="text-center" style={{fontSize: "31px", color: 'red', fontWeight: 900}}>Somos la primer Plataforma Colectiva Inmobiliaria en México</h1>
-                <p className="text-center" style={{fontSize: "24px", color: "black",fontWeight: 100}}>Participación fácil, segura y al alcance de todos</p>
+                <p className="text-center" style={{fontSize: "24px", color: "black",fontWeight: 100}}></p>
                 </div>
 
                 <div className="col-xs-12 col-sm-12" style={{backgroundColor: "#fff", marginBottom: "70px"}}>

@@ -162,7 +162,7 @@ export default class Index extends Component {
         <div className="container">
           <div className="row">
             <div className="col-sm-6" style={{marginBottom: "30px"}}>
-              <div className="row box-banner" style={{cursor: 'pointer'}}>
+              <div className="row box-banner" style={{backgroundColor: "#5fb6b0", borderColor: "#4b2f7f", cursor: 'pointer'}}>
                 <a href="http://sellspot.mx/" target="_blank">
                       <img src="style/images/sellspot.png" className="img-responsive" style={{float: 'left', width: 200}}/>
                       <div className="col-xs-12">
@@ -172,7 +172,7 @@ export default class Index extends Component {
               </div>
             </div>
             <div className="col-sm-6" style={{marginBottom: "30px"}}>
-              <div className="row box-banner" style={{cursor: 'pointer'}}>
+              <div className="row box-banner" style={{backgroundColor: "black", borderColor: "#5fb6b0", cursor: 'pointer'}}>
                 <a href="http://premiumspot.mx/" target="_blank">
                       <img src="style/images/premiumspot.png" className="img-responsive" style={{float: 'right', width: 300}} alt="" />
                       <div className="col-xs-12">
