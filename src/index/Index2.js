@@ -73,7 +73,7 @@ export default class Index extends Component {
               <div className="slide-1" />
               <div className="hero">
                 <hgroup>
-                  <h1 style={{lineHeight: "40px", borderWidth: "0px", marginTop: "0px", marginBottom: "50px", padding: "0px", letterSpacing: "0px", fontWeight: "900", fontSize: "35px"}}>Invierte de forma segura en<br />desarrollos inmobiliarios y obtén<br />altos rendimientos.</h1>
+                  <h1>Invierte de forma segura en<br />desarrollos inmobiliarios y obtén<br />altos rendimientos.</h1>
                   <div className="hidden-xs hidden-sm btn-promo col-xs-6 col-sm-6 col-md-6">
                     <Link to="proyectos">
                       <button style={{padding: '15px 20px', fontFamily: 'AvenirNext-Bold', display: 'inline-block', backgroundColor: "#FF3C00", borderColor: "#FF3c00"}}>Ver proyectos</button></Link>
@@ -88,7 +88,7 @@ export default class Index extends Component {
               <div className="slide-2" />
               <div className="hero">
                 <hgroup>
-                <h1 style={{lineHeight: "40px", borderWidth: "0px", marginTop: "0px", marginBottom: "100px", padding: "0px", letterSpacing: "0px", fontWeight: "900", fontSize: "35px"}}>Tu punto de inversión inmobiliario.</h1>
+                <h1>Tu punto de inversión inmobiliario.</h1>
                 <div className="hidden-xs hidden-sm btn-promo col-xs-6 col-sm-6 col-md-6">
                     <Link to="proyectos">
                       <button style={{padding: '15px 20px', fontFamily: 'AvenirNext-Bold', display: 'inline-block'}}>Ver proyectos</button></Link>
@@ -103,7 +103,7 @@ export default class Index extends Component {
               <div className="slide-3" />
               <div className="hero">
                 <hgroup>
-                <h1 style={{lineHeight: "40px", borderWidth: "0px", marginTop: "0px", marginBottom: "50px", padding: "0px", letterSpacing: "0px", fontWeight: "900", fontSize: "35px"}}>Ahorro + Inversión + <br />Diversificación + Excelentes <br />rendimientos= Inverspot.</h1>
+                <h1>Ahorro + Inversión + <br />Diversificación + Excelentes <br />rendimientos= Inverspot.</h1>
                 <div className="hidden-xs hidden-sm btn-promo col-xs-6 col-sm-6 col-md-6">
                     <Link to="proyectos">
                       <button style={{padding: '15px 20px', fontFamily: 'AvenirNext-Bold', display: 'inline-block', backgroundColor: "#FF3C00", borderColor: "#FF3c00"}}>Ver proyectos</button></Link>
@@ -121,7 +121,7 @@ export default class Index extends Component {
           <div className="row main-container propiedades">
             <div style={{height: "60px"}}/>
             <h1>
-              <b style={{fontSize: "30px"}}>Proyectos para Participar &nbsp;&nbsp;&nbsp;&nbsp;</b>
+              <b style={{fontSize: "30px", color: "#ff3c00"}}>Proyectos para Participar &nbsp;&nbsp;&nbsp;&nbsp;</b>
               <button type="button" className="btn button" style={{marginTop: "-10px"}}><Link to="proyectos" style={{color: 'white'}}>Ver más</Link></button>
             </h1>
             <div style={{height: "80px"}}/>
@@ -148,8 +148,8 @@ export default class Index extends Component {
           {/*Fichas de las Propiedades Fondeadas*/}
           <div className="row main-container propiedades">
             <div style={{height: "60px"}}/>
-            <h1><b>Proyectos Fondeados &nbsp;&nbsp;&nbsp;&nbsp;</b>
-              <button type="button" className="btn button">
+            <h1 style={{fontSize: "30px", color: "#ff3c00"}}><b>Proyectos Fondeados &nbsp;&nbsp;&nbsp;&nbsp;</b>
+              <button type="button" className="btn button" style={{marginTop: "-10px"}}>
               <Link to="/proyectos#fondeados" style={{color: 'white'}}>Ver más</Link>
               </button> </h1>
             <div style={{height: "80px"}}/>

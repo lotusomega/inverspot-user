@@ -142,7 +142,7 @@ class Tab4 extends Component {
     let years = this.state.workProgress
     return(
       <div className="tab-pane fade in active" id="tab4">
-        <h1 className="text-center">Avance de Obra</h1>
+        <h2 style={{fontWeight: 700, marginTop: "0px"}} className="text-center">Avance de Obra</h2>
         <div className="spacer"></div>
         <div className="row">
           <div className="col-sm-3">

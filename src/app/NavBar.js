@@ -31,7 +31,7 @@ class NavBar extends Component {
     }
     return (
         <Navbar bsStyle="none" collapseOnSelect className="navbar navbar-light bg-faded" style={stylen}>
-          <div className="hidden-xs hidden-sm" style={{backgroundColor: '#81D742', height:'32px'}}>
+          <div className="barra hidden-xs hidden-sm">
             <p style={stylen2}>
               Atención al cliente | <b>01 (55) 8000 6555</b> |
               <a style={stylen3} href="mailto:hola@inverspot.mx"> hola@inverspot.mx</a>

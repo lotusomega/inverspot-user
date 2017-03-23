@@ -129,7 +129,7 @@ footer ul p {
     font-weight: 700;
     font-size: 20px;
     font-family: AvenirNext-Bold;
-    color: white;
+    color: #5EC3BC;
 }
 .counter {
     font-family: AvenirNext-Bold;
@@ -463,12 +463,12 @@ button.btnn.button.btn-grande {
 
 .box > .icon { text-align: center; position: relative; }
 .box > .icon > .image { position: relative; z-index: 2; margin: auto; width: 88px; height: 88px; border: 8px solid white; line-height: 88px; border-radius: 50%; background: #4b118e; vertical-align: middle; }
-.box > .icon:hover > .image { background: #333; }
+.box > .icon:hover > .image { background: #ff3c00; }
 .box > .icon > .image > i { font-size: 36px !important; color: #fff !important; }
 .box > .icon:hover > .image > i { color: white !important; }
 .box > .icon > .info { margin-top: -24px; background: rgba(0, 0, 0, 0.04); border: 1px solid #e0e0e0; padding: 15px 0 10px 0; height: 250px;}
 .box > .icon:hover > .info { background: rgba(0, 0, 0, 0.04); border-color: #e0e0e0; color: white; }
-.box > .icon > .info > h3.title { font-family: "AvenirNext-Regular",sans-serif !important; font-size: 18px; color: #222; font-weight: 700; margin-bottom: -10px; }
+.box > .icon > .info > h3.title { font-family: "AvenirNext-Regular",sans-serif !important; font-size: 18px; color: #ff3c00; font-weight: 700; margin-bottom: -10px; }
 .box > .icon > .info > p { font-family: "AvenirNext-Regular",sans-serif !important; font-size: 13px; color: #666; line-height: 1.5em; margin: 20px; height: 125px;}
 .box > .icon:hover > .info > h3.title, .box > .icon:hover > .info > p, .box > .icon:hover > .info > .more > a { color: #222; }
 .box > .icon > .info > .more a { font-family: "Roboto",sans-serif !important; font-size: 12px; color: #222; line-height: 12px; text-transform: uppercase; text-decoration: none; }
@@ -1718,10 +1718,14 @@ box-shadow: inset 0 1px 1px rgba(255,255,255,.4);
               transform: translate3d(-50%,-50%,0);
 }
 .hero h1 {
-    font-size: 49px;
-    font-weight: 900;
-    margin: 0;
-    padding: 0;
+  line-height: 40px;
+  border-width: 0px;
+  margin-top: 0px;
+  margin-bottom: 50px;
+  padding: 0px;
+  letter-spacing: 0px;
+  font-weight: 900;
+  font-size: 35px;
 }
 
 .hero h3 {
@@ -2019,8 +2023,83 @@ legend {
     margin: 10px 0;
 }
 
+.hero h1 {
+    font-size: 2em;
+    line-height: 25px;
+    border-width: 0px;
+    margin-top: 0px;
+    margin-bottom: 40px;
+    padding: 0px;
+    letter-spacing: 0px;
+    font-weight: 900;
+    font-size: 25px;
+}
+
+.margin-head {
+    margin-top: 3px;
+    margin-bottom: 0px;
+}
+
+.card-v .header-holder .p-promo {
+    font-size: 16px;
+}
+
+.card-v .header-holder .p-promo span {
+    font-size: 19px;
+}
+
+.info-cols-holder .col p:first-child {
+    color: #4b118e;
+    font-weight: 900;
+    font-size: 10px;
+    font-family: AvenirNext-Bold;
+}
+
+.info-cols-holder .col p {
+    font-size: 14px;
+}
+
+.col-centered {
+    display: inline-block;
+    margin-right: -10px;
+    margin-left: 3px;
+}
+
+.large-invertion {
+    margin-top: 0px;
+}
+
 	}
 
+  .tab-pane h2 {
+      color: #4b118e;
+  }
+
+  .tab-pane h3 {
+    color: #ff3c00;
+}
+
+.tab-pane h4 {
+    color: #00c4bc;
+}
+
+.tab-pane h5 {
+    color: #2bcec7;
+    font-weight: 900;
+}
+
+.propiedades h1, .propiedades p {
+    margin: 0;
+    color: #4b118e;
+}
+
+.panel-body h5 {
+    color: white!important;
+}
+
+.panel-body p {
+    color: white!important;
+}
 
   .navbar .container {
       width: 100%;
@@ -2077,4 +2156,34 @@ legend {
   width: 191px;
   height: 46px;
   background-position: 0 -70px;
+}
+
+nav.navbar.navbar-light.bg-faded.navbar.navbar-none {
+    border-bottom: 1px solid white;
+}
+
+.barra{
+  background-color: rgb(129, 215, 66);
+  border-bottom: 1px solid;
+  border-top-style: solid;
+  border-right-style: solid;
+  border-left-style: solid;
+  border-bottom-color: white;
+  height: 32px;
+}
+
+.box > .icon > .info > p {
+    font-family: "AvenirNext-Regular",sans-serif !important;
+    font-size: 16px;
+    color: #4b118e;
+    line-height: 1.5em;
+    margin: 20px;
+    height: 125px;
+}
+
+.box > .icon > .image > i {
+    font-size: 36px !important;
+    color: #fff !important;
+    font-style: normal;
+    font-weight: 900;
 }

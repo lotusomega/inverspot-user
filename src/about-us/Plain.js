@@ -8,9 +8,9 @@ export default function(props) {
         <h1 className="text-center"><b></b></h1>
         <div className="spacer double" />
 
-        <div className="col-xs-12 col-sm-12" style={{backgroundColor: "#f7f9f9", marginBottom: "70px"}}>
+        <div className="col-xs-12 col-sm-12" style={{backgroundColor: "#f7f9f9", marginBottom: "20px"}}>
         <div className="spacer double" />
-        <p className="text-center" style={{fontSize: "24px", color: "black",fontWeight: 100}}>Somos una plataforma que da la oportunidad a un grupo de personas para que inviertan desde $100,000 PESOS en proyectos de construcción con la garantía del inmueble.*1*2*3</p>
+        <p className="text-center" style={{fontSize: "24px", color: "#4b118e",fontWeight: 100}}>Somos una plataforma que da la oportunidad a un grupo de personas para que inviertan desde <b style={{color: "#ff3c00"}}>$100,000 PESOS</b> en proyectos de construcción con la garantía del inmueble.<b style={{color: "#ff3c00"}}>*1*2*3</b></p>
         <div className="spacer double" />
         </div>
 
@@ -18,25 +18,25 @@ export default function(props) {
                 <div className="row">
                   <div className="col-md-6">
                     <div className="card">
+                    <div className="card-content">
+                      <span className="card-title" style={{fontSize: "20px", color: "#4b118e",fontWeight: 900}}>¿Qué es Inverspot?</span>
+                    </div>
                       <div className="card-image">
                         <div className="embed-responsive embed-responsive-16by9">
                           <iframe src="https://player.vimeo.com/video/190621870?color=4B118E&title=0&byline=0&portrait=0" width={640} height={360} frameBorder={0} />
                         </div>
                       </div>
-                      <div className="card-content">
-                        <span className="card-title">¿Qué es Inverspot?</span>
-                      </div>
                     </div>
                   </div>
                   <div className="col-md-6">
                     <div className="card">
+                    <div className="card-content">
+                      <span className="card-title" style={{fontSize: "20px", color: "#4b118e",fontWeight: 900}}>¿Cómo funciona Inverspot?</span>
+                    </div>
                       <div className="card-image">
                         <div className="embed-responsive embed-responsive-16by9">
                           <iframe src="https://player.vimeo.com/video/182658897?color=4B118E&title=0&byline=0&portrait=0" width={640} height={360} frameBorder={0} />
                         </div>
-                      </div>
-                      <div className="card-content">
-                        <span className="card-title">¿Cómo funciona Inverspot?</span>
                       </div>
                     </div>
                   </div>
@@ -88,27 +88,26 @@ export default function(props) {
             </div>
           </div>
         </div>
-        <div className="spacer triple" />
-
-
-
-        <div className="col-xs-12 col-sm-12" style={{backgroundColor: "#f7f9f9", marginBottom: "70px"}}>
         <div className="spacer double" />
-        <h1 className="text-center" style={{fontSize: "31px", color: 'red', fontWeight: 900}}>¿Quiénes conforman Inverspot?</h1>
+
+
+
+        <div className="col-xs-12 col-sm-12" style={{backgroundColor: "#f7f9f9", marginBottom: "50px"}}>
+        <div className="spacer double" />
+        <h1 className="text-center" style={{fontSize: "31px", color: '#ff3c00', fontWeight: 900, marginBottom: "10px"}}>¿Quiénes conforman Inverspot?</h1>
         <p className="text-center" style={{fontSize: "24px", color: "black",fontWeight: 100}}>Somos un grupo de personas que hemos laborado en el sector financiero inmobiliario y tecnológico con más de 10 años de experiencia. El fundador y director de la empresa es David Agmon Mizrahi, licenciado en mercadotecnia y una maestría en banca y mercados financieros, cuenta con más de 5 años de experiencia en el sector financiero.
         El resto del equipo y socios, es gente preparada y con experiencia en el sector inmobiliario, administración y finanzas.</p>
         <div className="spacer" />
         </div>
         <div className="row"></div>
 
-        <div className="container" style={{background: 'url(style/images/2.jpg) no-repeat center center fixed', width: '100%', height: 500}}>
+        <div className="container" style={{background: 'url(style/images/2.jpg) no-repeat center center fixed', width: '100%', height: 300}}>
           <div className="row">
           </div>
         </div>
         <div style={{height: "40px"}}/>
         <div className="row main-container registro-section" style={{backgroundColor: '#fff!important'}}>
-          <div className="spacer" />
-          <h1 style={{fontFamily: 'AvenirNext-Regular', fontWeight: 900}}>¿Porqué Inverspot?</h1>
+          <h1 style={{fontFamily: 'AvenirNext-Regular', fontWeight: 900, color: "#ff3c00", marginBottom: "-100px"}}>¿Porqué Inverspot?</h1>
         </div>
         <div className="container">
           <div className="row">
@@ -116,7 +115,7 @@ export default function(props) {
               <center>
                 <img alt="" src="style/images/analiza.png" className="icon-circle" />
                 <br />
-                <h4 className="footertext" style={{fontFamily: 'AvenirNext-Regular', fontSize: 20, fontWeight:900}}>Nuestra plataforma</h4>
+                <h4 className="footertext" style={{fontFamily: 'AvenirNext-Regular', fontSize: 20, fontWeight:900, color: "#ff3c00"}}>Nuestra plataforma</h4>
                 <p className="footertext" style={{fontFamily: 'AvenirNext-Regular', fontSize: 17, fontWeight: 400}}>Te mostramos día a día nuevas propiedades previamente revisadas que ofrecen atractivos rendimientos.<br />
                 </p></center>
             </div>
@@ -124,7 +123,7 @@ export default function(props) {
               <center>
                 <img alt="" src="style/images/rendimientos.png" className="icon-circle" />
                 <br />
-                <h4 className="footertext" style={{fontFamily: 'AvenirNext-Regular', fontSize: 20, fontWeight:900}}>Rentabilidad</h4>
+                <h4 className="footertext" style={{fontFamily: 'AvenirNext-Regular', fontSize: 20, fontWeight:900, color: "#ff3c00"}}>Rentabilidad</h4>
                 <p className="footertext" style={{fontFamily: 'AvenirNext-Regular', fontSize: 17, fontWeight: 400}}>Dependiendo cada proyecto, podrás recibir atractivos retornos al termino de ellos.<br />
                 </p></center>
             </div>
@@ -132,7 +131,7 @@ export default function(props) {
               <center>
                 <img alt="" src="style/images/grupo.png" className="icon-circle" />
                 <br />
-                <h4 className="footertext" style={{fontFamily: 'AvenirNext-Regular', fontSize: 20, fontWeight:900}}>Flexibilidad</h4>
+                <h4 className="footertext" style={{fontFamily: 'AvenirNext-Regular', fontSize: 20, fontWeight:900, color: "#ff3c00"}}>Flexibilidad</h4>
                 <p className="footertext" style={{fontFamily: 'AvenirNext-Regular', fontSize: 17, fontWeight: 400}}>Puedes donar, regalar, endosar, vender o dejar en garantía tus acciones notificándonoslo con anticipación.<br />
                 </p></center>
             </div>
@@ -140,7 +139,7 @@ export default function(props) {
               <center>
                 <img alt="" src="style/images/documentacion.png" className="icon-circle" />
                 <br />
-                <h4 className="footertext" style={{fontFamily: 'AvenirNext-Regular', fontSize: 20, fontWeight:900}}>Seguridad</h4>
+                <h4 className="footertext" style={{fontFamily: 'AvenirNext-Regular', fontSize: 20, fontWeight:900, color: "#ff3c00"}}>Seguridad</h4>
                 <p className="footertext" style={{fontFamily: 'AvenirNext-Regular', fontSize: 17, fontWeight: 400}}>Tu dinero esta invertido y respaldado con inmuebles, por lo que tu capital esta 100% seguro.<br />
                 </p></center>
             </div>
@@ -152,7 +151,7 @@ export default function(props) {
             <center>
               <img alt="" src="style/images/pic.png" className="icon-circle" />
               <br />
-              <h4 className="footertext" style={{fontFamily: 'AvenirNext-Regular', fontSize: 20, fontWeight:900}}>Plusvalía</h4>
+              <h4 className="footertext" style={{fontFamily: 'AvenirNext-Regular', fontSize: 20, fontWeight:900, color: "#ff3c00"}}>Plusvalía</h4>
               <p className="footertext" style={{fontFamily: 'AvenirNext-Regular', fontSize: 17, fontWeight: 400}}>Tus participaciones van incrementando su valor conforme a la plusvalía de la proyecto.<br />
               </p></center>
           </div>
@@ -160,7 +159,7 @@ export default function(props) {
             <center>
               <img alt="" src="style/images/elige.png" className="icon-circle" />
               <br />
-              <h4 className="footertext" style={{fontFamily: 'AvenirNext-Regular', fontSize: 20, fontWeight:900}}>Diversificación</h4>
+              <h4 className="footertext" style={{fontFamily: 'AvenirNext-Regular', fontSize: 20, fontWeight:900, color: "#ff3c00"}}>Diversificación</h4>
               <p className="footertext" style={{fontFamily: 'AvenirNext-Regular', fontSize: 17, fontWeight: 400}}>En vez de participar en un proyecto, puedes diversificar tu dinero en varios proyectos.<br />
               </p></center>
           </div>
@@ -168,7 +167,7 @@ export default function(props) {
             <center>
               <img alt="" src="style/images/tu-pago.png" className="icon-circle" />
               <br />
-              <h4 className="icon-tittle" style={{fontFamily: 'AvenirNext-Regular', fontSize: 20, fontWeight:900}}>Motores de participación</h4>
+              <h4 className="icon-tittle" style={{fontFamily: 'AvenirNext-Regular', fontSize: 20, fontWeight:900, color: "#ff3c00"}}>Motores de participación</h4>
               <p className="footertext" style={{fontFamily: 'AvenirNext-Regular', fontSize: 17, fontWeight: 400}}>Sin duda es la mejor forma de que inviertas tu dinero en proyectos inmobiliarios con montos accesibles.<br />
               </p></center>
           </div>
@@ -176,22 +175,20 @@ export default function(props) {
             <center>
               <img alt="" src="style/images/rendimientos.png" className="icon-circle" />
               <br />
-              <h4 className="icon-tittle" style={{fontFamily: 'AvenirNext-Regular', fontSize: 20, fontWeight:900}}>Participa a plazos</h4>
+              <h4 className="icon-tittle" style={{fontFamily: 'AvenirNext-Regular', fontSize: 20, fontWeight:900, color: "#ff3c00"}}>Participa a plazos</h4>
               <p className="icon-text" style={{fontFamily: 'AvenirNext-Regular', fontSize: 17, fontWeight: 400}}>En los proyectos para desarrollar y dependiendo cada proyecto, se podrá participar en distintas parcialidades y podrás participar con un anticipo desde $20,000.<br />
               </p></center>
           </div>
         </div>
-        <div style={{height: "40px"}}/>
+        <div style={{height: "20px"}}/>
 
-                <div className="col-xs-12 col-sm-12" style={{backgroundColor: "#fff", marginBottom: "70px"}}>
-                <div className="spacer double" />
-                <h1 className="text-center" style={{fontSize: "31px", color: 'red', fontWeight: 900}}>Somos la primer Plataforma Colectiva Inmobiliaria en México</h1>
-                <p className="text-center" style={{fontSize: "24px", color: "black",fontWeight: 100}}></p>
+                <div className="col-xs-12 col-sm-12 registro-section" style={{marginBottom: "20px", padding: "10px 10px"}}>
+                <h1 className="text-center" style={{fontSize: "31px", color: '#ff3c00', fontWeight: 900}}>Somos la primer Plataforma Colectiva Inmobiliaria en México</h1>
                 </div>
 
                 <div className="col-xs-12 col-sm-12" style={{backgroundColor: "#fff", marginBottom: "70px"}}>
                 <div className="spacer" />
-                <h1 className="text-center" style={{fontSize: "31px", color: '#4B118E', fontWeight: 900}}>Contacta con nosotros</h1>
+                <h1 className="text-center" style={{fontSize: "31px", color: '#4B118E', fontWeight: 900, marginBottom: "10px"}}>Ponte en contacto con nosotros</h1>
                 <p className="text-center" style={{fontSize: "24px", color: "black",fontWeight: 100}}>Puedes agendar una cita con nosotros en el corporativo en cualquier momento o pedir que un asesor te contacte para darte una mejor atención personalizada. Sabemos que cada persona tiene distintas necesidades y nuestro objetivo es lograr satisfacerlas</p>
                 </div>
 

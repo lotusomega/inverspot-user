@@ -8,14 +8,14 @@ export default function(props) {
         {/*Fichas de las Propiedades Disponibles*/}
         <div className="spacer" />
         <h1 className="text-center"><b></b></h1>
-        <div className="spacer double" />
+        <div className="spacer" />
 
 
 
                 <div className="col-xs-12 col-sm-12" style={{backgroundColor: "#f7f9f9", marginBottom: "70px"}}>
                 <div className="spacer double" />
-                <h1 className="text-center" style={{fontSize: "31px", color: 'red', fontWeight: 900}}>Garantía de tu participación</h1>
-                <p className="text-center" style={{fontSize: "24px", color: "black",fontWeight: 100}}>Entendemos la importancia de tu participación, con el objetivo de garantizar un excelente proceso te presentamos las diferentes funciones que ofrecemos como garantía</p>
+                <h1 className="text-center" style={{fontSize: "31px", color: '#ff3c00', fontWeight: 900}}>Garantía de tu participación</h1>
+                <p className="text-center" style={{fontSize: "24px", color: "#4B118E",fontWeight: 100}}>Entendemos la importancia de tu participación, con el objetivo de garantizar un excelente proceso te presentamos las diferentes funciones que ofrecemos como garantía</p>
                 <div className="spacer double" />
                 </div>
 
@@ -74,7 +74,7 @@ export default function(props) {
 
         <div className="col-xs-12 col-sm-12" style={{backgroundColor: "#f7f9f9", marginBottom: "70px"}}>
         <div className="spacer double" />
-        <h1 className="text-center" style={{fontSize: "28px", color: 'red', fontWeight: 900}}>Invertir en la construcción es invertir en economía real</h1>
+        <h1 className="text-center" style={{fontSize: "28px", color: '#ff3c00', fontWeight: 900}}>Invertir en la construcción es invertir en economía real</h1>
         <p className="text-center" style={{fontSize: "22px", color: "black",fontWeight: 100}}>En Inverspot somos amigos de la transparencia y no tenemos letras pequeñas, te damos la posibilidad de acceder al negocio de la construcción; esto supone recibir beneficios y asumir variables.</p><br/>
         <div className="spacer double" />
         </div>
@@ -83,7 +83,7 @@ export default function(props) {
 
         <div className="col-xs-12 col-sm-12" style={{backgroundColor: "#f7f9f9", marginBottom: "70px"}}>
         <div className="spacer double" />
-        <h1 className="text-center" style={{fontSize: "28px", color: 'red', fontWeight: 900}}>¿Variables?</h1>
+        <h1 className="text-center" style={{fontSize: "28px", color: '#ff3c00', fontWeight: 900}}>¿Variables?</h1>
 
             <div className="col-xs-12 col-sm-5 col-sm-offset-1" style={{padding: "30px"}}>
             <p className="text-left" style={{fontSize: "22px", color: "black",fontWeight: 100}}>
@@ -109,7 +109,7 @@ export default function(props) {
 
         <div className="col-xs-12 col-sm-12" style={{backgroundColor: "#f7f9f9", marginBottom: "70px"}}>
         <div className="spacer double" />
-        <h1 className="text-center" style={{fontSize: "28px", color: 'red', fontWeight: 900}}>Se trata de un modelo de crowdfunding apadrinado</h1>
+        <h1 className="text-center" style={{fontSize: "28px", color: '#ff3c00', fontWeight: 900}}>Se trata de un modelo de crowdfunding apadrinado</h1>
         <p className="text-center" style={{fontSize: "22px", color: "black",fontWeight: 100}}>
         Es decir que Inverspot se encarga de: elegir el mejor proyecto, elegir un constructor de prestigio, supervisar la obra, darte informes, asegurar tu capital en todo momento y conseguir la mejor opción de compra. Si la obra se detiene, tu capital sigue protegido por Inverspot.
         </p>
@@ -118,8 +118,8 @@ export default function(props) {
 
 
         <div className="container">
-                        <div className="col-xs-12 col-sm-12" style={{backgroundColor: "#fff", marginTop: "70px", marginBottom: "70px"}}>
-                        <h1 className="text-center" style={{fontSize: "31px", color: 'red', fontWeight: 900}}>Somos la primer Plataforma Colectiva Inmobiliaria en México</h1>
+                        <div className="col-xs-12 col-sm-12" style={{backgroundColor: "#fff", marginTop: "30px", marginBottom: "30px"}}>
+                        <h1 className="text-center" style={{fontSize: "31px", color: '#ff3c00', fontWeight: 900}}>Somos la primer Plataforma Colectiva Inmobiliaria en México</h1>
                         <p className="text-center" style={{fontSize: "24px", color: "black",fontWeight: 100}}>Inversión fácil, segura y al alcance de todos</p>
                         </div>
 

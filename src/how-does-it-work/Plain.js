@@ -8,16 +8,16 @@ export default function(props) {
           <div className="spacer" />
           <h1 className="text-center"><b></b></h1>
           <div className="spacer" />
-          <div className="col-xs-12 col-sm-12" style={{backgroundColor: "#fff", marginBottom: "70px"}}>
-          <p className="text-center" style={{fontSize: "24px", color: "black",fontWeight: 100}}>Inverspot ofrece una gran lista de inmuebles<br /> para que puedas participar en el que más te convenza</p>
+          <div className="col-xs-12 col-sm-12" style={{backgroundColor: "#fff", marginBottom: "30px"}}>
+          <p className="text-center" style={{fontSize: "24px", color: "#ff3c00",fontWeight: 900}}>Inverspot ofrece una gran lista de inmuebles<br /> para que puedas participar en el que más te convenza</p>
           </div>
           <div className="row"></div>
 
           <div className="row main-container">
-            <h1 style={{color: 'black', fontFamily: 'AvenirNext-Regular', fontWeight: 900}}>¿Cómo valuamos los proyectos?</h1>
-            <h3 className="text-center" style={{color: '#5a5a5a', fontFamily: 'AvenirNext-Regular', fontWeight: 400}}>Inverspot valúa cada proyecto en 3 grandes indicadores</h3>
+            <h1 style={{color: 'black', fontFamily: 'AvenirNext-Regular', fontWeight: 900, color: "#ff3c00"}}>¿Cómo valuamos los proyectos?</h1>
+            <h3 className="text-center" style={{color: '#4B118E', fontFamily: 'AvenirNext-Regular', fontWeight: 400}}>Inverspot valúa cada proyecto en 3 grandes indicadores</h3>
           </div>
-          <div style={{height: "50px"}}/>
+          <div style={{height: "30px"}}/>
           <div className="container">
             <div className="row">
               <div className="col-xs-12 col-sm-6 col-lg-4">
@@ -67,7 +67,7 @@ export default function(props) {
           <div style={{height: "30px"}}/>
           <div className="row main-container">
             <div className="spacer" />
-            <h1 style={{color: 'black', fontFamily: 'AvenirNext-Regular', fontWeight: 900}}>¿Cómo paraticipar en los proyectos?</h1>
+            <h1 style={{color: 'black', fontFamily: 'AvenirNext-Regular', color: "#ff3c00",fontWeight: 900}}>¿Cómo paraticipar en los proyectos?</h1>
           </div>
           <div style={{height: "40px"}}/>
           <div className="col-xs-12 col-sm-12 col-md-4 col-lg-4">
@@ -76,7 +76,7 @@ export default function(props) {
                 <div className="shape-text">1</div>
               </div>
               <div className="listing-content">
-                <h3 className="lead text-center">1. Analiza</h3>
+                <h3 className="lead text-center"  style={{fontFamily: 'AvenirNext-Regular', color: "#ff3c00",fontSize: "23px", fontWeight: 900}}>1. Analiza</h3>
                 <p className="text-center">Analiza las opciones para participar. Para ver la información completa de los proyectos es indispensable te registres.</p>
               </div>
             </div>
@@ -87,7 +87,7 @@ export default function(props) {
                 <div className="shape-text">2</div>
               </div>
               <div className="listing-content">
-                <h3 className="lead text-center">2. Tú eliges</h3>
+                <h3 className="lead text-center"  style={{fontFamily: 'AvenirNext-Regular', color: "#ff3c00",fontSize: "23px", fontWeight: 900}}>2. Tú eliges</h3>
                 <p className="text-center">Checa las formas de pagos y montos que más se adapten a tus necesidades.</p>
               </div>
             </div>
@@ -98,7 +98,7 @@ export default function(props) {
                 <div className="shape-text">3</div>
               </div>
               <div className="listing-content">
-                <h3 className="lead text-center">3. Aparta tu lugar</h3>
+                <h3 className="lead text-center"  style={{fontFamily: 'AvenirNext-Regular', color: "#ff3c00",fontSize: "23px", fontWeight: 900}}>3. Aparta tu lugar</h3>
                 <p className="text-center">Aparta la cantidad con la que deseas participar en el proyecto de tu elección.</p>
               </div>
             </div>
@@ -110,7 +110,7 @@ export default function(props) {
                 <div className="shape-text">4</div>
               </div>
               <div className="listing-content">
-                <h3 className="lead text-center">4.  Llena la solicitud de participación</h3>
+                <h3 className="lead text-center"  style={{fontFamily: 'AvenirNext-Regular', color: "#ff3c00",fontSize: "23px", fontWeight: 900}}>4.  Llena la solicitud de participación</h3>
                 <p className="text-center">Si es tu primera participación con nosotros, llena la solicitud, que aparecerá después de apartar tu lugar en un proyecto.</p>
               </div>
             </div>
@@ -121,7 +121,7 @@ export default function(props) {
                 <div className="shape-text">5</div>
               </div>
               <div className="listing-content">
-                <h3 className="lead text-center">5. Recibe tus contratos</h3>
+                <h3 className="lead text-center"  style={{fontFamily: 'AvenirNext-Regular', color: "#ff3c00",fontSize: "23px", fontWeight: 900}}>5. Recibe tus contratos</h3>
                 <p className="text-center">Recibe los contratos que amparan tu participación en la dirección de tu conveniencia, tenemos entrega en toda la república.</p>
               </div>
             </div>
@@ -132,7 +132,7 @@ export default function(props) {
                 <div className="shape-text">6</div>
               </div>
               <div className="listing-content">
-                <h3 className="lead text-center">6. Participa</h3>
+                <h3 className="lead text-center"  style={{fontFamily: 'AvenirNext-Regular', color: "#ff3c00",fontSize: "23px", fontWeight: 900}}>6. Participa</h3>
                 <p className="text-center">Una vez que estén firmados los contratos, realiza tus aportaciones vía transferencia bancaria.</p>
               </div>
             </div>
@@ -143,7 +143,7 @@ export default function(props) {
                 <div className="shape-text">7</div>
               </div>
               <div className="listing-content">
-                <h3 className="lead text-center">7. ¡Ve crecer tu dinero!</h3>
+                <h3 className="lead text-center"  style={{fontFamily: 'AvenirNext-Regular', color: "#ff3c00",fontSize: "23px", fontWeight: 900}}>7. ¡Ve crecer tu dinero!</h3>
                 <p className="text-center">¡Una vez concluido el desarrollo, recibirás tu capital más utilidad!</p>
               </div>
             </div>
