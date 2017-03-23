@@ -34,6 +34,10 @@ class Project extends Component {
         .then( property => this.setState({ property: property[0] }) )
         .catch( e => alert(e) )
     }
+    if( this.props.location.query.modal ){
+      this.props.stepSet(3)
+      this.props.showModal()
+    }
   }
   //toggleWizard: agrega las clases necesarias para abrir el modal de inversion hecho en bootstrap y coloca el estado show(mostrar) en verdadero o falso
   toggleWizard( property ) {

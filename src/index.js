@@ -32,9 +32,9 @@ function requireAuth(nextState, replace) {
   const path = nextState.location.pathname.split('/')
   if (!isLogged()) {
     if(path[1] === 'proyectos') {
-      alert('Necesita iniciar sesión para poder acceder a esta sección')
       path.pop()
-      path.push('ficha')
+      path.push('ficha?modal=true')
+      window.location.reload()
     }
     replace({
       pathname: path.join('/')

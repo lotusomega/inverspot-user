@@ -5,6 +5,28 @@ import { create } from '../services/signup'
 import { listUser } from '../services/list'
 import { withRouter, Link } from 'react-router'
 
+//function ModalSesion
+function ModalSesion(props){
+  return(
+    <div className='modal fade in' style={{display: 'block'}}>
+      <div className="modal-dialog">
+        <div className="loginmodal-container">
+          <button type="button" className="close" style={{fontSize: '35px'}} onClick={props.onClick}>&times;</button>
+          <div className="col-sm-12">
+              <img className="img-responsive center-block" alt="logo" src="style/images/inverspot.png"/>
+              <div className="spacer"></div>
+              <p className="text-center text-modal">Necesitas Iniciar sesión para poder acceder a ésta sección</p>
+              <div className="col-sm-12">
+                <button onClick={() => props.next(2)}  className="button large-invertion" style={{marginTop: "2px"}}>Iniciar sesión</button>
+              </div>
+              <p className="text-center text-modal">Si aún no estás registrado <span onClick={() => props.next(1)} style={{color: 'red', cursor: 'pointer'}}>regístrate ahora</span></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  )
+}
+
 //function Register: contenido del modal de registro
 /*props
 handleSubmit: maneja el envio del formulario al api
@@ -512,6 +534,9 @@ class LoginWizard1 extends Component {
       case 2:
         Element = withRouter(ModalLogin)
         break;
+      case 3:
+          Element = withRouter(ModalSesion)
+          break;
       default:
         break;
     }
