@@ -180,8 +180,8 @@ export default function(props) {
                     </div>
                   </div>
                   <div className="col-md-12">
-                    <button type="submit" className="btn btn-primary pull-right" id="btnContactUs">
-                    Enviar Mensaje</button>
+                  <button type="submit" id="btnContactUs"  style={{padding: '10px 20px', float: "right", fontFamily: 'AvenirNext-Bold', display: 'inline-block', backgroundColor: "#FF3C00", borderColor: "#FF3c00"}}>
+                  Enviar Mensaje</button>
                   </div>
                 </div>
               </form>

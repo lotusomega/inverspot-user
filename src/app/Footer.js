@@ -16,6 +16,14 @@ class Footer extends Component {
         </div>
       </div>
 
+      <div className="container">
+        <div className="row">
+          <div className="col-xs-12 col-sm-12 text-center" style={{color: "black",fontSize: "13px", marginTop: "10px"}}>
+              <b style={{color: "#ff3c00"}}>* </b>Las fotografías mostradas en cada proyecto, son de carácter ilustrativo y no necesariamente reflejan el proyecto final.
+          </div>
+        </div>
+      </div>
+
         <div className="container">
           <div className="row">
             <div className="divider col-xs-3 col-sm-3 col-lg-12">

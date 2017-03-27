@@ -2187,3 +2187,33 @@ nav.navbar.navbar-light.bg-faded.navbar.navbar-none {
     font-style: normal;
     font-weight: 900;
 }
+
+.panel-heading [data-toggle="collapse"]:after {
+    font-family: 'FontAwesome';
+    content: "\f078";
+    float: right;
+    color: #FF3C00;
+    font-size: 16px;
+    line-height: 10px;
+    color: #ef4123;
+}
+
+.close {
+    float: right;
+    font-size: 21px;
+    line-height: 1;
+    color: #ff3c00;
+    text-shadow: 0 1px 0 #fff;
+    opacity: .9;
+    filter: alpha(opacity=20);
+}
+
+.btn-primary:focus, .btn-primary:hover {
+    background-color: #ff3c00!important;
+    border-color: #ff3c00!important;
+    background-position: 0 -15px!important;
+}
+
+.btn-orange {
+    background-image: none;
+}

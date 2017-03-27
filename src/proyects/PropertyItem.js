@@ -60,7 +60,7 @@ function CardMedia(props) {
     <div className="card-v">
       {/* <div className="main-card-image" style={{width: "100%"}}> */}
       <div className="main-card-image">
-        <a href="#">
+        <a>
           <img src={props.src} alt="Propiedad"/>
           { props.fund &&
             <div className="fondeada-layer" style={{display: 'block'}}>

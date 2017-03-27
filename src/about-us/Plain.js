@@ -106,9 +106,11 @@ export default function(props) {
           </div>
         </div>
         <div style={{height: "40px"}}/>
-        <div className="row main-container registro-section" style={{backgroundColor: '#fff!important'}}>
-          <h1 style={{fontFamily: 'AvenirNext-Regular', fontWeight: 900, color: "#ff3c00", marginBottom: "-100px"}}>¿Porqué Inverspot?</h1>
+
+        <div className="col-xs-12 col-sm-12 registro-section" style={{marginBottom: "20px", padding: "10px 10px"}}>
+        <h1 className="text-center" style={{fontSize: "31px", color: '#ff3c00', fontWeight: 900}}>¿Porqué Inverspot?</h1>
         </div>
+
         <div className="container">
           <div className="row">
             <div className="col-md-3">
@@ -238,7 +240,7 @@ export default function(props) {
                     </div>
                   </div>
                   <div className="col-md-12">
-                    <button type="submit" className="btn btn-primary pull-right" id="btnContactUs">
+                    <button type="submit" id="btnContactUs"  style={{padding: '10px 20px', float: "right", fontFamily: 'AvenirNext-Bold', display: 'inline-block', backgroundColor: "#FF3C00", borderColor: "#FF3c00"}}>
                     Enviar Mensaje</button>
                   </div>
                 </div>
