@@ -1,3 +1,4 @@
+
 @font-face {
     font-family: "AvenirNext-Regular";
     font-style: normal;
@@ -2226,4 +2227,12 @@ nav.navbar.navbar-light.bg-faded.navbar.navbar-none {
 
 input.form-control.caja {
     color: black;
+}
+
+.card-v .main-card-image img {
+    border-radius: 10px;
+}
+
+.card-v.fondeada .main-card-image .fondeada-layer {
+    border-radius: 10px;
 }

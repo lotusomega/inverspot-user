@@ -56,14 +56,14 @@ function CardProgress(props) {
   return (
     <div className="row progress-bar-holder">
       <div className="col-xs-6 col-sm-6 col-md-6 left">
-        <p style={{fontWeight: "bold", color:"#f00"}}>{currency(multiplier * current)}</p>
+        <p style={{fontSize: "18px", fontWeight: "bold", color:"#f00"}}>{currency(multiplier * current)}</p>
       </div>
-      <div className="col-xs-6 col-sm-6 col-md-6 right"><p style={{fontWeight: "bold", color:"#f00"}}>{currency(multiplier * max)}</p></div>
+      <div className="col-xs-6 col-sm-6 col-md-6 right"><p style={{fontSize: "18px", fontWeight: "bold", color:"#f00"}}>{currency(multiplier * max)}</p></div>
       <div className="col-xs-12 col-sm-12 col-md-12 range-holder">
         <div className="range" style={{backgroundColor: progress < 100 ? "#FF3C00" : "#00cc99", width: `${ progress }%`}}></div>
       </div>
       <div className="col-xs-12 col-sm-12 col-md-12 range-txt">
-        <p style={{color: '#f00'}}>Quedan <span style={{color: '#f00'}}>{max - current}</span> participaciones de <span style={{color: '#f00'}}>{max}</span></p>
+        <p style={{fontSize: "18px", color: '#f00'}}>Quedan <span style={{color: '#f00'}}>{max - current}</span> participaciones de <span style={{color: '#f00'}}>{max}</span></p>
       </div>
       <hr className="hr-card"/>
     </div>
