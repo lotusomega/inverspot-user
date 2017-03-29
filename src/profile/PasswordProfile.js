@@ -71,7 +71,7 @@ class PasswordProfile extends Component {
                   <div className="container">
                    <div className="row">
                     <div className="col-md-4 col-md-offset-3">
-                      <p className="text-center" style={{fontSize: "16px", fontFamily: "AvenirNext-Bold"}}>Introduzca su nueva contraseña</p>
+                      <h3 className="text-center" style={{fontSize: "16px", fontFamily: "AvenirNext-Bold", color: "#4B118E"}}>Introduzca su nueva contraseña</h3>
                       <form onSubmit={ this.handleSubmit }>
                         <input type="password" className="input-sm form-control" name="password1" placeholder="Nueva contraseña"
                         value={ this.state.password1 } onChange={ this.handleInput2 } required/>

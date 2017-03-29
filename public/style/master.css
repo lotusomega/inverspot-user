@@ -2217,3 +2217,13 @@ nav.navbar.navbar-light.bg-faded.navbar.navbar-none {
 .btn-orange {
     background-image: none;
 }
+
+.suscribe .form-group>input[type=email] {
+    color: black;
+    font-size: 14px;
+    width: 100%;
+}
+
+input.form-control.caja {
+    color: black;
+}

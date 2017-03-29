@@ -104,19 +104,6 @@ export default function(props) {
         </div>
 
 
-
-
-
-        <div className="col-xs-12 col-sm-12" style={{backgroundColor: "#f7f9f9", marginBottom: "70px"}}>
-        <div className="spacer double" />
-        <h1 className="text-center" style={{fontSize: "28px", color: '#ff3c00', fontWeight: 900}}>Se trata de un modelo de crowdfunding apadrinado</h1>
-        <p className="text-center" style={{fontSize: "22px", color: "black",fontWeight: 100}}>
-        Es decir que Inverspot se encarga de: elegir el mejor proyecto, elegir un constructor de prestigio, supervisar la obra, darte informes, asegurar tu capital en todo momento y conseguir la mejor opción de compra. Si la obra se detiene, tu capital sigue protegido por Inverspot.
-        </p>
-        <div className="spacer double" />
-        </div>
-
-
         <div className="container">
                         <div className="col-xs-12 col-sm-12" style={{backgroundColor: "#fff", marginTop: "30px", marginBottom: "30px"}}>
                         <h1 className="text-center" style={{fontSize: "31px", color: '#ff3c00', fontWeight: 900}}>Somos la primer Plataforma Colectiva Inmobiliaria en México</h1>
@@ -196,6 +183,12 @@ export default function(props) {
                 Lomas de Chapultepec, CDMX, México<br />
                 <abbr title="Phone">
                 Teléfono: (55) 800-06555</abbr>
+              </address>
+              <br />
+              <address>
+                <strong>Inverspot Jalisco</strong><br />
+                Avenida Adolfo López Mateos 830<br />
+                Fracc. Chapalita 44500, Guadalajara, Jalisco<br />
               </address>
               <br />
               <address>

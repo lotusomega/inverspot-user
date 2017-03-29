@@ -93,7 +93,7 @@ function CardProgress(props) {
         <div className="range" style={{backgroundColor: progress < 100 ? "#FF3C00" : "#00cc99", width: `${ progress }%`}}></div>
       </div>
       <div className="col-xs-12 range-txt">
-        <p className="purple-text"><b>{max - current}</b> participaciones disponibles de <b>{max}</b></p>
+        <p className="purple-text">Quedan <b>{max - current}</b> participaciones de <b>{max}</b></p>
       </div>
     </div>
   )

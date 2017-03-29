@@ -184,16 +184,18 @@ export default class Index extends Component {
           </div>
         </div>
         {/*Suscribe*/}
+        <div  style={{height: "40px"}}/>
         <div className="container">
-          <div className="row jumbotron main-container registro-section">
-            <div className="spacer" />
-            <h2>Participar con nosotros es rápido, seguro y sencillo</h2>
-            <div className="spacer" />
-            <p>Con el objetivo de democratizar la participación en el sector inmobiliario, hemos diseñado un método sencillo para la selección del inmueble ideal. Participar nunca fue más sencillo.</p>
+              <div className="col-xs-12 col-sm-12 text-center" style={{backgroundColor: "#f7f9f9", marginBottom: "70px"}}>
+              <div className="spacer double" />
+              <h1 style={{fontSize: "31px", color: 'red', fontFamily: 'AvenirNext-Regular', fontWeight: 900}}>Participar con nosotros es rápido, seguro y sencillo</h1>
+              <p style={{fontSize: "24px", color: "black",fontWeight: 100}}>Con el objetivo de democratizar la inversión en el sector inmobiliario, hemos diseñado un método sencillo para la selección del inmueble ideal. Invertir nunca fue más sencillo.</p>
             <button className="button" onClick={ () => this.props.stepSet(1) }>Comenzar registro</button>
-          </div>
+              <div className="spacer double" />
+              </div>
         </div>
-        <div  style={{height: "60px"}}/>
+        <div className="row"></div>
+        <div  style={{height: "20px"}}/>
         {/*Slider ellos hablan*/}
         <div className="hidden-xs hidden-sm conteiner">
           <div className="row">

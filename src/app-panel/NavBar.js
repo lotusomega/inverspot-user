@@ -41,6 +41,9 @@ class NavBar extends Component {
                 <LinkContainer to="/user/investments">
                   <NavItem>Mis Participaciones</NavItem>
                 </LinkContainer>
+                <LinkContainer to="/">
+                  <NavItem>Regresar al Inicio</NavItem>
+                </LinkContainer>
               </Nav>
               <Nav pullRight className="nav navbar-nav">
                 <li onClick={this.closeSession}><a>Cerrar Sesión</a></li>

@@ -1,6 +1,7 @@
 import React from 'react'
-import {Link} from 'react-router'
+import {Link, withRouter} from 'react-router'
 import currency from '../services/currency'
+
 //funcion CardHeader: contiene el estilo de la cabecera de la tarjeta
 /*props
 addres.street: nombre de la calle donde se ubica la propiedad
@@ -62,7 +63,7 @@ function CardProgress(props) {
         <div className="range" style={{backgroundColor: progress < 100 ? "#FF3C00" : "#00cc99", width: `${ progress }%`}}></div>
       </div>
       <div className="col-xs-12 col-sm-12 col-md-12 range-txt">
-        <p style={{color: '#f00'}}><span style={{color: '#f00'}}>{max - current}</span> participaciones disponibles de <span style={{color: '#f00'}}>{max}</span></p>
+        <p style={{color: '#f00'}}>Quedan <span style={{color: '#f00'}}>{max - current}</span> participaciones de <span style={{color: '#f00'}}>{max}</span></p>
       </div>
       <hr className="hr-card"/>
     </div>
@@ -150,7 +151,11 @@ function PropertyCard (props) {
       <CardPromo>
         Participa desde <span>{currency(property.dataSheet.investAmount)}</span> pesos
       </CardPromo>
+      <Link to={`/proyectos/${ property._id }/ficha`} >
       <CardMedia src={'http://192.169.174.96/is-img/'+ property.image} />
+      </Link>
+
+
       <CardProgress
         current={property.dataSheet.sharesSold}
         max={property.dataSheet.totalShares}

@@ -82,14 +82,16 @@ class Index extends Component {
             <div className="spacer double"></div>
 
             <div className="container">
-              <div className="row jumbotron main-container registro-section">
-                <div className="spacer"></div>
-                <h2>Participar con nosotros es rápido, seguro y sencillo</h2>
-                <div className="spacer"></div>
-                <p>Con el objetivo de democratizar la inversión en el sector inmobiliario, hemos diseñado un método sencillo para la selección del inmueble ideal. Invertir nunca fue más sencillo.</p>
-                <button className="button" data-launchWizard="modal" >Comenzar registro</button>
-              </div>
+                  <div className="col-xs-12 col-sm-12 text-center" style={{backgroundColor: "#f7f9f9", marginBottom: "70px"}}>
+                  <div className="spacer double" />
+                  <h1 style={{fontSize: "31px", color: 'red', fontFamily: 'AvenirNext-Regular', fontWeight: 900}}>Participar con nosotros es rápido, seguro y sencillo</h1>
+                  <p style={{fontSize: "24px", color: "black",fontWeight: 100}}>Con el objetivo de democratizar la inversión en el sector inmobiliario, hemos diseñado un método sencillo para la selección del inmueble ideal. Invertir nunca fue más sencillo.</p>
+                  <button className="button" onClick={ () => props.stepSet(1) }>Regístrate</button>
+                  <div className="spacer double" />
+                  </div>
             </div>
+            <div className="row"></div>
+
             <div className="spacer double"></div>
             <SliderLogos/>
           </div>
