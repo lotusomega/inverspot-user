@@ -155,10 +155,10 @@ class InvestmentData extends Component {
     newState.user['level'] = 'investor'
     this.setState(newState)
     console.log(this.state.user)
-    edit('user', this.state.user )
+    return edit('user', this.state.user )
       .then( success => {
         if(success) {
-          this.props.router.location.state && this.props.router.location.state.investment ? this.toggleWizard() : alert("Datos actualizados")
+          this.toggleWizard()
         }
         else {
           alert('Error al actualizar')
@@ -177,7 +177,7 @@ class InvestmentData extends Component {
 		return(
 <div className="container">
   <div className="panel-body panel panel-default" style={{backgroundColor: "rgb(247, 247, 247)"}}>
-    { this.state.show && <Wizard onClick={ this.toggleWizard } investment={this.props.router.location.state.investment} /> }
+    { this.state.show && <Wizard onClick={ this.toggleWizard } alert="Datos actualizados" step={99} /> }
     {/* <h3>Completa los campos requeridos * para comenzar a participar</h3> */}
     <div className="spacer"></div>
     <div className="text-center"><b>Para poder participar en cualquier proyecto de Inverspot es necesario llenar los campos requeridos, <br/>esto ayudará a que nuestros asesores generen tu contrato de participación</b></div>
@@ -194,7 +194,7 @@ class InvestmentData extends Component {
       <FormFieldset legend='3. Designación de Beneficiario 2'
         controls={ beneficiary2 } source={ u } handleInput={ this.handleInput }>
         <div className="text-right">
-          <button type="submit" className="button-save btn-success">Editar Usuario <i className="icon-arrow-right14 position-right"></i></button>
+          <button type="submit" className="button-save btn-success">Enviar <i className="icon-arrow-right14 position-right"></i></button>
         </div>
       </FormFieldset>
     </form>

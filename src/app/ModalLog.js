@@ -4,6 +4,7 @@ import { login, recovery, fbAuth } from '../services/auth'
 import { create } from '../services/signup'
 import { listUser } from '../services/list'
 import { withRouter, Link } from 'react-router'
+import { Step97, Step98, Step99 } from '../index/Wizard'
 
 //function ModalSesion
 function ModalSesion(props){
@@ -336,7 +337,7 @@ class ModalLogin extends Component {
           this.props.postLogin ? this.props.postLogin() : this.props.router.push('/user/profile')
         }
         this.props.onClick()
-      }, e => alert(e))
+      }, e => this.props.next(97))
     }
     else {
       alert("Completa los campos")
@@ -425,8 +426,7 @@ class ModalRegister extends Component {
   		this.setState(newState)
       create( this.state.user )
       .then( success => {
-        success && alert("Registro exitoso, activa tu cuenta")
-        this.props.onClick()
+        success && this.props.next(98)
       }, this.props.onClick )
     }
     else
@@ -476,7 +476,7 @@ class ModalRecover extends Component {
     e.preventDefault()
     if ( this.state.email !== "" ) {
       recovery(this.state.email)
-      .then( success => success && alert("Correo enviado, recupera tu contraseña"),this.props.onClick())
+      .then( success => success && this.props.next(99))
     }
     else {
       alert("Introduce tu correo")
@@ -521,7 +521,10 @@ class LoginWizard1 extends Component {
     let passProps = {
       step: step,
       onClick: this.props.onClick,
-      next: this.goTo
+      next: this.goTo,
+      alert: 'Te hemos enviado un correo, para restablecer tu contraseña',
+      support: 'Te sugerimos revisar tu carpeta de SPAM o correo no deseado. Si no lo has recibido, por favor contact a uno de nuestros asesores',
+      alert2: 'Regístro exitoso, te hemos enviado un mail de confirmación, actívalo para comenzar a invertir'
     }
     // switch: renderiza el componente correspondiente a cada paso (0= recuperacion de contraseña, 1= Registro, 2= Inicio de sesión)
     switch (step) {
@@ -537,6 +540,15 @@ class LoginWizard1 extends Component {
       case 3:
           Element = withRouter(ModalSesion)
           break;
+      case 97:
+        Element = Step97
+        break;
+      case 98:
+        Element = Step98
+        break;
+      case 99:
+        Element = Step99
+        break;
       default:
         break;
     }

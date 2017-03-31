@@ -1,6 +1,6 @@
 //Wizard: Componente que contiene todos los modales de inversion y de inicio de sesión
 import React, { Component } from 'react'
-import { withRouter } from 'react-router'
+import { withRouter, Link } from 'react-router'
 import currency from '../services/currency'
 import { listProperty } from '../services/list'
 import { create } from '../services/crud'
@@ -20,7 +20,8 @@ function ModalPromo (props){
 function ModalButton(props){
   return (
     <div className="col-sm-12">
-      <button onClick={ props.onClick } className="button large-invertion" style={{marginTop: "2px"}}>Participar</button>
+      {props.name ? <button onClick={ props.onClick } className="button large-invertion" style={{marginTop: "2px"}}>{props.name}</button>:
+        <button onClick={ props.onClick } className="button large-invertion" style={{marginTop: "2px"}}>Participar</button>}
     </div>
   )
 }
@@ -53,9 +54,9 @@ function Modal (props){
         <div className={`loginmodal-container ${props.type}`}>
           <button type="button" className="close" style={{fontSize: '35px'}} onClick={props.onClick}>&times;</button>
           <div className="col-sm-12">
-              <img className="img-responsive center-block" alt="logo" src="style/images/inverspot.png"/>
-              <div className="spacer"></div>
-              {props.children}
+            <img className="img-responsive center-block" alt="logo" src="style/images/inverspot.png"/>
+            <div className="spacer"></div>
+            {props.children}
           </div>
         </div>
       </div>
@@ -134,6 +135,36 @@ function Step5 (props){
     </Modal>
   )
 }
+
+function Step99 (props){
+  return(
+    <Modal onClick={props.onClick}>
+      <ModalPromo>{ props.alert }</ModalPromo>
+      <ModalButton onClick={ props.onClick } name='Aceptar' />
+      <p style={{color: 'white',fontWeight: 'bolder'}}>{ props.support }</p>
+    </Modal>
+  )
+}
+
+function Step98 (props){
+  return(
+    <Modal onClick={props.onClick}>
+      <ModalPromo>{ props.alert2 }</ModalPromo>
+      <ModalButton onClick={ props.onClick } name='Aceptar' />
+    </Modal>
+  )
+}
+
+function Step97 (props){
+  return(
+    <Modal onClick={props.onClick}>
+      <ModalPromo>Datos inválidos.Por favor inténtalo de nuevo</ModalPromo>
+      <ModalButton onClick={ props.onClick } name='Aceptar' />
+      <p style={{color: 'white',fontWeight: 'bolder'}}>¿Imposible conectar? Contacta a un <Link to="contacto">asesor</Link></p>
+    </Modal>
+  )
+}
+
 //InvestmentWizard componente que posee el paso en que se encuentra el modal(0, 1, 2, 3, 4, 5)
 class InvestmentWizard extends Component {
   /* state
@@ -166,6 +197,9 @@ class InvestmentWizard extends Component {
   //Lista los detalles de la propiedad y los inserta en el estado property
   /*props id: identificador de la propiedad*/
   componentDidMount() {
+    if(this.props.step){
+      this.setState({step: this.props.step})
+    }
     this.props.id && listProperty({_id: this.props.id}, {}, 'title dataSheet marketResearch')
       .then( properties => this.setState({ property: properties[0] }) )
     let newState = {}
@@ -241,6 +275,7 @@ class InvestmentWizard extends Component {
     let passProps = {
       property,
       onClick: this.props.onClick,
+      alert: this.props.alert,
       postLogin: this.postLogin,
       next: this.goTo,
       summary: this.summary,
@@ -277,6 +312,9 @@ class InvestmentWizard extends Component {
       case 7:
         Element = Step5
         break;
+      case 99:
+          Element = Step99
+        break;
       default:
         break;
     }
@@ -292,5 +330,5 @@ class InvestmentWizard extends Component {
 let Wizard = withRouter(InvestmentWizard)
 
 export {
-  ModalSmallButton, Wizard
+  ModalSmallButton, Wizard, Step99, Step98, Step97
 }
