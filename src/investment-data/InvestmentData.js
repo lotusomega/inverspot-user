@@ -7,7 +7,7 @@ function SelectControl(props) {
   let { hint, value, handleInput, options, ...other } = props
   return (
     <select { ...other } className="form-control"
-        onChange={ handleInput } value={ value }>
+      onChange={ handleInput } value={ value }>
       <option disabled>{ hint }</option>
       { options.map(e => <option key={ e.value } value={ e.value }>{ e.name }</option> ) }
     </select>
@@ -32,8 +32,8 @@ function FormFieldset(props) {
     <fieldset>
       <legend>{ legend }</legend>
       { controls.map( e => <FormControl key={e.name} value={e.name.indexOf('.') > -1 ? source[ [e.name.split('.')[0]] ][ [e.name.split('.')[1]] ] : source[e.name] } { ...e } handleInput={ handleInput } /> ) }
-      {props.children}
-    </fieldset>
+        {props.children}
+      </fieldset>
   )
 }
 
@@ -119,7 +119,7 @@ class InvestmentData extends Component {
     list('user',{_id: this.user._id},{}, 'invesmentData')
       .then( user => this.setState( (prev, props) => {
         return {
-          user: Object.assign( {}, user[0], prev.user)
+          user: Object.assign( {}, prev.user, user[0])
         }
       } ) )
       .catch(alert)
@@ -158,7 +158,7 @@ class InvestmentData extends Component {
     edit('user', this.state.user )
       .then( success => {
         if(success) {
-          this.props.router.location.state.investment ? this.toggleWizard() : alert("Datos actualizados")
+          this.props.router.location.state && this.props.router.location.state.investment ? this.toggleWizard() : alert("Datos actualizados")
         }
         else {
           alert('Error al actualizar')
@@ -169,36 +169,36 @@ class InvestmentData extends Component {
   render() {
     let u = this.state.user.invesmentData,
     general = data.general,
-    invest = data.invest,
+    // invest = data.invest,
     bankData = data.bankData,
     beneficiary1 = data.beneficiary1,
     beneficiary2 = data.beneficiary2
 
 		return(
 <div className="container">
-      <div className="panel-body panel panel-default" style={{backgroundColor: "rgb(247, 247, 247)"}}>
-        { this.state.show && <Wizard onClick={ this.toggleWizard } investment={this.props.router.location.state.investment} /> }
-        {/* <h3>Completa los campos requeridos * para comenzar a participar</h3> */}
-          <div className="spacer"></div>
-        <div className="text-center"><b>Para poder participar en cualquier proyecto de Inverspot es necesario llenar los campos requeridos, <br/>esto ayudará a que nuestros asesores generen tu contrato de participación</b></div>
-        <form className="form-horizontal" onSubmit={ this.handleSubmit } >
-          <div className="spacer"></div>
-          <FormFieldset legend='1. Datos Generales de Participación'
-            controls={ general } source={ u } handleInput={ this.handleInput } />
-          <FormFieldset legend='2. Forma de Paticipación'
-            controls={ invest } source={ u } handleInput={ this.handleInput } />
-          <FormFieldset legend='3. Datos Bancarios'
-            controls={ bankData } source={ u } handleInput={ this.handleInput } />
-          <FormFieldset legend='4. Designación de Beneficiario 1'
-            controls={ beneficiary1 } source={ u } handleInput={ this.handleInput } />
-          <FormFieldset legend='4. Designación de Beneficiario 2'
-            controls={ beneficiary2 } source={ u } handleInput={ this.handleInput }>
-            <div className="text-right">
-              <button type="submit" className="button-save btn-success">Editar Usuario <i className="icon-arrow-right14 position-right"></i></button>
-            </div>
-          </FormFieldset>
-        </form>
-      </div>
+  <div className="panel-body panel panel-default" style={{backgroundColor: "rgb(247, 247, 247)"}}>
+    { this.state.show && <Wizard onClick={ this.toggleWizard } investment={this.props.router.location.state.investment} /> }
+    {/* <h3>Completa los campos requeridos * para comenzar a participar</h3> */}
+    <div className="spacer"></div>
+    <div className="text-center"><b>Para poder participar en cualquier proyecto de Inverspot es necesario llenar los campos requeridos, <br/>esto ayudará a que nuestros asesores generen tu contrato de participación</b></div>
+    <form className="form-horizontal" onSubmit={ this.handleSubmit } >
+      <div className="spacer"></div>
+      <FormFieldset legend='1. Datos Generales de Participación'
+        controls={ general } source={ u } handleInput={ this.handleInput } />
+      {/* <FormFieldset legend='2. Forma de Paticipación'
+      controls={ invest } source={ u } handleInput={ this.handleInput } /> */}
+      <FormFieldset legend='2. Datos Bancarios'
+        controls={ bankData } source={ u } handleInput={ this.handleInput } />
+      <FormFieldset legend='3. Designación de Beneficiario 1'
+        controls={ beneficiary1 } source={ u } handleInput={ this.handleInput } />
+      <FormFieldset legend='3. Designación de Beneficiario 2'
+        controls={ beneficiary2 } source={ u } handleInput={ this.handleInput }>
+        <div className="text-right">
+          <button type="submit" className="button-save btn-success">Editar Usuario <i className="icon-arrow-right14 position-right"></i></button>
+        </div>
+      </FormFieldset>
+    </form>
+  </div>
 </div>
 		)
 	}

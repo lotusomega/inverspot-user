@@ -152,7 +152,7 @@ function PropertyCard (props) {
         Participa desde <span>{currency(property.dataSheet.investAmount)}</span> pesos
       </CardPromo>
       <Link to={`/proyectos/${ property._id }/ficha`} >
-      <CardMedia src={'http://192.169.174.96/is-img/'+ property.image} />
+      <CardMedia src={'https://inverspot.mx/is-img/'+ property.image} />
       </Link>
 
 
@@ -206,7 +206,7 @@ function FundCard (props) {
   return (
     <Card>
       <CardHeader title={property.title} address={address} />
-      <CardMedia src={'http://192.169.174.96/is-img/' + property.image}>
+      <CardMedia src={'https://inverspot.mx/is-img/' + property.image}>
         <div className="fondeada-layer">
           <p>PROYECTO<br/>FONDEADO</p>
         </div>
