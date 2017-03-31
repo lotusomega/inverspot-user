@@ -50,7 +50,7 @@ function Modal (props){
   return (
     <div className='modal fade in' style={{display: 'block'}}>
       <div className="modal-dialog">
-        <div className="loginmodal-container">
+        <div className={`loginmodal-container ${props.type}`}>
           <button type="button" className="close" style={{fontSize: '35px'}} onClick={props.onClick}>&times;</button>
           <div className="col-sm-12">
               <img className="img-responsive center-block" alt="logo" src="style/images/inverspot.png"/>
@@ -108,12 +108,32 @@ function Step3 (props){
   return(
     <Modal onClick={props.onClick}>
       <ModalPromo>¿Estás seguro que deseas apartar {props.shares} participaciones con un total de {currency(props.total)} en {props.property.title}?</ModalPromo>
+      <ModalSmallButton onClick={ () => props.next(6) } name='Si' clas='large-invertion'/>
+      <ModalSmallButton onClick={ props.onClick } name='No' clas='large-confirm'/>
+    </Modal>
+  )
+}
+
+function Step4 (props){
+  return(
+    <Modal onClick={props.onClick}>
+      <ModalPromo>¿Realmente estas seguro que deseas invertir en esta propiedad?</ModalPromo>
       <ModalSmallButton onClick={ () => props.invest() } name='Si' clas='large-invertion'/>
       <ModalSmallButton onClick={ props.onClick } name='No' clas='large-confirm'/>
     </Modal>
   )
 }
 
+function Step5 (props){
+  return(
+    <Modal onClick={props.onClick} type='large'>
+      <ModalPromo>¡Felicidades!, ya estas contemplado para participar en este proyecto. </ModalPromo>
+      <ModalPromo>Por favor comienza a llenar tu solicitud inversion, no olvides dejar ningun campo solicitado vacio</ModalPromo>
+      <ModalSmallButton onClick={ () => props.redirect() } name='Responder ahora' clas='large-invertion'/>
+      <ModalSmallButton onClick={ props.onClick } name='En otro momento' clas='large-confirm'/>
+    </Modal>
+  )
+}
 //InvestmentWizard componente que posee el paso en que se encuentra el modal(0, 1, 2, 3, 4, 5)
 class InvestmentWizard extends Component {
   /* state
@@ -130,6 +150,7 @@ class InvestmentWizard extends Component {
     this.invest = this.invest.bind(this)
     this.verify = this.verify.bind(this)
     this.postLogin = this.postLogin.bind(this)
+    this.redirect = this.redirect.bind(this)
     this.state = {
       step: 3,
       property: {},
@@ -174,19 +195,19 @@ class InvestmentWizard extends Component {
   }
   //funcion de resumen con el total de acciones y monto que verifica el nivel de usuario para poder invetir
   summary(shares,total) {
-    if(this.user && this.user.level === 'investor'){
+    if(this.user){
       this.setState({shares: shares, total: total})
       this.goTo(5)
     }
-    else {
-      this.props.router.push({
-        pathname: '/user/investment-data',
-        state: {
-          investment: Object.assign({},this.state, {shares, total})
-        }
-      })
-      this.props.onClick()
-    }
+    // else {
+    //   this.props.router.push({
+    //     pathname: '/user/investment-data',
+    //     state: {
+    //       investment: Object.assign({},this.state, {shares, total})
+    //     }
+    //   })
+    //   this.props.onClick()
+    // }
   }
   //funcion invertir, crea el objeto de inversion con los datos y lo manda a la api
   invest(){
@@ -199,10 +220,14 @@ class InvestmentWizard extends Component {
     create( 'investment',investment )
       .then( success => {
         if(success) {
-          alert('Gracias por tu participación, nuestros asesores se pondrán en contacto para dar seguimiento.')
-          this.close()
+          this.goTo(7)
         }
       } )
+  }
+
+  redirect(){
+    this.props.onClick()
+    this.props.router.push({pathname: '/user/investment-data'})
   }
 
   postLogin() {
@@ -222,7 +247,8 @@ class InvestmentWizard extends Component {
       invest: this.invest,
       verify: this.verify,
       shares: this.state.shares,
-      total: this.state.total
+      total: this.state.total,
+      redirect: this.redirect
     }
     /* switch: renderiza el componente correspondiente a cada paso
     (0= recuperacion de contraseña, 1= Registro, 2= Inicio de sesión, 3= Paso 1 inversion, 4= Paso 2 inversion, 5= Paso 3 inversion)*/
@@ -244,6 +270,12 @@ class InvestmentWizard extends Component {
         break;
       case 5:
         Element = Step3
+        break;
+      case 6:
+        Element = Step4
+        break;
+      case 7:
+        Element = Step5
         break;
       default:
         break;

@@ -328,6 +328,9 @@ button.loginBtn.loginBtn--facebook {
   font-family: AvenirNext-Regular;
   border-radius: 10px;
 }
+.large{
+  max-width: 600px;
+}
 
 .loginmodal-container h1 {
   text-align: center;
