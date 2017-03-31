@@ -26,8 +26,7 @@ class NavBar extends Component {
       float: "right", marginLeft: "10px", color: "white"
     }
     const stylen5={
-      backgroundColor: "#4b118e",
-      marginTop: '-50px'
+      backgroundColor: "#4b118e"
     }
     return (
         <Navbar bsStyle="none" collapseOnSelect className="navbar navbar-light bg-faded" style={stylen}>

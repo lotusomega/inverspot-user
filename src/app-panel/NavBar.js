@@ -26,7 +26,7 @@ class NavBar extends Component {
                   <img alt="Brand" src="assets/images/inver.png" width="140px" style={{height: '28px'}} />
                 </Link>
               </Navbar.Brand>
-              <Navbar.Toggle className="navbar-toggle">
+              <Navbar.Toggle className="navbar-toggle" style={{marginTop: 0}}>
                 <i style={{color: '#644898'}} className="fa fa-bars"></i>
               </Navbar.Toggle>
             </Navbar.Header>
