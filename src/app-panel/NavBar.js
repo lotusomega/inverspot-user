@@ -19,7 +19,7 @@ class NavBar extends Component {
     return (
       <div className="navbar-wrapper">
         <div className="container-fluid">
-          <Navbar className="navbr" bsStyle="default" collapseOnSelect staticTop fluid style={{borderBottomWidth: "3px", borderColor: "#81d742"}}>
+          <Navbar bsStyle="default" collapseOnSelect staticTop fluid style={{borderBottomWidth: "3px", borderColor: "#81d742"}}>
             <Navbar.Header>
               <Navbar.Brand>
                 <Link to="/" style={{marginRight: '-8px', marginTop: '-5px'}}>

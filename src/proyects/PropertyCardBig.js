@@ -177,7 +177,7 @@ class PropertyCardBig1 extends Component  {
           <CardHeader title={property.title} address={address} />
           <div className="col-sm-12">
             <div className="col-sm-4">
-              <CardMedia src={'http://192.169.174.96/is-img/'+ property.image} />
+              <CardMedia src={'https://inverspot.mx/is-img/'+ property.image} />
               <CardProgress
                 current={property.dataSheet.sharesSold}
                 max={property.dataSheet.totalShares}
@@ -243,7 +243,7 @@ class FundCardBig1 extends Component  {
           <CardHeader title={property.title} address={address} />
           <div className="col-sm-12">
             <div className="col-sm-4">
-              <CardMedia src={'http://192.169.174.96/is-img/' + property.image}>
+              <CardMedia src={'https://inverspot.mx/is-img/' + property.image}>
                 <div className="fondeada-layer" style={{display: 'block'}}>
                   <p>PROYECTO<br/>FONDEADO</p>
                 </div>
