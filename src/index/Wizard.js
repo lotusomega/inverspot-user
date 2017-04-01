@@ -36,13 +36,13 @@ function ModalSmallButton (props){
 }
 
 //funcion ModalText: contiene el estilo del texto cuerpo del modal
-function ModalText(props){
-  return (
-    <p className="text-center" style={{fontSize: "12px", color: "white"}}>
-      {props.children}
-    </p>
-  )
-}
+// function ModalText(props){
+//   return (
+//     <p className="text-center" style={{fontSize: "12px", color: "white"}}>
+//       {props.children}
+//     </p>
+//   )
+// }
 
 //funcion Modal: contiene la estructura del modal
 /*props

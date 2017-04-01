@@ -14,7 +14,7 @@ export default function(props) {
           <div className="row"></div>
 
           <div className="row main-container">
-            <h1 style={{color: 'black', fontFamily: 'AvenirNext-Regular', fontWeight: 900, color: "#ff3c00"}}>¿Cómo valuamos los proyectos?</h1>
+            <h1 style={{fontFamily: 'AvenirNext-Regular', fontWeight: 900, color: "#ff3c00"}}>¿Cómo valuamos los proyectos?</h1>
             <h3 className="text-center" style={{color: '#4B118E', fontFamily: 'AvenirNext-Regular', fontWeight: 400}}>Inverspot valúa cada proyecto en 3 grandes indicadores</h3>
           </div>
           <div style={{height: "30px"}}/>
@@ -67,7 +67,7 @@ export default function(props) {
           <div style={{height: "30px"}}/>
           <div className="row main-container">
             <div className="spacer" />
-            <h1 style={{color: 'black', fontFamily: 'AvenirNext-Regular', color: "#ff3c00",fontWeight: 900}}>¿Cómo paraticipar en los proyectos?</h1>
+            <h1 style={{fontFamily: 'AvenirNext-Regular', color: "#ff3c00",fontWeight: 900}}>¿Cómo paraticipar en los proyectos?</h1>
           </div>
           <div style={{height: "40px"}}/>
           <div className="col-xs-12 col-sm-12 col-md-4 col-lg-4">

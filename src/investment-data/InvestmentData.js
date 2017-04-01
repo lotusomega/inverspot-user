@@ -119,7 +119,10 @@ class InvestmentData extends Component {
     list('user',{_id: this.user._id},{}, 'invesmentData')
       .then( user => this.setState( (prev, props) => {
         return {
-          user: Object.assign( {}, prev.user, user[0])
+          user: {
+            _id: user[0]._id || prev.user._id,
+            invesmentData: Object.assign({}, prev.user.invesmentData, user[0].invesmentData)
+          }
         }
       } ) )
       .catch(alert)

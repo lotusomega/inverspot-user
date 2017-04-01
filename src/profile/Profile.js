@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import CardProfile from './CardProfile'
+// import CardProfile from './CardProfile'
 import BarProfile from './BarProfile'
 import DataProfile from './DataProfile'
 import PasswordProfile from './PasswordProfile'

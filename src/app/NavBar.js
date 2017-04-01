@@ -87,7 +87,9 @@ class NavBar extends Component {
               }
 
               {this.user &&
-                <li><Link to="/user/profile">Mi perfil</Link></li> }
+                <LinkContainer to="/user/profile">
+                  <NavItem>Mi perfil</NavItem>
+                </LinkContainer> }
             </Nav>
           </Navbar.Collapse>
         </Navbar>

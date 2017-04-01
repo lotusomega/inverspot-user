@@ -46,7 +46,7 @@ class NavBar extends Component {
                 </LinkContainer>
               </Nav>
               <Nav pullRight className="nav navbar-nav">
-                <li onClick={this.closeSession}><a>Cerrar Sesión</a></li>
+                <NavItem onClick={this.closeSession}>Cerrar Sesión</NavItem>
               </Nav>
             </Navbar.Collapse>
           </Navbar>

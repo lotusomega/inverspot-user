@@ -242,7 +242,7 @@ class PropertyCardBig1 extends Component  {
         <CardHeader title={property.title} address={address} />
         <CardBody>
           <CardLeft>
-            <CardMedia src={'https://inverspot.mx/is-img/'+ property.image} />
+            <CardMedia src={'http://inverspot.mx/is-img/'+ property.image} />
             <CardProgress
               current={property.dataSheet.sharesSold}
               max={property.dataSheet.totalShares}
@@ -298,7 +298,7 @@ class FundCardBig1 extends Component  {
         <CardHeader title={property.title} address={address} />
         <CardBody>
           <CardLeft>
-            <CardMedia src={'https://inverspot.mx/is-img/'+ property.image} fund={true} />
+            <CardMedia src={'http://inverspot.mx/is-img/'+ property.image} fund={true} />
             <CardProgress
               current={property.dataSheet.sharesSold}
               max={property.dataSheet.totalShares}

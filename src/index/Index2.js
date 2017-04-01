@@ -164,7 +164,7 @@ export default class Index extends Component {
             <div className="col-sm-6" style={{marginBottom: "30px"}}>
               <div className="row box-banner" style={{backgroundColor: "#5fb6b0", borderColor: "#4b2f7f", cursor: 'pointer'}}>
                 <a href="http://sellspot.mx/" target="_blank">
-                      <img src="style/images/sellspot.png" className="img-responsive" style={{float: 'left', width: 200}}/>
+                      <img alt="" src="style/images/sellspot.png" className="img-responsive" style={{float: 'left', width: 200}}/>
                       <div className="col-xs-12">
                         <h2 style={{fontSize: 24, textAlign: 'left'}}>Promueve propiedades y gana<br />comisiones<br /><br /><b>Ir al sitio</b></h2>
                       </div>

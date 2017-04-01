@@ -1,5 +1,5 @@
 import React from 'react'
-import {Link, withRouter} from 'react-router'
+import {Link} from 'react-router'
 import currency from '../services/currency'
 
 //funcion CardHeader: contiene el estilo de la cabecera de la tarjeta
@@ -152,7 +152,7 @@ function PropertyCard (props) {
         Participa desde <span>{currency(property.dataSheet.investAmount)}</span> pesos
       </CardPromo>
       <Link to={`/proyectos/${ property._id }/ficha`} >
-      <CardMedia src={'https://inverspot.mx/is-img/'+ property.image} />
+      <CardMedia src={'http://inverspot.mx/is-img/'+ property.image} />
       </Link>
 
 
@@ -206,7 +206,7 @@ function FundCard (props) {
   return (
     <Card>
       <CardHeader title={property.title} address={address} />
-      <CardMedia src={'https://inverspot.mx/is-img/' + property.image}>
+      <CardMedia src={'http://inverspot.mx/is-img/' + property.image}>
         <div className="fondeada-layer">
           <p>PROYECTO<br/>FONDEADO</p>
         </div>

@@ -1,4 +1,4 @@
-const BASE_URL = 'https://inverspot.mx/api';
+const BASE_URL = 'http://inverspot.mx/api';
 // const BASE_URL = 'http://127.0.0.1:8080/api';
 const TOKEN = 'token';
 // import hello from 'hellojs/dist/hello.all.js'
