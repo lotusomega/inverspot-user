@@ -525,7 +525,7 @@ font-size: 24px;
     font-size: 36px;
 }
 
-.panel-heading [data-toggle="collapse"]:after {
+.panel-heading [data-toggle="collapse"]:after, .panel-title.with-cursor > a:after, .panel-title.with-cursor > a:after {
     font-family: 'FontAwesome';
     content: "\f078"; /* "play" icon */
     float: right;
@@ -2189,7 +2189,7 @@ nav.navbar.navbar-light.bg-faded.navbar.navbar-none {
     font-weight: 900;
 }
 
-.panel-heading [data-toggle="collapse"]:after {
+.panel-heading [data-toggle="collapse"]:after, .panel-title.with-cursor > a:after {
     font-family: 'FontAwesome';
     content: "\f078";
     float: right;

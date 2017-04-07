@@ -48,7 +48,10 @@ ReactGA.initialize('UA-90163231-1')
 function logPageView() {
   ReactGA.set({ page: window.location.hash })
   ReactGA.pageview(window.location.hash)
-  window.scrollTo(0, 0)
+  const path = window.location.hash.split('/')
+  if(path[1] !== 'proyectos') {
+    window.scrollTo(0, 0)
+  }
 }
 
 

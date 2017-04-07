@@ -60,10 +60,10 @@ function Register(props) {
                 <input name="email" className="form-control input-sm" type="email" placeholder="Email" required="required"
                   value={ props.user.email } onChange={ props.handleInputRegister }/>
 
-                <input id="password" className="form-control input-sm" type="password" placeholder="Password" name="password1" required
+                <input id="password" className="form-control input-sm" type="password" placeholder="Contraseña" name="password1" required
                   value={ props.password1 } onChange={ props.handleFields }/>
 
-                <input id="password_confirmation" className="form-control input-sm" type="password" placeholder="Repeat Password" name="password" required="required"
+                <input id="password_confirmation" className="form-control input-sm" type="password" placeholder="Repetir contraseña" name="password" required="required"
                   value={ props.user.password } onChange={ props.handleInputRegister }/>
 
                 <input type="text" className="form-control input-sm" name="telephone" id="phone" placeholder="Tu teléfono" required="required"
@@ -523,7 +523,7 @@ class LoginWizard1 extends Component {
       onClick: this.props.onClick,
       next: this.goTo,
       alert: 'Te hemos enviado un correo, para restablecer tu contraseña',
-      support: 'Te sugerimos revisar tu carpeta de SPAM o correo no deseado. Si no lo has recibido, por favor contact a uno de nuestros asesores',
+      support: 'Te sugerimos revisar tu carpeta de SPAM o correo no deseado. Si no lo has recibido, por favor contacta a uno de nuestros asesores',
       alert2: 'Regístro exitoso, te hemos enviado un mail de confirmación, actívalo para comenzar a invertir'
     }
     // switch: renderiza el componente correspondiente a cada paso (0= recuperacion de contraseña, 1= Registro, 2= Inicio de sesión)

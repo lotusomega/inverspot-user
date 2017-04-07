@@ -158,9 +158,11 @@ function Step98 (props){
 function Step97 (props){
   return(
     <Modal onClick={props.onClick}>
-      <ModalPromo>Datos inválidos.Por favor inténtalo de nuevo</ModalPromo>
+      <ModalPromo>Datos inválidos. Por favor inténtalo de nuevo.</ModalPromo>
       <ModalButton onClick={ props.onClick } name='Aceptar' />
-      <p style={{color: 'white',fontWeight: 'bolder'}}>¿Imposible conectar? Contacta a un <Link to="contacto">asesor</Link></p>
+      <p style={{color: 'white',fontWeight: 'bolder'}}>¿Imposible conectar? Contacta a un <Link to="contacto">
+        <span style={{color: '#ff3c00', fontWeight: 'bold'}}>asesor</span></Link>
+      </p>
     </Modal>
   )
 }

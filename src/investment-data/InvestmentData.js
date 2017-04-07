@@ -180,7 +180,7 @@ class InvestmentData extends Component {
 		return(
 <div className="container">
   <div className="panel-body panel panel-default" style={{backgroundColor: "rgb(247, 247, 247)"}}>
-    { this.state.show && <Wizard onClick={ this.toggleWizard } alert="Datos actualizados" step={99} /> }
+    { this.state.show && <Wizard onClick={ this.toggleWizard } alert="Gracias, hemos actualizado tu información correctamente." step={99} /> }
     {/* <h3>Completa los campos requeridos * para comenzar a participar</h3> */}
     <div className="spacer"></div>
     <div className="text-center"><b>Para poder participar en cualquier proyecto de Inverspot es necesario llenar los campos requeridos, <br/>esto ayudará a que nuestros asesores generen tu contrato de participación</b></div>

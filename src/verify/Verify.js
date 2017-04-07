@@ -35,7 +35,7 @@ class Verify extends Component {
             <div className="row main-container text-center">
           		{this.state.show ? <h1 style={{color: '#5a5a5a', fontSize: '26px', fontFamily: 'AvenirNext-Regular', fontWeight: '900'}}>
           		Has completado tu registro</h1>: <h1 style={{color: '#5a5a5a', fontSize: '26px', fontFamily: 'AvenirNext-Regular', fontWeight: '900'}}>
-          		Hubo un error al verificar el codigo de tu correo</h1>} <br/><br/><br/>
+          		Hubo un error al verificar el código de tu correo</h1>} <br/><br/><br/>
 							{this.state.show && <button className="button" onClick={this.change}>Comenzar a Participar</button>}
           	</div>
             <div className="spacer" style={{height: '70px'}}></div>
